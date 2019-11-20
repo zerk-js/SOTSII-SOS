@@ -134,9 +134,6 @@ DELETE FROM research_projects WHERE id={0};</value>
   <data name="GetNodeLine" xml:space="preserve">
     <value>SELECT id,system1_id,system2_id,health FROM travel_nodes WHERE id = {0}</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="DeleteLoaFleetCompositon" xml:space="preserve">
     <value>UPDATE loa_fleet_compositions SET visible="False" WHERE id = {0};</value>
   </data>
@@ -196,7 +193,7 @@ UPDATE player_diplomacy_points SET points = {2} WHERE player_id = {0} AND factio
     <value>UPDATE von_neumann SET homeworld_system_id = {1},  homeworld_orbit_id = {2}, resources = {3}, construction_progress = {4}, resources_collected_last_turn = {5}, project_design_id = {6}, last_collection_system = {7}, last_target_system = {8}, last_collection_turn={9}, last_target_turn={10}, fleet_id = {11} WHERE encounter_id = {0}</value>
   </data>
   <data name="InsertUINotchSetting" xml:space="preserve">
-    <value>INSERT OR REPLACE INTO ui_slider_notch_settings (player_id, slider_type, slider_value, colony_id) VALUES ({0},{1},{2},{3});</value>
+    <value>INSERT INTO ui_slider_notch_settings (player_id, slider_type, slider_value, colony_id) VALUES ({0},{1},{2},{3});</value>
   </data>
   <data name="InsertDesignSection" xml:space="preserve">
     <value>INSERT OR IGNORE INTO assets (path) VALUES("{1}");

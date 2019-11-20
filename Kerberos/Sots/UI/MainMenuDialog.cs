@@ -6,6 +6,7 @@
 
 using Kerberos.Sots.GameStates;
 using System;
+using System.Text.RegularExpressions;
 
 namespace Kerberos.Sots.UI
 {
@@ -37,8 +38,10 @@ namespace Kerberos.Sots.UI
 					this._app.UI.CreateDialog((Dialog)new OptionsDialog(this._app, "OptionsDialog"), null);
 				else if (panelName == "gameSaveGameButton")
 				{
-					if (this._app.Game == null)
-						return;
+					if (this._app.Game == null) return;
+
+					//string pattern = "\\s*\\((?:" + Regex.Replace(App.Localize("@AUTOSAVE_SUFFIX"), "([\\(\\)])", string.Empty) + "|Precombat)\\).*";
+					//string saveName = Regex.Replace(this._app.Game.SaveGameName ?? string.Empty, pattern, string.Empty);
 					string saveName = this._app.Game.SaveGameName ?? string.Empty;
 					this._app.UI.CreateDialog((Dialog)new SaveGameDialog(this._app, saveName, "dialogSaveGame"), null);
 				}
