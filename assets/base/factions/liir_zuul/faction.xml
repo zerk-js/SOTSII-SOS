@@ -1,0 +1,208 @@
+<Faction ID="2" name="liir_zuul">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+	
+  <MaterialDictionary>\base\factions\liir_zuul\materials.xml</MaterialDictionary>
+
+  <MinishipModel>props\ui\miniship_liir.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Liir.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Stutter_Warp</RootNode>
+  </TechTree>
+
+  <InitialDesigns weaponbias="EWP">
+  
+  	<Design name="Colonizer">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Drone">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_drone_carrier"/>
+    </Design>
+<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair"/>
+    </Design>
+	-->
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_shuttle_carrier"/>
+    </Design>
+
+  
+  
+    <Design name="Armor">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Supply">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+    <Design name="Command">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+    <Design name="Scout">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_extended_range"/>
+    </Design>
+  </InitialDesigns>
+
+  <DiplomacyActionWeights>factions\liir_zuul\diplomacyWeights.xml</DiplomacyActionWeights>
+  <StratModifiers>
+    <TradeRangeModifier>2.0</TradeRangeModifier>
+    <MaxProvincePlanetRange>9.0</MaxProvincePlanetRange>
+    <OverharvestModifier>80.0</OverharvestModifier>
+    <ResearchModifier>1.5</ResearchModifier>
+    <ScrapShipModifier>1.5</ScrapShipModifier>
+    <PopulationGrowthModifier>0.8</PopulationGrowthModifier>
+    <PsiResearchModifier>2.0</PsiResearchModifier>
+    <BiosphereDestructionModifier>0.8</BiosphereDestructionModifier>
+    <TerraformingModifier>1.2</TerraformingModifier>
+    <DiplomacyReactionKillShips>-20</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-200</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>6</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-30</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-120</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>-30</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-100</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-80</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>100</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>1</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>8</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>85</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>-20</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>20</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>0</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>0</DiplomacyReactionSmallerEmpire>
+    <DiplomacyDemandWeight>0.4</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>1.2</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="1100"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="950"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="1200"/>
+    <DefaultDiplomacyReaction faction="loa"       value="550"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="1100"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="650"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="100"/>
+  </DefaultDiplomacyReactions>
+
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="1.25" />
+    <ImmigrationPopBonus faction="hiver"     value="1.25"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="1"/>
+    <ImmigrationPopBonus faction="loa"       value="1.0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="1.0"/>
+    <ImmigrationPopBonus faction="tarkas"    value="1.1"/>
+    <ImmigrationPopBonus faction="zuul"      value="0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="0.15" />
+    <SpyingBonus faction="hiver"     value="-0.10"/>
+    <SpyingBonus faction="tarkas"    value="-0.30"/>
+    <SpyingBonus faction="liir_zuul" value="0.30"/>
+    <SpyingBonus faction="morrigi"   value="0.15"/>
+    <SpyingBonus faction="zuul"      value="-0.10"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_INDEPENDANT_CONQUERED>2</ME_INDEPENDANT_CONQUERED>
+    </Centrism>
+  </MoralEventModifiers>
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>20.0</PsiPowerPerCrew>
+  <CrewEfficiencyValue>10.0</CrewEfficiencyValue>
+  <EntryPointOffset>5000</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+  
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.6</EXPANDING>
+    <ARMING>0.8</ARMING>
+    <HUNKERING>0.7</HUNKERING>
+    <CONQUERING>0.6</CONQUERING>
+    <DESTROYING>0.6</DESTROYING>
+    <DEFENDING>0.6</DEFENDING>
+  </ResearchRates>
+  
+  
+  <!--Badges-->
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_1.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_2.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_3.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_4.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_5.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_6.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_7.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_8.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_9.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_10.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_11.tga"/>
+  <Badge texture="\base\factions\liir_zuul\badges\liir_badge_12.tga"/>
+
+  <NoAvatar texture="\base\factions\liir_zuul\avatars\liir_off.tga"/>
+  
+  <!--Avatars-->
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\liir_zuul\avatars\Liir_Avatar_08.tga"/>
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\liir_zuul\textures\splash\Muur_splash.tga"/>
+    <SplashScreen image="factions\liir_zuul\textures\splash\Black_splash.tga"/>
+    <SplashScreen image="factions\liir_zuul\textures\splash\Deacon_splash.tga"/>
+  </SplashScreens>
+
+
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineHumanDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineHumanDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineHumanDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.8</FreshAgentStrength>
+    <TiredAgentStrength>1.6</TiredAgentStrength>
+    <ExhaustedAgentStrength>1.0</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="2.0" leviathan="2.0" />
+    <EfficiencyVSBoarding default="0.7" cruiser="0.6" dreadnought="0.9" leviathan="0.9" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_LIIR_ZUUL_" count="36"/>
+  <EmpireNames prefix="@EMPIRENAME_LIIR_ZUUL_" count="16"/>
+
+</Faction>

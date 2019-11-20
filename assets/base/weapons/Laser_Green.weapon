@@ -1,0 +1,216 @@
+<Weapon>
+  <Name>Green Laser</Name>
+  <PassableShields />
+  <RequiredTechnologies />
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Laser</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Light</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_Greenlaser_1_Light</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+        <TurretClassSize>
+          <TurretSize>Medium</TurretSize>
+          <Turret>Turret_Medium_2_Standard</Turret>
+          <Barrel>Barrel_Greenlaser_2_Light</Barrel>
+          <Base>Base_Medium</Base>
+        </TurretClassSize>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Heavy_3_Standard</Turret>
+          <Barrel>Barrel_Greenlaser_3_Light</Barrel>
+          <Base>Base_Heavy</Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+    <TurretClass>
+      <TurretClass>Strafe</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Light</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>
+          </Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Bolt</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Light</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>200</Cost>
+  <Crew>1</Crew>
+  <CrewPerBank>True</CrewPerBank>
+  <Power>1</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>0</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>1</Signature>
+  <SignaturePerBank>True</SignaturePerBank>
+  <HpBonus>0</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>0</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>-20</CritHitBonus>
+  <MalfunctionPercent>0</MalfunctionPercent>
+  <MalfunctionDamage>5</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>1.2</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>0</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>3.5</BaseRechargeTime>
+  <MuzzleSpeed>800</MuzzleSpeed>
+  <ShotAcceleration>0</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>
+  </Model>
+  <DecalMaterial>Burn 01</DecalMaterial>
+  <DecalSize>3</DecalSize>
+  <MuzzleEffect>effects\Weapons\greenlaser_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\laser_impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\Greenlaser_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Laser_Green_impact</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Laser_PD_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>
+  </BulletSound>
+  <RicochetSound>Laser_Green_rico</RicochetSound>
+  <Icon>las_green</Icon>
+  <RangeTable>
+    <PbRange>500</PbRange>
+    <PbDeviation>0.5</PbDeviation>
+    <PbDamage>2</PbDamage>
+    <EffectiveRange>800</EffectiveRange>
+    <EffectiveDeviation>1</EffectiveDeviation>
+    <EffectiveDamage>2</EffectiveDamage>
+    <MaxRange>1100</MaxRange>
+    <MaxDeviation>1.5</MaxDeviation>
+    <MaxDamage>2</MaxDamage>
+    <PlanetRange>2500</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-1.1</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>300</PopDamage>
+  <InfraDamage>1E-06</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>4</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

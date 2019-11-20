@@ -1,0 +1,443 @@
+<!-- DEFAULT_C0MBAT template is given a scoring weight of 100% by AI when scoring templates for combat fleets -->
+<!-- DEFAULT_PATROL template is given a scoring weight of 75% by AI when scoring templates for combat fleets -->
+<!-- DEFAULT_INVASTION template is given a scoring weight of 50% by AI when scoring templates for combat fleets -->
+<!-- DEFAULT_SURVEY template is given a scoring weight of 25% by AI when scoring templates for combat fleets -->
+
+
+<!-- Any template with SURVERY misison type will also automatically receive DEPLOY_NPG mission type within game AI if Loa -->
+<!-- DEPLOY_NPG missions only occur if/when an NPG gate is not present at a TARGET SYSTEM... does not rebuild missing gates within a Loa Line :( -->
+		
+
+
+<!--
+[AI STANCES]
+EXPANDING,		// AI is expanding its empire.
+ARMING, 		// AI is increasing its forces and preparing for war
+HUNKERING, 		// AI is not at war, and is building up its industry and technology as rapidly as possible
+CONQUERING, 	// AI is expanding its empire by warring with neighbours
+DESTROYING, 	// AI is attempting to eliminate an opponent
+DEFENDING, 		// AI is defending its territory
+-->
+
+<!--
+[INCLUSION TYPES]
+REQUIRED,		// This ship is required for this fleet.
+FILL,			// All remaining command points will be filled with this type of ship.
+-->
+
+<!-- 
+[SHIP ROLES]
+COMBAT,
+CARRIER,
+COMMAND,
+COLONIZER,
+CONSTRUCTOR,
+CARRIER_DRONE,
+SUPPLY,
+E_WARFARE,
+GATE,
+BORE,
+FREIGHTER,
+SCAVENGER,
+
+Added these as they were missing. Not sure if they all work...
+SCOUT,
+CARRIER_ASSAULT,
+CARRIER_DRONE,
+CARRIER_BIO,
+CARRIER_BOARDING,
+
+I don't think you can use these, as they're riders not ship types but they were in the original file... 
+DRONE, (Use CARRIER_DRONE instead)
+ASSAULTSHUTTLE, (Use CARRIER_ASSAULT instead)
+SLAVEDISK, (Use SCAVENGER instead)
+BOARDINGPOD, (Use CARRIER_BOARDING instead)
+-->
+
+<!--
+[WEAPON ROLES]
+STAND_OFF,
+BRAWLER,
+DISABLING,
+PLANET_ATTACK,
+DISABLING,
+-->
+
+<!--
+[MISSION TYPES]
+COLONIZATION,
+SURVEY,
+RELOCATION,
+CONSTRUCT_STN,
+UPGRADE_STN,
+TRANSFER,
+PATROL,
+INTERDICTION,
+STRIKE,
+INVASION,
+INTERCEPT,
+GATE,
+RETURN,
+ ** Added from internal game logic, not in original file/comments **
+SUPPORT (for colonization support)
+RETREAT, 
+PIRACY,
+DEPLOY_NPG,
+EVACUATE,
+SPECIAL_CONSTRUCT_STN
+REACTION
+-->
+
+<!-- 
+[STANCE WEIGHTS]
+<StanceWeight stance="x">y</StanceWeight>
+
+x = Stance to weigh.
+y = Relative chance of selecting this fleet type.
+
+Not specifying a stance in a FleetTemplate will result in a fleet not being selectable for that stance.
+-->
+
+<!--
+[SHIPS]
+<Ship inclusion="v" amount="w" weaponRole="x" faction="y">z</Ship>
+
+v = An inclusion type, see [INCLUSION TYPES].
+w = Number of ships to build, for REQUIRED inclusion type only.
+x = (Optional) Use a design with the specified weapon role.
+y = (Optional) Faction requirement. 
+z = A ship role, see [SHIP ROLES].
+
+-->
+
+<FleetTemplates>
+	<!-- DEFAULT_C0MBAT template is given a scoring weight of 100% by AI when scoring templates for combat fleets -->
+	<!-- Added 1 Gravboat for Morrigi and 1 Boarding for Zuul -->
+	<FleetTemplate name="DEFAULT_COMBAT" fleetName="Combat Fleet">
+		<MissionType>INTERDICTION</MissionType>
+		<MissionType>STRIKE</MissionType>
+		<MissionType>INTERCEPT</MissionType>
+		<MissionType>INVASION</MissionType>
+		<StanceWeight stance="EXPANDING">5</StanceWeight>
+		<StanceWeight stance="CONQUERING">5</StanceWeight>
+		<StanceWeight stance="DESTROYING">5</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">0</Amount>
+      <Amount stance="ARMING">3</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">3</Amount>
+      <Amount stance="DESTROYING">3</Amount>
+      <Amount stance="DEFENDING">1</Amount>
+    </MinToMaintain>
+	<Ship inclusion="REQUIRED" amount="1" weaponRole="STAND_OFF" nfaction="zuul">COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1" weaponRole="BRAWLER" faction="zuul">COMMAND</Ship>
+	
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="DISABLING">GRAVBOAT</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="STAND_OFF">SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul"  weaponRole="STAND_OFF">SUPPLY</Ship>	
+	<Ship inclusion="REQUIRED" amount="2" faction="tarkas"  weaponRole="STAND_OFF">SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF">SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF">BORE</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="human"  weaponRole="STAND_OFF">SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="hiver"  weaponRole="STAND_OFF">SUPPLY</Ship>
+	
+	
+	<Ship inclusion="REQUIRED" faction="zuul" amount="1" weaponRole="STAND_OFF">CARRIER_BOARDING</Ship>
+	
+	<Ship inclusion="FILL" weaponRole="BRAWLER">COMBAT</Ship>
+	</FleetTemplate>
+
+	<!-- DEFAULT_PATROL template is given a scoring weight of 75% by AI when scoring templates for combat fleets -->
+	<!-- Added 1 Gravboat for Morrigi and 1 Boarding for Zuul -->
+	<FleetTemplate name="DEFAULT_PATROL" fleetName="Defense Fleet">
+		<MissionType>PATROL</MissionType>
+		<MissionType>INTERDICTION</MissionType>
+		<MissionType>STRIKE</MissionType>
+		<MissionType>INTERCEPT</MissionType>
+		<MissionType>INVASION</MissionType>
+		<StanceWeight stance="EXPANDING">5</StanceWeight>
+		<StanceWeight stance="CONQUERING">5</StanceWeight>
+		<StanceWeight stance="DESTROYING">5</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">0</Amount>
+      <Amount stance="ARMING">0</Amount>
+      <Amount stance="HUNKERING">0</Amount>
+      <Amount stance="CONQUERING">0</Amount>
+      <Amount stance="DESTROYING">0</Amount>
+      <Amount stance="DEFENDING">0</Amount>
+    </MinToMaintain>
+    
+	<Ship inclusion="REQUIRED" amount="1"  nfaction="zuul" weaponRole="STAND_OFF">COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1"  faction="zuul" weaponRole="BRAWLER">COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF">BORE</Ship>
+		
+	<Ship inclusion="REQUIRED" amount="1" weaponRole="STAND_OFF" >CARRIER_BOARDING</Ship>
+	<Ship inclusion="FILL"  weaponRole="BRAWLER">COMBAT</Ship>
+	</FleetTemplate>
+	
+	
+	
+	<!-- DEFAULT_INVASTION template is given a scoring weight of 50% by AI when scoring templates for combat fleets -->
+	<!-- Added 2 CARRIER_ASSAULT per faction except for Zuul who gets all SCAVENGERs. COMMAND/COMBATs set to PLANET_ATTACK weaponRoles -->
+	<FleetTemplate name="DEFAULT_INVASION" fleetName="Invasion Fleet">
+		<MissionType>INVASION</MissionType>
+		<MissionType>SURVEY</MissionType>
+		<StanceWeight stance="EXPANDING">5</StanceWeight>
+		<StanceWeight stance="CONQUERING">15</StanceWeight>
+		<StanceWeight stance="DESTROYING">15</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">0</Amount>
+      <Amount stance="ARMING">3</Amount>
+      <Amount stance="HUNKERING">3</Amount>
+      <Amount stance="CONQUERING">5</Amount>
+      <Amount stance="DESTROYING">5</Amount>
+      <Amount stance="DEFENDING">3</Amount>
+    </MinToMaintain>
+    <Ship inclusion="REQUIRED" amount="1" nfaction="zuul" weaponRole="PLANET_ATTACK">COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul" weaponRole="BRAWLER">COMMAND</Ship>
+	
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi"  weaponRole="STAND_OFF">SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="DISABLING">GRAVBOAT</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="tarkas" weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul" weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul" weaponRole="STAND_OFF" >BORE</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="3" faction="hiver"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="human" weaponRole="STAND_OFF"  >SUPPLY</Ship>	
+
+	<Ship inclusion="REQUIRED" amount="1" faction="liir_zuul" weaponRole="PLANET_ATTACK">CARRIER_BIO</Ship>	
+
+	<Ship inclusion="REQUIRED" amount="2" nfaction="zuul" weaponRole="PLANET_ATTACK">CARRIER_ASSAULT</Ship>	
+	<Ship inclusion="FILL" nfaction="zuul" weaponRole="PLANET_ATTACK">COMBAT</Ship>
+	
+	<Ship inclusion="FILL" faction="zuul" weaponRole="BRAWLER">SCAVENGER</Ship>	
+	
+	</FleetTemplate>
+
+
+	<!-- Switched to CARRIER_DRONEs from the default COMBATs, LOA get +2 CARRIER_DRONES since they don't need supply -->
+	<FleetTemplate name="DEFAULT_SURVEY" fleetName="Survey Fleet">
+		<MissionType>SURVEY</MissionType>
+		<MissionType>DEPLOY_NPG</MissionType>
+	<AllowableFactions>
+      <Faction>human</Faction>
+	  <Faction>morrigi</Faction>
+	  <Faction>liir_zuul</Faction>
+	  <Faction>zuul</Faction>
+	  <Faction>tarkas</Faction>
+	  <Faction>loa</Faction>
+    </AllowableFactions>
+		<StanceWeight stance="EXPANDING">5</StanceWeight>
+		<StanceWeight stance="CONQUERING">5</StanceWeight>
+		<StanceWeight stance="DESTROYING">5</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">2</Amount>
+      <Amount stance="ARMING">2</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+    <Ship inclusion="REQUIRED" amount="1"  weaponRole="STAND_OFF" >COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="DISABLING" >GRAVBOAT</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="tarkas" weaponRole="STAND_OFF"  >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >BORE</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="hiver"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="human"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	
+	<Ship inclusion="REQUIRED" faction="loa" amount="4" weaponRole="STAND_OFF"  >CARRIER_DRONE</Ship>
+	<Ship inclusion="REQUIRED" nfaction="loa" amount="2"  weaponRole="STAND_OFF" >CARRIER_DRONE</Ship>
+	</FleetTemplate>
+	
+	<!-- Switched to CARRIER_DRONEs from the default COMBATs, LOA get +2 CARRIER_DRONES since they don't need supply -->
+	<FleetTemplate name="HIVER_SURVEY" fleetName="Survey Fleet">
+		<MissionType>SURVEY</MissionType>
+	<AllowableFactions>
+	  <Faction>hiver</Faction>
+    </AllowableFactions>
+		<StanceWeight stance="EXPANDING">25</StanceWeight>
+		<StanceWeight stance="CONQUERING">25</StanceWeight>
+		<StanceWeight stance="DESTROYING">25</StanceWeight> 
+		<StanceWeight stance="DEFENDING">25</StanceWeight>
+		<StanceWeight stance="HUNKERING">25</StanceWeight>
+		<StanceWeight stance="ARMING">25</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">1</Amount>
+      <Amount stance="ARMING">1</Amount>
+      <Amount stance="HUNKERING">1</Amount>
+      <Amount stance="CONQUERING">1</Amount>
+      <Amount stance="DESTROYING">1</Amount>
+      <Amount stance="DEFENDING">1</Amount>
+    </MinToMaintain>
+    <Ship inclusion="REQUIRED" amount="1"  weaponRole="STAND_OFF" >COMMAND</Ship>	
+	<Ship inclusion="REQUIRED" amount="4" weaponRole="STAND_OFF"  >CARRIER_DRONE</Ship>
+	</FleetTemplate>
+	
+	
+	
+	<FleetTemplate name="DEFAULT_GATE" fleetName="Gate Fleet">
+	<MissionType>GATE</MissionType>
+    <MissionType>SURVEY</MissionType>
+		<StanceWeight stance="EXPANDING">100</StanceWeight>
+		<StanceWeight stance="CONQUERING">100</StanceWeight>
+		<StanceWeight stance="DESTROYING">100</StanceWeight> 
+		<StanceWeight stance="DEFENDING">100</StanceWeight>
+		<StanceWeight stance="HUNKERING">100</StanceWeight>
+		<StanceWeight stance="ARMING">100</StanceWeight>
+    <AllowableFactions>
+      <Faction>hiver</Faction>
+    </AllowableFactions>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">4</Amount>
+      <Amount stance="ARMING">4</Amount>
+      <Amount stance="HUNKERING">4</Amount>
+      <Amount stance="CONQUERING">4</Amount>
+      <Amount stance="DESTROYING">4</Amount>
+      <Amount stance="DEFENDING">4</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1" weaponRole="STAND_OFF" >COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="3" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" weaponRole="STAND_OFF" >GATE</Ship>
+		<Ship inclusion="FILL" weaponRole="BRAWLER" >COMBAT</Ship>
+	</FleetTemplate>
+  
+
+	<FleetTemplate name="DEFAULT_COLONIZATION" fleetName="Colonization Fleet" initial="true">
+		<MissionType>COLONIZATION</MissionType>
+		<MissionType>SUPPORT</MissionType>
+	<MinToMaintain>
+      <Amount stance="EXPANDING">0</Amount>
+      <Amount stance="ARMING">0</Amount>
+      <Amount stance="HUNKERING">0</Amount>
+      <Amount stance="CONQUERING">0</Amount>
+      <Amount stance="DESTROYING">0</Amount>
+      <Amount stance="DEFENDING">0</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1"  weaponRole="STAND_OFF" >COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="STAND_OFF"  >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="DISABLING" >GRAVBOAT</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="tarkas"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul" weaponRole="STAND_OFF"  >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >BORE</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="hiver"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="human"  weaponRole="STAND_OFF" >SUPPLY</Ship>	
+		
+		<Ship inclusion="REQUIRED" amount="3" faction="loa" weaponRole="STAND_OFF" >COLONIZER</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="hiver" weaponRole="STAND_OFF" >COLONIZER</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="human" weaponRole="STAND_OFF" >COLONIZER</Ship>		
+		<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="STAND_OFF" >COLONIZER</Ship>		
+		<Ship inclusion="REQUIRED" amount="1" faction="tarkas" weaponRole="STAND_OFF" >COLONIZER</Ship>		
+		<Ship inclusion="REQUIRED" amount="1" faction="liir_zuul" weaponRole="STAND_OFF" >COLONIZER</Ship>	
+		<Ship inclusion="REQUIRED" amount="1" faction="zuul" weaponRole="STAND_OFF" >COLONIZER</Ship>				
+		
+	</FleetTemplate>
+	
+	
+	<!-- Limited it to only being able to create new Lvl. 1 stations as it only has one CONSTRUCTOR except for Loa with only 2 -->
+	<!-- A full Large Construction fleet template is provided below for station upgrading -->
+	<FleetTemplate name="DEFAULT_CONSTRUCTION" fleetName="Construction Fleet" intial="true">
+			<MissionType>CONSTRUCT_STN</MissionType>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">0</Amount>
+      <Amount stance="ARMING">0</Amount>
+      <Amount stance="HUNKERING">0</Amount>
+      <Amount stance="CONQUERING">0</Amount>
+      <Amount stance="DESTROYING">0</Amount>
+      <Amount stance="DEFENDING">0</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1"  weaponRole="STAND_OFF" >COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="morrigi"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="morrigi"  weaponRole="DISABLING" >GRAVBOAT</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="tarkas"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="zuul"  weaponRole="STAND_OFF" >BORE</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="human"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="hiver"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+		
+		<Ship inclusion="REQUIRED" faction="loa" amount="2" weaponRole="STAND_OFF" >CONSTRUCTOR</Ship>
+		<Ship inclusion="REQUIRED" nfaction="loa" amount="1" weaponRole="STAND_OFF" >CONSTRUCTOR</Ship>
+	</FleetTemplate>
+	
+	
+
+	<FleetTemplate name="CONSTRUCTION" fleetName="Full Construction Fleet">
+		<MissionType>CONSTRUCT_STN</MissionType>
+		<MissionType>UPGRADE_STN</MissionType>
+		<StanceWeight stance="EXPANDING">15</StanceWeight>
+		<StanceWeight stance="CONQUERING">5</StanceWeight>
+		<StanceWeight stance="DESTROYING">5</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">2</Amount>
+      <Amount stance="ARMING">1</Amount>
+      <Amount stance="HUNKERING">1</Amount>
+      <Amount stance="CONQUERING">1</Amount>
+      <Amount stance="DESTROYING">1</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+	<Ship inclusion="REQUIRED" amount="1" weaponRole="STAND_OFF"  >COMMAND</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi" weaponRole="STAND_OFF"  >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="morrigi"  weaponRole="DISABLING" >GRAVBOAT</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="tarkas"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="liir_zuul" weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul" weaponRole="STAND_OFF"  >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="zuul" weaponRole="STAND_OFF" >BORE</Ship>
+	<Ship inclusion="REQUIRED" amount="2" faction="human"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="REQUIRED" amount="1" faction="hiver"  weaponRole="STAND_OFF" >SUPPLY</Ship>
+	<Ship inclusion="FILL" weaponRole="STAND_OFF" >CONSTRUCTOR</Ship>
+	</FleetTemplate>
+	
+
+	<!-- A large colonization fleet template to supplement the small starting one -->
+	<FleetTemplate name="COLONIZATION" fleetName="Full Colonization Fleet">
+		<MissionType>COLONIZATION</MissionType>
+		<MissionType>SUPPORT</MissionType>
+		<StanceWeight stance="EXPANDING">15</StanceWeight>
+		<StanceWeight stance="CONQUERING">5</StanceWeight>
+		<StanceWeight stance="DESTROYING">5</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="HUNKERING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">3</Amount>
+      <Amount stance="ARMING">2</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1" weaponRole="STAND_OFF" >COMMAND</Ship>
+		<Ship inclusion="REQUIRED" faction="human" amount="2" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="morriggi" amount="1" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="morrigi" amount="1" weaponRole="DISABLING" >GRAVBOAT</Ship>
+		<Ship inclusion="REQUIRED" faction="liir_zuul" amount="2" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="tarkas" amount="2" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="zuul" amount="1" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="zuul" amount="1" weaponRole="STAND_OFF" >BORE</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="hiver" weaponRole="STAND_OFF" >SUPPLY</Ship>
+		
+		<Ship inclusion="FILL" weaponRole="STAND_OFF" >COLONIZER</Ship>
+	</FleetTemplate>		
+	
+</FleetTemplates>
+
+

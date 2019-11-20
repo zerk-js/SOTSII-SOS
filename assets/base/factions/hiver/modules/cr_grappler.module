@@ -1,0 +1,73 @@
+<ShipModule>
+  <Module>@MODULETITLE_CR_GRAPPLER</Module>
+  <Description>@MODULEDESC_CR_GRAPPLER</Description>
+  <ModelFile>factions\hiver\models\modules\CR_grappler.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>factions\hiver\models\modules\CR_damaged.scene</DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <IconSprite>moduleicon_grappler</IconSprite>
+  <AmbientSound>
+  </AmbientSound>
+  <AssignByDefault>False</AssignByDefault>
+  <ModuleSize>Cruiser</ModuleSize>
+  <ModuleType>Cruiser</ModuleType>
+  <AbilityType>None</AbilityType>
+  <AbilitySupply>0</AbilitySupply>
+  <SavingsCost>1500</SavingsCost>
+  <UpkeepCost>0</UpkeepCost>
+  <ProductionCost>600</ProductionCost>
+  <Crew>12</Crew>
+  <CrewRequired>2</CrewRequired>
+  <Supply>12</Supply>
+  <Struct>20</Struct>
+  <StructDamagedAmount>0</StructDamagedAmount>
+  <StructBonus>0</StructBonus>
+  <ArmorBonus>0</ArmorBonus>
+  <PsionicPowerBonus>0</PsionicPowerBonus>
+  <ECCM>0</ECCM>
+  <ECM>0</ECM>
+  <SensorBonus>0</SensorBonus>
+  <MassBonus>0</MassBonus>
+  <CriticalHitBonus>0</CriticalHitBonus>
+  <AdmiralSurvivalBonus>0</AdmiralSurvivalBonus>
+  <Damage>0</Damage>
+  <Banks>
+    <Bank>
+      <Id>5165f94d-d170-4c77-bb94-cf01ee207185</Id>
+      <TurretSize>Heavy</TurretSize>
+      <TurretClass>Missile</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>144</FrameX>
+      <FrameY>16</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_heavy_01</NodeName>
+          <YawMin>-180</YawMin>
+          <YawMax>180</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        
+      </Mounts>
+    </Bank>
+  </Banks>
+  <RequiredTechs>
+    <Tech>
+      <Name>Group PD</Name>
+    </Tech>
+  </RequiredTechs>
+  <ExcludedSections />
+  <ExcludedTypes />
+  <Description>@MODULEDESC_CR_POINT_DEFENCE</Description>
+</ShipModule>

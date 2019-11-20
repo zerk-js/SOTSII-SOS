@@ -1,0 +1,194 @@
+<Faction ID="28" name="loa">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<CrewEfficiencyValue>1.0</CrewEfficiencyValue>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+	
+  <MaterialDictionary>factions\loa\materials.xml</MaterialDictionary>
+
+  <MinishipModel>factions\loa\models\Loa_MiniShip.scene</MinishipModel>
+
+  <TechTree>
+    <Model>Tech\Models\DRV_Loa.scene</Model>
+    <RootNode>DRV_Neutrino_Pulse_Accelerators</RootNode>
+  </TechTree>
+
+
+<InitialDesigns weaponbias="EWP">
+    <Design name="Armor">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Drone Carrier">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_dronecarrier"/>
+    </Design>
+    <Design name="Supply">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_supply"/>
+    </Design>
+    <Design name="Command">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair"/>
+    </Design>
+	-->
+    <Design name="Assimilator">
+      <Section name="cr_mis_assimilator"/>
+    </Design>
+    <Design name="Constructor">
+      <Section name="cr_mis_construction"/>
+    </Design>
+    <Design name="Assault Shuttle Carrier">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_carrier"/>
+    </Design>
+    <Design name="Boarding">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+    <Design name="Assault Shuttle">
+      <Section name="br_assaultshuttle"/>
+    </Design>
+  </InitialDesigns>
+  
+  <StratModifiers>
+	<RequiresSterileEnvironment>true</RequiresSterileEnvironment>
+	<MutableFleets>true</MutableFleets>
+	<ColonyStarvation>false</ColonyStarvation>
+    <MaxColonizableHazard>675</MaxColonizableHazard>
+    <MaxProvincePlanetRange>9.0</MaxProvincePlanetRange>
+    <PopulationGrowthModifier>0.8</PopulationGrowthModifier>
+    <TradeRangeModifier>2.0</TradeRangeModifier>
+    <AsteroidMonitorResearchModifier>2.0</AsteroidMonitorResearchModifier>
+    <OverharvestModifier>120.0</OverharvestModifier>
+    <ConstructionPointBonus>0.8</ConstructionPointBonus>
+    <PrototypeConstructionCostModifierPF>3.2</PrototypeConstructionCostModifierPF>
+    <PrototypeSavingsCostModifierPF>3.5</PrototypeSavingsCostModifierPF>
+    <PrototypeConstructionCostModifierCR>3.0</PrototypeConstructionCostModifierCR>
+    <PrototypeConstructionCostModifierDN>2.5</PrototypeConstructionCostModifierDN>
+    <PrototypeConstructionCostModifierLV>1.8</PrototypeConstructionCostModifierLV>
+    <PrototypeSavingsCostModifierCR>5.0</PrototypeSavingsCostModifierCR>
+    <PrototypeSavingsCostModifierDN>4.0</PrototypeSavingsCostModifierDN>
+    <PrototypeSavingsCostModifierLV>3.0</PrototypeSavingsCostModifierLV>
+    <DiplomacyReactionKillShips>-2</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-75</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>6</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-15</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-50</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>0</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-115</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-70</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>70</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>15</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>15</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>75</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>0</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>0</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>1</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>-1</DiplomacyReactionSmallerEmpire>
+	<DiplomacyDemandWeight>0.5</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>1.0</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="400"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="300"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="550"/>
+    <DefaultDiplomacyReaction faction="loa"       value="1000"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="1000"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="1000"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="1"/>    
+  </DefaultDiplomacyReactions>
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>0.5</PsiPowerPerCrew>
+  <EntryPointOffset>1500</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI-->
+  <ResearchRates>
+    <EXPANDING>0.6</EXPANDING>
+    <ARMING>0.7</ARMING>
+    <HUNKERING>0.7</HUNKERING>
+    <CONQUERING>0.6</CONQUERING>
+    <DESTROYING>0.6</DESTROYING>
+    <DEFENDING>0.6</DEFENDING>
+  </ResearchRates>
+
+  <!--Badges-->
+  <Badge texture="\base\factions\loa\badges\loa_badge_1.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_2.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_3.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_4.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_5.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_6.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_7.tga"/>
+  <Badge texture="\base\factions\loa\badges\loa_badge_8.tga"/>
+  
+
+
+  <NoAvatar texture="\base\factions\loa\avatars\Loa_off.tga"/>
+
+  <!--Avatars-->
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\loa\avatars\Loa_Avatar_08.tga"/>
+
+
+
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\loa\textures\splash\loa_councilchamber.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_diorama.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_foundry.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_hangar.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_lab.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_textilemill.tga"/>
+    <SplashScreen image="factions\loa\textures\splash\loa_walkabout_factory.tga"/>
+  </SplashScreens>
+
+
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineTarkasDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineTarkasDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineTarkasDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.5</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_LOA_" count="35"/>
+  <EmpireNames prefix="@EMPIRENAME_LOA_" count="16"/>
+
+</Faction>

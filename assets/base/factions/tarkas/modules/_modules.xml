@@ -1,0 +1,59 @@
+<ModuleList>
+  <Modules>
+
+	<Module File="factions/tarkas/modules/cr_grappler.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_psiwar.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_dancer.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_semperfi.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_joker.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_scotsman.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_caravan.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_bulwark.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_eng_bulwark.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_eng_GOOP.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_GOOP.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_camel.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_eng_camel.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_hannibal.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_hawkeye.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_karnak.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_point_defence.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_reflux.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_eng_auxfission.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/tarkas/modules/cr_eng_auxfusion.module" Type="Module" Class="Cruiser"/>
+
+
+    <Module File="factions/tarkas/modules/dn_biowar.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_GOOP.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_eng_GOOP.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_psiwar.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_bulwark.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_eng_bulwark.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_caravan.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_kingfisher.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_scotsman.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_semperfi.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_heavybeam.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_eng_heavybeam.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_reflux.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_auxfusion.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_torpedo.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/tarkas/modules/dn_hannibal.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/tarkas/modules/sn_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_heavy_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_medium_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_light_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_command.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_customs.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_dock.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_lab.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_sensor.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_terraform.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_warehouse.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_repair.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_habitation_tarkas.module" Type="Module" Class="Station"/>
+    <Module File="factions/tarkas/modules/sn_large_habitation_tarkas.module" Type="Module" Class="Station"/>
+
+  </Modules>
+</ModuleList>

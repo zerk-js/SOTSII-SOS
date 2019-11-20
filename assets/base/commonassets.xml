@@ -1,0 +1,2661 @@
+<CommonAssets>
+	<TechTree>
+		<Model>Tech\Models\EnergyWeapon.scene</Model>
+		<Model>Tech\Models\Torpedo.scene</Model>
+		<Model>Tech\Models\Energy.scene</Model>
+		<Model>Tech\Models\Warhead.scene</Model>
+		<Model>Tech\Models\Ballistic.scene</Model>
+		<Model>Tech\Models\Biotech.scene</Model>
+		<Model>Tech\Models\Industrial.scene</Model>
+		<Model>Tech\Models\CCC.scene</Model>
+		<Model>Tech\Models\PoliSci.scene</Model>
+		<!--<Model>Tech\Models\PSI.scene</Model>-->
+		<Model>Tech\Models\Engineering.scene</Model>
+		<Model>Tech\Models\Riders.scene</Model>
+		<Model>Tech\Models\Shield.scene</Model>
+
+
+		<RootNode>EWP_UV_Laser</RootNode>
+    <!--<RootNode>PSI_Wild_Talents</RootNode>-->
+		<RootNode>WAR_Fusion_Warhead</RootNode>
+		<RootNode>NRG_Fusion</RootNode>
+		<RootNode>SLD_Directed_Energy</RootNode>
+		<RootNode>BAL_Gauss_Cannons</RootNode>
+		<RootNode>BRD_Combat_Drones</RootNode>
+		<RootNode>CCC_FTL_Broadband</RootNode>
+		<RootNode>BIO_Terraforming_Bacteria</RootNode>
+		<RootNode>TRP_Torpedos</RootNode>
+		<RootNode>ENG_Cruiser_Construction</RootNode>
+		<RootNode>IND_Polysteel</RootNode>
+		<RootNode>POL_FTL_Administration</RootNode>
+	</TechTree>
+
+	<!-- NOTE: odds are only used if random/egg/gm is available with the players version.  If version not available, encounter will not be added -->
+	<EasterEggOdds>
+		<EE_INDEPENDENT>0</EE_INDEPENDENT>
+		<EE_GARDENERS>1</EE_GARDENERS>
+		<EE_ASTEROID_MONITOR>1</EE_ASTEROID_MONITOR>
+		<EE_MORRIGI_RELIC>1</EE_MORRIGI_RELIC>
+		<EE_SWARM>1</EE_SWARM>
+		<EE_VON_NEUMANN>1</EE_VON_NEUMANN>
+    <EE_PIRATE_BASE>1</EE_PIRATE_BASE>
+	</EasterEggOdds>
+	<RandomEncounterOdds>
+		<RE_ASTEROID_SHOWER>1</RE_ASTEROID_SHOWER>
+		<RE_GHOST_SHIP>1</RE_GHOST_SHIP>
+		<RE_SPECTORS>1</RE_SPECTORS>
+		<RE_SLAVERS>1</RE_SLAVERS>
+	</RandomEncounterOdds>
+	<GMOdds>
+		<GM_LOCUST_SWARM>1</GM_LOCUST_SWARM>
+		<GM_SYSTEM_KILLER>1</GM_SYSTEM_KILLER>
+		<GM_COMET>1</GM_COMET>
+		<GM_NEUTRON_STAR>1</GM_NEUTRON_STAR>
+		<GM_GARDENER>1</GM_GARDENER>
+	</GMOdds>
+
+	<Globals>
+		<!-- Sterile Environment population growth modifier. -->
+		<SterilizationIndex>10000</SterilizationIndex>
+		<!-- Replicant tech will take effect up until population reaches this value. -->
+		<ReplicantGrowthLimit>1000000</ReplicantGrowthLimit>
+		<!-- Native Population growth value will be multiplied by this value while system is open. -->
+		<OpenSystemNativeModifier>1.2</OpenSystemNativeModifier>
+		<!-- Same as above.. except with alien populations. -->
+		<OpenSystemAlienModifier>1.3</OpenSystemAlienModifier>
+		<!-- Initial value to add to infrastructure of planet. 0.0-1.0 -->
+		<AssimilatorInitialValue>0.1</AssimilatorInitialValue>
+		<!-- Burns x amount of biosphere off all planets in system per turn. -->
+		<SterileModuleBiosphereBonus>100.0</SterileModuleBiosphereBonus>
+	  <DefaultTacSensorRange>6000</DefaultTacSensorRange>
+	  <DefaultBRTacSensorRange>5500</DefaultBRTacSensorRange>
+		<DefaultPlanetTacSensorRange>15000</DefaultPlanetTacSensorRange>
+		<DefaultStratSensorRange>4</DefaultStratSensorRange>
+		<PolicePatrolRadius>4000</PolicePatrolRadius>
+		<RandomEncounterMinTurns>25</RandomEncounterMinTurns>
+		<RandomEncounterTurnsToResetOdds>2</RandomEncounterTurnsToResetOdds>
+		<RandomEncounterMinOdds>0</RandomEncounterMinOdds>
+		<RandomEncounterMaxOdds>1</RandomEncounterMaxOdds>
+		<RandomEncounterBaseOdds>0.1</RandomEncounterBaseOdds>
+		<RandomEncounterDecOddsCombat>0.4</RandomEncounterDecOddsCombat>
+		<RandomEncounterIncOddsIdle>0.2</RandomEncounterIncOddsIdle>
+		<RandomEncounterIncOddsRounds>0.1</RandomEncounterIncOddsRounds>
+		<RandomEncounterTurnsToExclude>10</RandomEncounterTurnsToExclude>
+		<RandomEncounterSinglePlayerOdds>0.02</RandomEncounterSinglePlayerOdds>
+		<LargeCombatThreshold>15</LargeCombatThreshold>
+		<InfrastructureSupplyRatio>0.5</InfrastructureSupplyRatio>
+		<PopulationNoise>0.01</PopulationNoise>
+    <CivilianPopulationTriggerAmount>8000</CivilianPopulationTriggerAmount>
+		<CivilianPopulationStartAmount>1000</CivilianPopulationStartAmount>
+		<CivilianPopulationStartMoral>50</CivilianPopulationStartMoral>
+		<DiplomacyPointsPerProvince>15</DiplomacyPointsPerProvince>
+		<DiplomacyPointsPerStation1>5</DiplomacyPointsPerStation1>
+		<DiplomacyPointsPerStation2>10</DiplomacyPointsPerStation2>
+		<DiplomacyPointsPerStation3>15</DiplomacyPointsPerStation3>
+		<DiplomacyPointsPerStation4>25</DiplomacyPointsPerStation4>
+		<DiplomacyPointsPerStation5>50</DiplomacyPointsPerStation5>
+		<GlobalProductionModifier>1.0</GlobalProductionModifier>
+		<StationSupportRangeModifier>2.0</StationSupportRangeModifier>
+		<ColonySupportCostFactor>1.0</ColonySupportCostFactor>
+		<BaseCorruptionRate>0.20</BaseCorruptionRate>
+		<EvacuationCivPerCol>1000000</EvacuationCivPerCol>
+		<MaxGovernmentShift>100</MaxGovernmentShift>
+		<GrandMenaceMinTurn>100</GrandMenaceMinTurn>
+		<GrandMenaceChance>5</GrandMenaceChance>
+    <SwarmerData>
+      <GrowthRateLarvaSpawn>15</GrowthRateLarvaSpawn>
+      <GrowthRateQueenSpawn>3</GrowthRateQueenSpawn>
+      <NumHiveSwarmers>30</NumHiveSwarmers>
+      <NumHiveGuardians>5</NumHiveGuardians>
+      <NumQueenSwarmers>45</NumQueenSwarmers>
+      <NumQueenGuardians>10</NumQueenGuardians>
+    </SwarmerData>
+		<MeteorShowerData>
+			<MeteorShowerMinMeteors>20</MeteorShowerMinMeteors>
+			<MeteorShowerMaxMeteors>30</MeteorShowerMaxMeteors>
+			<MeteorShowerLargeMeteorChance>70</MeteorShowerLargeMeteorChance>
+			<NumBreakoffMeteors>5</NumBreakoffMeteors>
+			<SmallMeteorData crew="0" population="1000000" infra=".01" tera="0" resources="50" />
+			<MediumMeteorData crew="0" population="10000000" infra=".03" tera="5" resources="50" />
+			<LargeMeteorData crew="0" population="50000000" infra=".05" tera="30" resources="50" />
+		</MeteorShowerData>
+		<CometData>
+			<CometDamage crew="0" population="1000000000" infra=".75" tera="150"/>
+		</CometData>
+		<NeutronStarData>
+			<StarSpeed>2</StarSpeed>
+			<GravityAffectRange>5</GravityAffectRange>
+			<MeteorRatio>70</MeteorRatio>
+			<MaxMeteorIntensity>2</MaxMeteorIntensity>
+		</NeutronStarData>
+		<SuperNovaData>
+			<MinTurns>100</MinTurns>
+			<Chance>5</Chance>
+			<BlastRadius>7</BlastRadius>
+			<MinExplodeTurns>5</MinExplodeTurns>
+			<MaxExplodeTurns>10</MaxExplodeTurns>
+			<SystemInRangeBioReduction>50</SystemInRangeBioReduction>
+			<SystemInRangeMinHazard>50</SystemInRangeMinHazard>
+			<SystemInRangeMaxHazard>200</SystemInRangeMaxHazard>
+		</SuperNovaData>
+		<SlaverData>
+			<SlaverMinAbductors>2</SlaverMinAbductors>
+			<SlaverMaxAbductors>5</SlaverMaxAbductors>
+			<SlaverMinScavengers>1</SlaverMinScavengers>
+			<SlaverMaxScavengers>3</SlaverMaxScavengers>
+		</SlaverData>
+		<SpectreData>
+			<SpectreMinSpectres>4</SpectreMinSpectres>
+			<SpectreMaxSpectres>12</SpectreMaxSpectres>
+			<SmallSpectreDamage crew="2" population="15000" infra="0" tera="0"/>
+			<MediumSpectreDamage crew="5" population="70000" infra="0" tera="0"/>
+			<LargeSpectreDamage crew="15" population="550000" infra="0" tera="0"/>
+		</SpectreData>
+		<AsteroidMonitorData>
+			<AsteroidMonitorNumMonitors>10</AsteroidMonitorNumMonitors>
+		</AsteroidMonitorData>
+		<MorrigiRelicData>
+			<NumCrowFighters>50</NumCrowFighters>
+			<NumTombs>3</NumTombs>
+			<CapturedResearchBonus percent="10" turns="5" />
+			<DestroyedResearchBonus percent="10" turns="1" />
+			<Rewards>
+				<Pristine1>50000</Pristine1>
+				<Stealth1>50000</Stealth1>
+				<Pristine2>50000</Pristine2>
+				<Stealth2>50000</Stealth2>
+				<Pristine3>50000</Pristine3>
+				<Stealth3>50000</Stealth3>
+				<Pristine4>50000</Pristine4>
+				<Stealth4>50000</Stealth4>
+				<Pristine5>50000</Pristine5>
+				<Stealth5>50000</Stealth5>
+			</Rewards>
+		</MorrigiRelicData>
+		<GardenerData>
+			<ProteanMinPlanets>3</ProteanMinPlanets>
+			<ProteanMinBiosphere>10000</ProteanMinBiosphere>
+			<ProteanMaxBiosphere>15000</ProteanMaxBiosphere>
+			<ProteanCatchUpDelay>2</ProteanCatchUpDelay>
+			<ProteanMobMin>5</ProteanMobMin>
+			<ProteanMobMax>10</ProteanMobMax>
+			<Terraform>1.0</Terraform>
+			<BiosphereDamage>-0.5</BiosphereDamage>
+		</GardenerData>
+		<VonNeumannData>
+			<VonNeumannStartingResources>100</VonNeumannStartingResources>
+			<VonNeumannBuildRate>1000</VonNeumannBuildRate>
+			<VonNeumannSalvageCapacity>500</VonNeumannSalvageCapacity>
+			<VonNeumannSalvageCycle>10</VonNeumannSalvageCycle>
+			<VonNeumannTargetCycle>10</VonNeumannTargetCycle>
+			<!-- VN Combat AI Variables -->
+			<MomRUCost>5000</MomRUCost>
+			<BerserkerRUCost>31250</BerserkerRUCost>
+			<ChildRUCost>400</ChildRUCost>
+			<ChildRUCarryCap>200</ChildRUCarryCap>
+			<MinChildrenToMaintain>2</MinChildrenToMaintain>
+			<NumSatelitesPerChild>4</NumSatelitesPerChild>
+			<NumShipsPerChild>2</NumShipsPerChild>
+			<ChildIntegrationTime>2.0</ChildIntegrationTime>
+			<RUTransferRateShip>480.0</RUTransferRateShip>
+			<RUTransferRatePlanet>80.0</RUTransferRatePlanet>
+		</VonNeumannData>
+
+		<Locust>
+			<MaxDrones>250</MaxDrones>
+			<MaxCombatDrones>50</MaxCombatDrones>
+			<MaxMoonCombatDrones>25</MaxMoonCombatDrones>
+			<DroneCost>10</DroneCost>
+			<NumToLand>20</NumToLand>
+			<MinResourceSpawnAmount>20000</MinResourceSpawnAmount>
+			<MaxSalvageRate>10000</MaxSalvageRate>
+			<InitialLocustScouts>4</InitialLocustScouts>
+			<MinLocustScouts>2</MinLocustScouts>
+			<LocustScoutCost>2500</LocustScoutCost>
+			<LocustMotherCost>5000</LocustMotherCost>
+		</Locust>
+
+		<AIRebellionChance>0.02</AIRebellionChance>
+		<AIRebellionColonyPercent>0.25</AIRebellionColonyPercent>
+		<EncounterMinStartDistance>2000</EncounterMinStartDistance>
+		<EncounterMaxStartDistance>100000</EncounterMaxStartDistance>
+		<InterceptThreshold>0.10</InterceptThreshold>
+    <PiracyBounties>
+    <PiracyBaseOdds>0.02</PiracyBaseOdds>
+      <PiracyBaseMod>0.35</PiracyBaseMod>
+    <PiracyModPolice>-0.01</PiracyModPolice>
+    <PiracyModNavalBase>-0.02</PiracyModNavalBase>
+    <PiracyModNoNavalBase>0.02</PiracyModNoNavalBase>
+    <PiracyModZuulProximity>0.02</PiracyModZuulProximity>
+    <PiracyMinZuulProximity>10</PiracyMinZuulProximity>
+    <PiracyMinShips>1</PiracyMinShips>
+    <PiracyMaxShips>5</PiracyMaxShips>
+      <PiracyMinBaseShips>5</PiracyMinBaseShips>
+      <PiracyTotalMaxShips>20</PiracyTotalMaxShips>
+      <PiracyBaseRange>10</PiracyBaseRange>
+      <PiracyBaseShipBonus>2</PiracyBaseShipBonus>
+      <PiracyBaseTurnsPerUpdate>5</PiracyBaseTurnsPerUpdate>
+      <PiracyBaseTurnShipBonus>1</PiracyBaseTurnShipBonus>
+      <PirateBaseDestroyed>200000</PirateBaseDestroyed>
+			<PirateShipDestroyed>10000</PirateShipDestroyed>
+			<FreighterDestroyed>25000</FreighterDestroyed>
+			<FreighterCaptured>50000</FreighterCaptured>
+      <RelationBonusFromBase>
+        <Bonus faction="human" value="50" />
+        <Bonus faction="hiver" value="50" />
+        <Bonus faction="liir_zuul" value="50" />
+        <Bonus faction="morrigi" value="50" />
+        <Bonus faction="tarkas" value="50" />
+        <Bonus faction="zuul" value="-50" />
+        <Bonus faction="loa" value="50" />
+      </RelationBonusFromBase>
+		</PiracyBounties>
+		<TradePointsPerFreighterFleet>1</TradePointsPerFreighterFleet>
+		<PopulationPerTradePoint>200000000</PopulationPerTradePoint>
+    <IncomePerInternationalTradePointMoved>35000</IncomePerInternationalTradePointMoved>
+    <IncomePerProvincialTradePointMoved>25000</IncomePerProvincialTradePointMoved>
+    <IncomePerGenericTradePointMoved>15000</IncomePerGenericTradePointMoved>
+		<TaxDivider>60000</TaxDivider>
+    <HomeworldTaxBonusMod>2.0</HomeworldTaxBonusMod>
+    <MaxDebtMultiplier>15</MaxDebtMultiplier>
+		<BankruptcyTurns>10</BankruptcyTurns>
+		<ProvinceTradeModifier>1.25</ProvinceTradeModifier>
+		<EmpireTradeModifier>1.50</EmpireTradeModifier>
+		<CitizensPerImmigrationPoint>10000</CitizensPerImmigrationPoint>
+		<MoralBonusPerPoliceShip>1</MoralBonusPerPoliceShip>
+		<PopulationPerPlanetBeam>150000000</PopulationPerPlanetBeam>
+		<PopulationPerPlanetMirv>200000000</PopulationPerPlanetMirv>
+		<PopulationPerPlanetMissile>100000000</PopulationPerPlanetMissile>
+		<PopulationPerHeavyPlanetMissile>200000000</PopulationPerHeavyPlanetMissile>
+		<PlanetMissileLaunchDelay>1.0</PlanetMissileLaunchDelay>
+		<PlanetBeamLaunchDelay>1.0</PlanetBeamLaunchDelay>
+		<ForgeWorldImpMaxBonus>2.0</ForgeWorldImpMaxBonus>
+		<ForgeWorldIOBonus>2.0</ForgeWorldIOBonus>
+		<GemWorldCivMaxBonus>5.0</GemWorldCivMaxBonus>
+		<SuperWorldSizeConstraint>9</SuperWorldSizeConstraint>
+		<SuperWorldModifier>3.0</SuperWorldModifier>
+		<MaxOverharvestRate>0.10</MaxOverharvestRate>
+		<RandomEncOddsPerOrbital>0.05</RandomEncOddsPerOrbital>
+		<SecurityPointCost>50000</SecurityPointCost>
+		<RequiredIntelPointsForMission>50</RequiredIntelPointsForMission>
+		<RequiredCounterIntelPointsForMission>50</RequiredCounterIntelPointsForMission>
+		<ColonyFleetSupportPoints>6</ColonyFleetSupportPoints>
+		<StationLvl1FleetSupportPoints>15</StationLvl1FleetSupportPoints>
+		<StationLvl2FleetSupportPoints>30</StationLvl2FleetSupportPoints>
+		<StationLvl3FleetSupportPoints>45</StationLvl3FleetSupportPoints>
+		<StationLvl4FleetSupportPoints>70</StationLvl4FleetSupportPoints>
+		<StationLvl5FleetSupportPoints>110</StationLvl5FleetSupportPoints>
+		<RelationsGoodThreshold>10</RelationsGoodThreshold>
+		<RelationsBadThreshold>-10</RelationsBadThreshold>
+		<RelationsChangeWar>-50</RelationsChangeWar>
+		<MinSlaveDeathRate>0.10</MinSlaveDeathRate>
+		<MaxSlaveDeathRate>0.20</MaxSlaveDeathRate>
+		<ImperialProductionMultiplier>3.0</ImperialProductionMultiplier>
+		<SlaveProductionMultiplier>15.0</SlaveProductionMultiplier>
+		<CivilianProductionMultiplier>0.8</CivilianProductionMultiplier>
+		<CivilianPopulationGrowthRateMod>0.5</CivilianPopulationGrowthRateMod>
+		<MiningStationIOBonus>500</MiningStationIOBonus>
+		<FlockMaxBonus>3.0</FlockMaxBonus>
+		<FlockBRBonus>0</FlockBRBonus>
+		<FlockCRBonus>0.1</FlockCRBonus>
+		<FlockDNBonus>0.3</FlockDNBonus>
+		<FlockLVBonus>0.5</FlockLVBonus>
+    <FlockBRCountBonus>0</FlockBRCountBonus>
+    <FlockCRCountBonus>6</FlockCRCountBonus>
+    <FlockDNCountBonus>3</FlockDNCountBonus>
+    <FlockLVCountBonus>2</FlockLVCountBonus>
+
+		<DeclareWarPointCost>50</DeclareWarPointCost>
+
+		<RequestResearchPointCost>100</RequestResearchPointCost>
+		<RequestMilitaryAssistancePointCost>150</RequestMilitaryAssistancePointCost>
+		<RequestGatePointCost>125</RequestGatePointCost>
+		<RequestEnclavePointCost>400</RequestEnclavePointCost>
+		<RequestSystemInfoPointCost>75</RequestSystemInfoPointCost>
+		<RequestSavingsPointCost>100</RequestSavingsPointCost>
+
+		<DemandSavingsPointCost>50</DemandSavingsPointCost>
+		<DemandResearchPointCost>50</DemandResearchPointCost>
+		<DemandSystemInfoPointCost>25</DemandSystemInfoPointCost>
+		<DemandSlavesPointCost>30</DemandSlavesPointCost>
+		<DemandSystemPointCost>150</DemandSystemPointCost>
+		<DemandProvincePointCost>250</DemandProvincePointCost>
+		<DemandEmpirePointCost>500</DemandEmpirePointCost>
+
+		<TreatyArmisticeWarNeutralPointCost>100</TreatyArmisticeWarNeutralPointCost>
+		<TreatyArmisticeNeutralCeasefirePointCost>150</TreatyArmisticeNeutralCeasefirePointCost>
+		<TreatyArmisticeNeutralNonAggroPointCost>250</TreatyArmisticeNeutralNonAggroPointCost>
+		<TreatyArmisticeCeaseFireNonAggroPointCost>100</TreatyArmisticeCeaseFireNonAggroPointCost>
+		<TreatyArmisticeCeaseFirePeacePointCost>300</TreatyArmisticeCeaseFirePeacePointCost>
+		<TreatyArmisticeNonAggroPeaceCost>400</TreatyArmisticeNonAggroPeaceCost>
+
+		<TreatyTradePointCost>300</TreatyTradePointCost>
+		<TreatyIncorporatePointCost>350</TreatyIncorporatePointCost>
+		<TreatyProtectoratePointCost>200</TreatyProtectoratePointCost>
+
+		<TreatyLimitationShipClassPointCost>100</TreatyLimitationShipClassPointCost>
+		<TreatyLimitationFleetsPointCost>75</TreatyLimitationFleetsPointCost>
+		<TreatyLimitationWeaponsPointCost>150</TreatyLimitationWeaponsPointCost>
+		<TreatyLimitationResearchTechPointCost>200</TreatyLimitationResearchTechPointCost>
+		<TreatyLimitationResearchTreePointCost>200</TreatyLimitationResearchTreePointCost>
+		<TreatyLimitationColoniesPointCost>200</TreatyLimitationColoniesPointCost>
+		<TreatyLimitationForgeGemWorldsPointCost>150</TreatyLimitationForgeGemWorldsPointCost>
+		<TreatyLimitationStationType>150</TreatyLimitationStationType>
+
+		<StimulusColonizationBonus>10000</StimulusColonizationBonus>
+
+		<StimulusMiningMin>200000</StimulusMiningMin>
+		<StimulusMiningMax>700000</StimulusMiningMax>
+    <StimulusColonizationMin>350000</StimulusColonizationMin>
+		<StimulusColonizationMax>1200000</StimulusColonizationMax>
+    <StimulusTradeMin>45000</StimulusTradeMin>
+		<StimulusTradeMax>150000</StimulusTradeMax>
+
+		<PopulationPerStation>750000000</PopulationPerStation>
+
+		<MaxLoaCubesOnBuild>60000</MaxLoaCubesOnBuild>
+		<MinLoaCubesOnBuild>10000</MinLoaCubesOnBuild>
+
+    <LoaCubeCostPer>18</LoaCubeCostPer>
+
+	<LoaDistanceBetweenGates>5.0</LoaDistanceBetweenGates>
+    <LoaBaseMaxMass>70000</LoaBaseMaxMass>
+    <LoaMassStandingPulseWavesMaxMass>150000</LoaMassStandingPulseWavesMaxMass>
+    <LoaMassInductionProjectorsMaxMass>300000</LoaMassInductionProjectorsMaxMass>
+    <LoaGateSystemMargin>1.0</LoaGateSystemMargin>
+    <LoaTechModMod>0.8</LoaTechModMod>
+
+  
+	<!-- Old/default values. Modified below to match slider bar/UI 
+		<PieChartColourShipMaintenance>0,0.282353,0.411765</PieChartColourShipMaintenance>
+		<PieChartColourPlanetaryDevelopment>0.168627,0.682353,1</PieChartColourPlanetaryDevelopment>
+		<PieChartColourDebtInterest>1,0,0</PieChartColourDebtInterest>
+		<PieChartColourResearch>0.447059,0,0.466666</PieChartColourResearch>
+		<PieChartColourSecurity>0.494118,0.560784,0.525490</PieChartColourSecurity> 
+		<PieChartColourStimulus>1,0.705882,0</PieChartColourStimulus>
+		<PieChartColourSavings>0.054902,0.501961,0.035294</PieChartColourSavings>
+		<PieChartColourCorruption>0,0,0</PieChartColourCorruption>
+	-->
+		<PieChartColourShipMaintenance>0,0.282353,0.411765</PieChartColourShipMaintenance>
+		<PieChartColourPlanetaryDevelopment>0.168627,0.682353,1</PieChartColourPlanetaryDevelopment>
+		<PieChartColourDebtInterest>1,0,0</PieChartColourDebtInterest>
+		<PieChartColourResearch>0.72157,0.2756,0.7383</PieChartColourResearch> <!-- purple -->
+		<PieChartColourSecurity>0.494118,0.560784,0.525490</PieChartColourSecurity> <!-- grey -->
+		<PieChartColourStimulus>1,1,0</PieChartColourStimulus> <!-- was gold, now yellow -->
+		<PieChartColourSavings>0,1,0</PieChartColourSavings> <!-- was dark green, now green -->
+		<PieChartColourCorruption>0,0,0</PieChartColourCorruption>
+		
+		
+		
+		<WeaponAccumulatedKnowledgePerBattleMin>50</WeaponAccumulatedKnowledgePerBattleMin>
+		<WeaponAccumulatedKnowledgePerBattleMax>100</WeaponAccumulatedKnowledgePerBattleMax>
+
+		<UpkeepBattleRider>0</UpkeepBattleRider>
+		<UpkeepCruiser>5000</UpkeepCruiser>
+		<UpkeepDreadnaught>15000</UpkeepDreadnaught>
+		<UpkeepLeviathan>75000</UpkeepLeviathan>
+		<UpkeepDefensePlatform>2000</UpkeepDefensePlatform>
+		<UpkeepScience1>6000</UpkeepScience1>
+		<UpkeepScience2>12000</UpkeepScience2>
+		<UpkeepScience3>30000</UpkeepScience3>
+		<UpkeepScience4>60000</UpkeepScience4>
+		<UpkeepScience5>150000</UpkeepScience5>
+		<UpkeepNaval1>15000</UpkeepNaval1>
+		<UpkeepNaval2>30000</UpkeepNaval2>
+		<UpkeepNaval3>95000</UpkeepNaval3>
+		<UpkeepNaval4>150000</UpkeepNaval4>
+		<UpkeepNaval5>400000</UpkeepNaval5>
+		<UpkeepDiplomatic1>4000</UpkeepDiplomatic1>
+		<UpkeepDiplomatic2>8000</UpkeepDiplomatic2>
+		<UpkeepDiplomatic3>16000</UpkeepDiplomatic3>
+		<UpkeepDiplomatic4>50000</UpkeepDiplomatic4>
+		<UpkeepDiplomatic5>150000</UpkeepDiplomatic5>
+		<UpkeepCivilian1>2000</UpkeepCivilian1>
+		<UpkeepCivilian2>4000</UpkeepCivilian2>
+		<UpkeepCivilian3>10000</UpkeepCivilian3>
+		<UpkeepCivilian4>20000</UpkeepCivilian4>
+		<UpkeepCivilian5>50000</UpkeepCivilian5>
+		<UpkeepGate1>8000</UpkeepGate1>
+		<UpkeepGate2>16000</UpkeepGate2>
+		<UpkeepGate3>40000</UpkeepGate3>
+		<UpkeepGate4>80000</UpkeepGate4>
+		<UpkeepGate5>200000</UpkeepGate5>
+    
+    <!--empire default colors | There needs to be exactly 10 color entries, or they wont be used -->
+    <BaseEmpireColors>
+      <Color value="1,0,0" />
+      <Color value="1,1,0" />
+      <Color value="0,0,1" />
+      <Color value="0.7098,0,1" />
+      <Color value="1,0.4902,0" />
+      <Color value="0,1,0" />
+      <Color value="0,1,1" />
+      <Color value="0.79607,0.56078,0.40784" />
+      <Color value="0.10196,0.52941,0.45098" />
+      <Color value="2.2222,0.1765,0.5098" />
+    </BaseEmpireColors>
+
+	
+	
+    <!-- the strat range from a system to detect nearby systems for entry point display -->
+		<StarSystemEntryPointRange>12.0</StarSystemEntryPointRange>
+
+		<!-- The tactical signature reduction bonus for ships with stealth armor -->
+		<TacStealthArmorSignature>50</TacStealthArmorSignature>
+
+		<!-- slew mode exit range is the range the ship will exit slew mode-->
+		<SlewModeExitRange>9000</SlewModeExitRange>
+
+		<!-- slew mode enter offset is the range that all enemy ships must be outside all friendly sensor ranges 
+    (eg: + sensorRange = 10000, enterOffset = 2000, will go into slew mode when ships are greater than 12000m appart)
+    (eg: - sensorRange = 10000, enterOffset = -2000, will go into slew mode when ships are greater than 8000m appart, NOTE
+          NOTE: ships the min distance is 2000 + SlewModeExitRange so example 2 will go into slew mode at 10000m-->
+		<SlewModeEnterOffset>2000</SlewModeEnterOffset>
+
+		<SlewModeMultiplier>30</SlewModeMultiplier>
+		<SlewModeDecelMultiplier>90</SlewModeDecelMultiplier>
+
+		<!-- sn value is a base and snlvloffset is a value to increase the distance depending on the station's level (eg: lvl 1 is sn, lvl 2 is sn + snlvloffset) -->
+	  <SpotterRangeTable br="1000" cr="5500" dn="8000" lv="13000" sn="3000" snlvloffset="3000"/>
+
+		<MineField>
+			<Width>4000</Width>
+			<Length>4000</Length>
+			<Height>0</Height>
+    <SpacingOffset>800</SpacingOffset>
+		</MineField>
+
+		<SpecialProjectData>
+			<MinimumIndyInvestigate>35000</MinimumIndyInvestigate>
+			<MaximumIndyInvestigate>60000</MaximumIndyInvestigate>
+			<MinimumAsteroidMonitorStudy>50000</MinimumAsteroidMonitorStudy>
+			<MaximumAsteroidMonitorStudy>50000</MaximumAsteroidMonitorStudy>
+			<MinimumRadiationShieldingStudy>500</MinimumRadiationShieldingStudy>
+			<MaximumRadiationShieldingStudy>500</MaximumRadiationShieldingStudy>
+			<MinimumNeutronStarStudy>500</MinimumNeutronStarStudy>
+			<MaximumNeutronStarStudy>500</MaximumNeutronStarStudy>
+			<MinimumGardenerStudy>500</MinimumGardenerStudy>
+			<MaximumGardenerStudy>500</MaximumGardenerStudy>
+		</SpecialProjectData>
+
+		<!-- cost of 0 means the game will use the ships command point cost in the defense manager-->
+		<DefenseManagerSettings>
+			<SDBCPCost>3</SDBCPCost>
+			<MineLayerCPCost>2</MineLayerCPCost>
+			<PoliceCPCost>1</PoliceCPCost>
+			<ScanSatCPCost>1</ScanSatCPCost>
+			<DroneSatCPCost>1</DroneSatCPCost>
+			<TorpSatCPCost>1</TorpSatCPCost>
+			<BRSatCPCost>3</BRSatCPCost>
+			<MonitorSatCPCost>6</MonitorSatCPCost>
+      <MissileSatCPCost>1</MissileSatCPCost>
+		</DefenseManagerSettings>
+
+		<!-- Crit Hit Percentages
+          type = enum associated with crit hit (do not change as they are specifically named)
+          com = percent chance of crit hit on COMMAND section, "0" means no chance
+          mis = percent chance of crit hit on MISSION section, "0" means no chance
+          eng = percent chance of crit hit on ENGINE section, "0" means no chance 
+		  sn = percent chance of crit hit on STATIONS, "0" means no chance
+          -->
+		<CritHitPercentages>
+			<CritHit type="CrewDeath"           cmd="1"	 mis="2"		eng="1"		sn="1"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="0"/>
+			<!--Any-->
+			<CritHit type="CoolantSystem"       cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="0"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="ReactorCoolantLeak"  cmd="0"	 mis="0"		eng="1"		sn="0"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="1"/>
+			<!--Engine-->
+			<CritHit type="AmmoConveyor"        cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="Scanners"            cmd="1"	 mis="0"		eng="0"		sn="0"	monster="1"   loa_cmd="0"  loa_mis="0"  loa_eng="0"/>
+			<!--Command-->
+			<CritHit type="ECM"                 cmd="1"	 mis="0"		eng="0"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="0"  loa_eng="0"/>
+			<!--Command-->
+			<CritHit type="ReactorShielding"    cmd="0"	 mis="0"		eng="1"		sn="0"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="2"/>
+			<!--Engine-->
+			<CritHit type="TurretFailure"       cmd="1"	 mis="1"		eng="1"		sn="1"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="ModuleFailure"	      cmd="1"	 mis="1"		eng="1"		sn="1"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Station-->
+			<CritHit type="MagazineExplosion"   cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="CapacitorBreach"     cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="2"  loa_mis="2"  loa_eng="2"/>
+			<!--Any-->
+			<CritHit type="TurretMalfunction"   cmd="2"	 mis="2"		eng="2"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="SupplyHit"           cmd="2"	 mis="5"		eng="2"		sn="0"	monster="0"   loa_cmd="0"  loa_mis="1"  loa_eng="0"/>
+			<!--Any-->
+			<CritHit type="TurretHydrolics"     cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="1"/>
+			<!--Any-->
+			<CritHit type="RotThrusters"        cmd="1"	 mis="0"		eng="0"		sn="1"	monster="0"   loa_cmd="1"  loa_mis="0"  loa_eng="0"/>
+			<!--Command-->
+			<CritHit type="MainThrusters"       cmd="0"	 mis="0"		eng="1"		sn="1"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="1"/>
+			<!--Engine-->
+			<CritHit type="HelmControls"        cmd="1"	 mis="0"		eng="0"		sn="0"	monster="0"   loa_cmd="1"  loa_mis="1"  loa_eng="0"/>
+			<!--Command-->
+			<CritHit type="LifeSupport"         cmd="1"	 mis="1"		eng="1"		sn="0"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="0"/>
+			<!--Any-->
+			<CritHit type="ShieldGenerator"     cmd="1"	 mis="0"		eng="0"		sn="0"	monster="1"   loa_cmd="0"  loa_mis="0"  loa_eng="0"/>
+			<!--Any-->
+			<CritHit type="TwoTimesDamage"      cmd="5"      mis="5"	        eng="5  "	sn="20"	monster="10"  loa_cmd="10" loa_mis="10" loa_eng="10"/>
+			<!--Any-->
+			<CritHit type="ThreeTimesDamage"    cmd="5"	 mis="7"		eng="7"		sn="10"	monster="3"   loa_cmd="5"  loa_mis="10" loa_eng="5"/>
+			<!--Any-->
+			<CritHit type="FiveTimesDamage"     cmd="2"	 mis="3"		eng="5"		sn="3"	monster="1"   loa_cmd="3"  loa_mis="3"  loa_eng="3"/>
+			<!--Any-->
+			<CritHit type="TenTimesDamage"      cmd="0"	 mis="0"		eng="1"		sn="1"	monster="1"   loa_cmd="0"  loa_mis="1"  loa_eng="1"/>
+			<!--Station-->
+			<CritHit type="TwentyTimesDamage"   cmd="0"	 mis="0"		eng="0"		sn="1"	monster="0"   loa_cmd="0"  loa_mis="0"  loa_eng="0"/>
+			<!--Station-->
+		</CritHitPercentages>
+
+
+		<MiniShips>
+			<MiniShip type="human"            location="props\ui\miniship_human.scene" />
+			<MiniShip type="hiver"            location="props\ui\miniship_hiver.scene" />
+			<MiniShip type="liir_zuul"        location="props\ui\miniship_liir.scene" />
+			<MiniShip type="morrigi"          location="props\ui\miniship_morrigi.scene" />
+			<MiniShip type="tarkas"           location="props\ui\miniship_tarka.scene" />
+			<MiniShip type="zuul"             location="props\ui\miniship_zuul.scene" />
+			<MiniShip type="systemkiller"     location="props\ui\miniship_systemkiller.scene" />
+			<MiniShip type="neutronstar"      location="props\ui\miniship_neutron.scene" />
+			<MiniShip type="indy_a"           location="props\ui\miniship_planet.scene" />
+			<MiniShip type="indy_b"           location="props\ui\miniship_planet.scene" />
+			<MiniShip type="locust_world"     location="props\ui\miniship_locust.scene" />
+			<MiniShip type="locust_moon"      location="props\ui\miniship_locust.scene" />
+			<MiniShip type="slavers"          location="props\ui\miniship_slavers.scene" />
+			<MiniShip type="swarm"            location="props\ui\miniship_swarm.scene" />
+			<MiniShip type="vonneumann"       location="props\ui\miniship_planet.scene" />
+			<MiniShip type="loa"              location="factions\loa\models\Loa_MiniShip.scene" />
+			<MiniShip type="loa_gate"         location="factions\loa\models\Loa_Gate_MiniShip.scene" />
+			<MiniShip type="gardener"         location="props\ui\miniship_gardener.scene" />
+		</MiniShips>
+	
+</Globals>
+
+	<MaterialDictionary>\base\materials.xml</MaterialDictionary>
+	<MaterialDictionary>\base\sky\materials.xml</MaterialDictionary>
+	<MaterialDictionary>\base\effects\materials.xml</MaterialDictionary>
+	<MaterialDictionary>\base\props\materials.xml</MaterialDictionary>
+	<MaterialDictionary>\base\Tech\materials.xml</MaterialDictionary>
+	<MaterialDictionary>\eof\Tech\materials.xml</MaterialDictionary>
+
+	<sky material="Blackspace" usage="InSystem"/>
+
+	<sky material="Starmap" usage="StarMap"/>
+	<sky material="Galaxy" usage="InSystem"/>
+	<sky material="Bluenova" usage="InSystem"/>
+	<sky material="Starmap" usage="InSystem"/>
+	<sky material="Shockwave" usage="InSystem"/>
+	<sky material="Blackspace" usage="InSystem"/>
+	<sky material="Redhole" usage="InSystem"/>
+	<sky material="Milkyway Orange Sky" usage="InSystem"/>
+	<sky material="Milkyway Amber" usage="InSystem"/>
+	<sky material="MilkyWayRainbowSky" usage="InSystem"/>
+	<sky material="Supernova" usage="InSystem"/>
+
+
+	<sky material="Techtree" usage="Research"/>
+
+	<sky material="Design" usage="Design"/>
+
+
+	<SplashScreens>
+		<!-- splash screens not affiliated with factions go here -->
+		<!--<SplashScreen image=""/>-->
+
+	</SplashScreens>
+
+	<planets>
+
+
+
+		<!-- atmo params are referenced by name in the planet type descriptions that follow -->
+		<atmo name="earthy"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0003"
+		  filter="0.75,0.57,0.475"
+		  clouddiffuse="props\textures\Earth_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Clouds_Specular.tga"
+		  clouddiffusecolor="1,1,1"
+		  cloudspecularcolor="1,1,1"
+		  cloudcover="1" />
+
+		<atmo name="noclouds"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.75,0.57,0.475"
+		  clouddiffuse="props\textures\Earth_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Clouds_Specular.tga"
+		  clouddiffusecolor="1,1,1"
+		  cloudspecularcolor="1,1,1"
+		  cloudcover="0.3" />
+
+		<atmo name="thickclouds"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.75,0.57,0.475"
+		  clouddiffuse="props\textures\Earth_Thick_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Thick_Clouds_Specular.tga"
+		  clouddiffusecolor="1,1,1"
+		  cloudspecularcolor="1,1,1"
+		  cloudcover="1" />
+
+		<atmo name="Toxic_thickclouds"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.3,0.57,0.9"
+		  clouddiffuse="props\textures\Earth_Thick_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Thick_Clouds_Specular.tga"
+		  clouddiffusecolor="1,.7,.2"
+		  cloudspecularcolor="1,.6,.1"
+		  cloudcover="1" />
+
+		<atmo name="Toxic_Alt_thickclouds"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.67,0.99,0.9"
+		  clouddiffuse="props\textures\Earth_Thick_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Thick_Clouds_Specular.tga"
+		  clouddiffusecolor=".4,.3,.1"
+		  cloudspecularcolor="1,.6,.1"
+		  cloudcover="1" />
+
+		<atmo name="lightclouds"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.75,0.57,0.475"
+		  clouddiffuse="props\textures\Earth_Light_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Light_Clouds_Specular.tga"
+		  clouddiffusecolor="1,1,1"
+		  cloudspecularcolor="1,1,1"
+		  cloudcover="1" />
+
+		<atmo name="none"
+		  thick="0"
+		  scaledepth="0.1"
+		  km="0.00025"
+		  kr="0.0003"
+		  filter="1,1,1"
+		  clouddiffuse="props\textures\Earth_Thick_Clouds_Diffuse.tga"
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="0" />
+
+		<atmo name="browngas"
+		  thick="0.025"
+		  scaledepth="0.45"
+		  km="0.00025"
+		  kr="0.0003"
+		  filter="0.6,0.7,0.8"
+		  clouddiffuse=""
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="0" />
+
+		<atmo name="tempestuousdead"
+		  thick="0.0025"
+		  scaledepth="0.15"
+		  km="0.00525"
+		  kr="0.0003"
+		  filter="0.4,0.5,0.9"
+		  clouddiffuse=""
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="0" />
+
+		<atmo name="Magma"
+		  thick="0.4"
+		  scaledepth="0.02"
+		  km="0.00025"
+		  kr="0.0003"
+		  filter="0.2,0.4,0.9"
+		  clouddiffuse=""
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="0" />
+
+		<atmo name="Magma_Star"
+		  thick="0.03"
+		  scaledepth="0.08"
+		  km="0.00025"
+		  kr="0.0003"
+		  filter="0.2,0.5,0.9"
+		  clouddiffuse="props\textures\Earth_Thick_Clouds_Diffuse.tga"
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="2.5" />
+
+		<atmo name="Magnetic"
+		  thick="0.1"
+		  scaledepth="0.1"
+		  km="0.00025"
+		  kr="0.0001"
+		  filter="0.3,0.7,0.9"
+		  clouddiffuse="props\textures\Earth_Clouds_Diffuse.tga"
+		  cloudspecular="props\textures\Earth_Clouds_Specular.tga"
+		  clouddiffusecolor="1,0.3,0.4"
+		  cloudspecularcolor="1,0.3,0.4"
+		  cloudcover="0.23" />
+
+		<atmo name="Primordial"
+		  thick="0.6"
+		  scaledepth="0.1"
+		  km="0.00025"
+		  kr="0.0000"
+		  filter="0.3,0.7,0.9"
+		  clouddiffuse=""
+		  cloudspecular=""
+		  clouddiffusecolor="0,0,0"
+		  cloudspecularcolor="0,0,0"
+		  cloudcover="0" />
+
+		<!-- heightgen defines heightmap generation rules -->
+		<!-- planecuts is presently the only supported type -->
+		<heightgen
+		  name="gasheight"
+		  type="planecuts"
+		  baseheight="0.5"
+		  iterations="1000"
+		  shift="1000" />
+
+		<!-- DG: some of the types below were referring to 'test', so I added it here -->
+		<heightgen
+		  name="test"
+		  type="blend"
+		  base="props\textures\Planets\Pastoral\Pastoral_A.dds" />
+
+		<heightgen
+	  name="Barren_A"
+	  type="blend"
+	  base="props\textures\Planets\Barren\Barren_A.dds" />
+
+		<heightgen
+		  name="Barren_B"
+		  type="blend"
+		  base="props\textures\Planets\Barren\Barren_B.dds" />
+
+		<heightgen
+	  name="Barren_C"
+	  type="blend"
+	  base="props\textures\Planets\Barren\Barren_C.dds" />
+
+		<heightgen
+	  name="Barren_CHA"
+	  type="blend"
+	  base="props\textures\Planets\Barren\Barren_CHA.dds" />
+
+
+		<heightgen
+		  name="Normal_A"
+		  type="blend"
+		  base="props\textures\Planets\Normal\Normal_A.dds" />
+
+
+		<heightgen
+		  name="Normal_Variant01"
+		  type="blend"
+		  base="props\textures\Planets\Normal\Normal_Variant01.dds" />
+
+
+		<heightgen
+		  name="Normal_Variant02"
+		  type="blend"
+		  base="props\textures\Planets\Normal\Normal_Variant01.dds" />
+
+		<heightgen
+	  name="Normal_Variant03"
+	  type="blend"
+	  base="props\textures\Planets\Normal\Normal_Variant03.dds" />
+
+
+		<heightgen
+		  name="Pastoral"
+		  type="blend"
+		  base="props\textures\Planets\Pastoral\Pastoral_A.dds" />
+
+
+		<heightgen
+		  name="Volcanic_A"
+		  type="blend"
+		  base="props\textures\Planets\Volcanic\Volcanic_A.dds" />
+
+		<heightgen
+		  name="A"
+		  type="blend"
+		  base="props\textures\Planets\Cavernous\A.dds" />
+
+		<heightgen
+		  name="Cavernous_A"
+		  type="blend"
+		  base="props\textures\Planets\Cavernous\Cavernous_A.dds" />
+
+		<heightgen
+		  name="Magnar_A"
+		  type="blend"
+		  base="props\textures\Planets\Magnar\Magnar_A.dds" />
+
+		<heightgen
+		  name="tempestuous"
+		  type="blend"
+		  base="props\textures\Planets\Tempestuous\Tempestuous_A.dds" />
+
+		<heightgen
+		  name="primordial"
+		  type="blend"
+		  base="props\textures\Planets\Primordial\Primordial_A.dds" />
+
+
+		<!-- normal, barren and gas types are not included in the design doc as these are either not special in any way, or may never be colonized -->
+		<!-- basic hazard range is 0-750, but it can go up to 1000 -->
+
+		<!--barren Defualts-->
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_Default.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_A"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_Default.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_B"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_Default.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_C"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_Default.tga"
+			  sealevel="0.65"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_CHA"
+			  atmo="none" />
+		</type>
+
+		<!--Barren Dried-->
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_Dried.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_A"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_Dried.tga"
+			  sealevel="0.35"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_B"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_Dried.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_C"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_Dried.tga"
+			  sealevel="0.65"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_CHA"
+			  atmo="none" />
+		</type>
+		<!--Barren B's-->
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_B.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_A"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/Planets/Barren/Barren_B.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_B"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_B.tga"
+			  sealevel="0.55"
+			  maxseadepth="0.5"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_C"
+			  atmo="none" />
+		</type>
+
+		<type name="barren">
+			<hazard
+			  value="750"
+			  heightgrad="props/textures/Planets/Barren/Barren_B.tga"
+			  sealevel="0.65"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="7"
+			  heightgen="Barren_CHA"
+			  atmo="none" />
+		</type>
+		<!--Gas-->
+		<type name="gaseous">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Gaseous\BrightBlue.tga"
+			  sealevel="0"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="0"
+			  heightgen="gasheight"
+			  atmo="browngas" />
+		</type>
+
+		<type name="gaseous">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Gaseous\LimeGreen.tga"
+			  sealevel="0"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="0"
+			  heightgen="gasheight"
+			  atmo="browngas" />
+		</type>
+
+
+		<type name="gaseous">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Gaseous\ToxicYellow.tga"
+			  sealevel="0"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="0"
+			  heightgen="gasheight"
+			  atmo="browngas" />
+		</type>
+
+		<type name="gaseous">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\grad11.tga"
+			  sealevel="0"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="1,1,1"
+			  bumpiness="0"
+			  heightgen="gasheight"
+			  atmo="browngas" />
+		</type>
+
+		<!-- you can have multiple entires of the same type! they will be selected at random-->
+		<type name="gaseous">
+			<hazard
+			  value="1"
+			  heightgrad="props/textures/grad10.tga"
+			  sealevel="0"
+			  maxseadepth="0"
+			  maxlandalt="1"
+			  waterspec="1,1,1"
+			  bumpiness="0"
+			  heightgen="gasheight"
+			  atmo="browngas" />
+		</type>
+
+
+		<!-- remainder of types are special characteristics as listed in the design doc -->
+
+
+
+		<!--default Normal-->
+		<type name="normal">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.75"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_A"
+			  atmo="thickclouds" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.75"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="thickclouds" />
+
+			<hazard
+		value="250"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="450"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="750"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="lightclouds" />
+
+
+			<hazard
+				value="1500"
+				heightgrad="props/textures/Planets/Pastoral/Pastoral_Dried.tga"
+				sealevel=".2"
+				maxseadepth="0"
+				maxlandalt="1"
+				waterspec="1,1,1"
+				bumpiness="7"
+				heightgen="Barren_B"
+				atmo="none" />
+
+
+		</type>
+		<!--Normal Variant 01s-->
+
+		<type name="normal">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+			  sealevel="0.5"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant01"
+			  atmo="earthy" />
+
+			<hazard
+		value="50"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.75"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="250"
+		heightgrad="props\textures\Planets\Cavernous\Cavernous_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="380"
+		heightgrad="props\textures\Planets\Barren\Barren_Default.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="noclouds" />
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Generic\Ice.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="noclouds" />
+		</type>
+		<type name="normal">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Brown.tga"
+			  sealevel=".77"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_A"
+			  atmo="earthy" />
+
+			<hazard
+		value="50"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		sealevel="0.75"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+			<hazard
+			  value="200"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+			  sealevel="0.1"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_A"
+			  atmo="earthy" />
+
+			<hazard
+		value="400"
+		heightgrad="props\textures\Planets\Cavernous\Cavernous_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="none" />
+
+
+			<hazard
+		value="700"
+		heightgrad="props\textures\Planets\Primordial\Primordial_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant01"
+		atmo="Toxic_thickclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Primordial\Primordial_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_thickclouds" />
+		</type>
+
+		<!--Normal Variant 02s-->
+		<type name="normal">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.5"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant02"
+			  atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.35"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="earthy" />
+
+			<hazard
+		value="200"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.27"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="400"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.2"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant01"
+		atmo="earthy" />
+
+
+			<hazard
+		value="750"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_Alt_thickclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Barren\Barren_B.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_Alt_thickclouds" />
+		</type>
+		<type name="normal">
+			<hazard
+			  value="0"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.42"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant02"
+			  atmo="earthy" />
+
+			<hazard
+		value="50"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Green.tga"
+		sealevel="0.2"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="200"
+		heightgrad="props\textures\Planets\Normal\Normal_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="450"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="none" />
+			<hazard
+		value="700"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_thickclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_thickclouds" />
+		</type>
+		<type name="normal">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.46"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant02"
+			  atmo="earthy" />
+
+			<hazard
+		value="50"
+		heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		sealevel="0.45"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		sealevel="0.4"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="earthy" />
+
+
+			<hazard
+		value="200"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		sealevel="0.65"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="earthy" />
+
+
+			<hazard
+		value="450"
+		heightgrad="props\textures\Planets\Normal\Normal_Dried_Moon.tga"
+		sealevel="0.1"
+		maxseadepth="1"
+		maxlandalt="1"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant01"
+		atmo="noclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Generic\Ice.tga"
+		sealevel="0.1"
+		maxseadepth="1"
+		maxlandalt="1"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant01"
+		atmo="Toxic_Alt_thickclouds" />
+		</type>
+
+		<!--Normal Variant 03s-->
+		<type name="normal">
+			<hazard
+			  value="-100"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.5"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant03"
+			  atmo="earthy" />
+
+			<hazard
+		value="100"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.75"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant03"
+		atmo="earthy" />
+
+			<hazard
+		value="250"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant01"
+		atmo="earthy" />
+
+
+			<hazard
+		value="450"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant02"
+		atmo="Toxic_thickclouds" />
+
+
+			<hazard
+		value="750"
+		heightgrad="props\textures\Planets\Barren\Barren_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt=".5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="thickclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Barren\Barren_Default.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="Toxic_thickclouds" />
+		</type>
+		<type name="normal">
+			<hazard
+			  value="-100"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Purple.tga"
+			  sealevel="0.41"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_Variant03"
+			  atmo="earthy" />
+
+			<hazard
+		value="100"
+			  heightgrad="props\textures\Planets\Normal\Normal_Default_Brown.tga"
+		sealevel="0.75"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_Variant03"
+		atmo="earthy" />
+
+			<hazard
+		value="250"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.68"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="450"
+		heightgrad="props\textures\Planets\Normal\Normal_Dried.tga"
+		sealevel="0.5"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+
+			<hazard
+		value="750"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0.1"
+		maxseadepth="0.48"
+		maxlandalt="0.5"
+		waterspec="0.3,0.7,1"
+		bumpiness="2"
+		heightgen="Normal_A"
+		atmo="earthy" />
+
+			<hazard
+			  value="1500"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+			  sealevel="0.1"
+			  maxseadepth="0.48"
+			  maxlandalt="0.5"
+			  waterspec="0.3,0.7,1"
+			  bumpiness="2"
+			  heightgen="Normal_A"
+			  atmo="Toxic_Alt_thickclouds" />
+		</type>
+
+
+		<!--Pastorals-->
+		<type name="pastoral">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.7"
+			  maxseadepth="1"
+			  maxlandalt="0.5"
+			  waterspec="0.2,0.7,1"
+			  bumpiness="2"
+			  heightgen="Pastoral"
+			  atmo="lightclouds" />
+
+			<hazard
+		value="375"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+		sealevel="0.3"
+		maxseadepth="0.75"
+		maxlandalt="0.3"
+		waterspec="0.3,0.7,1"
+		bumpiness="1"
+		heightgen="Pastoral"
+		atmo="lightclouds" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+			  sealevel="-0.1"
+			  maxseadepth="1"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="0.5"
+			  heightgen="Pastoral"
+			  atmo="lightclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Pastoral\Pastoral_Dried.tga"
+		sealevel="0"
+		maxseadepth="0.8"
+		maxlandalt="1"
+		waterspec="0,0,0"
+		bumpiness="0.5"
+		heightgen="Barren_B"
+		atmo="lightclouds" />
+		</type>
+
+		<type name="volcanic">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Volcanic\Volcanic_Green.tga"
+			  sealevel="0.2"
+			  maxseadepth="0.21"
+			  maxlandalt="1"
+			  waterspec="1,1,0"
+			  bumpiness="9"
+			  heightgen="Volcanic_A"
+			  atmo="lightclouds" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Volcanic\Volcanic_Default.tga"
+			  sealevel="0.38"
+			  maxseadepth="0.2"
+			  maxlandalt="1"
+			  waterspec="1,1,0"
+			  bumpiness="3.5"
+			  heightgen="Volcanic_A"
+			  atmo="lightclouds" />
+
+			<hazard
+			  value="1500"
+			  heightgrad="props\textures\Planets\Volcanic\Volcanic_Default.tga"
+			  sealevel="0.5"
+			  maxseadepth="0.28"
+			  maxlandalt="1"
+			  waterspec="1,0,0"
+			  bumpiness="5"
+			  heightgen="Volcanic_A"
+			  atmo="Magma_Star" />
+		</type>
+
+		<type name="cavernous">
+
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Cavernous\Cavernous_Default.tga"
+			  sealevel="0.4"
+			  maxseadepth="0.6"
+			  maxlandalt="1"
+			  waterspec="0.5,0.8,1"
+			  bumpiness="3"
+			  heightgen="Cavernous_A"
+			  atmo="thickclouds" />
+
+			<hazard
+		value="375"
+		heightgrad="props\textures\Planets\Cavernous\Cavernous_Default.tga"
+		sealevel="0.4"
+		maxseadepth="0.5"
+		maxlandalt="1"
+		waterspec="0.5,0.8,1"
+		bumpiness="3"
+		heightgen="Cavernous_A"
+		atmo="earthy" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Cavernous\Cavernous_Dried.tga"
+			  sealevel="-0.3"
+			  maxseadepth="0.4"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="5"
+			  heightgen="Cavernous_A"
+			  atmo="lightclouds" />
+
+			<hazard
+		value="1500"
+		heightgrad="props\textures\Planets\Cavernous\Cavernous_Dried.tga"
+		sealevel="-0.2"
+		maxseadepth="0.5"
+		maxlandalt="1"
+		waterspec="0,0,0"
+		bumpiness="3"
+		heightgen="Cavernous_A"
+		atmo="browngas" />
+		</type>
+
+		<type name="tempestuous">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Tempestuous\Tempestuous_Default.tga"
+			  sealevel="0.7"
+			  maxseadepth="0.35"
+			  maxlandalt="0.5"
+			  waterspec="0.3,1,1"
+			  bumpiness="1"
+			  heightgen="tempestuous"
+			  atmo="thickclouds" />
+
+			<hazard
+			  value="350"
+			  heightgrad="props\textures\Planets\Tempestuous\Tempestuous_Default.tga"
+			  sealevel="0.7"
+			  maxseadepth="0.35"
+			  maxlandalt="0.5"
+			  waterspec="0.3,1,1"
+			  bumpiness="1"
+			  heightgen="tempestuous"
+			  atmo="thickclouds" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Tempestuous\Tempestuous_Dried.tga"
+			  sealevel="0.4"
+			  maxseadepth="1"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="10"
+			  heightgen="tempestuous"
+			  atmo="lightclouds" />
+
+			<hazard
+			  value="1500"
+			  heightgrad="props\textures\Planets\Tempestuous\Tempestuous_Dried.tga"
+			  sealevel="0.4"
+			  maxseadepth="1"
+			  maxlandalt="1"
+			  waterspec="0,0,0"
+			  bumpiness="10"
+			  heightgen="Barren_B"
+			  atmo="noclouds" />
+
+		</type>
+
+		<type name="magnar">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Magnar\Magnar_Default.tga"
+			  sealevel="0.1"
+			  maxseadepth="1"
+			  maxlandalt="1"
+			  waterspec="1,0.9,0.7"
+			  bumpiness="3"
+			  heightgen="Magnar_A"
+			  atmo="Magnetic" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Magnar\Magnar_Dried.tga"
+			  sealevel="0"
+			  maxseadepth="0.1"
+			  maxlandalt="1"
+			  waterspec="0.6,1,0.8"
+			  bumpiness="1"
+			  heightgen="Magnar_A"
+			  atmo="none" />
+		</type>
+
+		<type name="primordial">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Primordial\Primordial_Default.tga"
+			  sealevel="0.1"
+			  maxseadepth="1"
+			  maxlandalt="4"
+			  waterspec="0.4,0.6,0.3"
+			  bumpiness="5"
+			  heightgen="primordial"
+			  atmo="thickclouds" />
+
+			<hazard
+			  value="350"
+			  heightgrad="props\textures\Planets\Primordial\Primordial_Default.tga"
+			  sealevel="0.1"
+			  maxseadepth="1"
+			  maxlandalt="9"
+			  waterspec="0.4,0.6,0.3"
+			  bumpiness="5"
+			  heightgen="primordial"
+			  atmo="lightclouds" />
+
+			<hazard
+			  value="750"
+			  heightgrad="props\textures\Planets\Primordial\Primordial_Dried.tga"
+			  sealevel="0.1"
+			  maxseadepth="1"
+			  maxlandalt="3"
+			  waterspec="0.3,0.1,0"
+			  bumpiness="4"
+			  heightgen="primordial"
+			  atmo="noclouds" />
+
+			<hazard
+			  value="1500"
+			  heightgrad="props\textures\Planets\Normal\Normal_Dried_Moon.tga"
+			  sealevel="0.1"
+			  maxseadepth="1"
+			  maxlandalt="4"
+			  waterspec="0,0,0"
+			  bumpiness="5"
+			  heightgen="Barren_B"
+			  atmo="Primordial" />
+
+		</type>
+
+
+
+		<!--cutscene/movie versions-->
+		<type name="suulka_movie_watery">
+			<hazard
+			  value="0"
+			  heightgrad="props\textures\Planets\Pastoral\Pastoral_Default.tga"
+			  sealevel="0.7"
+			  maxseadepth="1"
+			  maxlandalt="0.5"
+			  waterspec="0.2,0.7,1"
+			  bumpiness="2"
+			  heightgen="Pastoral"
+			  atmo="earthy" />
+		</type>
+
+
+
+		<!-- per-faction tailoring of planets (additional faction planet descriptions may be found in the faction.xml files in future expansions) -->
+		<faction
+		  name="human"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="hiver"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Hiver.dds"
+		  cityemissive="props/textures/CityLights/Hiver.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="liir_zuul"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Liir.dds"
+		  cityemissive="props/textures/CityLights/Liir.tga"
+		  cityaltrange="-1,0" />
+
+		<faction
+		  name="morrigi"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Morrigi.dds"
+		  cityemissive="props/textures/CityLights/Morrigi.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="tarkas"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Tarkas.dds"
+		  cityemissive="props/textures/CityLights/Tarkas.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="zuul"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Zuul.dds"
+		  cityemissive="props/textures/CityLights/Zuul.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="enki"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="kaeru"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="mindi"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="nandi"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="tatzel"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="utukku"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/Human.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0,0.5" />
+
+		<faction
+		  name="VNM"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props/textures/Planets/Factions/VNM.dds"
+		  cityemissive="props/textures/CityLights/VNM.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="Gardner"
+		  idealgrad="props\textures\Planets\Pastoral\Gardner_Default.tga"
+		  idealheight="props/textures/Planets/Factions/VNM.dds"
+		  cityemissive="props/textures/CityLights/VNM.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="Puppeteer"
+		  idealgrad="props\textures\Planets\Normal\Normal_Default_Red.tga"
+		  idealheight="props\textures\Planets\Pastoral\Pastoral_A.dds"
+		  cityemissive="props/textures/CityLights/Human.tga"
+		  cityaltrange="0.1,0.3" />
+
+		<faction
+		  name="Moon"
+		  idealgrad="factions/human/planets/idealgrad.tga"
+		  idealheight="props\textures\Planets\Barren\Barren_B.dds"
+		  cityemissive="props/textures/CityLights/Moon.tga"
+		  cityaltrange="-1,1" />
+
+		<faction
+		  name="loa"
+		  idealgrad="props/textures/Panets/Barren/Barren_Default.tga"
+		  idealheight="props/textures/Planets/Barren/Barren_B.dds"
+		  cityemissive="props/textures/CityLights/Loa.tga"
+		  cityaltrange="0,1" />
+
+
+	</planets>
+
+	<!-- ShipSparks -->
+	<!-- Spark Type Enum
+        SMALL_SPARK
+        LARGE_SPARK
+        FIRE     
+        -->
+	<ShipSparks>
+		<spark type="SMALL_SPARK" effect="effects/Damage/Sparks_Stage01.effect"/>
+		<spark type="LARGE_SPARK" effect="effects/Damage/Turret_Medium_Destroyed.effect"/>
+		<spark type="FIRE" effect="effects/Damage/Sparks_Stage01.effect"/>
+	</ShipSparks>
+	<ShipEMPSpark>effects/Damage/Electro_Damage.effect</ShipEMPSpark>
+
+	<psionics>
+		<!-- DESCRIPTION -->
+		<!-- "Name" is the name of the power -->
+		<!-- "MinPower" is the minimum cost to initiate the effect -->
+		<!-- "MaxPower" is the maximum power that can be used per cast -->
+		<!-- "Cost" is the additional power cost for each attack -->
+		<!-- "Range" is the effect's range (Currently not used, but may be needed) -->
+		<!-- "CastorEffect" is the effect that is associated to the ship casting the psionic effect -->
+		<!-- "CastEffect" is the effect used while casting the psionic effect (castor is on all, cast is only for extra/special effects) -->
+		<!-- "ApplyEffect" is the effect used on the ship(s) that are having the effect applied to them -->
+		<!-- "Mesh" is a mesh (if needed) to be used for psionic visuals (eg: Reflector, TKFist) -->
+		<!-- WARNING! Do not change the name fields, as they're hardcoded into game logic -->
+		
+		<!--Telekinetic Powers""-->
+		<psionic
+		  name="TKFist"
+		  title="TK Fist"
+		  description="Creates a striking blast of telekinetic power"
+		  icon="psi_tkfist"
+		  tech="PSI_Combat_Telekinesis"
+		  suulka_only="false"
+		  minPower="20"
+		  maxPower="100"
+      cost="40"
+		  range="0"
+      baseDamage="40"
+		  castorEffect="effects/Psionics/TKFist.effect"
+		  castEffect=""
+		  applyEffect="effects/ShipDeath/Levi_CRF_Antimatter.effect"
+		  mesh="effects/Psionics/TK_fist.scene"
+		  />
+
+		<psionic
+		  name="Hold"
+		  title="Hold"
+		  icon="psi_hold"
+		  tech="PSI_MetaKineses"
+		  suulka_only="false"
+		  minPower="20"
+		  maxPower="1000"
+		  cost="5"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Hold.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Hold.effect"
+		  mesh="effects/Psionics/Hold.scene"
+		  description = "Holds a target ship in place"
+		  />
+
+		<psionic
+		  name="Crush"
+		  title="Crush"
+		  icon="psi_crush"
+		  tech="PSI_MetaKineses"
+		  suulka_only="false"
+      minPower="60"
+		  maxPower="1500"
+      cost="30"
+		  range="0"
+      baseDamage="30"
+		  castorEffect="effects/Psionics/Crush.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Crush.effect"
+		  mesh="effects/Psionics/Crush.scene"
+		  description = "Holds a target ship in place while also inflicting crush damage"
+		  />
+
+		
+
+		<psionic
+		  name="Repair"
+		  title="Repair"
+		  icon="psi_repair"
+		  tech="PSI_Micro-Telekinesis"
+		  suulka_only="false"
+		  minPower="15"
+		  maxPower="150"
+      cost="30"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Repair.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Repair.effect"
+		  mesh=""
+		  description = "Use telekinesis to repair existing ship armor"
+		  />
+
+		<!--Empathy Powers""-->
+		<psionic
+		  name="Fear"
+		  title="Fear"
+		  icon="psi_fear"
+		  tech="PSI_Empathy"
+		  suulka_only="false"
+      minPower="20"
+		  maxPower="1000"
+      cost="20"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Fear.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Fear.effect"
+		  mesh=""
+		  description = "Use telepathy to instill fear and cause a ship to flee"
+		  />
+
+		<psionic
+		  name="Inspiration"
+		  title="Inspiration"
+		  icon="psi_inspiration"
+		  tech="PSI_Empathy"
+		  suulka_only="false"
+		  minPower="50"
+		  maxPower="50"
+		  cost="50"
+		  range="1000.0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Inspiration.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Inspiration.effect"
+		  mesh=""
+		  description = "Provides some temporary resistance to psionic attacks for targeted ships"
+		  />
+
+		<psionic
+		  name="Reveal"
+		  title="Reveal"
+		  icon="psi_reveal"
+		  tech="PSI_LifeSense"
+		  suulka_only="false"
+		  minPower="10"
+		  maxPower="100"
+		  cost="5"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/cast.effect"
+		  castEffect=""
+		  applyEffect=""
+		  mesh=""
+		  description = "Telepathically reveals cloaked ships for a short duration"
+		  />
+
+		<!--Telepathy Powers""-->
+		<psionic
+		  name="Listen"
+		  title="Listen"
+		  icon="psi_listen"
+		  tech="PSI_Telepathy"
+		  suulka_only="false"
+		  minPower="10"
+		  maxPower="50"
+		  cost="10"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Listen.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Listen.effect"
+		  mesh=""
+		  description = "Reveals a ship's desitnation and target"
+		  />
+
+		<psionic
+		  name="Block"
+		  title="Block"
+		  icon="psi_block"
+		  tech="PSI_Telepathy"
+		  suulka_only="false"
+		  minPower="50"
+		  maxPower="50"
+		  cost="10"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Block.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Block.effect"
+		  mesh=""
+		  description = "Provides greater, permanent resistance to psionic attacks for targeted ships"
+		  />
+
+		<psionic
+		  name="PsiDrain"
+		  title="Psi Drain"
+		  icon="psi_psidrain"
+		  tech="PSI_Telepathy"
+		  suulka_only="false"
+		  minPower="2"
+		  maxPower="10"
+      cost="2"
+      range="6000"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/PsiDrain.effect"
+		  castEffect="effects/Psionics/PsiDrain_Bullet.effect"
+		  applyEffect="effects/Psionics/PsiDrain.effect"
+		  mesh=""
+		  description = "Drains psionic power from target ship"
+		  />
+
+		<!--Coercion Powers""-->
+		<psionic
+		  name="WildFire"
+		  title="WildFire"
+		  icon="psi_wildfire"
+		  tech="PSI_Coercion"
+		  suulka_only="false"
+		  minPower="30"
+		  maxPower="150"
+		  cost="30"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/WildFire.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/WildFire.effect"
+		  mesh=""
+		  description = "Uses telepathy to cause targeted crew to lose control of weapons and fire randomly in all directions"
+		  />
+
+		<psionic
+		  name="Control"
+		  title="Control"
+		  icon="psi_control"
+		  tech="PSI_Coercion"
+		  suulka_only="false"
+      minPower="50"
+		  maxPower="1000"
+      cost="50"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Control.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Control.effect"
+		  mesh=""
+		  description = "Gain telekinetic control of an entire ship for short period"
+		  />
+
+		<psionic
+		  name="Posses"
+		  title="Possession"
+		  icon="psi_posses"
+		  tech="PSI_Possession"
+		   suulka_only="false"
+		  minPower="60"
+		  maxPower="100"
+		cost="60"
+		  range="0"
+		  baseDamage="0"
+		  description = "Possess the minds of target crew, causing insanity and reckless destruction of the ship's critical systems"
+		   castorEffect="effects/Psionics/Control.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Control.effect"
+		  mesh=""
+		  
+		  />
+		
+
+		<!--Glamour Powers""-->
+		<psionic
+		  name="Mirage"
+		  title="Mirage"
+		  icon="psi_mirage"
+		  tech="PSI_Lesser_Glamour"
+		  suulka_only="false"
+		  minPower="45"
+		  maxPower="45"
+		  cost="45"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Mirage.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Mirage.effect"
+		  mesh=""
+		  description = "Confuses enemy with three telepathically generated copies of your ship"
+		  />
+
+		<psionic
+		  name="FalseFriend"
+		  title="False Friend"
+		  icon="psi_falsefriend"
+		  tech="PSI_Lesser_Glamour"
+		  suulka_only="false"
+		  minPower="75"
+		  maxPower="75"
+		  cost="75"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/FalseFriend.effect"
+		  castEffect=""
+		  applyEffect=""
+		  mesh=""
+		  description = "Force enemy minds to percieve your ship as one of their own"
+		  />
+
+		<psionic
+		  name="Invisibility"
+		  title="Invisibility"
+		  icon="psi_invisibility"
+		  tech="PSI_Lesser_Glamour"
+		  suulka_only="false"
+		  minPower="10"
+		  maxPower="1000"
+		  cost="10"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Invisibility.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Invisibility.effect"
+		  mesh=""
+		  description = "Prevent enemy minds from perceiving your ship in any way"
+		  />
+
+	<!-- Suul'ka Only -->
+		<psionic
+		  name="Movement"
+		  title="Movement"
+		  icon="psi_movement"
+		  tech=""
+		  suulka_only="true"
+		  minPower="30"
+		  maxPower="500"
+      cost="100"
+		  range="1500.0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Movement.effect"
+		  castEffect=""
+		  applyEffect="effects/Psionics/Movement.effect"
+		  mesh="effects/Psionics/Teleport.scene"
+		  description = "Teleports target"
+		  />
+		  
+		 <psionic
+		  name="LifeDrain"
+		  title="Life Drain"
+		  icon="psi_lifedrain"
+		  tech=""
+		  suulka_only="true"
+		  minPower="10"
+		  maxPower="1000"
+      cost="20"
+      range="6000"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/LifeDrain.effect"
+		  castEffect="effects/Psionics/LifeDrain_Bullet.effect"
+		  applyEffect="effects/Psionics/LifeDrain.effect"
+		  mesh=""
+		  description = "Drains life from target"
+		  />
+		
+		<psionic
+		  name="Reflector"
+		title="Reflector"
+		icon="psi_reflector"
+		tech=""
+		suulka_only="true"
+		  minPower="100"
+		  maxPower="1500"
+	  cost="100"
+		  range="0"
+		  baseDamage="0"
+		  castorEffect="effects/Psionics/Wildfire.effect"
+		  castEffect=""
+		  applyEffect=""
+		  mesh="effects/Psionics/Reflector.scene"
+		description = "Reflects weapons back on attackers"
+		  />
+	</psionics>
+
+	<!-- Suulka Psi Power Bonuses-->
+	<!-- == ATRIBUTE TO APPLY BONUS ==
+        ABILITIES:
+          NONE = no abilities
+          HIDDEN = suulka, as well as fleet, remain cloaked (the hidden) (not yet implemented)
+          DEAF = suulka, as well as fleet, are immune to psi attacks (not yet implemented)
+  
+        ability:  X = one of the above ability (as spelled above)
+        psidrain:  X = multiplyer to take psi power from target
+        lifedrain:  X = multiplyer for amount of crew to kill each drain cycle
+        tkfist:  X = multiplyer for amount of damage done to a target
+        crush:  X = multiplyer for amount of damage and armor damage done to a target
+        fear:  X = fear effect multiplyer (time target remains in fear mode)
+        control:  X = total duration for player to keep target.  0 will be for end of combat, -1 will be used for permanant (but for now 0 is half combat and -1 is all combat), or X is in minutes
+        movement:  X = multiplyer for teleport range
+        
+        RATE
+          psi:  X = the psi (read above psionics for correct spelling) the rate change applies to
+          rate:  X = multiplyer to increase speed of consumption to use the specified psionic faster
+          
+          EFFICIENCIES
+            psi:  X = the psi (read above psionics for correct spelling) the rate change applies to
+            value:  X = multiplyer to increase the efficiency of the psi power used on the specified psionic (>1 consumes less, >0 <1 consumes more)
+          
+  -->
+	<SuulkaPsiBonuses>
+		<Suulka name="lv_suulka_the_cannibal" lifedrain="2" psidrain="2">
+			<PsiEfficiency>
+				<PsiPower psi="LifeDrain" rate ="1.5" efficiency="1.0"/>
+				<PsiPower psi="PsiDrain" rate ="1.5" efficiency="1.0" />
+			</PsiEfficiency>
+		</Suulka>
+		<Suulka name="lv_suulka_the_deaf" ability="DEAF"/>
+		<Suulka name="lv_suulka_the_hidden" ability="HIDDEN"/>
+		<Suulka name="lv_suulka_the_immortal" lifedrain="2" psidrain="2" movement="2.0">
+			<PsiEfficiency>
+				<PsiPower psi="LifeDrain" rate ="2.0" efficiency="1.0" />
+				<PsiPower psi="Fear" rate ="2.0" efficiency="1.0" />
+				<PsiPower psi="Movement" rate ="3.0" efficiency="1.0" />
+			</PsiEfficiency>
+		</Suulka>
+		<Suulka name="lv_suulka_the_kraken" tkfist="2" crush="2">
+			<PsiEfficiency>
+				<PsiPower psi="TKFist" rate ="1.5" efficiency="1.0" />
+				<PsiPower psi="Crush" rate ="1.5" efficiency="1.0" />
+			</PsiEfficiency>
+		</Suulka>
+    <Suulka name="lv_suulka_the_shaper" biomissile="3.0"/>
+		<Suulka name="lv_suulka_the_siren" control="-1"/>
+		<Suulka name="lv_suulka_usurper" />
+		<Suulka name="lv_blackelder" />
+	</SuulkaPsiBonuses>
+
+
+
+	<!-- Shields -->
+
+	<!--===SHIELD TYPE ENUM============
+      DEFLECTOR_SHIELD,
+      DISRUPTOR_SHIELD,
+      SHIELD_MK_I,
+      SHIELD_MK_II,
+      SHIELD_MK_III,
+      SHIELD_MK_IV,
+      STRUCTURAL_FIELDS,
+      RECHARGERS,
+      MESON_SHIELD,
+      GRAV_SHIELD,
+      SHIELD_PROJECTORS,
+      FOCUSED_SHIELDING,
+      CLOAKING,
+      IMPROVED_CLOAKING,
+      DIRECTED_ENERGY
+  -->
+	<Shields>
+		<shield
+		  name="Deflector Shield"
+		  techID="SLD_Deflector_Shields"
+		  type="DEFLECTOR_SHIELD"
+		  crHealth="100"
+		  crRechargeTime="8"
+		  crRicochetMod="5"
+		  crModelFileName="CR_Deflector.scene"
+		  crImpactEffectName=""
+		  dnHealth="100"
+		  dnRechargeTime="8"
+		  dnRicochetMod="5"
+		  dnModelFileName="DN_Deflector.scene"
+		  dnImpactEffectName="" />
+
+		<shield
+		  name="Disruptor Shield"
+		  techID="SLD_Disruptor_Shields"
+		  type="DISRUPTOR_SHIELD"
+		  crHealth="100"
+		  crRechargeTime="8"
+		  crRicochetMod="5"
+		  crModelFileName="CR_Disruptor.scene"
+		  crImpactEffectName=""
+		  dnHealth="100"
+		  dnRechargeTime="8"
+		  dnRicochetMod="5"
+		  dnModelFileName="DN_Disruptor.scene"
+		  dnImpactEffectName="" />
+
+		<shield
+		  name="Shield Mk. I"
+		  techID="SLD_Shield_Mk._I"
+		  type="SHIELD_MK_I"
+		  crHealth="200"
+		  crRechargeTime="10"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_MK1.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact_MK1.effect"
+		  dnHealth="200"
+		  dnRechargeTime="10"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_MK1.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Shield Mk. II"
+		  techID="SLD_Shield_Mk._II"
+		  type="SHIELD_MK_II"
+		  crHealth="400"
+		  crRechargeTime="8"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_MK2.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact_MK2.effect"
+		  dnHealth="400"
+		  dnRechargeTime="8"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_MK2.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Shield Mk. III"
+		  techID="SLD_Shield_Mk._III"
+		  type="SHIELD_MK_III"
+		  crHealth="600"
+		  crRechargeTime="6"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_MK3.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact_MK3.effect"
+		  dnHealth="600"
+		  dnRechargeTime="6"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_MK3.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Shield Mk. IV"
+		  techID="SLD_Shield_Mk._IV"
+		  type="SHIELD_MK_IV"
+		  crHealth="800"
+		  crRechargeTime="5"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_MK4.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact_MK4.effect"
+		  dnHealth="800"
+		  dnRechargeTime="5"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_MK4.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Meson Shields"
+		  techID="SLD_Meson_Shields"
+		  type="MESON_SHIELD"
+		  crHealth="100"
+		  crRechargeTime="10"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_Meson.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact.effect"
+		  dnHealth="100"
+		  dnRechargeTime="10"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_Meson.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Grav Shields"
+		  techID="SLD_Grav_Shields"
+		  type="GRAV_SHIELD"
+		  crHealth="100"
+		  crRechargeTime="10"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_Grav.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact.effect"
+		  dnHealth="100"
+		  dnRechargeTime="10"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_Grav.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+		<shield
+		  name="Psionic Shields"
+		  techID="PSI_Shield"
+		  type="PSI_SHIELD"
+		  crHealth="200"
+		  crRechargeTime="0"
+		  crRicochetMod="5"
+		  crModelFileName="Shield_Meson.scene"
+		  crImpactEffectName="effects/Weapons/Shield_Impact.effect"
+		  dnHealth="200"
+		  dnRechargeTime="0"
+		  dnRicochetMod="5"
+		  dnModelFileName="Shield_Meson.scene"
+		  dnImpactEffectName="effects/Weapons/Shield_Impact.effect" />
+
+	</Shields>
+
+</CommonAssets>

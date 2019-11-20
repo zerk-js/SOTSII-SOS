@@ -1,0 +1,588 @@
+<gui>
+	<!-- Disabled for visual clarity (stupid accounting spreadsheet image)
+	<skin>
+		<sprite id="empireBG"     texture="ui/skin1/empireBG.tga"></sprite>
+	</skin>
+	-->
+	
+	<!--SCREEN-->
+	<panel id="EmpireSummary" shape="parent" >
+		<var id="text_huge" value="StandardMediumTitle" />			<!-- 24pt -->
+		<var id="text_huge_Bold" value="StandardMediumTitleBold" />	<!-- 24pt Bold -->
+		<var id="text_large" value="StandardHeaderBold"/>			<!-- 18pt Outline -->
+		<var id="text_med" value="StandardMedTitle_Bold"/>			<!-- 14pt Outline -->
+		<var id="text_med_Bold" value="StandardText"/> 				<!-- 14pt Dropshadow (system default)  -->	
+		<var id="text_med_Plain" value="Standard_NO"/>				<!-- 14pt No outline -->
+		<var id="text_small_Bold" value="SubTitleBold"/> 			<!-- 12pt outline  -->	
+
+		
+		<var id="text_color" value="255,255,255"/>
+
+	<!-- Disabled for visual clarity (background image)
+    <image sprite="empireBG" hcenter="parent:hcenter" vcetner="parent:vcenter" color="100,100,100,100"/>
+	-->
+
+	<!--income-->
+	<panel id="maincontrol" top="0" right="parent:right-150" left="20"  height="75"  clipping="false" >
+
+		<label text="@UI_EMPIRESUMMARY_GOVERNMENT"   color="64,178,59" justify="left" font="var:text_huge_Bold" width="parent:width" left="80" top="parent:top+15"/>
+		<label id="governmentValue" text="999 999 999 999 999"  font="var:text_large" color="64,178,59" justify="left" top="parent:top+45" width="parent:width" left="80"/>
+
+		<label text="@UI_EMPIRESUMMARY_RESEARCH"   color="184,70,189" justify="right" font="var:text_huge_Bold" width="parent:width" top="parent:top+15"/>
+		<label id="researchValue" text="999 999 999 999 999"  font="var:text_large" color="184,70,189" justify="right" top="parent:top+45" width="parent:width" left="0"/>
+
+		<panel  id="governmentResearchSlider" template="ResearchSlider" left="80" right="parent:right"  bottom="parent:bottom+10" clipping="false" />
+		<piechart id="piechart" width="64" height="64" left="0" top="20" />
+		<panel width="71" height="71" hcenter="piechart:hcenter" vcenter="piechart:vcenter" top="30" >
+			<image sprite="Budget_ring" color="25,68,142" />
+			<image sprite="Budget_glow" color="25,68,142,180" top="1" left="1" />
+			<image sprite="Budget_ref" color="255,255,255,100" top="1" hcenter="parent:hcenter" />
+		</panel>
+		
+		<!-- disabled because it's in a stupid location
+		<label text="@UI_EMPIRESUMMARY_INCOME" left="0" justify="left" font="var:text_large" top="0"/> 
+		<label id="incomeValue" text="100 000 000" left="70" justify="left" width="parent:width" font="StandardListDivider" top="-3"/>
+		-->
+
+	</panel >
+
+	<button2 id="researchCubeButton" tooltip="@UI_TOOLTIP_RESEARCHCUBE" right="parent:right-35" top="10" width="80" height="80">
+		<object_host id="idle" left="parent:left+5" top="parent:top+5" right="parent:right-5" bottom="parent:bottom-5" draw_layer="1" background="false" />
+		<object_host id="mouse_over" left="parent:left" top="parent:top" right="parent:right" bottom="parent:bottom" draw_layer="1" background="false" />
+		<object_host id="pressed" left="parent:left+2" top="parent:top+2" right="parent:right-2" bottom="parent:bottom-2" draw_layer="1" background="false" />
+	</button2>
+
+	<row id="sliderRow" top="100" height="150" width="parent:width" item_spacing="even" clipping="false">
+		
+		<!-- Government Security Totals and Sub-Totals with Sliders -->
+		<panel id="Security_Tab" width="parent:width:23%" max_width="350"  clipping="false">
+			<panel template="boxpanel_scale" left="parent:left-4" top="parent:top-4" right="parent:right+4" bottom="parent:bottom+4">
+				<!-- Security Grey (set in commonassets.xml) with White outline at 75% opacity -->
+				<var id="box_bgcolor" value="126,143,135"/>
+				<var id="box_olcolor" value="255,255,255,192"/>
+			</panel>
+			<label id="label" text="@UI_EMPIRESUMMARY_SECURITY" font="var:text_large"  lwidth="parent:width-8"/>
+			<label id="securityValue" text="999 999 999 999 999" font="var:text_large" justify="right" width="parent:width-8" />
+			<panel template="FillSlider"  width="parent:width-8" hcenter="parent:hcenter" top="25" clipping="false" >
+				<var id="slider_id" value="securitySlider" color="126,143,135"/>
+			</panel>
+			
+			<panel template="boxpanel_scale" left="parent:left" top="parent:top+42" right="parent:right" bottom="parent:bottom">
+				<!-- Black inner box at 25% opacity with White outline at 75% opacity -->
+				<var id="box_bgcolor" value="0,0,0,64"/>
+				<var id="box_olcolor" value="255,255,255,192"/>
+				
+				<column top="parent:top"  width="parent:width-8" hcenter="parent:hcenter" bottom="parent:bottom-4" item_spacing="even">
+					<panel width="parent:width" height="30">
+						<label text="@UI_EMPIRESUMMARY_OPERATIONS" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider" bottom="parent:bottom" left="parent:left" right="parent:right-100"  clipping="false">
+							<var id="slider_id" value="operationsSlider"/>
+						</panel>
+						<label id="operationsValue" text="999 999 999 999 999" font="var:text_med" bottom="parent:bottom" justify="right" color="var:text_color"  width="parent:width"/>
+					</panel>
+
+					<panel width="parent:width" height="30">
+						<label text="@UI_EMPIRESUMMARY_INTEL" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider" bottom="parent:bottom" left="parent:left" right="parent:right-100" clipping="false">
+							<var id="slider_id" value="intelSlider"/>
+						</panel>
+						<label id="intelValue" text="999 999 999 999 999" font="var:text_med" bottom="parent:bottom" justify="right" color="var:text_color" width="parent:width"/>
+					</panel>
+
+					<panel width="parent:width" height="30">
+						<label text="@UI_EMPIRESUMMARY_COUNTER_INTELLIGENCE" font="var:text_med" justify="left" color="var:text_color"   width="parent:width" />
+						<panel template="FillSlider"  bottom="parent:bottom" left="parent:left" right="parent:right-100" clipping="false">
+							<var id="slider_id" value="counterIntelSlider"/>
+						</panel>
+						<label id="counterIntelValue" text="999 999 999 999 999" font="var:text_med" bottom="parent:bottom" justify="right" color="var:text_color" width="parent:width" />
+					</panel>
+				</column>
+			</panel>
+
+		</panel>
+
+		<!-- Government Stimulus with Totals and SubTotals with sliders -->
+		<panel id="Stimulus_Tab"  width="parent:width:23%" max_width="350" clipping="false">
+			<panel template="boxpanel_scale" left="parent:left-4" top="parent:top-4" right="parent:right+4" bottom="parent:bottom+4">
+				<!-- Yellow outter box at 75% opacity to match Stimulus Yellow (set in commonassets.xml) with Yellow outline -->
+				<var id="box_bgcolor" value="255,255,0,192"/>
+				<var id="box_olcolor" value="255,255,0"/>
+			</panel>
+			<label id="label" text="@UI_EMPIRESUMMARY_STIMULUS" font="var:text_large" width="parent:width-8" hcenter="parent:hcenter"/>
+			<label id="stimulusValue" text="999 999 999 999 999" font="var:text_large" justify="right" width="parent:width-8" hcenter="parent:hcenter" />
+			<panel template="FillSlider" width="parent:width-8" hcenter="parent:hcenter"  top="25" clipping="false">
+				<var id="slider_id" value="stimulusSlider"/>
+			</panel>
+			
+			<panel template="boxpanel_scale" left="parent:left" top="parent:top+42" right="parent:right" bottom="parent:bottom" >
+				<!-- Black inner box at 25% opacity with Yellow outline at 75% opacity -->
+				<var id="box_bgcolor" value="0,0,0,64"/>
+				<var id="box_olcolor" value="255,255,0,192"/>
+				
+				<column top="parent:top" width="parent:width-8" hcenter="parent:hcenter" bottom="parent:bottom-4" item_spacing="even">
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_MINING" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider" left="parent:left" right="parent:right-100"  bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="miningSlider"/>
+						</panel>
+						<label id="miningValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_COLONIZATION" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider"  left="parent:left" right="parent:right-100" bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="colonizationSlider"/>
+						</panel>
+						<label id="colonizationValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_TRADE_B" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider"  left="parent:left" right="parent:right-100"  bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="tradeSlider"/>
+						</panel>
+						<label id="tradeValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+				</column>
+			</panel>
+						
+		</panel>
+
+		<!-- Savings tab with slider -->
+		<panel id="Savings_Tab"  width="parent:width:23%" max_width="350" clipping="false">
+			<panel template="boxpanel_scale" left="parent:left-4" top="parent:top-4" right="parent:right+4" bottom="parent:bottom+4">
+				<!-- Green box to match Savings color (set in commonassets.xml) at 75% opacity with Green outline -->
+				<var id="box_bgcolor" value="64,178,59,192"/>
+				<var id="box_olcolor" value="64,178,59"/>
+			</panel>
+			<label id="label" text="Savings" font="var:text_large" width="parent:width-8" hcenter="parent:hcenter"/>
+			<label id="savingsValue" text="999 999 999 999 999" font="var:text_large" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+			<panel template="FillSlider"  width="parent:width-8" hcenter="parent:hcenter"  top="25" clipping="false">
+				<var id="slider_id" value="savingsSlider"/>
+			</panel>
+			
+			<panel template="boxpanel_scale" left="parent:left" top="parent:top+42" right="parent:right" bottom="parent:bottom">
+				<!-- Black inner box at 25% opacity with Yellow outline at 75% opacity -->
+				<var id="box_bgcolor" value="0,0,0,64"/>
+				<var id="box_olcolor" value="64,178,59,192"/>
+
+				<column top="parent:top" width="parent:width-8" hcenter="parent:hcenter" bottom="parent:bottom-4">
+					<panel height="20" width="parent:width">
+						<label id="TreasuryLabel" text="@UI_EMPIRESUMMARY_TREASURY" font="var:text_med" justify="left" color="var:text_color"  width="parent:width" />
+						<label id="treasuryValue" text="999 999 999 999"  font="var:text_med" justify="right" width="parent:width" hcenter="parent:hcenter"/>
+					</panel>
+					<panel  height="20">
+						<label id="ProjectedTreasuryLabel" text="@UI_EMPIRESUMMARY_PROJECTED_TREASURY" font="var:text_med" color="var:text_color" justify="left" width="parent:width"/>
+						<label id="projectedTreasuryValue" text="999 999 999 999"  font="var:text_med" justify="right" width="parent:width" hcenter="parent:hcenter"/>
+					</panel>
+				</column>
+			</panel>
+		</panel>
+
+		<!-- Research tab with sliders -->
+		<panel id="Research_Tab"  width="parent:width:23%" max_width="350" clipping="false" >
+			<panel template="boxpanel_scale"  left="parent:left-4" top="parent:top-4" right="parent:right+4" bottom="parent:bottom+4">
+				<!-- Purple box to match Research color (set in commonassets.xml) at 75% opacity with Purple outline -->
+				<var id="box_bgcolor" value="184,70,189,192"/>
+				<var id="box_olcolor" value="184,70,189"/>
+			</panel>
+			<label id="label" text="@UI_EMPIRESUMMARY_RESEARCH_B" font="var:text_large" width="parent:width-8" hcenter="parent:hcenter"/>
+			<label id="researchTotalValue" text="999 999 999 999 999" font="var:text_large" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+			
+			<panel template="boxpanel_scale" left="parent:left" top="parent:top+35" right="parent:right" bottom="parent:bottom">
+				<!-- Black inner box at 25% opacity with Purple outline at 75% opacity -->
+				<var id="box_bgcolor" value="0,0,0,64"/>
+				<var id="box_olcolor" value="184,70,189,192"/>
+				
+				<column top="parent:top" width="parent:width-8" hcenter="parent:hcenter" bottom="parent:bottom-4"  item_spacing="even">
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_CURRENT_PROJECT" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider"  left="parent:left" right="parent:right-100"  bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="currentProjectSlider"/>
+						</panel>
+						<label id="currentProjectValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_SPECIAL_PROJECT" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider"  left="parent:left" right="parent:right-100"  bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="specialProjectSlider"/>
+						</panel>
+						<label id="specialProjectValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+					<panel height="30" width="parent:width">
+						<label text="@UI_EMPIRESUMMARY_SALVAGE_RESEARCH" font="var:text_med" justify="left" color="var:text_color" width="parent:width" />
+						<panel template="FillSlider"  left="parent:left" right="parent:right-100"  bottom="parent:bottom" clipping="false">
+							<var id="slider_id" value="salvageResearchSlider"/>
+						</panel>
+						<label id="salvageResearchValue" text="999 999 999 999 999" font="var:text_med" justify="right" color="var:text_color" width="parent:width" bottom="parent:bottom"/>
+					</panel>
+				</column>
+			</panel>
+			
+		</panel>
+
+	</row>
+
+	<row id="infoRow" top="sliderRow:bottom+10"  height="parent:height-sliderRow:bottom-60" width="parent:width" item_spacing="even" clipping="false">
+		
+		<!-- Budget info -->
+		<panel id="Budget_Tab" width="parent:width:24%" max_width="350" height="parent:height" clipping="false">
+		
+			  <panel template="boxpanel_scale"  left="parent:left-4" top="parent:top" right="parent:right+4" bottom="parent:bottom">
+				<var id="box_bgcolor" value="64,178,59,80"/>
+				<var id="box_olcolor" value="64,178,59,210"/>
+			  </panel>
+			  
+			  <label id="label" text="Empire Budget" font="var:text_large" justify="left" left="parent:left+4" top="parent:top+6" width="parent:width" />
+			  
+			  <panel width="parent:width" left="parent:left" top="35" bottom="parent:bottom" clipping="false">
+				<panel id="budgetTopBox" template="boxpanel_scale" width="parent:width" height="parent:height:49%">
+				  <var id="box_bgcolor" value="0,0,0"/>
+				  <var id="box_olcolor" value="64,178,59,210"/>
+						<label id="incomeLabel" text="@UI_EMPIRESUMMARY_INCOME" font="var:text_large" color="64,178,59" justify="left" top="parent:top+4" width="parent:width-8" hcenter="parent:hcenter"/>
+						<label id="incomeValue" text="500,000,000,000" font="var:text_large"  color="64,178,59" justify="right" width="parent:width-8" top="parent:top+4" hcenter="parent:hcenter"/>
+
+						<label id="colIncomeLabel" text="Colony Income:" font="var:text_med" top="incomeLabel:bottom" justify="left" color="43,174,255"  left="parent:left+10"/>
+						<label id="colonyincome" text="50 000 000" font="var:text_med" top="incomeLabel:bottom" justify="right" color="43,174,255" right="parent:right-4"/>
+						
+						<label id="tradeLabel" text="Trade Income:" font="var:text_med" top="colIncomeLabel:bottom" justify="left" color="0,255,0,192" left="parent:left+10" clipping="false" />
+						<label id="tradeunitsvalue" text="50 000 000 000" font="var:text_med" top="colIncomeLabel:bottom" justify="right" color="0,255,0,192" right="parent:right-4" />
+
+						<label id="InterestLabel" text="@UI_EMPIRESUMMARY_INTEREST" font="var:text_med" top="tradeLabel:bottom" color="0,255,0,192" justify="left" left="parent:left+10"/>
+						<label id="interestValue" text="999 999 999 999"  font="var:text_med" top="tradeLabel:bottom" color="0,255,0,192" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+				</panel>
+				<panel id="budgetBottomBox" template="boxpanel_scale" width="parent:width" height="parent:height:50%" top="budgetTopBox:bottom" >
+				  <var id="box_bgcolor" value="0,0,0"/>
+				  <var id="box_olcolor" value="255,0,0,210"/>
+						<label id="shipCost" text="Ships" font="var:text_large" color="255,0,0,192" justify="left" top="parent:top+4" width="parent:width-8" hcenter="parent:hcenter"/>
+						<label id="shipinvoicecost" text="500,000,000,000" font="var:text_large" color="255,0,0,192"   justify="right" width="parent:width-8" top="parent:top+4" hcenter="parent:hcenter"/>
+
+						<label id="stationCost" text="Stations" font="var:text_large" color="255,0,0,192" justify="left" top="shipCost:bottom" width="parent:width-8" hcenter="parent:hcenter"/>
+						<label id="stationinvoicecost" text="500,000,000,000" font="var:text_large" color="255,0,0,192"   justify="right" top="shipCost:bottom" width="parent:width-8" hcenter="parent:hcenter"/>
+
+						<label id="expensesLabel" text="Other Expenses" font="var:text_large" color="255,0,0,192" justify="left" top="stationCost:bottom" width="parent:width-8" hcenter="parent:hcenter"/>
+						<label id="expensesValue" text="500,000,000,000" font="var:text_large" color="255,0,0,192"   justify="right" width="parent:width-8" top="stationCost:bottom" hcenter="parent:hcenter"/>
+
+						<label id="colExpLabel" text="Colony Expenses" font="var:text_med" top="expensesLabel:bottom" justify="left" color="43,174,255,192"  left="parent:left+10"/>
+						<label id="colonyDevelopmentValue" text="50 000 000" font="var:text_med" top="expensesLabel:bottom" justify="right" color="43,174,255,192" right="parent:right-4"/>
+						
+						<label id="fleetExpLabel" text="@UI_EMPIRESUMMARY_FLEET_MAINTENANCE" font="var:text_med" top="colExpLabel:bottom" justify="left" color="10,82,115"  left="parent:left+10" clipping="false" />
+						<label id="fleetMaintenanceValue" text="50 000 000 000" font="var:text_med" top="colExpLabel:bottom" justify="right" color="10,82,115" right="parent:right-4" />
+
+						<label id="stationExpLabel" text="@UI_EMPIRESUMMARY_STATION_MAINTENANCE" font="var:text_med" top="fleetExpLabel:bottom" color="10,82,115" justify="left" left="parent:left+10"/>
+						<label id="stationMaintenanceValue" text="999 999 999 999"  font="var:text_med" top="fleetExpLabel:bottom" color="10,82,115" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+						
+						<label id="corruptionLabel" text="@UI_EMPIRESUMMARY_CORRUPTION" font="var:text_med" top="stationExpLabel:bottom" color="90,90,90" justify="left" left="parent:left+10" />
+						<label id="embezzlementValue" text="999 999 999 999"  font="var:text_med" top="stationExpLabel:bottom" color="90,90,90" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+						
+						<label id="debtLabel" text="@UI_EMPIRESUMMARY_DEBT_INTEREST" font="var:text_med" top="corruptionLabel:bottom" color="255,0,0,128" justify="left"  left="parent:left+10" />
+						<label id="debtInterestValue" text="999 999 999 999"  font="var:text_med" top="corruptionLabel:bottom" color="255,0,0,128" justify="right" width="parent:width-8" hcenter="parent:hcenter"/>
+				</panel>
+				
+			  </panel>
+		</panel>		
+		      
+      <panel id="Invoices" width="parent:width:24%" max_width="350" height="parent:height" clipping="false">
+        <panel template="boxpanel_scale"  left="parent:left-4" top="parent:top" right="parent:right+4" bottom="parent:bottom">
+				<var id="box_bgcolor" value="0,82,115,128"/>
+				<var id="box_olcolor" value="0,82,115"/>
+		</panel>
+        <label id="invoiceHeader" text="Construction Invoices" font="var:text_large" justify="left" left="parent:left+4" top="parent:top+6" width="parent:width" />
+        <panel width="parent:width" top="35" height="parent:height-35">
+		<panel id="ships" template="boxpanel_scale" width="parent:width" height="parent:height:49%" >
+			<var id="box_bgcolor" value="0,0,0,192"/>
+			<var id="box_olcolor" value="0,82,115,210"/>
+			<label id="shipsLabel" text="Ship Construction" font="var:text_med" justify="left" left="parent:left+8"/>
+			<label id="shipInvoicesDue" text="(Next Turn)" font="var:text_med" color="83,214,255" justify="right"  right="parent:right-4"/>
+			<panel template="v4ListBox" id="shipinvoicelist" selection_template="" selectable="false" item_template="designListItem" left="parent:left+4" right="parent:right-5" top="shipsLabel:bottom" bottom="parent:bottom-4">
+			</panel>
+        </panel>
+		<panel id="stations" template="boxpanel_scale" width="parent:width" top="ships:bottom" height="parent:height:49%" >
+			<var id="box_bgcolor" value="0,0,0,192"/>
+			<var id="box_olcolor" value="0,82,115,210"/>
+			<label id="stationsLabel" text="Station Construction" font="var:text_med" justify="left" left="parent:left+8"/>
+			<label id="stationInvoicesDue" text="(Next Turn)" font="var:text_med" color="83,214,255" justify="right"  right="parent:right-4" />
+			<panel template="v4ListBox" id="stationinvoicelist" selection_template="" selectable="false" item_template="designListItem" left="parent:left+4" right="parent:right-5" top="stationsLabel:bottom" bottom="parent:bottom-4">
+			</panel>
+        </panel>
+
+		</panel>
+      </panel>
+		
+		<!-- Colony Information -->
+		<panel id="ColonyInfo" width="parent:width:24%" max_width="350" height="parent:height" clipping="false">
+			  <panel template="boxpanel_scale"  left="parent:left-4" top="parent:top" right="parent:right+4" bottom="parent:bottom">
+				<!-- Colonization Cost Blue (set in commonassets.xml) with same color outline at 75% opacity -->
+				<var id="box_bgcolor" value="43,174,255,128"/>
+				<var id="box_olcolor" value="43,174,255"/>
+			  </panel>
+			  
+			  <label id="colonyHeader" text="Colony Information" font="var:text_large" justify="left" left="parent:left+4" top="parent:top+6" width="parent:width" />
+			  <label id="coloniesvalue" font="var:text_small_Bold" text="999 Colonies" justify="right" top="parent:top+2" width="parent:width" />
+			  <label id="provincesvalue" font="var:text_small_Bold"  text="100 Provinces" justify="right" top="coloniesvalue:bottom" width="parent:width" />
+			  			  
+			  <panel width="parent:width" top="35" height="parent:height-35">
+				<panel id="colTopBox" template="boxpanel_scale" width="parent:width" height="parent:height:49%" >
+					<var id="box_bgcolor" value="0,0,0,192"/>
+					<var id="box_olcolor" value="64,178,59,210"/>
+					
+					<label id="established" text="Colony Income" font="var:text_med" color="0,255,0,192" justify="left" left="parent:left+4" />
+					
+					<panel template="v4ListBox" id="colonyincomelist" selection_template="" item_template="ColonyCostItem" left="parent:left+4" right="parent:right-5" top="established:bottom" >
+					</panel>
+				</panel>
+				<panel id="colBottomBox" template="boxpanel_scale" width="parent:width" top="colTopBox:bottom" height="parent:height:50%" >
+					<var id="box_bgcolor" value="0,0,0,192"/>
+					<var id="box_olcolor" value="255,0,0"/>
+					
+					<label id="expenses" text="Colony Expenses" font="var:text_med" color="255,0,0,192" justify="left" left="parent:left+4" />
+					
+					<panel template="v4ListBox" id="colonydevlist" selection_template="" item_template="ColonyCostItem" left="parent:left+4" right="parent:right-5" top="expenses:bottom" >
+					</panel>
+				</panel>
+			  </panel>
+		</panel>
+		
+		
+		<!-- Turn summary -->
+		<panel id="TurnInfo" width="parent:width:24%" max_width="350" height="parent:height" clipping="false">
+
+			  <column id="Values Tab"  width="parent:width" height="parent:height" item_spacing="even">
+			  <panel width="parent:width" left="parent:left"  clipping="false">
+				
+					<label id="TaxRate" text="@UI_EMPIRESUMMARY_TAX_RATE" font="var:text_med" justify="left" left="parent:left"/>
+					<panel template="FillSlider" left="parent:left+90" right="parent:right-30" top="parent:top+5" clipping="false">
+						<var id="slider_id" value="taxslider"/>
+					</panel>
+					<slider_value id="taxvalue" text="999" font="var:text_med" justify="right" right="parent:right-4" width="40" top="parent:top"  slider="taxslider" ></slider_value>
+					
+					<label id="immigrationlabel" text="Immigration:" font="var:text_med" justify="left" left="parent:left" top="TaxRate:bottom+15" ></label>
+					<panel template="FillSlider" left="parent:left+90" right="parent:right-30"  top="TaxRate:bottom+20" clipping="false">
+					  <var id="slider_id" value="immigrationslider"/>
+					</panel>
+					<slider_value id="immigrationvalue" text="999" font="var:text_med" justify="right" right="parent:right-4" width="40" top="TaxRate:bottom+15" slider="immigrationslider" ></slider_value>
+			  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_POPULATION" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="populationvalue" text="999 999 999 999" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_BIOSPHERE" font="var:text_large" justify="left" width="parent:width"></label>
+					<label id="biospherevalue" text="999 999 999" font="var:text_large" justify="right" width="parent:width"></label>
+				  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_AVERAGE_MORALE" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="averagemoralevalue" text="99" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_ECONOMY" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="economyvalue" text="1.99" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="15"  width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_BASES" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="basesvalue" text="999" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_FLEETS" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="fleetsvalue" text="999" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="15" width="parent:width" clipping="false">
+					<label id="label" text="@UI_EMPIRESUMMARY_SHIPS" font="var:text_large" justify="left" width="parent:width"/>
+					<label id="shipsvalue" text="999" font="var:text_large" justify="right" width="parent:width"/>
+				  </panel>
+				  <panel height="30" width="parent:width" clipping="false">
+					<label id="allExp" text="Pending Expenses:" font="var:text_large" color="255,165,0" justify="left" width="parent:width"/>
+					<label id="financialCommit_Value" text="999" font="var:text_large" color="255,165,0" justify="right" width="parent:width"/>
+					<label id="label" text="@UI_EMPIRE_DUE_NEXT_TURN_COLON" font="var:text_large" justify="left" width="parent:width" top="allExp:bottom" color="255,0,0,128"/>
+					<label id="financialDue_Amount" text="999" font="var:text_large" justify="right" width="parent:width" top="allExp:bottom" color="255,0,0,128" />
+				  </panel>
+				  
+				</column>
+		</panel>
+		
+		
+		<!--
+		<column id="Values Tab" width="350" height="parent:height" >
+          <var id="valuesLabel" value="StandardMediumTitleBold"/>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_POPULATION" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="populationvalue" text="999 999 999 999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_BIOSPHERE" font="var:valuesLabel" justify="left" width="parent:width"></label>
+            <label id="biospherevalue" text="999 999 999" font="var:valuesLabel" justify="right" width="parent:width"></label>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_AVERAGE_MORALE" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="averagemoralevalue" text="99" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_ECONOMY" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="economyvalue" text="1.99" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_BASES" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="basesvalue" text="999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_FLEETS" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="fleetsvalue" text="999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+          <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRESUMMARY_SHIPS" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="shipsvalue" text="999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+		  <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRE_DUE_NEXT_TURN_COLON" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="financialCommit_Value" text="999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+		  <panel width="parent:width" clipping="false">
+            <label id="label" text="@UI_EMPIRE_DUE_NEXT_TURN_COLON" font="var:valuesLabel" justify="left" width="parent:width"/>
+            <label id="financialDue_Amount" text="999" font="var:valuesLabel" justify="right" width="parent:width"/>
+          </panel>
+        </column>
+		-->
+
+	</row>
+
+
+
+	<!--government-->
+	<panel id="governmentScreen" shape="parent" hidden="true">
+		<image sprite="SolidWhite" color="0,0,0," shape="parent"/>
+
+		<panel id="government_widget" width="parent:width:90%" hcenter="parent:hcenter"  top="20" bottom="parent:bottom" clipping="false" >
+			<label id="governmenttype_title" text="Libritarian" height="30"  width="parent:height:70%" font="StandardLargeTitle" justify="hcenter" left="10" clipping="false"/>
+
+
+			<pol_spectrum id="pol_spectrum" left="10" top="50" width="parent:height:70%" height="parent:height:70%" clipping="false">
+				<panel template="boxpanel_scale" width="parent:width+10" height="parent:height+10" hcenter="parent:hcenter" vcenter="parent:vcenter"/>
+				<image sprite="political_bkg" width="parent:width" height="parent:height" color="180,150,120,180"/>
+				<var id="line" value="150,150,150,100"/>
+				<image sprite="SolidWhite" hcenter="parent:hcenter" width="2" height="parent:height"   color="var:line"/>
+				<image sprite="SolidWhite" hcenter="parent:width:25%" width="2" height="parent:height" color="var:line"/>
+				<image sprite="SolidWhite" hcenter="parent:width:75%" width="2" height="parent:height" color="var:line"/>
+				<image sprite="SolidWhite" vcenter="parent:vcenter" height="2" width="parent:width"    color="var:line"/>
+				<image sprite="SolidWhite" vcenter="parent:width:25%" height="2" width="parent:width"    color="var:line"/>
+				<image sprite="SolidWhite" vcenter="parent:width:75%" height="2" width="parent:width"    color="var:line"/>
+				<column height="parent:height" hcenter="parent:hcenter" width="8" item_spacing="even">
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+					<image sprite="SolidWhite" width="10" height="2" color="var:line"/>
+				</column>
+				<row height="8" vcenter="parent:hcenter" width="parent:width" item_spacing="even">
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+					<image sprite="SolidWhite" height="10" width="2" color="var:line"/>
+				</row>
+				<var id="spritesize" value="70"/>
+				<image sprite="governmenticon_communalism" left="parent:left" top="parent:top"             height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_junta" hcenter="parent:hcenter" top="parent:top"             height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_plutocracy" right="parent:right" top="parent:top"            height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_socialism" left="parent:left" vcenter="parent:vcenter"       height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_centrism" hcenter="parent:hcenter" vcenter="parent:vcenter"  height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_mercantilism" right="parent:right" vcenter="parent:vcenter"  height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_cooperativism" left="parent:left" bottom="parent:bottom"     height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_anarchism" hcenter="parent:hcenter" bottom="parent:bottom"   height="var:spritesize" width="var:spritesize"/>
+				<image sprite="governmenticon_liberationism" right="parent:right" bottom="parent:bottom"   height="var:spritesize" width="var:spritesize"/>
+
+				<panel id="government_communalism" template="InvisibleButton" left="parent:left" top="parent:top"             height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_junta" template="InvisibleButton" hcenter="parent:hcenter" top="parent:top"             height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_plutocracy" template="InvisibleButton" right="parent:right" top="parent:top"            height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_socialism" template="InvisibleButton" left="parent:left" vcenter="parent:vcenter"       height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_centrism" template="InvisibleButton" hcenter="parent:hcenter" vcenter="parent:vcenter"  height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_mercantilism" template="InvisibleButton" right="parent:right" vcenter="parent:vcenter"  height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_cooperativism" template="InvisibleButton" left="parent:left" bottom="parent:bottom"     height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_anarchism" template="InvisibleButton" hcenter="parent:hcenter" bottom="parent:bottom"   height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+				<panel id="government_liberationism" template="InvisibleButton" right="parent:right" bottom="parent:bottom"   height="var:spritesize" width="var:spritesize" hover_messages="true" debug="false"/>
+
+				<!-- "reticle" will be repositioned by the pol_spectrum code -->
+				<image id="reticle" sprite="sysmap_selectring" width="sprite:sysmap_selectring:width:50%" height="sprite:sysmap_selectring:height:50%" color="255,0,0,255"/>
+
+			</pol_spectrum>
+			<panel template="boxpanel_scale" width="500"  top="pol_spectrum:bottom+18" bottom="parent:bottom-58" left="pol_spectrum:left+8" right="pol_spectrum:right-8">
+				<var id="box_bgcolor" value="15,15,15"/>
+				<var id="box_olcolor" value="80,155,170,160"/>
+			</panel>
+			<panel template="v3ListBox" id="eventlist" selection_template="" item_template="governmentMoveItem" width="500"  top="pol_spectrum:bottom+20" bottom="parent:bottom-60" left="pol_spectrum:left+10" right="pol_spectrum:right-10"/>
+			<text_box2 id="govDescrip" font="StandardHeaderBold" left="pol_spectrum:right+20" top="0" right="parent:right" bottom="parent:bottom-60" />
+
+		</panel>
+	</panel>
+
+	<!--border frames-->
+	<!--<panel width="2000"  children_ right="leftside:left-15" bottom="parent:bottom-60" top="60">
+  <panel template="Frame_Right" shape="parent"></panel>
+  <panel template="Tab_Right" width="parent:width" right="parent:right-30" top="parent:top"></panel>
+  <panel template="Chipped_Corner_GlossPanel" width="parent:width" right="parent:right-10" top="parent:top+30" bottom="parent:bottom-10">
+	<var id="BG_color" value="0,40,60,100"></var>
+  </panel>
+</panel>
+
+<panel width="2000"  children_ left="rightside:right+25" bottom="parent:bottom-60" top="60">
+  <panel template="Frame_Left" shape="parent"></panel>
+  <panel template="Tab_Left" width="parent:width" left="parent:left+30" top="parent:top"></panel>
+  <panel template="Chipped_Corner_GlossPanel" width="parent:width" left="parent:left+10" top="parent:top+30" bottom="parent:bottom-10">
+	<var id="BG_color" value="0,40,60,100"></var>
+  </panel>
+</panel>-->
+
+	<panel id="gameScreenFrame" template="ScreenFrame_NT_Widget" shape="parent"  >
+		<var id="screen_title" value="@UI_EMPIREMANAGER_EMPIRE_MANAGER"/>
+	</panel>
+
+	<panel template="Chipped_Corner_Panel" bottom="parent:bottom+25" height="70" width="340" left="parent:left-30">
+		<var id="BG_color" value="0,0,20,100" />
+	</panel>
+	<panel id="btnEmpire" template="ST_MiddleButton" bottom="parent:bottom-10" width="170" left="parent:left-30">
+		<var id="label" value="@UI_GENERAL_EMPIRE" />
+	</panel>
+
+	<panel id="btnGovernment" template="ST_MiddleButton" bottom="parent:bottom-10" width="170" left="parent:left+140">
+		<var id="label" value="@UI_GENERAL_GOVERNMENT" />
+	</panel>
+
+
+</panel>
+<!--END OF SCREEN-->
+</gui>

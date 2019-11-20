@@ -1,0 +1,194 @@
+<Weapon>
+  <Name>Heavy Inertial Cannon</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>EWP_Heavy_Inertial_Cannon</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Inertial</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Heavy_3_HeavyCannon</Turret>
+          <Barrel>Barrel_HeavyInertial_3_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Bolt</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>20000</Cost>
+  <Crew>3</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>15</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>6</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>5</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>30</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>0</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>-15</CritHitBonus>
+  <MalfunctionPercent>35</MalfunctionPercent>
+  <MalfunctionDamage>75</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111000
+0000111000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>0001110000
+0001110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>0001110000
+0001110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>3</Volleys>
+  <VolleyPeriod>0.2</VolleyPeriod>
+  <VolleyDelay>0</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>5</BaseRechargeTime>
+  <MuzzleSpeed>550</MuzzleSpeed>
+  <ShotAcceleration>0</ShotAcceleration>
+  <Duration>4</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>
+  </Model>
+  <DecalMaterial>Burn 02</DecalMaterial>
+  <DecalSize>17</DecalSize>
+  <MuzzleEffect>effects\Weapons\inertialcannon_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\inertialcannon_impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\inertialcannon_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Can_Hvy_Inertial_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Can_Hvy_Inertial_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>
+  </BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>can_hvyinertial</Icon>
+  <RangeTable>
+    <PbRange>400</PbRange>
+    <PbDeviation>0.35</PbDeviation>
+    <PbDamage>8</PbDamage>
+    <EffectiveRange>1500</EffectiveRange>
+    <EffectiveDeviation>0.5</EffectiveDeviation>
+    <EffectiveDamage>8</EffectiveDamage>
+    <MaxRange>2100</MaxRange>
+    <MaxDeviation>0.7</MaxDeviation>
+    <MaxDamage>8</MaxDamage>
+    <PlanetRange>2100</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>5000</PopDamage>
+  <InfraDamage>5E-05</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>0</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

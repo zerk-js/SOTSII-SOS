@@ -1,0 +1,253 @@
+<ShipSection>
+  <RealClass />
+  <Title>@SECTIONTITLE_CR_MIS_BIOWAR</Title>
+  <Description>@SECTIONDESC_CR_MIS_BIOWAR</Description>
+  <AiType>
+  </AiType>
+  <ModelFile>factions\human\models\Cruiser\Mission\Biowar.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>
+  </DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <AmbientSound>
+  </AmbientSound>
+  <EngineSound>
+  </EngineSound>
+  <CameraDistanceFactor>1</CameraDistanceFactor>
+  <Struct>400</Struct>
+  <StructDamageAmount>0</StructDamageAmount>
+  <DeathDamage>0</DeathDamage>
+  <ExplosionRadius>0</ExplosionRadius>
+  <Mass>7000</Mass>
+  <Top>10,3</Top>
+  <Bottom>10,3</Bottom>
+  <Side>10,4</Side>
+  <Crew>20</Crew>
+  <CrewRequired>10</CrewRequired>
+  <Power>5</Power>
+  <Supply>30</Supply>
+  <ECM>0</ECM>
+  <ECCM>0</ECCM>
+  <ColonizerSpace>0</ColonizerSpace>
+  <SavingsCost>15000</SavingsCost>
+  <ProductionCost>2500</ProductionCost>
+  <FtlSpeed>0</FtlSpeed>
+  <NodeSpeed>0</NodeSpeed>
+  <MissionTime>0</MissionTime>
+  <CommandPoints>0</CommandPoints>
+  <RepairPoints>0</RepairPoints>
+  <TerraformingPoints>0</TerraformingPoints>
+  <FreighterSpace>0</FreighterSpace>
+  <Signature>0</Signature>
+  <TacticalSensorRange>0</TacticalSensorRange>
+  <StrategicSensorRange>0</StrategicSensorRange>
+  <LaunchDelay>0</LaunchDelay>
+  <DockingDelay>0</DockingDelay>
+  <BattleRiderReserveSize>0</BattleRiderReserveSize>
+  <StationType>
+  </StationType>
+  <StationLevel>0</StationLevel>
+  <IsConstructor>False</IsConstructor>
+  <IsFreighter>False</IsFreighter>
+  <ConstructionPoints>0</ConstructionPoints>
+  <IsPolice>False</IsPolice>
+  <PsionicPowerLevel>0</PsionicPowerLevel>
+  <SlaveCapacity>0</SlaveCapacity>
+  <FleetSpeedModifier>1</FleetSpeedModifier>
+  <PreviewImage>
+  </PreviewImage>
+  <Acceleration>0</Acceleration>
+  <RotationalAccelerationYaw>0</RotationalAccelerationYaw>
+  <RotationalAccelerationPitch>0</RotationalAccelerationPitch>
+  <RotationalAccelerationRoll>0</RotationalAccelerationRoll>
+  <Decceleration>0</Decceleration>
+  <LinearSpeed>10</LinearSpeed>
+  <RotationSpeed>0</RotationSpeed>
+  <Banks>
+    <Bank>
+      <Id>c846873c-ab42-43d5-b31d-15286eb8bf95</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_05</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>65</YawMax>
+          <PitchMin>-10</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_04</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-65</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-10</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+    <Bank>
+      <Id>b79fa5e6-b737-4d24-bcd3-8d8bdc9b62b4</Id>
+      <TurretSize>VeryHeavy</TurretSize>
+      <TurretClass>Biomissile</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>battlerider_01</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>0</YawMin>
+          <YawMax>0</YawMax>
+          <PitchMin>0</PitchMin>
+          <PitchMax>0</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>battlerider_02</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>0</YawMin>
+          <YawMax>0</YawMax>
+          <PitchMin>0</PitchMin>
+          <PitchMax>0</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>battlerider_03</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>0</YawMin>
+          <YawMax>0</YawMax>
+          <PitchMin>0</PitchMin>
+          <PitchMax>0</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+    <Bank>
+      <Id>5aaa648e-dfcb-48fb-ae05-653c1bbf5bf8</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_03</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-65</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-10</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_02</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>65</YawMax>
+          <PitchMin>-10</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+  </Banks>
+  <RequiredTechs>
+    <Tech>
+      <Name>Group Bioweapons</Name>
+    </Tech>
+  </RequiredTechs>
+  <Modules />
+  <ExcludedSections />
+  <ExcludedTypes />
+  <PsionicAbilities />
+  <WeaponGroups />
+  <ShipOptionGroups>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>SLD_Structural_Fields</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Polysteel</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_MagnoCeramic_Latices</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Quark_Resonators</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Reflective</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+  </ShipOptionGroups>
+</ShipSection>

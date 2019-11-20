@@ -1,0 +1,84 @@
+<ShipSection>
+  <RealClass />
+  <Title>@SECTIONTITLE_BR_BOARDING_POD</Title>
+  <Description>@SECTIONDESC_BR_BOARDING_POD</Description>
+  <AiType>
+  </AiType>
+  <ModelFile>factions\morrigi\models\Battle Riders\boarding_pod.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>
+  </DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <AmbientSound>
+  </AmbientSound>
+  <EngineSound>Eng_br_heavy_drone</EngineSound>
+  <CameraDistanceFactor>1</CameraDistanceFactor>
+  <Struct>75</Struct>
+  <StructDamageAmount>0</StructDamageAmount>
+  <DeathDamage>0</DeathDamage>
+  <ExplosionRadius>0</ExplosionRadius>
+  <Mass>1000</Mass>
+  <Top>0,0</Top>
+  <Bottom>0,0</Bottom>
+  <Side>0,0</Side>
+  <Crew>10</Crew>
+  <CrewRequired>1</CrewRequired>
+  <Power>10</Power>
+  <Supply>10</Supply>
+  <ECM>0</ECM>
+  <ECCM>0</ECCM>
+  <ColonizerSpace>0</ColonizerSpace>
+  <SavingsCost>1100</SavingsCost>
+  <ProductionCost>200</ProductionCost>
+  <FtlSpeed>0</FtlSpeed>
+  <NodeSpeed>0</NodeSpeed>
+  <MissionTime>120</MissionTime>
+  <CommandPoints>0</CommandPoints>
+  <RepairPoints>0</RepairPoints>
+  <TerraformingPoints>0</TerraformingPoints>
+  <FreighterSpace>0</FreighterSpace>
+  <Signature>0</Signature>
+  <TacticalSensorRange>0</TacticalSensorRange>
+  <StrategicSensorRange>0</StrategicSensorRange>
+  <LaunchDelay>0</LaunchDelay>
+  <DockingDelay>0</DockingDelay>
+  <BattleRiderReserveSize>0</BattleRiderReserveSize>
+  <StationType>
+  </StationType>
+  <StationLevel>0</StationLevel>
+  <IsConstructor>False</IsConstructor>
+  <IsFreighter>False</IsFreighter>
+  <ConstructionPoints>0</ConstructionPoints>
+  <IsPolice>False</IsPolice>
+  <PsionicPowerLevel>0</PsionicPowerLevel>
+  <SlaveCapacity>0</SlaveCapacity>
+  <FleetSpeedModifier>1</FleetSpeedModifier>
+  <PreviewImage>
+  </PreviewImage>
+  <Acceleration>150</Acceleration>
+  <RotationalAccelerationYaw>360</RotationalAccelerationYaw>
+  <RotationalAccelerationPitch>360</RotationalAccelerationPitch>
+  <RotationalAccelerationRoll>360</RotationalAccelerationRoll>
+  <Decceleration>2</Decceleration>
+  <LinearSpeed>250</LinearSpeed>
+  <RotationSpeed>360</RotationSpeed>
+  <Banks />
+  <RequiredTechs />
+  <Modules />
+  <ExcludedSections />
+  <ExcludedTypes>
+    <ExcludedType>
+      <Name>Command</Name>
+    </ExcludedType>
+    <ExcludedType>
+      <Name>Engine</Name>
+    </ExcludedType>
+  </ExcludedTypes>
+  <PsionicAbilities />
+  <WeaponGroups />
+  <ShipOptionGroups />
+</ShipSection>

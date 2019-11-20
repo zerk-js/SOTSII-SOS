@@ -1,0 +1,212 @@
+<Faction ID="4" name="tarkas">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<CrewEfficiencyValue>1.0</CrewEfficiencyValue>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+	
+  <MaterialDictionary>\base\factions\tarkas\materials.xml</MaterialDictionary>
+
+  <MinishipModel>props\ui\miniship_tarka.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Tarkas.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Hyperfields</RootNode>
+  </TechTree>
+
+  <InitialDesigns weaponbias="">
+  
+  	<Design name="Colonizer">
+	  <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Drone">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_drone_carrier"/>
+    </Design>
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_hammerhead"/>		
+      <Section name="cr_mis_shuttle_carrier"/>
+    </Design>
+	<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair_salvage"/>
+    </Design>
+	-->
+
+	<Design name="Boarding">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+	
+    <Design name="Armor">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Supply">
+	  <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+    <Design name="Command">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+    <Design name="Scout">
+	  <Section name="cr_cmd"/>
+      <Section name="cr_mis_extended"/>
+    </Design>
+  </InitialDesigns>
+
+	<DiplomacyActionWeights>factions\tarkas\diplomacyWeights.xml</DiplomacyActionWeights>
+  <StratModifiers>
+    <MaxColonizableHazard>675</MaxColonizableHazard>
+    <MaxProvincePlanetRange>9.0</MaxProvincePlanetRange>
+    <TradeRangeModifier>2.5</TradeRangeModifier>
+    <OverharvestModifier>120.0</OverharvestModifier>
+    <ResearchModifier>1.0</ResearchModifier>
+    <PrototypeConstructionCostModifierPF>2.75</PrototypeConstructionCostModifierPF>
+    <PrototypeConstructionCostModifierCR>2.25</PrototypeConstructionCostModifierCR>
+    <PrototypeConstructionCostModifierDN>1.8</PrototypeConstructionCostModifierDN>
+    <PrototypeConstructionCostModifierLV>1.25</PrototypeConstructionCostModifierLV>
+    <BadDesignAttributePercent>8</BadDesignAttributePercent>
+    <GoodDesignAttributePercent>12</GoodDesignAttributePercent>
+    <DiplomacyReactionKillShips>-20</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-100</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>10</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-45</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-50</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>0</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-115</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-70</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>70</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>5</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>2</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>75</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>0</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>0</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>2</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>-5</DiplomacyReactionSmallerEmpire>
+    <DiplomacyDemandWeight>0.1</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>0.7</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="1200"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="1000"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="400"/>
+    <DefaultDiplomacyReaction faction="loa"       value="1000"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="700"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="700"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="250"/>
+  </DefaultDiplomacyReactions>
+
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="1.05" />
+    <ImmigrationPopBonus faction="hiver"     value="1.10"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="1.10"/>
+    <ImmigrationPopBonus faction="loa"       value="1.0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="1.2"/>
+    <ImmigrationPopBonus faction="tarkas"    value="1.0"/>
+    <ImmigrationPopBonus faction="zuul"      value="0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="-0.05" />
+    <SpyingBonus faction="hiver"     value="-0.20"/>
+    <SpyingBonus faction="tarkas"    value="0.10"/>
+    <SpyingBonus faction="liir_zuul" value="-0.30"/>
+    <SpyingBonus faction="morrigi"   value="0.20"/>
+    <SpyingBonus faction="zuul"      value="-0.45"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_INDEPENDANT_CONQUERED>2</ME_INDEPENDANT_CONQUERED>
+    </Centrism>
+  </MoralEventModifiers>
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>0.5</PsiPowerPerCrew>
+  <EntryPointOffset>1500</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.5</EXPANDING>
+    <ARMING>0.7</ARMING>
+    <HUNKERING>0.6</HUNKERING>
+    <CONQUERING>0.6</CONQUERING>
+    <DESTROYING>0.5</DESTROYING>
+    <DEFENDING>0.5</DEFENDING>
+  </ResearchRates>
+  
+  
+  <!--Badges-->
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge1.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge2.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge3.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge4.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge5.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge6.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge7.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge8.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge9.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge10.tga"/>
+  <Badge texture="\base\factions\tarkas\badges\tarka_badge11.tga"/>
+
+  <NoAvatar texture="\base\factions\tarkas\avatars\tarka_off.tga"/>
+  
+  <!--Avatars-->  
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\tarkas\avatars\Tarka_Avatar_08.tga"/>
+
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\tarkas\textures\splash\Lan_Supreme_splash.tga"/>
+    <SplashScreen image="factions\tarkas\textures\splash\Mateo_splash.tga"/>
+  </SplashScreens>
+  
+ 
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineTarkasDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineTarkasDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineTarkasDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.5</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_TARKAS_" count="35"/>
+  <EmpireNames prefix="@EMPIRENAME_TARKAS_" count="16"/>
+
+</Faction>

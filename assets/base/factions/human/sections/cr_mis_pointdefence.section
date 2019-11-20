@@ -1,0 +1,404 @@
+<ShipSection>
+  <RealClass />
+  <Title>@SECTIONTITLE_CR_MIS_POINTDEFENCE</Title>
+  <Description>@SECTIONDESC_CR_MIS_POINTDEFENCE</Description>
+  <AiType>
+  </AiType>
+  <ModelFile>factions\human\models\cruiser\mission\pointdefence.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>
+  </DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <AmbientSound>
+  </AmbientSound>
+  <EngineSound>
+  </EngineSound>
+  <CameraDistanceFactor>1</CameraDistanceFactor>
+  <Struct>520</Struct>
+  <StructDamageAmount>0</StructDamageAmount>
+  <DeathDamage>0</DeathDamage>
+  <ExplosionRadius>0</ExplosionRadius>
+  <Mass>5000</Mass>
+  <Top>10,7</Top>
+  <Bottom>10,7</Bottom>
+  <Side>10,8</Side>
+  <Crew>25</Crew>
+  <CrewRequired>5</CrewRequired>
+  <Power>10</Power>
+  <Supply>25</Supply>
+  <ECM>0</ECM>
+  <ECCM>0</ECCM>
+  <ColonizerSpace>0</ColonizerSpace>
+  <SavingsCost>31000</SavingsCost>
+  <ProductionCost>2300</ProductionCost>
+  <FtlSpeed>0</FtlSpeed>
+  <NodeSpeed>0</NodeSpeed>
+  <MissionTime>0</MissionTime>
+  <CommandPoints>0</CommandPoints>
+  <RepairPoints>0</RepairPoints>
+  <TerraformingPoints>0</TerraformingPoints>
+  <FreighterSpace>0</FreighterSpace>
+  <Signature>0</Signature>
+  <TacticalSensorRange>0</TacticalSensorRange>
+  <StrategicSensorRange>0</StrategicSensorRange>
+  <LaunchDelay>0</LaunchDelay>
+  <DockingDelay>0</DockingDelay>
+  <BattleRiderReserveSize>0</BattleRiderReserveSize>
+  <StationType>
+  </StationType>
+  <StationLevel>0</StationLevel>
+  <IsConstructor>False</IsConstructor>
+  <IsFreighter>False</IsFreighter>
+  <ConstructionPoints>0</ConstructionPoints>
+  <IsPolice>False</IsPolice>
+  <PsionicPowerLevel>0</PsionicPowerLevel>
+  <SlaveCapacity>0</SlaveCapacity>
+  <FleetSpeedModifier>1</FleetSpeedModifier>
+  <PreviewImage>
+  </PreviewImage>
+  <Acceleration>0</Acceleration>
+  <RotationalAccelerationYaw>0</RotationalAccelerationYaw>
+  <RotationalAccelerationPitch>0</RotationalAccelerationPitch>
+  <RotationalAccelerationRoll>0</RotationalAccelerationRoll>
+  <Decceleration>0</Decceleration>
+  <LinearSpeed>0</LinearSpeed>
+  <RotationSpeed>10</RotationSpeed>
+  <Banks>
+    <Bank>
+      <Id>ba6a4e8d-5733-48f0-8487-e2d5e728b50f</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_01</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>90</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_02</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_03</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_04</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+    <Bank>
+      <Id>350f4313-2275-42ea-9a9b-528d717124c6</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_05</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-90</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_06</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_07</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_08</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+    <Bank>
+      <Id>e129c93e-e1c7-4ce6-b16b-2ac3aff33fd0</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_09</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>90</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_10</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_11</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_12</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+    <Bank>
+      <Id>3855431a-33bf-43ea-8764-3885e903bd9a</Id>
+      <TurretSize>Light</TurretSize>
+      <TurretClass>Standard</TurretClass>
+      <WeaponGroup>
+      </WeaponGroup>
+      <DefaultWeapon>
+      </DefaultWeapon>
+      <FrameX>0</FrameX>
+      <FrameY>0</FrameY>
+      <Mounts>
+        <Mount>
+          <NodeName>turret_light_13</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-90</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_14</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_15</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+        <Mount>
+          <NodeName>turret_light_16</NodeName>
+          <TurretOverload />
+          <BarrelOverload />
+          <BaseOverload />
+          <YawMin>-75</YawMin>
+          <YawMax>75</YawMax>
+          <PitchMin>-5</PitchMin>
+          <PitchMax>90</PitchMax>
+          <SectionFireAnimation>
+          </SectionFireAnimation>
+          <SectionReloadAnimation>
+          </SectionReloadAnimation>
+        </Mount>
+      </Mounts>
+    </Bank>
+  </Banks>
+  <RequiredTechs>
+    <Tech>
+      <Name>Group PD</Name>
+    </Tech>
+  </RequiredTechs>
+  <Modules />
+  <ExcludedSections />
+  <ExcludedTypes />
+  <PsionicAbilities />
+  <WeaponGroups />
+  <ShipOptionGroups>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>SLD_Structural_Fields</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Polysteel</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_MagnoCeramic_Latices</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Quark_Resonators</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Adamantine_Alloys</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Stealth_Armor</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Reflective</Name>
+        </ShipOption>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>IND_Improved_Reflective</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+  </ShipOptionGroups>
+</ShipSection>

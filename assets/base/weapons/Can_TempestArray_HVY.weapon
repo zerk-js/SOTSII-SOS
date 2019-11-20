@@ -1,0 +1,198 @@
+<Weapon>
+  <Name>Heavy Tempest Array</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>EWP_Heavy_Tempest_Array</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+    <Attribute>
+      <Name>StandOff</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Exclusive</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Dummy</Turret>
+          <Barrel>Barrel_Tempestarray_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Bolt</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>8000</Cost>
+  <Crew>4</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>16</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>1</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>8</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>100</HpBonus>
+  <Health>15</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>40</TimeToLive>
+  <DumbfireTime>0.5</DumbfireTime>
+  <CritHitBonus>0</CritHitBonus>
+  <MalfunctionPercent>10</MalfunctionPercent>
+  <MalfunctionDamage>120</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>15</EMPRange>
+  <EMPDuration>3</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>1111111111
+0111111110
+0011111100
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0111111110
+0011111100
+0001111000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0011111100
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>1.15</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>15</BaseRechargeTime>
+  <MuzzleSpeed>200</MuzzleSpeed>
+  <ShotAcceleration>125</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>turret_dummy.scene</Model>
+  <DecalMaterial>Bullet hole07</DecalMaterial>
+  <DecalSize>12</DecalSize>
+  <MuzzleEffect>effects\Weapons\TempestArray_Muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\TempestArray_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\TempestArray_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Mis_IOBMMissile_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Mis_IOBMMissile_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>Mis_IOBMMissile_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>trp_empulsar</Icon>
+  <RangeTable>
+    <PbRange>1000</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>24</PbDamage>
+    <EffectiveRange>2000</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>18</EffectiveDamage>
+    <MaxRange>2500</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>12</MaxDamage>
+    <PlanetRange>2000</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>5000000</PopDamage>
+  <InfraDamage>0.01</InfraDamage>
+  <TerraDamage>0.01</TerraDamage>
+  <SolutionTolerance>90</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

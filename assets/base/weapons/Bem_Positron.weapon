@@ -1,0 +1,217 @@
+<Weapon>
+  <Name>Positron Beam</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>EWP_Positron_Beam</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+	<Attribute>
+      <Name>Brawler</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_Positron_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+        <TurretClassSize>
+          <TurretSize>VeryHeavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_Positron_3_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+    <TurretClass>
+      <TurretClass>Spinal</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>
+          </Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Beam</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>18000</Cost>
+  <Crew>4</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>11</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>1</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>11</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>400</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>0</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>5</CritHitBonus>
+  <MalfunctionPercent>15</MalfunctionPercent>
+  <MalfunctionDamage>100</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000111000
+0000010000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000111000
+0000010000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000111000
+0000010000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0.5</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>1.25</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>10</BaseRechargeTime>
+  <MuzzleSpeed>10000</MuzzleSpeed>
+  <ShotAcceleration>0</ShotAcceleration>
+  <Duration>2</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>
+  </Model>
+  <DecalMaterial>Burn 01</DecalMaterial>
+  <DecalSize>12</DecalSize>
+  <MuzzleEffect>effects\Weapons\PositronBeam_Muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\PositronBeam_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\PositronBeam_Bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Bem_Positron_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Bem_Positron_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>
+  </BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>bem_pos</Icon>
+  <RangeTable>
+    <PbRange>1200</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>9</PbDamage>
+    <EffectiveRange>1800</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>9</EffectiveDamage>
+    <MaxRange>2600</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>9</MaxDamage>
+    <PlanetRange>2600</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>800000</PopDamage>
+  <InfraDamage>0.005</InfraDamage>
+  <TerraDamage>0.8</TerraDamage>
+  <SolutionTolerance>0</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

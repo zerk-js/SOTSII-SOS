@@ -1,0 +1,483 @@
+		 Save Our SOTS2 Patch 
+		A Fan Made Binary Patch 
+				for 
+		  Kerberos Studio's 
+		Sword of the Stars ][ 
+          Version 4.29.2019
+		  
+
+Special Thanks
+--------------
+
+	Kerberos Studios - All the developers and designers who dedicated so much effort with so little resources to release
+	  the best product possible under extremely difficult circumstances.
+	Mecron - For bringing us the Sword of the Stars series.
+	Erinys - For building a universe filled with amazing races and technology.
+	Rossinna - For inspiring me to work on SOTS2 Modding by constantly posting the most amazing screen shots of SOTS2.
+	ZedF - For teaching me how to play Sword of the Stars with amazing TARs.
+		  
+Introduction
+------------
+
+	This is (I believe) the first fan made binary patch released for Kerberos Studio's Sword of the Stars 2. I began this journey 
+	after first discovering a RNG bug in the game's AI (http://www.kerberos-productions.com/forums/viewtopic.php?f=52&t=57985). 
+	Up to that point I had made some minor efforts to improve the modding community by releasing a 2D asset extraction tool 
+	(http://www.kerberos-productions.com/forums/viewtopic.php?f=50&t=57842) and playing with the 3D asset file format but never 
+	successfully decoding it. Realizing that Kerb and/or Paradox would probably not have the resources to resolve my RNG bug, I
+	decided I'd take a swing at it. Three months later, I arrived at what I felt was a patch "good enough" to release. It includes
+	a multitude of modifications, mostly to the AI and how it behaves, that are all intended to preserve the original gameplay as
+	much as possible while fleshing out some of the undeveloped areas. 
+	As a fan of the Morrigi race, my initial goal was to improve their trade and diplomacy options to give them the same feel as
+	they had in SOTS1. Next came the Loa. That consumed most of my development time as their fleet composition model doesn't 
+	really fit with the game's template based AI system (well, it did, but totally lost the faction's fleet flexibility which is
+	their primary benefit). Work was done to redesign how templates work with Loa and ways to limit the cube costs of designs
+	created by the AI for accelerator gate limit compliance (mostly done by limiting tech tree and ship section preferences).
+	Some work was also done on Hivers as their fleet movement had some issues. 	Heavy work was also done at the basic AI level 
+	on the budget, colony, and fleet management logic. The techtree and fleet_templates files were preserved as much as possible
+	to match the original release of the game but tweaked slightly when necessary to make sense.
+	I'm sure a million bugs will be found, and probably some crashes, so this will likely be an ongoing project. Contact me on
+	Kerberos forums if you find anything and I'll try to fix it if I can!
+	- WILLDIEH on http://www.kerberos-productions.com/forums
+
+Changelog (details below)
+---------
+3.1.2019  - Initial Release
+3.3.2019  - Fixed IRC/chat bug from initial release. Please disable "Join Global Chat" as Kerb IRC/chat server is down.
+3.6.2019  - Rewrite of ship design logic. Minor section_preferences.csv tweaks. AI can now build Biome Colonizers.
+3.11.2019 - Rewrite of design and template preference logic. Changes to fleet budget. Tuning of Hiver fleet supply/weights. 
+			Fixed a Loa fleet fill bug causing crash. Increase reseach chances for Heavy Combat Laser. Set station
+			preferences to lean toward monitor/torpedo/missile. Disabled POINT_DEFENSE roles wherever possible.
+3.16.2019 - Removed minelayer/extended range section preferences. Updated Strike/Invasion scoring for Zuul/Human.
+			Changed defense fleets to use DEFAULT_PATROL template. Added Bore ships to zuul templates.
+			First attempt to update AI defensive logic.
+3.22.2019 - Fixed missing Declare War diplomacy impact. Altered declare war logic. Updated player strength evaluation logic.
+			Second attempt to update AI defensive logic. Added weapon scoring info to debug console. Improved template handling
+			of ship roles not yet developed (eg, CARRIER_BIO)-will fall back to COMBAT. Fixed bug in destroyed colony reserve
+			fleet not removing AI fleet info. Removed separate AI fleet prototyping build phase-build orders already include prototyping.
+			Disabled AI Patrol missions. Changed max strike/invade/survey travel time to 6 for Loa/Human/Zuul. Fixed missing weapon
+			icons for Phantom Missile and Fusion Burst Torp. Increased Support priority for populated colonies >1,000,000 to repair 
+			attacked colonies better.
+3.24.2019 - Reduced number of defensive fleets for Expanding and Defending stances in the hopes it will prompt better fleet build choices. Increased
+			Hiver gate fleet template priorities/counts. Increased priority for Gate, Strike, and Invasion missions in defensive stance.
+3.25.2019 - Improved AI colonization logic.
+3.28.2019 - Added Grappler module for Zuul/Tarkas/Hiver and AI design preference for Zuul. Fixed Loa Fleet Composition UI issues.
+4.11.2019 - Fixed Pirate Raid Message. Stations now only built in colonized systems. Reduced savings min to 500000 for building stations.
+			Reduced planet damage modifier in simulated battles. Defense fleets allowed to perform Strike missions. Changes to fleet templates.
+4.29.2019 - Updates submitted by Rossinna-sama added: 	
+	SoS Update - RS - V1 29/4/2019
+
+	Swapped Shipyard Supervisor requirements with We got Rock, Neil achievement - Design and save a ship design to unlock.
+	Swapped Steel Pusher requirements with Dr Sleepless achievement - Actually build a ship to completion to unlock.
+
+	AI chances of making new designs of all non-combat ships increased.
+	AI chances of making new designs of supply and colony ships decreased.
+	AI will now update and make new Gravboat designs if playing Morrigi.
+	AI no longer has defense fleets over every system (barring homeworld) it owns ONLY if it is in the expanding phase. It will build and place defense fleets in all other phases.
+	AI has 25% more budget allocated towards building new ships and fleets.
+	Combat AI focuses on planetary attack capable craft if they own the system (SoS default.)	
+	
+	
+Modifications
+-------------
+
+SOTS2_MANAGED.DLL
+	RNG Fix 
+		Introduced 100 ms sleep between AI player object instantiation and NPC player object instantiation to allow new RNG seed 
+	AI Budget 
+		Modified fleet build budget logic. Previously savings of 2,000,000 or so required before building non-defense combat fleets. AI would build
+			any non-combat templates regardless of budget. Now AI respects budget and has no preference except for defense fleets which are built first.
+			AI will only build fleets if savings >=500,000 (starting budget). This will very likely keep AI research budget very low for most of early
+			game (on "Normal" difficulty) but should result in much better fleet building performance.
+		Gov Security now always set to min required (previously hardcoded to 20%)
+		Stimulus limited to lesser of 15% or 60,000 (avg price of freighter) (0% if $<500,000 or if no trade researched) 
+		Research budget reaction modifiers increased 
+			Previously AI adjusted budget by 10% a turn to meet calculated recommendation
+			Now will adjust budget by 20% a turn. Results in faster budget modification response time.
+		Research is now properly assigned in such a way as to preserve Security and Savings 
+			Previously AI processing would run at end of turn and select cancelling an earlier call to set the budget up nicely. 
+			This would in effect ruin the budget as previous settings for Security and savings would be ignored.
+			Now, Research % is set first, then the rest of the budget is allocated between Security (min req'd) and Savings (left overs)
+				This means if you set the faction research to 90% in the factions.xml, they will keep spend into debt but
+				the game will stop research once they do and then return to previous research rate at 20% steps once savings are present.
+		Changed the UI Trade slider calculation logic
+			AI trade sliders should now properly affix to their notches, allowing trade routes to be established
+		Fixed Infrastructure/Terraforming allocation logic to allow 100% completion
+			Infra/Terraforming values would reach very small numbers and be rounded off before completion. 
+		Improved trade route allocation logic
+			Previously AI was only assigning n-1 trade routes per planet to available freighters, always leaving one route idle.
+			This may have been a design choice as AI originally only tracks freighter allocation by planet not by system so each planet attempts
+			to fill all the available freighters. Assuming an average of 2 planets per system, using N-1 would eliminate this problem in majority of cases.
+			Regardless, now more accurate trade allocation as we now track freighter allocation on a SYSTEM wide basis and compare before planet allocation.
+		Removed hardcoded AI 150% research bonus. Research bonuses are now based SOLELY on AI Difficulty setting	 
+	General Faction AI Changes
+		System defense fleets are now allowed to perform Strike missions.
+		Stations now only built in colonized systems. Reduced savings min to 500000 for building stations.
+		Improved AI colonization logic by increasing colonization missions for Loa and colonization fleet template weights for remainder of factions.
+		Increased Support priority for populated colonies >1,000,000 to repair attacked colonies better.
+		Disabled Patrol missions since AI now has dedicated defense fleets and doesn't do Intercept missions anyway.
+		Removed separate AI fleet prototyping build phase. Build orders already include prototyping and a separate phase was leaving the single 
+			prototype ships hanging around reserve fleets doing nothing. 
+		Fixed bug in destroyed colony reserve fleet not removing AI fleet info. AI would continue to try and deploy a destroyed fleet from reserves.
+		Templates that contain ship roles that don't yet exist (eg, CARRIER_BIO) will no longer crash
+			AI will replace the design with one based on COMBAT until it's possible to create an actual match
+		Improvements to AI defensive logic
+		Changed defense fleets to use DEFAULT_PATROL template.
+		Updated Strike/Invasion scoring for Zuul/Human to only allow slowboating if less than or equal to 4 turns
+		Modified fleet template build logic. Previously AI would only respect template weights after at least one fleet of each non-combat template type built.
+			Now respects weights and min to maintain values of the template in all considerations except defensive fleets which are always built first regardless
+			of other factors except budget min of 500,000.
+		AI now properly respects template stance weights. No more hard-coded shananigans forcing all template fleets to be built. If a fleet has low weight
+			it will get built last. The formula is something like (#req'd/#avail * weight)
+		Rewrite of ship design process
+			AI can now build Biomes - swapped the colonizerSpace values in the section files as the standard colonizer had fewer than the biomes and the AI was 
+				looking for the greater number when choosing a section
+			Weapon scoring now weighs armor piercing level enough to actually select AP rounds instead of Mass Drivers. Polarized Plasmatics may be over scored though.
+			Ships are redesigned almost every turn now. Prototying costs are avoided thanks to additional logic added to "matching design" algorithm
+			AI will still end up with several designs matching the various ship roles and weapon roles. These may appear duplicative, but should actually match
+				fleet templates better when weaponroles are defined (eg, STAND_OFF, PLANET_ATTACK, BRAWLER will all have separate designs)
+			Removed the POINT_DEFENSE type ship design logic. I think this existed before Kerberos hard coded small mounts to use Point Defense. It's appealing
+				in that it might allow one POINT_DEFENSE ship per template fleet to handle PD, but the reality is that all ships now field their own PD so 
+				having a POINT_DEFENSE weapon role for an entire ship doesn't make as much sense. Besides, entire fleets of POINT_DEFENSE ships were being
+				built based on the AI's counter design logic and that's no longer a concern.
+		Improved fleet travel logic to use direct travel if faster than node/gate travel
+		Updated AI player setup to allow for templates that contain ship designs with weaponroles that use weapons that haven't been created yet
+			Algorithm tries again with a null weaponrole
+		Added planet size weight to colonization mission selection. Larger planets/lower biohazard preferred.
+		Modified civilian (trade) station upgrade requirements to require all Dock modules built before upgrading
+			Easiest way to get AI to build additional dock modules for trade. Made sense to do anyway since why have trade if not building docks?
+		Improved mission assignment logic to differentiate between CONSTRUCT_STN and UPGRADE_STN mission capabilities of a fleet's assigned template
+			Previously either mission type would give the fleet a generic CONSTRUCTION flag which allowed it to do either mission not just the mission in the template.
+		Fixed fleet template processor to work with FILL quantities and faction inclusions/exclusions
+			Previously FILL would only work properly if no faction= or nfaction= entries as these would be improperly subtracted from the available
+			FILL amount.
+		Enabled warehouses in trade stations (previously disabled) 
+		Reduced slightly AI Strike mission scoring for Easter Egg events for all AI factions
+		Enabled AI colonization Support mission types. (previously disabled)
+		Updated AI station building logic to have 100% systems with Naval and 100% systems with Civ in all stances
+			Require Naval before Civ and Civ before Science (if/when player has trade)
+		Increased AI station building mission scores based on system total trade ports. + if >5 or ++ if >9
+		Fixed AI ship design logic to allow AI to place modules in CR sized slots on DNs and on LVs 
+			Module slots are mix of CR sized and DN sized (no LV sized) so DN/LVs would never get modules
+		AI can now detect completed research Tech Groups (for Psi Module compatibility checks which is based on the PSI tech group completion)
+		Added Ship Module selection logic. AI now has module type preferences based on ship properties.
+		Added AI psionics use logic for Abaddon, Possess, Inspiration, Block, Repair skills
+		Updated Patrol mission to only patrol one's own systems (this might still include empty but NPG'd systems though)
+	Zuul AI Changes
+		Enabled Demand Slaves for Zuul AI
+		Zuul ships will now have at least one Grappler module per ship once technology is developed. Best grappler tech available will be applied.
+	Morrigi AI Changes
+		Granted Morrigi trade treaty access at ceasefire (like SOTS1). Others wait till NAP like normal. (Wiki says Peace, but not true)
+		Morrigi have 1/2 Lessor Glamor bonus in most political actions. This affects chances of success and results. 
+			Elligible for 1/2 Lessor Glamor PLUS the full Lessor Glamor bonus if Lessor Glamor is researched.
+		Morrigi Gravboats are now a new ship class. This allows them to be included separately as ship roles in fleet_templates. 
+	Hiver AI Changes
+		Fixed fleet Gate mission scores to actually check for presence of gate ship
+		Fixed AI fleet movement to prevent Hivers from traveling via gate AND departing on space travel in same turn (now same as SOTS1)
+		Fixed Hiver Casting at 0 casting distance before Casting is researched. 
+			This was preventing first turn fleet travel as they'd try to cast and then stop at 0 distance from planet.
+		Fixed Hiver farcast success/failure logic to be based on farcast distance vs distance to planet 
+			Previously based on % of farcast distance modifier only. 
+		Removed a hard-coded requirement for Hiver to always have at least 2 colonization fleets. Now fleet builds based solely on template weights.
+	Loa AI Changes
+		Fleet Compositions are now based solely on a fleet's template name: 
+			AI tracks fleet builds by templates. Eg, template weight per stance and min amount affect which fleets are built.
+			For Loa to maintain some kind of sane fleet building logic, this behavior is preserved but to allow any fleet to assume any
+			template composition, the fleet's name is used to preserve which template the fleet was originally based on. 
+			Fleets will assume the composition of whichever template best fist the mission type. Fleets will generally travel
+			in cube form and recombine at destination to template designs before executing mission and before any combat.
+			In this way, any fleet can perform any mission.
+		Improved Loa mission time estimates when calculating accelerator gate effect. 
+			Previous logic assumed a constant fleet speed of 4 regardless of gate presence/proximity. Added a check on the final leg of any
+			accelerator gate path check that does not have a node connecting the last two hops and calculated the slowdown effect on average speed.
+		Fixed LOA colony resource allocation bug where, because LOA colonies have no hazard, the slider was always set at 1/2 ship construction
+		Improvied Loa fleet build/max capacity checks by AI
+		Removed 50% hardcoded price reduction benefit for Loa AI fleet costs 
+		Added taxation logic for Loa to update tax rate (for pop growth) based on number of planets in pop-growth mode (0 biosphere), min 2.
+		Loa fleet mission assignments is now based solely on cube coute and distance to target as fleet composition can be anything.
+		Added requirement for existing loa gate in target system for colonization missions
+		Add all Loa enabled templates to the starting Loa player list of fleet compositions
+			Allows creation of all missions with correct, pre-existing template 
+		Allow Loa to send NPG Gate missions to easter egg systems (should allow gating to target instead of strike)
+		Allow Loa Fleet to transfer cubes from reserve fleet during active mission if mission is at player owned system
+		Updated transfer cubes from resrve to allow better consumption of cubes 
+		Updated Loa fleet strength to be based off cube count not ship type
+		Excluded Loa from auto enabling tech options when designing ships 
+			****prevents AI from upgrading armor = cheaper cubes****
+			Hopefully the techtree research and ship section preference for SHIELDs will prevail
+	Debug Console
+		Added Ship Design, Asset, and Combat debug profiles
+		Set default view to AI debug with standard verbosity
+		Added weapon scoring details to Design output (probably too verbose)
+		Added turn time display logic
+		Removed "Station Support Check, Support Points: 0 Required Points: 4" type spamming debug messages for my sanity
+		Fixed "debug_newseventart" command (had bad filename extensions so couldn't find anything)
+	Sound
+		Removed hardcoded researching and feasibility study background loop audio from research screen (because they drove me nuts)
+		Replaced loud klaxony sounding research select/movement sounds with system default select and mouseover sounds (because they drove me nuts)
+	UI
+		Loa Fleet Composition UI issues fixed. Selecting a fleet composition on mission assignment will now properly re-configure Loa fleets.
+		Changed AI Difficulty selection for local player slot to change AI difficulty for ALL players (non-local player slots still allow separate AI difficulty) 
+		Added event message image for Pirate Base Destroyed
+		Updated Hiver Farcast messages with system details
+		Added event messages for Hiver gateship deployed so players can know when fleet ready for new orders
+		Updated Event Messages to show Loa specific colony support, destruction, alternative colonization, and NPG deployed event/image if playing as Loa
+		Enabled the Gardner Arrives event and created matching event image
+		Added NPG Gate completion event so players can know when their NPG missions are heading back and can receive new orders
+		Added Event focus on next/previous icon click AND on left/right arrow keys
+		Added inactive research end turn dialogue prompt player if no research allocated
+		Corrected hardcoded news Event Art references for Colony Support Complete images to use existing images
+		Added Research % Lost logic to Accident Event Levels I-III
+		Fixed Infrastructure damage reported on Accident Event Levels I-III (previously not loaded, always displayed 0 Infrastructure on event)
+	Politics
+		Improved the "pick a fight" logic for those who are not in War with anyone. Uses current relationship as basis for random declare war.
+			Must have at least one enemy colony, gate, or accelerator in traveling range of a friendly system. Logic for random odds is:
+			currentRelations / (maxRelations / 2 + 100)  -- Max relations are 2000. So at 1000 relations (neutral) there's about a 9% chance of War.
+		Declaring war now properly reduces relations to zero for target.
+		Counter Intelligence missions are now available! These were unfinished but I was able to implement some basic mission functionality
+			There were some beautiful dialogue boxes that I just couldn't get working as they'd require new savegame db processing to work
+			Instead, I have just implemented some hardcoded results: 
+				Success 
+					(faction specific chance of rolling this result) 
+					Triggers a research accident based on target's chances of research boost failure vs $100,000 boost 
+					Triggers a Government modification (based on govactionmodifiers.xml "CounterIntel" action [X:+3, Y:+0])
+				Critical Success 
+					(5% chance of rolling this result) 
+					Triggers boost accident based on target's chance of boost failure vs. $10,000,000
+					100% reduction to target player's current research project 
+					Triggers a Government modification (based on govactionmodifiers.xml "CounterIntel" action [X:+3, Y:+0])
+				Failure = 
+					(faction specific chance of rolling this result)
+					No effect 
+				Critical Failure 
+					(flat 5% chance of rolling this result) 
+					-500 relations towards spy player
+				Chance of boost failure
+					If target player savings <= $0 100% 
+					Otherwise, $Boost/$Savings * 2 * ResearchBoostAccidentMod (default=1, set in faction.xml), Max 100% 
+						eg: 10,000/100,000 = .1 * 2 = 20%
+			Faction results are based on intel mission modifiers (I think these are set in commonassets.xml or perhaps faction.xml)
+		Morrigi receive 1/2 Lesser Glamour bonus for all political success checks (plus full Lessor Glamor once researched) (default of 7% + 15% = 22% potential morrigi bonus total)
+		Lobby, Demands/Requests, Treaty requests now use Lesser Glamour bonus when calculating success odds (15% by default, morrigi always have 1/2 Lesser Glamour [floor'ed])
+		Treaty acceptance no longer a 50/50 coin toss (ugh). Based on same model as offer treaties logic (based on preferred diplomacy state)
+		Lobby UI now shows success chance (based on lobby-ee's relationship with target)
+		Counter Intel operations now use Intel operations faction weight mods
+		Added reaction history events for destroy pirate base, lobby success/fail, Sherman fleet admiral.
+		Fixed bug in diplomacy doubling negative effects 
+		Increased self Lobby success to +50points (from +25), other Lobby success to +75 (from +50), and reduced Lobby fail to -25 (from -50)
+		Fixed game internal player cache bug that prevented initial diplomacy values from loading because they were queried before cached 
+		Treaty incentives are now applied before treaty success evaluation is performed (previously applied after)
+		Updated AI handle treaty logic to use same logic as offer treaty (based on preferred diplomacy state and preferred diplomacy state ranking)
+		Added diplomatic effects + Lesser Glamour/Morrigi bonuses to GIVEs 
+		Added diplomatic effects + Lesser Glamour/Morrigi bonuses to International Trade (relations should go up with international trade)
+		Redid diplomacy reactions throughout the program to allow display of political impact in Politics UI
+	AI/Techtree
+		Added preferred Tech Style for Loa, granting tech family preferences. Similar to Liir in most respects but Bio 
+		Modified AI next tech selection logic to give more chances to lowest cost tech that matches current research mode.
+			Increased the number of cheapest tech that match the current beat used when choosing next tech from 2 to 3, increasing the chances the best tech will be selected.
+			This usually results in an increase from 66% to 75% of picking the cheapest tech that matches the research "beat" (expanding, empire, weapon, engine)
+			Still a chance the "second" best tech will be chosen, as the list includes the cheapest (x3), plus all at the same price (if any), plus the next most expensive
+			A random selection is made from this list. 
+			This should make tweaking the tech tree more predictable when testing/modifying the costfactors in techtree.techtree
+	Fleets
+		Added GRAVBOAT ship role - default DISABLING role to give it a bit of flexibility (Will try for weapons marked as DISABLING then by damage)		
+	SQLite
+		Database PRAGMAs added to SQLite database (may or may not affect performance)
+		PRAGMA LOCKING_MODE = EXCLUSIVE;
+		PRAGMA AUTOMATIC_INDEX = True;
+		PRAGMA OPTIMIZE (at save)
+			
+LOCALE/EN/Strings
+	Various string fixes (originally from Rossinna's Vanilla AI Enhancement (VAE) )
+UI
+	Modified Empire Management Screen Layout (EmpireSummary.xml)
+	Fixed Diplomacy player cards to allow relations history to fit in panel without clipping off the number (skin1.xml)
+	Modified Piechart colors (Commonassets.xml)
+	Updated Slavers and Indy miniships (Commonassets.xml)
+	Copied the Intel Mission news events over the Counter Intel news events (counter intels were just the default static icon)
+	Updated the Counter Intel mission Event text to better reflect its functionality
+	Copied Intelligence mission news event images to the Counter Intel event images (was just using default static)
+	Updated the Intelligence mission news event images for successful missions (was just using default static)
+	Added Research % Lost to Research Accident Levels I-III event messages (strings.csv)
+	Copied the regular "zuul built a ship" event image to fill in for the missing zuul "freighter was build" event image
+	Copied generic single/multi ships built to Loa to fix missing event images (look pretty cool)
+	 
+Modules 
+	Zuul, Tarkas, and Hiver now have access to a new "Grappler" module. Grappler technology is now limited as a weapon per ship except
+		by use of the Grappler module. 
+Weapons
+	Grappler weapons changed to Missile turret type
+	Fixed missing weapon icons for Phantom Missile and Fusion Burst Torp.
+	Fixed COL & Biomissile sounds
+	Changed muzzle and impact sounds for lasers to tone them down a little
+	Added Brawler to a few BEMs
+	Fixed sounds (VAE)
+	Removed <Name>Brawler</Name> attribute from Laser_Red.weapon
+		Other lasers had no such attribute so AI was preferring Red lasers to more powerful lasers when designing early BRAWLER ships
+	Added <Name>Brawler</Name> attribute to Bem_Neutron.weapon, Bem_Particle.weapon, Bem_Phaser.weapon, Bem_Positron.weapon, Bem_PulsedGraviton.weapon
+	Changed <PopDamage>500002</PopDamage> (+2) in Bem_Particle.weapon to allow for scoring tie with ballistics to go to beams for energy races
+	
+Techbonuses.xml
+	Fixed naming error for Replicants config line (CYB_Replicant -> BIO_Replicants)
+
+Techtree.techtree
+	
+	Disabled Empathy for Loa. 
+		There's a bug that allows AI access to the PSI family despite the techtree.techtree FactionDefined tag. 
+		That tag only affects the GUI Research Screen, preventing a player from accessing the tech there, but AI recieves access 
+		to all family roots and any techs listed as "Permanent" off a root node automatically evaluate to being available to a 
+		faction. Set the cost modifier to 99
+	Disabled Fusion Mines for AI. If they somehow get the first one, I suppose they can research the rest as they're unmodified.
+	Disabled Reflective Coating for AI. If they somehow get the first one, I suppose they can research the rest as they're unmodified.
+		Also Changed "Expansion" to "Weapon" in Reflective Coating to match other armors (AI was researching on turn 1)
+	Subspace Spy Beams is now a free starting tech for all factions. (Tech doesn't work. VAE) 
+	Sub-Space Jamming is now a free starting tech for all factions. (Tech doesn't work. VAE)
+	Added "Expansion" to Expert Systems to increase possibility of research and add to possible initial starting techs list (Prev. only "Empire")
+	Added "Expansion" to Materials Applications to increase possibility of research and add to possible initial starting techs list (Prev. only "Empire")
+	Added "Expansion" to Orbital Drydocks to increase possibility of research and add to possible initial starting techs list (Prev. only "Empire")
+	Added "Empire" to Environmental Tailoring to increase possibility of research and add to possible initial starting techs list (Prev. only "Expansion")
+		Reduced Loa cost factor from 20 to 0.5 (why 20? Because they can't go farther up? So? Is there a pop growth problem?)
+	Added "Empire" to Rapid-Pulse Lasers to allow the path to Point Defense faster (now matches Phalanx PD in this regard)
+	Added "Empire" to Point Defense Phaser to allow the path to Point Defense faster (now matches Phalanx PD in this regard)
+	Added "Empire" to Heavy Combat Laser to allow increased access to better sections for most factions
+	Added "Weapon" to the following key technologies as once AI goes out of Expanding, very little Empire/Expansion research occurrs (Weapons and Engines mostly)
+		FTL Economics (trade), Environmental Tailoring, Materials Applications, Expert Systems, Orbital Drydocks
+		Was hesitant to do this, but Zuul get to Conquering very quickly and this limits their empire techs
+	Removed "Empire" from Heavy Planet Missiles (currently only "Weapon") to allow other more important techs to take priority
+		Reduced incentives to allow other more important weapons (namely X-ray for PD) to be researched first
+	Removed "Expansion" from Combat Alogrithms (currently only "Empire" and "Weapon") to allow other more important techs to take priority
+	Changed "Expansion" to "Empire" or Advanced Sensors. Currently "Empire" and "Weapon"
+	Increased FTL Economics research incentive for all factions but Zuul who still have their original penalty rate
+	Increased Loa Convoy Systems and Modular Construction (Qship) reseach incentives (they have no Police to prevent piracy)
+	Increased X-Ray Laser research incentive for all factions to increase Point Defense research incentive. Should be the first weapon researched for all?
+	Increased Rapid-Pulse Laser research incentive for all factions to increase Point Defense research incentive. 
+	Increased VRF incentive for Ballistics oriented races (Human, Hiver, Tarka, Zuul)
+	Increased Phalanx incentives for all factions to increase Point Defense research incentive. Good/Bad?
+	Increased Phaser PD incentives for all factions to increase Point Defense research incentive. 
+	Increased Interceptor PD incentives for all factions to increase Point Defense research incentive.
+	Decreased Combat Algorithm incentive from .2 (.1 for Loa) to .5 to match X-Ray lasers (path to PD)
+	Changed Tracking Photonic Torpedo icon image to same as Photonic Torpedo (missing file)
+	Swapped all Morrigi and Liir (orig .3 and 1) Emitter tree research cost factors as Liir should be more likely to get Emitter tree than Morrigi
+	Removed Zuul FTL Economics (trade) disincentive. 
+		Why not have zuul trading? Local trade only but AI factions rarely do intra-trade anyway!
+	Disabled Armor research for LOA (to keep cube costs down)
+	Disabled Torpedo research for LOA (to focus on ARMOR + SHIELD sections)
+	Increased LOA incentives for standard shields, Disabled all other types of shields
+	Slightly decreased LOA incentives for CCC technology (as they're gate restrained for fleet size anyway)
+	Fixed tech description for Xeno-Analysis to match actual in-game benefits
+	
+Factions
+	All Playable Factions
+		Fixed engine sounds (sections\*)
+		Fixed station sounds (sections\*)
+		Initial faction ship designs for all available ships (tech level 0 only, faction.xml)
+		materials.xml~ mod (VAE)
+		LV description fixes (VAE)
+		Added missing ResearchBoostAccidentMod, CrewEfficiencyValue, and PsiPowerModifier faction tags to faction.xml 
+		Added "SUPPORT" mission type to colonization fleet templates to allow colony support missions
+		Added another CONSTRUCTOR fleet template hoping it will cause the AI to create another construction fleet full of Constructors for station upgrades
+			Removed the UPGRADE_STN from the initial constructor fleet (only one constructor) so all it can do is make new stations.
+			The normal/full constructor fleet can do both. Hoping this will speed up station Upgrades
+		Removed SMALL_COMBAT fleet template
+		Updated DEFAULT_INVASION template to be more faction specific
+			Zuul get SCAVENGERs
+			Rest get 2 CARRIER_ASSAULTs plus the standard ARMOR with PLANET_ATTACK weaponRole and FILL
+		Updated DEFAULT_ARMOR template to be more faction specific
+			Zuul get 1 CARRIER_BOARDING
+		Limited initial construction and colonization fleets to 1 and AI should forget the template altogether after EXPLORATION phase
+		Updated Psionic ability descriptions in ship builder UI (commonassets.xml)
+		Increased Biome Colonizer ship preference for all factions (except Loa) (section_preferences.csv)
+		Set point defense section prefences to 0 (section_preferences.csv)
+		Set cloaking preferences to 1 (section_preferences.csv)
+		Modified defense station preferences towards torpedos and heavy missile (section_preferences.csv)
+		Re-balanced section preferences so Assault, Battlebridge are more preferred by certain races
+		Removed minelayer/extended range preferences (section_preferences.csv)
+	Hiver
+		Renamed default DN damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+		Now only starts with one survey fleet (Hiver excluded from DEFAULT_SURVEY but has HIVER_SURVEY). 
+			Limited to 1 minimum required. This frees up valuable admirals for other fleets and hivers
+			Don't really need many survey fleets - the need many gate fleets instead!
+		Increased weight and supply ship count (3) in DEFAULT_GATE fleet 
+		Increased supply ship count in DEFAULT_INVASION
+	Human
+		Renamed default DN damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+
+	Liir_Zuul
+		Renamed default DN damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+		Fixed blackelder section value for destroyed model (VAE) (sections\*)
+	
+	Morrigi
+		Added morrigi battlerider/drone engine sounds (sections\*)
+		Modified starting fleet templates to replace one supply with one gravboat (fleet_templates.xml)
+		Added new GRAVBOAT ship role items to all fleet templates
+	
+	Slavers
+		Renamed default CR damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+		Fixed engine sounds (sections\*)
+	
+	Tarkas
+		Renamed default DN damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+	
+	Zuul
+		Renamed default DN damage models to hardcoded default file name (sections\*)
+		Removed custom config DN damage model configuration (fallback to hardcoded default) (sections\*)
+		Removed BOREs from all fleet templates except Survey as game auto inserts them if they're necessary
+	
+	Loa
+		Fixed some turrent designs (VAE) (sections\*)
+		Increased LoaDistanceBetweenGates from 5.0 to 8.0 as max speed of 4 for two turns (commonassets.xml)
+		Increased section preference for shield and other very limited sections to maximize fleet count (Shld/HH/Strafe and Armor) (section_preferences.csv)
+		Added DiplomacyDemandWeight/DiplomacyRequestWeight to faction.xml, set to 0.5/1.0 (was defaulting to 1 for both)
+		Added DefaultDiplomacyReactions for other races (starting opinions), mirrors the other factions reaction to them
+
+TODO (le sigh...):
+	Fix left over battleriders
+	Force defense fleets to behave better
+	Make sure newly researched Industrial bonuses apply to existing invoices (reduction in price/build time)
+	Flesh out diplomacyWeights.xml for each faction (boost demandslaves for zuul, trade treaty for morrigi)
+	Add betrayal conditions for AI
+	Possible bug in combat update diplomatic states 
+	Double check psi friendly ship selection (avoid drones/stations/etc?)
+	Fix "Ships have been recycled in ." message
+	Add AI Intercept mission scoring
+	Does AI do EVACUATION missions?
+	Add Zuul AI special projects research allocation amount logic
+	LOA BuildFleetFromCompositionID update logic of battlerider assignment (currently random)
+	LOA colonization completion bug? Disolving Assimilator only removes ship, no cube reduction? 
+		Support + Colonize on same turn?
+	Relocation bug/loop?
+	Is LOA rebuilding gate lines?
+	Fix rebase mission waypoints to check if already there and eliminate travel 
+		Should fix extra turn required for rebase + completion of mission (major annoyance!)
+	Test Supply ship requirements in fleet templates (do all factions need 2? Eg, zuul have fast Nodes)
+	Enable Loa 50% research bonus upon successful completion of AI technology?
+	Enable AutoGoop/AutoAOE/etc for AI
+	Game logic seems to suggest no need to add rending bore in templates (auto constructed if needed?)
+		But what if fleet not at a build-capable world? 
+	AI Science Station module selection logic?
+	Give AI 100% chance of civilian built freighter if stimulus spent == xxxx (in lieu of buying freighters)?
+	Check if AI creates provinces/add functionality if missing
+	Enable Combat Simulation?? 
+		Replace full simulation with fast simulation
+		Would probably require a lot of work to improve the simulation logic 
+	Fix Repair & Salvage ships being classified by AI as ARMOR because they have no Ship Role and default to ARMOR
+	Morrigi section preference for BB
+	Add GRAVBOAT DesignInfo (shipclass) to allow CPs to be set to < 6 (3? 0?)
+	Add "Adaptive Buttresses"/engine struct bonuses to Ballistics counter research? 
+	Check if VRF is considered with damage checks on ballistics for ship design
+	Finish adding Construction and R&S sound effects for all factions.
+	Fix drone sounds for all factions 
+	Starting station too big? Use a level 1 instead?
+	Fix COL sounds?
+	Fix Drone/Bioweapon BR sounds?
+	station specific damage models?
+	liir specific CR damage models?
+	Check if stations are STANDOFF
+	Check if Secuirty Operations works?
+	Check subspace spy beams really not working?
+	Fix Fusion Mine stats card
+	Profile sqlite performance for better indexing?

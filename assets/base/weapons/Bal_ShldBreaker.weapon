@@ -1,0 +1,214 @@
+<Weapon>
+  <Name>Shield Breaker</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>BAL_Shield_Breakers</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Ballistic</Name>
+    </Attribute>
+    <Attribute>
+      <Name>ShieldBreaker</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_HeavyDriver_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+        <TurretClassSize>
+          <TurretSize>VeryHeavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_HeavyDriver_3_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+    <TurretClass>
+      <TurretClass>Spinal</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>
+          </Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Bolt</PayloadType>
+  <PlagueType />
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>15000</Cost>
+  <Crew>2</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>5</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>5</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>2</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>40</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>0</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>0</CritHitBonus>
+  <MalfunctionPercent>5</MalfunctionPercent>
+  <MalfunctionDamage>35</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111100
+0000011000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111100
+0000011000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111100
+0000011000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>0.5</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>4</BaseRechargeTime>
+  <MuzzleSpeed>400</MuzzleSpeed>
+  <ShotAcceleration>0</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>HeavyDriver.scene</Model>
+  <DecalMaterial>Bullet hole05</DecalMaterial>
+  <DecalSize>20</DecalSize>
+  <MuzzleEffect>effects\Weapons\HeavyDriver_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\HeavyDriver_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\MassDriver_Bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Bal_Shieldbreaker_Driver_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Bal_Shieldbreaker_Driver_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>
+  </BulletSound>
+  <RicochetSound>Bal_Shieldbreaker_Driver_rico</RicochetSound>
+  <Icon>bal_drv_shield</Icon>
+  <RangeTable>
+    <PbRange>750</PbRange>
+    <PbDeviation>2</PbDeviation>
+    <PbDamage>6</PbDamage>
+    <EffectiveRange>1300</EffectiveRange>
+    <EffectiveDeviation>3</EffectiveDeviation>
+    <EffectiveDamage>6</EffectiveDamage>
+    <MaxRange>2400</MaxRange>
+    <MaxDeviation>4</MaxDeviation>
+    <MaxDamage>6</MaxDamage>
+    <PlanetRange>3000</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-0.6</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>800</RoundMass>
+  <PopDamage>0</PopDamage>
+  <InfraDamage>1E-05</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>10</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

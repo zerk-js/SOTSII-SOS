@@ -1,0 +1,176 @@
+<ModuleList>
+	<Modules>
+
+
+    <Module File="factions/zuul/modules/sn_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_heavy_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_light_combat.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_medium_combat.module" Type="Module" Class="Station"/>
+
+    <Module File="factions/zuul/modules/sn_command.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_customs.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_dock.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_repair.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_lab.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_habitation_zuul.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_large_habitation_zuul.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_sensor.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_terraform.module" Type="Module" Class="Station"/>
+    <Module File="factions/zuul/modules/sn_warehouse.module" Type="Module" Class="Station"/>
+
+	<Module File="factions/zuul/modules/cr_grappler.module" Type="Module" Class="Cruiser"/>
+	
+    <Module File="factions/zuul/modules/cr_psiwar.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_dancer.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_semperfi.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_joker.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_scotsman.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_caravan.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_bulwark.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_eng_bulwark.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_GOOP.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_eng_GOOP.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_camel.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_eng_camel.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_hannibal.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_hawkeye.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_karnak.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_point_defence.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_reflux.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_eng_auxfission.module" Type="Module" Class="Cruiser"/>
+    <Module File="factions/zuul/modules/cr_eng_auxfusion.module" Type="Module" Class="Cruiser"/>
+
+
+    <Module File="factions/zuul/modules/dn_eng_GOOP.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_GOOP.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_psiwar.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_bulwark.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_eng_bulwark.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_caravan.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_kingfisher.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_scotsman.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_semperfi.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_heavybeam.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_eng_heavybeam.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_reflux.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_auxfusion.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_torpedo.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_hannibal.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/dn_suulka_battle_light.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_suulka_battle_medium.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_suulka_battle_heavy.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_suulka_biowar.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/dn_suulka_zuuldropship.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/deaf_face_tendril.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/gun_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_small_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_upper_tailarmor_01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_upper_tailarmor_02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_upper_tailarmor_03.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_lower_tailarmor_01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_lower_tailarmor_02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_lower_tailarmor_03.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_tailflukes.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_engine.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/deaf_claw_tentacle.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/kraken_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_claw_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_gun_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_face_tendril.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_lower_tailarmor.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_small_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_upper_tailarmor_01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_upper_tailarmor_02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/kraken_upper_tailarmor_03.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/immortal_engine.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_claw_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_gun_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_waist.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_chestpiece.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_tailfluke.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_tailarmor01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_tailarmor02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_tailarmor03.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/immortal_tailarmor04.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/shaper_face_tendril.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_lower_tailarmor01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_lower_tailarmor02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_small_tendril.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_upper_tailarmor01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_upper_tailarmor02.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/shaper_upper_tailarmor03.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/siren_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_face_tendril.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_lower_tailarmor.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_tailflukes.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_upper_tailarmor01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/siren_upper_tailarmor02.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/hidden_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/hidden_jawplate.module" Type="Module" Class="Dreadnought"/>
+
+    <Module File="factions/zuul/modules/cannibal_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_lower_tail_armor.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_upper_tail_armor01.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/cannibal_upper_tail_armor02.module" Type="Module" Class="Dreadnought"/>
+
+
+    <Module File="factions/zuul/modules/usurper_backpack.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_helmet.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_jawplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_large_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_small_fin.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_tailflukes.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_backplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_bellyplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_chestplate.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_claw_tentacle.module" Type="Module" Class="Dreadnought"/>
+    <Module File="factions/zuul/modules/usurper_engine.module" Type="Module" Class="Dreadnought"/>
+  
+   
+
+	</Modules>
+</ModuleList>

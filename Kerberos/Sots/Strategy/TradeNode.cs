@@ -1,0 +1,31 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Kerberos.Sots.Strategy.TradeNode
+// Assembly: sots2_managed, Version=2.0.25104.1, Culture=neutral, PublicKeyToken=null
+// MVID: 7BEBB796-D765-47D7-AFD1-D31EAC2170CD
+// Assembly location: D:\Games\Sword of the Stars II Enhanced Edition\bin\x86\sots2_managed.dll
+
+namespace Kerberos.Sots.Strategy
+{
+	public class TradeNode
+	{
+		public int Produced;
+		public int ProductionCapacity;
+		public int Consumption;
+		public int Freighters;
+		public int DockCapacity;
+		public int DockExportCapacity;
+		public int ExportInt;
+		public int ExportProv;
+		public int ExportLoc;
+		public int ImportInt;
+		public int ImportProv;
+		public int ImportLoc;
+		public float Range;
+		public int Turn;
+
+		public int GetTotalImportsAndExports()
+		{
+			return this.ImportInt + this.ImportProv + this.ImportLoc + this.ExportInt + this.ExportProv + this.ExportLoc;
+		}
+	}
+}

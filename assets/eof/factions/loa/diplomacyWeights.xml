@@ -1,0 +1,82 @@
+<!-- Faction Diplomacy Action Weightings
+Tendancy for a faction to perform a certain diplomacy action.
+
+Certain actions will be excluded based on reaction 
+and available diplomacy points.
+
+Declaration and Armistice diplomacy actions are
+determined before these actions are attempted.
+
+** Diplomacy Reactions **
+
+values:
+		Hatred,
+		Hostility,
+		Distrust,
+		Indifference,
+		Trust,
+		Friendship,
+		Love
+
+** Actions **
+action:
+        REQUEST
+        DEMAND
+        TREATY
+        LOBBY
+        SPIN
+
+type:
+		Optional value for diplomacy actions with multiple types.
+		
+		REQUEST:
+			SavingsRequest
+			SystemInfoRequest
+			ResearchPointsRequest
+			MilitaryAssistanceRequest
+			GatePermissionRequest
+			EstablishEnclaveRequest
+		
+		DEMAND: 
+			SavingsDemand
+			SystemInfoDemand
+			ResearchPointsDemand
+			SlavesDemand
+			WorldDemand
+			ProvinceDemand
+			SurrenderDemand
+		
+		TREATY:			
+			LimitationFleetSize
+			LimitationShipClass
+			LimitationWeapon
+			LimitationResearchTree
+			LimitationResearchTech
+			LimitationEmpireSize
+			LimitationForgeGemWorlds
+			LimitationStationType
+			
+			Trade
+			Protectorate 	(?)
+			Incorporate		(?)
+		
+		LOBBY:
+			LobbySelf
+			LobbyEnemy
+			LobbyFriendly
+		
+		SPIN
+		
+value: 	0 ... n is a relative weighting.
+		Default value for unlisted actions is 1.0
+-->
+
+<DiplomacyActionWeights>
+	<DiplomacyReaction value="Hatred">
+		<Action id="DEMAND" type="SavingsDemand" value="1"/> 
+		<Action id="DEMAND" type="SystemInfoDemand" value="1"/> 
+		<Action id="DEMAND" type="ProvinceDemand" value="1"/> 
+		<Action id="TREATY" type="LimitationFleetSize" value="7"/>
+	</DiplomacyReaction>
+</DiplomacyActionWeights>
+ 

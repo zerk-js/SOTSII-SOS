@@ -1,0 +1,93 @@
+<!-- TECH BONUSES
+    these are the bonuses added to modifiers, attributes, weapons...
+    they are +-% values (1.0 = 100%, -0.5 = -50%) unless otherwise specified
+    any new values MUST go through a programmer to implement
+-->
+<TechBonuses>
+  <!-- COMBAT -->
+  <TechBonus techID="NRG_Internal_Kinetic_Dampers"    force="-0.75"/>
+  <TechBonus techID="BAL_Neutronium_Rounds"           damage="0.5" mass="0.5"/>
+  <TechBonus techID="BAL_Acceleration_Amplification"  damage="0.1" speed="0.2"/>
+  <TechBonus techID="WAR_MicroFusion_Drives"          speed="0.15" range="5000.0"/>
+  <TechBonus techID="NRG_Ionic_Thruster"              speed="0.25" accel="0.1" shiprot="0.1" shipaccel="0.25"/>
+  <TechBonus techID="NRG_Small_Scale_Fusion"          speed="0.15"/>
+  <TechBonus techID="NRG_Quantum_Capacitors"          rateoffire="0.35"/>
+  <TechBonus techID="BAL_VRF_Systems"                 rateoffire="0.25"/>
+  <TechBonus techID="IND_Polysteel"                   armorlayers="1" ricochet="0.1"/>
+  <TechBonus techID="IND_MagnoCeramic_Latices"        armorlayers="3" ricochet="0.3"/>
+  <TechBonus techID="IND_Quark_Resonators"            armorlayers="5" ricochet="0.5"/>
+  <TechBonus techID="IND_Adamantine_Alloys"           armorlayers="6" permarmorlayers="1" ricochet="0.8"/>
+  <TechBonus techID="IND_Reflective"                  beamdamage="-0.3" laserricochet="0.8"/>
+  <TechBonus techID="IND_Improved_Reflective"         beamdamage="-0.6" laserricochet="1.2"/>
+  <TechBonus techID="IND_Electronic_Hardening"        damage="-0.5"/>
+  <TechBonus techID="NRG_Plasma_Induction"            power="0.2"/>
+  <TechBonus techID="NRG_Wave_Amplification"          power="0.8"/>
+  <TechBonus techID="NRG_Plasma_Focusing"             supply="1.0"/>
+  <TechBonus techID="SLD_Structural_Fields"           structure="0.3"/>
+  <TechBonus techID="NRG_Quantum_Capacitors"          shieldstructure="0.2"/>
+  <TechBonus techID="NRG_Shield_Magnifier"            shieldstructure="0.9"/>
+  <TechBonus techID="CCC_Combat_Algorithms"           commandpoints="12"/>
+  <TechBonus techID="CCC_Holo-Tactics"		            commandpoints="12"/>
+  <TechBonus techID="CCC_Flag_Central_Command"	      commandpoints="6"/>
+  <TechBonus techID="PSI_Warmind"		                  commandpoints="18"/>
+  <TechBonus techID="PSI_Subversion"		              range="500" missilechanceN="0.1" dronechanceN="0.02" missilechanceL="0.1" dronechanceL="0.05"/>
+
+  <!-- STRAT MODIFIER BONUSES -->
+  
+  <!-- WARNING!!!!!!!!! 
+      changes made to the bonuses below will NOT be applied if the player has already researched the tech 
+      new games will be fine-->
+  <TechBonus techID="POL_Slave_Husbandry"             slavedeathrate="-0.3"/>
+  <TechBonus techID="CCC_Tunneling_Sensors"           sensorbonusnavy="0.05" sensorbonussci="0.05"/>
+  <TechBonus techID="IND_Mega-Strip_Mining"           miningmaxscale="2.0"/>
+  <TechBonus techID="IND_Atmospheric_Processors"      terra="0.45" biosphere="0.1"/>
+  <TechBonus techID="IND_Zero-G_Deconstruction"       industrialoutput="0.1" scrapship="1.0"/>
+  <TechBonus techID="IND_Tractor_Beams"               industrialoutput="0.1"/>
+  <TechBonus techID="IND_Gravity_Control"             industrialoutput="0.25"/>
+  <TechBonus techID="POL_Slave_Functionaries"         slaveproduction="0.3"/>
+  <TechBonus techID="POL_Accomodate"                  aliencivtaxrate="-0.2"/>
+  <TechBonus techID="BIO_Terraforming_Bacteria"       terra="0.25"/>
+  <TechBonus techID="BIO_Environmental_Tailoring"     terra="0.3" biosphere="-0.1" popgrowth="0.2"/>
+  <TechBonus techID="BIO_Gravitational_Adaptation"    popgrowth="0.1" colonysupportcost="-0.2" maxcolonizehazard="150"/>
+  <TechBonus techID="BIO_Elemental_Nanites"           terra="0.35"/>
+  <TechBonus techID="PSI_Lesser_Glamour"              diplomaticoffering="0.15"/>
+  <TechBonus techID="BIO_Anagathics"                  career="0.2"/>
+  <TechBonus techID="BIO_Biosphere_Preservation"      biosphere="-0.5"/>
+  <TechBonus techID="CCC_Convoy_Systems"              piratechance="-0.5"/>
+  <TechBonus techID="IND_Vacuum_Preservation"         shipsupply="0.1" warehousecapacity="1.0"/>
+  <TechBonus techID="DRV_Warp_Veil"                   warpsignature="-0.5"/>
+  <TechBonus techID="POL_Xeno-Analysis"               diplocost="-0.2" negativerelations="-0.1"/>
+  <TechBonus techID="PSI_Empathy"                     diploreaction="0.1" moralbonus="1"/>
+  <TechBonus techID="PSI_Telepathy"                   psiresearch="0.15" research="0.1"/>
+  <TechBonus techID="PSI_Telekinesis"                 industrialoutput="0.1"/>
+  <TechBonus techID="PSI_Micro-Telekinesis"           c3research="0.15" research="0.05"/>
+  <TechBonus techID="PSI_Precognition"                admiralreaction="0.25"/>
+  <TechBonus techID="PSI_Scientific_Prolepsis"        techfeasibilitydev="0.5"/>
+  <TechBonus techID="PSI_Doomsayers"                  randomnotification="0.25"/>
+  <TechBonus techID="CCC_Deep_Survey_Sensors"         survey="-0.5"/>
+  <TechBonus techID="IND_Pressure_Polarization"       domestage="100"/>
+  <TechBonus techID="IND_Quantum_Disassociation"      industrialoutput="0.2" caverndomemod="-2.0"/>
+  <TechBonus techID="POL_Disinformation_Nets"         enemyintel="-0.03" enemyoperations="-0.03" counterintel="0.1"/>
+  <TechBonus techID="POL_Enhanced_Jurisdiction"       maxplanets="1" maxrange="3"/>
+  <TechBonus techID="POL_Cosmic_Bureaucracies"        maxplanets="1" maxrange="4"/>
+  <TechBonus techID="POL_Paramilitary_Training"       policemoral="1"/>
+  <TechBonus techID="ENG_Rapid_Prototyping"           protocostscale="-0.5"/>
+  <TechBonus techID="CCC_A.I._Autonomy"               aibenefits="-0.5"/>
+  <TechBonus techID="DRV_Grav_Synergy"                flockbonusscale="2.0"/>
+  <TechBonus techID="DRV_Casting"                     castdistance="5.0"/>
+  <TechBonus techID="DRV_Far_Casting"                 castdistance="5.0"/>
+  <TechBonus techID="CCC_Expert_Systems"              crproduction="-0.05" dnproduction="-0.05" lvproduction="-0.05"/>
+  <TechBonus techID="ENG_Orbital_Drydocks"            crproduction="-0.1" dnproduction="-0.1"/>
+  <TechBonus techID="ENG_Heavy_Platforms"             industrialoutput="0.1"/>
+  <TechBonus techID="IND_Materials_Applications"      crproduction="-0.1" dnproduction="-0.1" lvproduction="-0.1" snproduction="-0.1"/>
+  <TechBonus techID="DRV_Phase_Dislocation"           permarmorlayers="1"/>
+  <TechBonus techID="ENG_Modular_Construction"        traderevenue="0.1"/>
+  <TechBonus techID="CYB_InFldManip"                  industrialoutput="0.1" power="0.15"/>
+  <TechBonus techID="CYB_PsiShield"                   psipower="200" />
+  <TechBonus techID="PSI_MechaEmpathy"                pdaccuracy="0.5" industrialoutput="0.05"/>
+  <TechBonus techID="CYB_Replicant"                   popgrowth_u100m="0.3"/>
+  <TechBonus techID="NRG_SWS_Systems"                 ridertimebonus="0.2"/>  
+
+<!-- Modified from Vanilla -->  
+  <TechBonus techID="BIO_Replicants"                   popgrowth_u100m="0.3"/>
+  </TechBonuses>

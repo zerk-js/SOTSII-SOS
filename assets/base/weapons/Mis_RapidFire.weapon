@@ -1,0 +1,195 @@
+<Weapon>
+  <Name>Rapid Fire Missile</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>WAR_Rapid_Fire_Missiles</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Explosive</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Upgradable</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Heavy_2_Rapidfire</Turret>
+          <Barrel>Barrel_Rapidfire_2_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Missile</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Medium</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>5000</Cost>
+  <Crew>2</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>1</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>12</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>2</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>0</HpBonus>
+  <Health>3</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>45</TimeToLive>
+  <DumbfireTime>0.5</DumbfireTime>
+  <CritHitBonus>5</CritHitBonus>
+  <MalfunctionPercent>5</MalfunctionPercent>
+  <MalfunctionDamage>50</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>0001110000
+0001110000
+0000100000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111000
+0000111000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000111000
+0000111000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>5</Volleys>
+  <VolleyPeriod>0.3</VolleyPeriod>
+  <VolleyDelay>0</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>3</BaseVolleyDeviationName>
+  <BaseRechargeTime>30</BaseRechargeTime>
+  <MuzzleSpeed>260</MuzzleSpeed>
+  <ShotAcceleration>125</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>missile.scene</Model>
+  <DecalMaterial>Bullet hole07</DecalMaterial>
+  <DecalSize>5</DecalSize>
+  <MuzzleEffect>effects\Weapons\nuclearmissile_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\nuclearmissile_impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\nuclearmissile_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Mis_RapidFireMissile_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Mis_RapidFireMissile_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>Mis_RapidFireMissile_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>mis_dfire</Icon>
+  <RangeTable>
+    <PbRange>1500</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>7</PbDamage>
+    <EffectiveRange>2500</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>7</EffectiveDamage>
+    <MaxRange>5000</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>7</MaxDamage>
+    <PlanetRange>5000</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>50000</PopDamage>
+  <InfraDamage>0.005</InfraDamage>
+  <TerraDamage>0.003</TerraDamage>
+  <SolutionTolerance>180</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

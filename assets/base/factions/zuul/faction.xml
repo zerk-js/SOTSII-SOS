@@ -1,0 +1,244 @@
+<Faction ID="5" name ="zuul">	
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<CrewEfficiencyValue>1.0</CrewEfficiencyValue>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+
+  <MaterialDictionary>\base\factions\zuul\materials.xml</MaterialDictionary>
+
+  <MinishipModel>props\ui\miniship_zuul.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Zuul.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Rend_Drive</RootNode>
+  </TechTree>
+
+<InitialDesigns weaponbias="">
+
+	<Design name="Colonizer">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Drone">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_drone_carrier"/>
+    </Design>
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_shuttle_carrier"/>
+    </Design>
+	<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair_salvage"/>
+    </Design>
+	-->
+
+	<Design name="Boarding">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+	<Design name="Scavenger">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_scavenger"/>
+    </Design>
+	<Design name="Wraith">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_wraith_abductor"/>
+    </Design>
+	<Design name="Rending Bore">     
+      <Section name="cr_mis_rending_bore"/>
+    </Design>
+
+
+    <Design name="Armor">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Supply">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+    <Design name="Command">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+    <Design name="Scout">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_extended"/>
+    </Design>
+  </InitialDesigns>
+
+	<DiplomacyActionWeights>factions\zuul\diplomacyWeights.xml</DiplomacyActionWeights>
+  <StratModifiers>
+    <OverharvestModifier>450.0</OverharvestModifier>
+    <MaxColonizableHazard>790</MaxColonizableHazard>
+    <MaxProvincePlanetRange>9.0</MaxProvincePlanetRange>
+    <PopulationGrowthModifier>1.8</PopulationGrowthModifier>
+    <BiosphereDestructionModifier>1.5</BiosphereDestructionModifier>
+    <DiplomacyPointCostModifier>1.8</DiplomacyPointCostModifier>
+    <ResearchModifier>0.9</ResearchModifier>
+    <PsiResearchModifier>2.0</PsiResearchModifier>
+    <ChanceOfPirates>0.75</ChanceOfPirates>
+    <TradeRangeModifier>2.0</TradeRangeModifier>
+    <BadDesignAttributePercent>12</BadDesignAttributePercent>
+    <GoodDesignAttributePercent>8</GoodDesignAttributePercent>
+    <MinOverharvestRate>0.05</MinOverharvestRate>
+    <DiplomacyReactionKillShips>-5</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-50</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>1</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-30</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>5</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>-10</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>-5</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>25</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-75</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>-500</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>1</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>1</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>3</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>-50</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>5</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>-10</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>-10</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>-35</DiplomacyReactionSmallerEmpire>
+    <DiplomacyReactionBetrayed>-15</DiplomacyReactionBetrayed>
+    <DiplomacyReactionBetrayal>10</DiplomacyReactionBetrayal>
+    <DiplomacyDemandWeight>0.2</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>0.1</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="100"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="100"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="1"/>
+    <DefaultDiplomacyReaction faction="loa"       value="1"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="1"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="150"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="500"/>
+  </DefaultDiplomacyReactions>
+
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="0" />
+    <ImmigrationPopBonus faction="hiver"     value="0"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="0"/>
+    <ImmigrationPopBonus faction="loa"       value="0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="0"/>
+    <ImmigrationPopBonus faction="tarkas"    value="0"/>
+    <ImmigrationPopBonus faction="zuul"      value="1.0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="0.0" />
+    <SpyingBonus faction="hiver"     value="-0.20"/>
+    <SpyingBonus faction="tarkas"    value="-0.05"/>
+    <SpyingBonus faction="liir_zuul" value="-0.40"/>
+    <SpyingBonus faction="morrigi"   value="-0.50"/>
+    <SpyingBonus faction="zuul"      value="0.50"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+  
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_WAR_DECLARED>2</ME_WAR_DECLARED>
+      </Centrism>        
+  </MoralEventModifiers>
+      
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>6.0</PsiPowerPerCrew>
+  <EntryPointOffset>2500</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>4000</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>6</RepSal>
+    <default>3</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.5</EXPANDING>
+    <ARMING>0.7</ARMING>
+    <HUNKERING>0.7</HUNKERING>
+    <CONQUERING>0.5</CONQUERING>
+    <DESTROYING>0.5</DESTROYING>
+    <DEFENDING>0.5</DEFENDING>
+  </ResearchRates>
+	
+  <!--Badges-->
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge1.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge2.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge3.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge4.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge5.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge6.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge7.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge8.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge9.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge10.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge11.tga"/>
+  <Badge texture="\base\factions\zuul\badges\suulka_zuul_badge12.tga"/>
+
+  <!--Noseart-->
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_01.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_02.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_03.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_04.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_05.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_06.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_07.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_08.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_09.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_10.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_11.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_12.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_13.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_14.tga"/>
+  <Noseart texture="\base\factions\zuul\textures\noseart\nose_art_zuul_15.tga"/>
+
+  <NoAvatar texture="\base\factions\zuul\avatars\zuul_off.tga"/>
+
+  <!--Avatars-->
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_01.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_02.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_03.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_04.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_05.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_06.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_07.tga"/>
+  <Avatar texture="\base\factions\zuul\avatars\zuul_avatar_08.tga"/>
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\zuul\textures\splash\plaguefather_splash.tga"/>
+    <SplashScreen image="factions\zuul\textures\splash\warmonger_splash.tga"/>
+  </SplashScreens>
+
+
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineHumanDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineHumanDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineHumanDecalLarge"/>
+  </FactionDamageDecals>
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>2.0</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_ZUUL_" count="40"/>
+  <EmpireNames prefix="@EMPIRENAME_ZUUL_" count="12"/>
+
+</Faction>

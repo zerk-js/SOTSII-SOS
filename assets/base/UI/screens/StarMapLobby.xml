@@ -1,0 +1,800 @@
+<gui>
+
+  <skin>
+    <panel_template id="ScreenFrame_NT_Widget">
+      <title_frame shape="parent" input="false">
+        <panel id="Static" shape="parent" input="false" >
+          <var id="static" value="50,120,150,125"></var>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="20" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="40" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="120" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="220" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="320" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="420" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="250" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="520" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" top="620" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+
+
+
+
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="29" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="42" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="121" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="229" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="322" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="327" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="255" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="522" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+          <panel id="Frame_static" height="2" left="parent:left" right="parent:right" bottom="623" input="false">
+            <anim_image loop="1" shape="parent" input="false">
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="5,20" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="var:static" frame_count="15" input="false"></add_frame>
+              <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+            </anim_image>
+          </panel>
+
+
+
+
+        </panel>
+
+        <panel id="BG_Fade" shape="parent" input="false">
+          <anim_image loop="1" shape="parent" input="false">
+            <add_frame sprite="SolidWhite" color="0,0,0,255" frame_count="45" input="false" ></add_frame>
+            <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="65" input="false"></add_frame>
+
+
+          </anim_image>
+
+        </panel>
+        <panel id="Tint_Fade" shape="parent" input="false">
+          <anim_image loop="1" shape="parent" input="false">
+            <add_frame sprite="SolidWhite" color="240,255,255,240" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="65" input="false"></add_frame>
+
+
+          </anim_image>
+
+        </panel>
+
+
+
+
+        <panel id="BottomBar" bottom="parent:bottom" right="parent:right" left="parent:left" input="false" height="54" clipping="false">
+          <var id="LBG" value="15,180,218"></var>
+
+          <image id="C_BG_LC" sprite="BottomBar_CBG_LC" left="parent:left" input="false"  color="var:LBG"></image>
+          <image id="C_BG_RC" sprite="BottomBar_CBG_RC" right="parent:right" input="false"  color="var:LBG"></image>
+          <image id="C_BG_MF" sprite="BottomBar_CBG_MF" left="C_BG_LC:right" right="C_BG_RC:left" input="false"  color="var:LBG"></image>
+
+          <image id="C_BG_LC" sprite="BottomBar_CBG_LC" left="parent:left" input="false"  color="var:LBG"></image>
+          <image id="C_BG_RC" sprite="BottomBar_CBG_RC" right="parent:right" input="false"  color="var:LBG"></image>
+          <image id="C_BG_MF" sprite="BottomBar_CBG_MF" left="C_BG_LC:right" right="C_BG_RC:left" input="false"  color="var:LBG"></image>
+
+          <image id="C_BG_LC" sprite="BottomBar_CBG_LC" left="parent:left" input="false"  color="var:LBG"></image>
+          <image id="C_BG_RC" sprite="BottomBar_CBG_RC" right="parent:right" input="false"  color="var:LBG"></image>
+          <image id="C_BG_MF" sprite="BottomBar_CBG_MF" left="C_BG_LC:right" right="C_BG_RC:left" input="false"  color="var:LBG"></image>
+
+
+          <anim_image left="parent:left" top="C_BG_LC:top" input="false" width="sprite:TopBar_WL_LC:width" height="sprite:TopBar_WL_LC:height">
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,255" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+          </anim_image>
+          <anim_image sprite="BottomBar_WL_RC" right="parent:right" top="C_BG_LC:top" input="false" width="sprite:TopBar_WL_RC:width" height="sprite:TopBar_WL_RC:height" >
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,255" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+          </anim_image>
+          <anim_image left="C_BG_LC:right" right="C_BG_RC:left" top="C_BG_LC:top" input="false" height="sprite:BottomBar_WL_MF:height">
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,255" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,200" frame_count="15" input="false"></add_frame>
+          </anim_image>
+
+          <anim_image left="parent:left" top="C_BG_LC:top" input="false" width="sprite:BottomBar_WL_LC:width" height="sprite:BottomBar_WL_LC:height">
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,255" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_LC" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+          </anim_image>
+          <anim_image sprite="BottomBar_WL_RC" right="parent:right" top="C_BG_LC:top" input="false" width="sprite:BottomBar_WL_RC:width" height="sprite:BottomBar_WL_RC:height" >
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,255" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_RC" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+          </anim_image>
+          <anim_image left="C_BG_LC:right" right="C_BG_RC:left" top="C_BG_LC:top" input="false" height="sprite:BottomBar_WL_MF:height">
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,255" frame_count="25" input="false"></add_frame>
+            <add_frame sprite="BottomBar_WL_MF" color="255,255,255,200" frame_count="25" input="false"></add_frame>
+          </anim_image>
+
+
+          <image sprite="BottomBar_REF_LC" left="parent:left" input="false" ></image>
+          <image sprite="BottomBar_REF_RC" right="parent:right" input="false" ></image>
+          <image sprite="BottomBar_REF_MF" left="C_BG_LC:right" right="C_BG_RC:left" input="false"  ></image>
+
+
+          <anim_image id="LGlow"  left="parent:left-200" input="false" width="sprite:BottomBar_GLOW_LC:width" height="sprite:BottomBar_GLOW_LC:height" bottom="parent:bottom">
+            <add_frame sprite="BottomBar_GLOW_LC" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_LC" color="255,255,255,17" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_LC" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+          </anim_image>
+          <anim_image id="RGlow"  right="parent:right+150" input="false"  width="sprite:BottomBar_GLOW_RC:width" height="sprite:BottomBar_GLOW_RC:height" bottom="parent:bottom" >
+            <add_frame sprite="BottomBar_GLOW_RC" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_RC" color="255,255,255,17" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_RC" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+          </anim_image>
+          <anim_image  left="LGlow:right" right="RGlow:left" input="false"  height="193" bottom="parent:bottom">
+            <add_frame sprite="BottomBar_GLOW_MF" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_MF" color="255,255,255,17" frame_count="15" input="false"></add_frame>
+            <add_frame sprite="BottomBar_GLOW_MF" color="255,255,255,20" frame_count="7" input="false"></add_frame>
+
+          </anim_image>
+
+        </panel>
+        <panel id="Frame_Fade" shape="parent" input="false">
+          <anim_image loop="1" shape="parent" input="false">
+            <add_frame sprite="SolidWhite" color="0,0,0,255" frame_count="10" input="false"></add_frame>
+            <add_frame sprite="SolidWhite" color="0,0,0,00" frame_count="100" input="false"></add_frame>
+
+
+          </anim_image>
+
+        </panel>
+        <var id="exitbutton" value="true"></var>
+        <panel template="Chipped_Corner_Panel" bottom="parent:bottom+5" height="50" width="150" right="parent:right+30" hidden="var:exitbutton">
+          <var id="BG_color" value="0,0,20,100"></var>
+
+        </panel>
+        <var id="button_text" value="@UI_GENERAL_BACK"></var>
+        <panel id="gameExitButton" template="ST_MiddleButton" bottom="parent:bottom-10" width="150" right="parent:right+40" hidden="var:exitbutton">
+          <var id="label" value="var:button_text"></var>
+        </panel>
+      </title_frame>
+    </panel_template>
+    <panel_template id="NotchPanel_scale">
+      <panel  width="150" height="200" children_input="false" clipping="flase">
+        <var id="BG_color" value="13,64,76,185"></var>
+        <var id="OL_color" value="213,264,255,185"></var>
+        <var id="G_color" value="40,90,200,200"></var>
+        <var id="Corner_Indent" value=""></var>
+        <var id="Top_Shift" value=""></var>
+        <var id="Bottom_Shift" value=""></var>
+
+        <!--Background-->
+        <image id="TLC1" sprite="NotchPanel_TLC1" left="parent:left" top="23" color="var:BG_color"></image>
+        <image id="BLC" sprite="NotchPanel_TLC1" flipy="true" left="parent:left" bottom="parent:bottom" color="var:BG_color" ></image>
+        <image id="LSF" sprite="NotchPanel_LSF" top="TLC1:bottom" bottom="BLC:top" color="var:BG_color"></image>
+        <image id="BRC" sprite="NotchPanel_BRC"  right="parent:right" bottom="parent:bottom" color="var:BG_color"></image>
+        <image id="BF" sprite="NotchPanel_TLC1F" flipy="true" left="BLC:right" bottom="parent:bottom" right="BRC:left" color="var:BG_color"></image>
+        <image id="TLC2" sprite="NotchPanel_TLC2" left="var:Corner_Indent" top="parent:top" color="var:BG_color"></image>
+        <image id="TLC1F" sprite="NotchPanel_TLC1F" left="TLC1:right" top="TLC1:top" right="TLC2:left" color="var:BG_color"></image>
+
+
+        <image id="TRC" sprite="NotchPanel_TRC" right="parent:right" top="parent:top" color="var:BG_color"></image>
+        <image id="TLC2F" sprite="NotchPanel_TLC2F" left="TLC2:right" right="TRC:left" top="parent:top" color="var:BG_color"></image>
+
+
+        <image id="RTF" sprite="NotchPanel_RTF" right="parent:right" top="parent:top+var:Top_Shift" color="var:BG_color"></image>
+        <image id="RBF" sprite="NotchPanel_RBF" right="parent:right" top="parent:bottom-var:Bottom_Shift" color="var:BG_color"></image>
+        <image id="RMF" sprite="SolidWhite" right="parent:right-4" top="RTF:bottom" bottom="RBF:top" left="RBF:left" color="var:BG_color"></image>
+        <image id="RTG1" sprite="SolidWhite" right="parent:right" left="RBF:left" top="TLC2F:bottom" bottom="RTF:top" color="var:BG_color"></image>
+        <image id="RTG2" sprite="SolidWhite" right="parent:right" left="TLC2F:right" top="TRC:bottom" bottom="RTG1:top" color="var:BG_color"></image>
+        <image id="RBG" sprite="SolidWhite" right="parent:right-1" left="RBF:left" top="RBF:bottom" bottom="BRC:top" color="var:BG_color"></image>
+        <image id="RFG" sprite="SolidWhite" right="RTG1:left" left="BRC:left" top="TLC2F:bottom" bottom="BRC:top" color="var:BG_color"></image>
+        <image id="CF" sprite="SolidWhite" left="LSF:right" right="RFG:left" top="TLC1:bottom" bottom="BLC:top" color="var:BG_color"></image>
+
+        <!--Outline-->
+        <image  sprite="NotchPanel_OL_TLC1" left="parent:left" top="23" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_TLC1" flipy="true" left="parent:left" bottom="parent:bottom" color="var:OL_color" ></image>
+        <image  sprite="NotchPanel_OL_LSF" top="TLC1:bottom" bottom="BLC:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_BRC"  right="parent:right" bottom="parent:bottom" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_TLC1F" flipy="true" left="BLC:right" bottom="parent:bottom" right="BRC:left" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_TLC2" left="var:Corner_Indent" top="parent:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_TLC1F" left="TLC1:right" top="TLC1:top" right="TLC2:left" color="var:OL_color"></image>
+
+        <image  sprite="NotchPanel_OL_TRC" right="parent:right" top="parent:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_TLC2F" left="TLC2:right" right="TRC:left" top="parent:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_RTF" right="parent:right" top="parent:top+var:Top_Shift" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_RBF" right="parent:right" top="parent:bottom-var:Bottom_Shift" color="var:OL_color"></image>
+
+        <image  sprite="NotchPanel_OL_RSF" right="parent:right" top="TRC:bottom" bottom="RTF:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_RSF" right="parent:right-1" top="RBF:bottom" bottom="BRC:top" color="var:OL_color"></image>
+        <image  sprite="NotchPanel_OL_RSF" left="parent:right-5" top="RTF:bottom" bottom="RBF:top" color="var:OL_color"></image>
+
+        <!--Glow-->
+        <image id="G_LC" sprite="NotchPanel_GL_RC" left="parent:left-50"   flipx="true"    bottom="parent:bottom+23" top="parent:bottom-150"     color="var:G_color"></image>
+        <image id="G_RC" sprite="NotchPanel_GL_LC" right="parent:right+20"  flipx="true"   bottom="parent:bottom+23" top="parent:bottom-150"  color="var:G_color"></image>
+        <image sprite="NotchPanel_GL_FMF" left="G_LC:right" right="G_RC:left" flipx="true" bottom="parent:bottom+23" top="parent:bottom-150"    color="var:G_color"></image>
+      </panel>
+    </panel_template>
+    <!--<panel_template id="TurnEventWidget">
+      <panel clipping="false" width="200" height="200">
+        <image id="turnEventImage" width="200" height="100" />
+        <panel id="turnEventMessage" template="StandardTextBox" right="parent:left-20" top="parent:top" width="300" height="100" />
+        <panel id="turnEventNext" template="StandardButton" hidden="true" right="parent:left-30" bottom="turnEventMessage:bottom" text="@UI_STARMAP_NEXT" />
+      </panel>
+    </panel_template>-->
+
+    <!--LAYOUT TEMPLATES-->
+    <panel_template id="Frame_Left">
+      <panel width="180" height="240" clipping="false" input="false">
+        <panel shape="parent" input="false" children_input="false" clipping="false">
+          <var id="BG_color" value="56,130,165,189"></var>
+          <var id="OL_color" value="156,178,265,189"></var>
+          <var id="REF_color" value="50,255,255,125"></var>
+          <var id="G_color" value="60,180,200,255"></var>
+          <var id="Left_Tab" value="50"></var>
+          <var id="Right_Tab" value="20"></var>
+          <var id="BRC_Offset" value="35"></var>
+          <var id="blank" value="0,0,0,0"></var>
+          <image id="TLC" sprite="SysBracket_TLC_tab" color="var:BG_color" left="parent:left" top="parent:top"  input="false"></image>
+          <image id="TRC" sprite="SysBracket_TRC" color="var:blank" left="parent:right" top="parent:top" input="false"></image>
+          <image id="TF"  sprite="SysBracket_TF"  color="var:blank" left="TLC:right"  right="parent:right" top="parent:top" input="false"></image>
+          <image id="BLC" sprite="SysBracket_BLC" color="var:BG_color" left="parent:left" bottom="parent:bottom" input="false"></image>
+          <image id="BRC" hidden="true" sprite="SysBracket_BRC" color="var:BG_color" right="parent:right-var:BRC_Offset" top="BF:top" input="false"></image>
+          <image id="BF"  sprite="SysBracket_BF"  color="var:BG_color" left="BLC:right" right="BRC:left" bottom="parent:bottom" input="false"></image>
+          <image id="LF"  sprite="SysBracket_LF"  color="var:BG_color" left="parent:left" top="TLC:bottom" bottom="BLC:top" input="false"></image>
+          <image sprite="SysBracket_OL_TLC"       color="var:OL_color" left="parent:left" top="parent:top"  input="false"></image>
+          <image sprite="SysBracket_OL_TRC"       color="var:OL_color" left="TLC:right-23" top="parent:top" input="false"></image>
+          <image sprite="SysBracket_OL_TF"        color="var:OL_color" left="TLC:right-26" width="3" top="parent:top" input="false"></image>
+          <image sprite="SysBracket_OL_LF"        color="var:OL_color" top="LF:top" bottom="LF:bottom"  input="false"></image>
+          <image id="REF_LC" sprite="SysBracket_REF_LC_single" left="parent:left" top="parent:top" color="var:REF_color" input="false"></image>
+        </panel>
+      </panel>
+    </panel_template>
+    <panel_template id="Frame_Right">
+      <panel width="180" height="240"  clipping="false" input="false">
+        <panel shape="parent" input="false" children_input="false" clipping="false">
+          <var id="BG_color" value="56,130,165,189"></var>
+          <var id="OL_color" value="156,178,265,189"></var>
+          <var id="REF_color" value="50,255,255,125"></var>
+          <var id="G_color" value="60,180,200,255"></var>
+          <var id="Left_Tab" value="50"></var>
+          <var id="Right_Tab" value="20"></var>
+          <var id="BRC_Offset" value="135"></var>
+          <var id="blank" value="0,0,0,0"></var>
+
+          <image id="TLC" sprite="SysBracket_TLC_tab" color="var:BG_color" flipx="true" right="parent:right" top="parent:top"  input="false"></image>
+          <image id="TRC" sprite="SysBracket_TRC" color="var:blank" left="parent:right" top="parent:top" input="false"></image>
+          <image id="TF"  sprite="SysBracket_TF"  color="var:blank" left="TLC:right"  right="parent:right" top="parent:top" input="false"></image>
+          <image id="BLC" sprite="SysBracket_BLC" color="var:BG_color" flipx="true" right="parent:right" bottom="parent:bottom" input="false"></image>
+          <image id="BRC" hidden="true" sprite="SysBracket_BRC" color="var:BG_color" flipx="true" left="parent:left+var:BRC_Offset" top="BF:top" input="false"></image>
+          <image id="BF"  sprite="SysBracket_BF"  color="var:BG_color" right="BLC:left" left="BRC:right" flipx="true" bottom="parent:bottom" input="false" ></image>
+          <image id="LF"  sprite="SysBracket_LF"  color="var:BG_color" right="parent:right" top="TLC:bottom" bottom="BLC:top" input="false" flipx="true"></image>
+          <image sprite="SysBracket_OL_TLC"       color="var:OL_color" flipx="true" right="parent:right" top="parent:top"  input="false"></image>
+          <image sprite="SysBracket_OL_TRC"       color="var:OL_color" right="TLC:left+23" flipx="true" top="parent:top" input="false"></image>
+          <image sprite="SysBracket_OL_TF"        color="var:OL_color" right="TLC:left+26" flipx="true" width="3" top="parent:top" input="false"></image>
+          <image sprite="SysBracket_OL_LF"        color="var:OL_color" flipx="true" top="LF:top" right="parent:right" bottom="LF:bottom"  input="false"></image>
+          <image id="REF_LC" sprite="SysBracket_REF_LC_single" flipx="true" right="parent:right" top="parent:top" color="var:REF_color" input="false"></image>
+        </panel>
+      </panel>
+    </panel_template>
+    <panel_template id="Tab_Right">
+      <panel id="on_idle" clipping="false" shape="parent" input="false">
+        <var id="Left_Tab" value="0"></var>
+        <var id="Right_Tab" value="20"></var>
+        <var id="BG_color" value="56,130,165,189"></var>
+        <var id="P_BG_color" value="56,130,165,230"></var>
+        <var id="OL_color" value="156,178,265,189"></var>
+        <var id="MO_OL_color" value="156,200,265,230"></var>
+        <var id="REF_color" value="50,255,255,125"></var>
+        <var id="MO_REF_color" value="50,255,255,180"></var>
+        <var id="P_REF_color" value="50,255,255,200"></var>
+        <var id="G_color" value="60,180,200,255"></var>
+        <var id="blank" value="0,0,0,0"></var>
+        <image id="TLC" sprite="SysBracket_TLC_button" color="var:BG_color" right="parent:right" flipx="true" top="parent:top" input="false"></image>
+        <image id="TRC" sprite="SysBracket_TRC" color="var:BG_color" right="parent:left" flipx="true" top="parent:top" input="false"></image>
+        <image id="TF"  sprite="SysBracket_TF"  color="var:BG_color" right="TLC:left"  left="parent:left" flipx="true" top="parent:top" input="false"></image>
+        <image id="Insert_LC" sprite="SysBracket_Insert_LC"   color="var:BG_color" right="parent:right" flipx="true" top="TF:bottom" input="false"></image>
+        <image id="Insert_RC" sprite="SysBracket_Insert_RC"   color="var:BG_color"  flipx="true" top="TF:bottom" right="var:Right_Tab" input="false"></image>
+        <image id="Insert_MF" sprite="SysBracket_Insert_MF"   color="var:BG_color" right="Insert_LC:left" left="Insert_RC:right" flipx="true" top="TF:bottom" input="false"></image>
+
+        <image sprite="SysBracket_OL_TLC_button"       color="var:OL_color" right="parent:right" flipx="true" top="parent:top"  input="false"></image>
+        <image sprite="SysBracket_OL_TRC"       color="var:OL_color" right="parent:left" flipx="true" top="parent:top" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_LC_button" color="var:OL_color" right="Insert_LC:right" flipx="true" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_RC_button" color="var:OL_color" right="Insert_RC:right" flipx="true" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_MF_button" color="var:OL_color" right="Insert_MF:right" left="Insert_MF:left" flipx="true" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_MF_topbutton" color="var:OL_color" right="TLC:left" left="Insert_MF:left-6" flipx="true" top="parent:top" input="false"></image>
+        <image sprite="SysBracket_OL_TF"        color="var:OL_color" right="Insert_RC:left" left="parent:left" flipx="true" top="parent:top" input="false"></image>
+
+        <image id="REF_LC" sprite="SysBracket_REF_LC" right="parent:right" flipx="true" top="parent:top" color="var:REF_color" input="false"></image>
+        <image id="REF_RC" sprite="SysBracket_REF_RC" left="TRC:left" flipx="true" top="parent:top" color="var:REF_color" input="false"></image>
+        <image sprite="SysBracket_REF_MF" right="REF_LC:left" left="REF_RC:right" flipx="true" top="parent:top" color="var:REF_color" input="false"></image>
+
+        <image id="G_LC" sprite="NotchPanel_GL_LC" right="parent:right+30"  flipx="true"     bottom="TF:bottom+7"   top="TF:top"     color="var:G_color" input="false"></image>
+        <image id="G_RC" sprite="NotchPanel_GL_RC" left="TRC:left-50"  flipx="true"        bottom="TF:bottom+7"  top="TF:top"   color="var:G_color" input="false"></image>
+        <image sprite="NotchPanel_GL_FMF" right="G_LC:left" left="G_RC:right" flipx="true" bottom="TF:bottom+7"  top="TF:top"  color="var:G_color" input="false"></image>
+      </panel>
+    </panel_template>
+    <panel_template id="Tab_Left">
+      <panel id="on_idle" clipping="false" shape="parent" input="false">
+        <var id="Left_Tab" value="0"></var>
+        <var id="Right_Tab" value="20"></var>
+        <var id="BG_color" value="56,130,165,189"></var>
+        <var id="P_BG_color" value="56,130,165,230"></var>
+        <var id="OL_color" value="156,178,265,189"></var>
+        <var id="MO_OL_color" value="156,200,265,230"></var>
+        <var id="REF_color" value="50,255,255,125"></var>
+        <var id="MO_REF_color" value="50,255,255,180"></var>
+        <var id="P_REF_color" value="50,255,255,200"></var>
+        <var id="G_color" value="60,180,200,255"></var>
+        <var id="blank" value="0,0,0,0"></var>
+        <image id="TLC" sprite="SysBracket_TLC_button" color="var:BG_color" left="parent:left" top="parent:top" input="false"></image>
+        <image id="TRC" sprite="SysBracket_TRC" color="var:BG_color" left="parent:right" top="parent:top" input="false"></image>
+        <image id="TF"  sprite="SysBracket_TF"  color="var:BG_color" left="TLC:right"  right="parent:right" top="parent:top" input="false"></image>
+        <image id="Insert_LC" sprite="SysBracket_Insert_LC"   color="var:BG_color" left="var:Left_Tab" top="TF:bottom" input="false"></image>
+        <image id="Insert_RC" sprite="SysBracket_Insert_RC"   color="var:BG_color" left="parent:right-var:Right_Tab" top="TF:bottom" input="false"></image>
+        <image id="Insert_MF" sprite="SysBracket_Insert_MF"   color="var:BG_color" left="Insert_LC:right" right="Insert_RC:left" top="TF:bottom" input="false"></image>
+
+        <image sprite="SysBracket_OL_TLC_button"       color="var:OL_color" left="parent:left" top="parent:top"  input="false"></image>
+        <image sprite="SysBracket_OL_TRC"       color="var:OL_color" left="parent:right" top="parent:top" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_LC_button" color="var:OL_color" left="Insert_LC:left" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_RC_button" color="var:OL_color" left="Insert_RC:left" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_MF_button" color="var:OL_color" left="Insert_MF:left" right="Insert_MF:right" top="parent:top+2" input="false"></image>
+        <image sprite="SysBracket_OL_Insert_MF_topbutton" color="var:OL_color" left="TLC:right" right="Insert_MF:right+6" top="parent:top" input="false"></image>
+        <image sprite="SysBracket_OL_TF"        color="var:OL_color" left="Insert_RC:right" right="parent:right" top="parent:top" input="false"></image>
+
+        <image id="REF_LC" sprite="SysBracket_REF_LC" left="parent:left" top="parent:top" color="var:REF_color" input="false"></image>
+        <image id="REF_RC" sprite="SysBracket_REF_RC" right="TRC:right" top="parent:top" color="var:REF_color" input="false"></image>
+        <image sprite="SysBracket_REF_MF" left="REF_LC:right" right="REF_RC:left" top="parent:top" color="var:REF_color" input="false"></image>
+
+        <image id="G_LC" sprite="NotchPanel_GL_LC" left="parent:left-30"        bottom="TF:bottom+7"   top="TF:top"     color="var:G_color" input="false"></image>
+        <image id="G_RC" sprite="NotchPanel_GL_RC" right="TRC:right+50"         bottom="TF:bottom+7"  top="TF:top"   color="var:G_color" input="false"></image>
+        <image sprite="NotchPanel_GL_FMF" left="G_LC:right" right="G_RC:left" bottom="TF:bottom+7"  top="TF:top"  color="var:G_color" input="false"></image>
+      </panel>
+    </panel_template>
+
+    <panel_template id="Tab">
+      <panel input="false">
+        <panel input="false" left="0" right="parent:hcenter">
+          <panel template="Tab_Left" left="0" right="parent:right+100" input="false"></panel>
+        </panel>
+        <panel input="false" right="parent:right-30" left="parent:hcenter">
+          <panel template="Tab_Right" right="parent:right" left="parent:left-100" input="false"></panel>
+        </panel>
+      </panel>
+    </panel_template>
+    <!--ONLINE POPUP TEMPLATES-->
+    <panel_template id="profileSearch">
+      <panel id="login_dialog" hidden="true" template="Large_ChippedCorner_Panel" width="500" hcenter="parent:hcenter" vcenter="parent:vcenter" height="400">
+        <label text="@UI_GAMELOBBY_SEARCH_CRITERIA" top="40" left="40"/>
+        <edit_box id="profile_search" hcenter="parent:hcenter" top="40" height="20" width="200">
+          <panel id="text_area" shape="content" input="false"></panel>
+          <image sprite="SolidWhite" color="64,64,64" shape="parent" input="false"></image>
+        </edit_box>
+      </panel>
+    </panel_template>
+    <!--FRIENDS DIALOG-->
+    <panel_template id="friendsDialog">
+      <panel>
+        <panel id="pnlFriends" hidden="true" template="boxpanel_scale">
+          <label text="Name" left="parent:left+10" justify="hcenter" font="Standard_NO"/>
+          <label text="Location" right="parent:right-50" justify="hcenter" font="Standard_NO"/>
+          <panel id="lstFriends" template="SlimListBox" top="parent:top+20" bottom="parent:bottom-5" left="parent:left+5" right="parent:right-5" debug="true">
+            <add_field id="fldName"        auto_add="true"></add_field>
+            <add_field id="fldLocation"     auto_add="true"></add_field>
+          </panel>
+          <panel id="lstRequests" hidden="true" template="SlimListBox" top="parent:top+20" bottom="parent:bottom-5" left="parent:left+5" right="parent:right-5" debug="true">
+            <add_field id="fldName"        auto_add="true"></add_field>
+            <add_field id="fldMessage"     auto_add="true"></add_field>
+          </panel>
+        </panel>
+      </panel>
+    </panel_template>
+    <!--GAME SETUP POPUP TEMPLATES-->
+    <panel_template id="selectFactionDialog">
+      <panel id="dlgSelectFaction" width="220" height="factionlist:height+5"  hcenter="parent:hcenter" vcenter="parent:vcenter" input="false" clipping="false" hidden="true" >
+        <image sprite="SolidWhite" color="0,0,0,200" input="true" hcenter="parent:hcenter" vcenter="parent:vcenter"    width="3000" height="3000"></image>
+        <panel template="boxpanel_scale" shape="parent" input="false"></panel>
+        <column id="factionlist" width="parent:width-5" hcenter="parent:hcenter" top="3" item_spacing="5" input="false">
+          <panel id="human|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_SOL_FORCE"></var>
+          </panel>
+          <panel id="human_dlc|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_SOL_FORCE_IMMERSION"></var>
+          </panel>
+          <panel id="hiver|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_HIVER_IMPERIUM"></var>
+          </panel>
+          <panel id="hiver_dlc|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_HIVER_IMMERSION"></var>
+          </panel>
+          <panel id="tarkas|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_TARKASIAN_EMPIRE"></var>
+          </panel>
+          <panel id="tarkas_dlc|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_TARKA_IMMERSION"></var>
+          </panel>
+          <panel id="zuul|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_SUULKA_HORDE"></var>
+          </panel>
+          <panel id="zuul_dlc|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_SUULKA_HORDE_IMMERSION"></var>
+          </panel>
+          <panel id="morrigi|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_MORRIGI_CONFEDERATION"></var>
+          </panel>
+          <panel id="morrigi_dlc|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_MORRIGI_IMMERSION"></var>
+          </panel>
+          <panel id="liir_zuul|btnFactionSelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@FACTION_LIIR_ZUUL_ALLIANCE"></var>
+          </panel>
+          <panel id="liir_zuul_dlc|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_LIIR_ZUUL_IMMERSION"></var>
+          </panel>
+          <panel id="loa|btnFactionSelected" template="menubutton" height="25" enabled="false">
+            <var id="menuLabel" value="@FACTION_LOA"></var>
+          </panel>
+        </column>
+      </panel>
+    </panel_template>
+
+    <panel_template id="selectDifficultyDialog">
+      <panel id="dlgSelectDifficulty" width="220" height="difficultylist:height+5"  hcenter="parent:hcenter" vcenter="parent:vcenter" input="false" clipping="false" hidden="true" >
+        <image sprite="SolidWhite" color="0,0,0,200" input="true" hcenter="parent:hcenter" vcenter="parent:vcenter"    width="3000" height="3000"></image>
+        <panel template="boxpanel_scale" shape="parent" input="false"></panel>
+        <column id="difficultylist" width="parent:width-5" hcenter="parent:hcenter" top="3" item_spacing="5" input="false">
+          <panel id="easy|btnDifficultySelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@AI_DIFFICULTY_EASY"></var>
+          </panel>
+          <panel id="medium|btnDifficultySelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@AI_DIFFICULTY_MEDIUM"></var>
+          </panel>
+          <panel id="hard|btnDifficultySelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@AI_DIFFICULTY_HARD"></var>
+          </panel>
+          <panel id="veryhard|btnDifficultySelected" template="menubutton" height="25">
+            <var id="menuLabel" value="@AI_DIFFICULTY_VERYHARD"></var>
+          </panel>
+        </column>
+      </panel>
+    </panel_template>
+
+    <panel_template id="selectAvatarDialog">
+      <panel id="dlgSelectAvatar" shape="parent" clipping="false" input="false" hidden="true">
+        <button2 id ="selectBackground" template="ClickableDarkness"  hcenter="parent:hcenter" vcenter="parent:vcenter"    width="3000" height="3000"></button2>
+        <panel id="lstAvatars" item_template="ImageButtonItem" template="v3ListBox" orientation="horizontal" height="140" left="imgSelectedAvatar:right-15" top="imgSelectedAvatar:top" right="parent:right-20" clipping="false" vscroll_enabled="false" />
+        <image id="imgSelectedAvatar" sprite="morrigi_av_pricica" right="240" top="250" width="128" height="128" input="false"/>
+      </panel>
+    </panel_template>
+    <panel_template id="selectBadgeDialog">
+      <panel id="dlgSelectBadge" shape="parent" clipping="false" input="false" hidden="true">
+        <button2 id ="selectBackground" template="ClickableDarkness"  hcenter="parent:hcenter" vcenter="parent:vcenter"    width="3000" height="3000"></button2>
+        <panel id="lstBadges" item_template="ImageButtonItem" template="v3ListBox" orientation="horizontal" height="140" left="imgSelectedBadge:right-15" top="imgSelectedBadge:top" right="parent:right-20"  clipping="false" />
+        <image id="imgSelectedBadge" sprite="morrigifaction4" left="20" top="310" width="128"  height="128" input="false"></image>
+      </panel>
+    </panel_template>
+    <panel_template id="selectEmpireColorDialog">
+      <panel id="dlgSelectEmpireColor" height="210" width="280" input="false" hidden="true" >
+        <panel template="boxpanel_scale" shape="parent" input="false" />
+        <row id="colorbuttonrow1" top="5" left="5" height="parent:height:45%" input="false" item_spacing="5">
+          <panel id="color0" template="EmpireColorItem"></panel>
+          <panel id="color1" template="EmpireColorItem"></panel>
+          <panel id="color2" template="EmpireColorItem"></panel>
+          <panel id="color3" template="EmpireColorItem"></panel>
+          <panel id="color4" template="EmpireColorItem"></panel>
+        </row>
+        <row id="colorbuttonrow2" bottom="parent:bottom-5" left="5" height="parent:height:45%" input="false" item_spacing="5">
+          <panel id="color5" template="EmpireColorItem"></panel>
+          <panel id="color6" template="EmpireColorItem"></panel>
+          <panel id="color7" template="EmpireColorItem"></panel>
+          <panel id="color8" template="EmpireColorItem"></panel>
+          <panel id="color9" template="EmpireColorItem"></panel>
+        </row>
+        <!--<panel id="lstEmpireColors" item_template="EmpireColorItem" template="v3ListBox" orientation="horizontal" height="80" width="840" left="5" top="5" item_spacing="5" clipping="false" />-->
+      </panel>
+    </panel_template>
+    <panel_template id="selectShipColorDialog">
+      <panel id="dlgSelectShipColor" height="200" width="280" bottom="parent:bottom" input="false" hidden="true" >
+        <panel template="boxpanel_scale" shape="parent" input="false"></panel>
+        <panel id="colorpicker" top="10" hcenter="parent:hcenter" template="ColorPickerHSV"></panel>
+        <panel id="btnShipColorAccept" template="ST_MiddleButton" bottom="parent:bottom-10" width="170" hcenter="parent:hcenter">
+          <var id="label" value="@UI_PLAYERSETUP_ACCEPT_COLOR"></var>
+        </panel>
+      </panel>
+    </panel_template>
+
+  </skin>
+
+  <panel id="StarMapLobby" shape="parent">
+    <object_host id="ohStarMapLobby" left="parent:left" right="parent:right-320" height="parent:height" background="true"/>
+    <panel shape="parent" input="false">
+      <!--Content: Player Setup-->
+      <panel id="pnlPlayerSetup" bottom="parent:bottom-60" left="parent:left+10" top="60" right="parent:right-330" input="false" hidden="true" clipping="false">
+        <object_host id="designShip" width="parent:width" top="playerInfoBox:bottom" bottom="parent:bottom" input="true"/>
+        <text_box2 id="lblFactionDescription" font="SubTitleBold"  left="20" right="parent:right-140" top="20" bottom="250" input="false"/>
+        <image id="imgFaction" sprite="logo_morrigi" best_fit="true" top="30" width="120" height="120" right="parent:right-10" ></image>
+        <image id="imgAvatar" sprite="morrigi_av_pricica" right="230" top="160" width="128" height="128" input="false"></image>
+        <image id="imgBadge" sprite="morrigifaction4" left="10" top="220" width="128"  height="128" input="false"></image>
+        <panel id="playerInfoBox" template="Chipped_Corner_BottomFadePanel"  height="155" top="180" left="230" width="450" input="false">
+          <column left="10" width="parent:width-20" input="false">
+            <row input="false" item_spacing="10">
+              <label id="lblEmpireName" text="EMPIRE NAME EMPIRE NAME" font="StandardHeaderBold" input="false"/>
+              <panel id="btnEmpireName" tooltip="@UI_TOOLTIP_EMPIRENAME" template="menubutton" height="20">
+                <var id="menuLabel" value="@UI_GAMELOBBY_CHANGE"></var>
+              </panel>
+            </row>
+            <label id="lblPlayerName" font="Standard_NO"/>
+          </column>
+
+          <column item_spacing="4" left="20" right="180" top="55" clipping="false" input="false">
+            <panel id="btnSelectFaction" tooltip="@UI_TOOLTIP_PLAYERFACTION" template="menubutton" height="20">
+              <var id="menuLabel" value="@UI_GAMELOBBY_SELECT_FACTION"></var>
+            </panel>
+            <panel id="btnSelectAvatar" tooltip="@UI_TOOLTIP_PLAYERAVATAR" template="menubutton" height="20">
+              <var id="menuLabel" value="@UI_GAMELOBBY_SELECT_AVATAR"></var>
+            </panel>
+            <panel id="btnSelectBadge" tooltip="@UI_TOOLTIP_PLAYERBADGE" template="menubutton" height="20">
+              <var id="menuLabel" value="@UI_GAMELOBBY_SELECT_BADGE"></var>
+            </panel>
+            <panel id="btnSelectDifficulty" tooltip="@UI_TOOLTIP_AIPLAYERDIFFICULTY" template="menubutton" height="20">
+              <var id="menuLabel" value="@UI_GAMELOBBY_SELECT_AI_DIFFICULTY"></var>
+            </panel>
+          </column>
+
+          <var id="spinnerHeight" value="20"/>
+          <var id="sliderHeight" value="38"/>
+
+          <column item_spacing="10" left="200" right="parent:right-10" top="35" clipping="false" input="false">
+
+            <panel template="ValueSpinner" tooltip="@UI_TOOLTIP_STARTINGSYSTEMS" width="parent:width" height="var:spinnerHeight">
+              <var id="vspinner_id" value="sldInitialSystems"/>
+              <var id="vspinner_up_id" value="sldInitialSystems_up"/>
+              <var id="vspinner_down_id" value="sldInitialSystems_down"/>
+              <var id="text" value="@UI_GAMESETUP_INITIAL_SYSTEMS"/>
+            </panel>
+
+            <panel template="ValueSpinner" tooltip="@UI_TOOLTIP_STARTINGTECHS" width="parent:width" height="var:spinnerHeight">
+              <var id="vspinner_id" value="sldInitialTechs"/>
+              <var id="vspinner_up_id" value="sldInitialTechs_up"/>
+              <var id="vspinner_down_id" value="sldInitialTechs_down"/>
+              <var id="text" value="@UI_GAMESETUP_INITIAL_TECHNOLOGIES"/>
+            </panel>
+
+            <panel template="ValueSlider" tooltip="@UI_TOOLTIP_STARTINGSAVINGS" width="parent:width" height="var:sliderHeight">
+              <var id="slider_id" value="sldInitialTreasury"/>
+              <var id="text" value="@UI_GAMESETUP_INITIAL_TREASURY"/>
+            </panel>
+
+          </column>
+        </panel>
+
+        <!--EMPIRE & SHIP COLORS -->
+        <button2 id="designShipClick" width="parent:width" top="playerInfoBox:bottom" bottom="parent:bottom" />
+        <panel top="imgBadge:bottom" height="210" width="400" input="false" left="10">
+          <color_hsv id="pickerSecondaryColor" width="parent:width" height="parent:height" clipping="false">
+            <column id="colorbuttons" input="false" height="parent:height" width="50" bottom="parent:bottom">
+              <text_box2 font="SubTitleBold" height="28" width="parent:width" input="false" justify="hcenter" text="@UI_PLAYERSETUP_EMPIRE_COLOR" />
+              <panel id="btnSelectEmpireColor" tooltip="@UI_TOOLTIP_EMPIRECOLOR" template="menubutton" height="parent:height:50%-28" width="parent:width" margins="5">
+                <var id="menuLabel" value=""></var>
+                <image id="imgEmpireColor" sprite="SolidWhite" shape="content" input="false"></image>
+              </panel>
+              <text_box2 font="SubTitleBold" height="28" width="parent:width" input="false" justify="hcenter" text="@UI_PLAYERSETUP_SHIP_COLOR" />
+              <panel id="btnSelectSecondaryColor" tooltip="@UI_TOOLTIP_SHIPCOLOR" template="menubutton" height="parent:height:50%-28" bottom="parent:bottom" width="parent:width" margins="5">
+                <var id="menuLabel" value=""></var>
+                <image id="sample" sprite="SolidWhite" shape="content" input="false"></image>
+              </panel>
+            </column>
+            <panel template="selectEmpireColorDialog" left="colorbuttons:right+5" />
+
+            <panel id="dlgSelectShipColor" left="colorbuttons:right+5" bottom="parent:bottom" width="280" height="210" hidden="true">
+              <panel template="boxpanel_scale" shape="parent" input="false" margins="5">
+                <!--hue-->
+                <slider id="hue" top="content:top" left="content:left" height="sprite:baseLC:height" width="content:width" clipping="false">
+                  <image3 id="track_idle" input="false" left_cap="hueLC" right_cap="hueRC" center_fill="hueFILL" width="parent:width" vspan="parent:vspan"></image3>
+                  <image id="thumb_idle"      input="false" sprite="colorpointeridle"></image>
+                  <image id="thumb_mouseover" input="false" sprite="colorpointermoused"></image>
+                  <image id="thumb_pressed"   input="false" sprite="colorpointerclicked"></image>
+                </slider>
+
+                <!--saturation-->
+                <slider id="sat" top="hue:bottom+5" left="content:left" bottom="content:bottom" width="content:width" clipping="false" scale_thumb="false">
+                  <image id="track_idle" input="false" sprite="SolidWhite" top="1" left="1" width="parent:width-2" height="parent:height-2"></image>
+                  <image id="base" input="false" sprite="GradientHorizontal" top="2" left="2" width="parent:width-4" height="parent:height-4"></image>
+                  <image id="brightness_overlay" input="false" sprite="GradientVertical" top="2" left="2" width="parent:width-4" height="parent:height-4" color="0,0,0" flipy="true"></image>
+
+                  <image id="thumb_idle"      input="false" height="this:width" sprite="colorpointeridle"></image>
+                  <image id="thumb_mouseover" input="false" height="this:width" sprite="colorpointermoused"></image>
+                  <image id="thumb_pressed"   input="false" height="this:width" sprite="colorpointerclicked"></image>
+                </slider>
+              </panel>
+            </panel>
+          </color_hsv>
+        </panel>
+      </panel>
+
+      <!--RIGHT PANEL (STARMAP DETAILS/PLAYER LIST)-->
+      <panel top="60" bottom="parent:bottom-60" left="parent:right-320" right="parent:right-10" clipping="false">
+        <panel template="boxpanel_scale" input="false" right="parent:right" width="parent:width" height="parent:height"></panel>
+        <!--<panel id="btnDetails" template="menubutton" height="20" width="parent:width" checked="true">
+          <var id="menuLabel" value="@UI_GAMELOBBY_DETAILS" />
+        </panel>-->
+        <!--<panel id="btnMap" template="menubutton" height="20" left="btnDetails:right" width="135" enabled="false">
+          <var id="menuLabel" value="@UI_GAMELOBBY_MAP" />
+        </panel>-->
+        <!--Content: Details-->
+        <panel id="pnlDetails" hidden="false" top="5" left="10" height="150" width="parent:width-20">
+          <label text="@UI_GAMELOBBY_DETAILS" width="parent:width" justify="hcenter" font="Standard_NO"/>
+          <panel id="lstGameSettings" template="SlimListBox" top="parent:top+20" width="parent:width-20" bottom="parent:bottom-40">
+            <add_field id="property" auto_add="true"></add_field>
+            <add_field id="value" auto_add="true"></add_field>
+            <add_field id="spacer" auto_add="true"></add_field>
+          </panel>
+        </panel>
+        <!--Content: Map-->
+        <panel id="pnlMap" hidden="true" top="25" left="10" height="150" width="parent:width-20">
+          <label text="@UI_GAMELOBBY_MAP" width="parent:width" justify="hcenter" font="Standard_NO"></label>
+        </panel>
+        <!--Content: Player List (ALWAYS VISIBLE)-->
+        <panel template="boxpanel_scale" top="185" bottom="parent:bottom-10" left="10" width="parent:width-20" input="false">
+          <label text="@UI_GAMELOBBY_PLAYERS" width="parent:width" justify="hcenter" font="Standard_NO"></label>
+          <panel id="lstPlayers" template="v3ListBox" item_template="PlayerSlotItem" selection_template="" right_click_selection="false" context_menu="true" stretch_items="true" width="parent:width-5" hcenter="parent:hcenter" top="20" bottom="parent:bottom-5"></panel>
+        </panel>
+      </panel>
+
+      <!--FRIENDS POPUP-->
+      <panel template="friendsDialog" input="false" width="250" height="500" top="pnlScreenLeft:top+30" right="pnlScreenLeft:right-15"/>
+      
+      <!--SCREEN FRAME-->
+      <panel template="ScreenFrame_NB_Widget" shape="parent"  input="false">
+        <var id="screen_title" value="@UI_GAMESETUP_GAME_LOBBY"></var>
+        <var id="label" value="@UI_GAMESETUP_CANCEL_GAME"></var>
+
+
+        <panel id="btnChat" template="IconButton" tooltip="@UI_OPENCHAT" left="10" top="parent:bottom-40">
+          <var id="icon" value="" />
+        </panel>
+        <image sprite="chat_icon" left="15" top="parent:bottom-34" height="20" input="false"/>
+      </panel>
+
+      <!--GAME IN PROGRESS STATUS-->
+      <panel id="pnlGameInProgressStatus" bottom="parent:bottom" right="parent:right+30-340-20" width="1000" height="52" input="false" hidden="true">
+        <label id="lblGameInProgressStatus" text="" font="StandardHeader" justify="right" shape="parent"/>
+      </panel>
+
+      <!--GAME MODE BUTTONS-->
+      <panel id="pnlMultiplayerGameType" bottom="parent:bottom" width="550" left="10" input="false" clipping="false">
+        <panel template="Chipped_Corner_Panel" bottom="parent:bottom+25" height="70" width="580" left="-30" input="false">
+          <var id="BG_color" value="0,0,20,100"></var>
+        </panel>
+        <row left="32" bottom="parent:bottom-10" >
+          <panel id="btnHostGame" template="ST_MiddleButton" bottom="parent:bottom" width="160"  >
+            <var id="label" value="@UI_GAMEMODEBUTTONS_HOST_GAME"></var>
+          </panel>
+          <panel id="btnDirectConnect" template="ST_MiddleButton" bottom="parent:bottom" width="180"  >
+            <var id="label" value="@UI_GAMEMODEBUTTONS_DIRECT_CONNECT"></var>
+          </panel>
+          <panel id="btnRefresh" template="ST_MiddleButton" bottom="parent:bottom" width="180"  >
+            <var id="label" value="@UI_GAMEMODEBUTTONS_REFRESH"></var>
+          </panel>
+        </row>
+      </panel>
+
+      <!--FLOW BUTTONS-->
+      <panel template="Chipped_Corner_Panel" bottom="parent:bottom+25" height="70" width="340" right="parent:right+30" hidden="var:exitbutton">
+        <var id="BG_color" value="0,0,20,100"></var>
+      </panel>
+      <panel id="btnBack" template="ST_MiddleButton" bottom="parent:bottom-10" width="170" right="parent:right+30" hidden="var:exitbutton">
+        <var id="label" value="@UI_GAMESETUP_CANCEL_GAME" />
+      </panel>
+      <panel  id="btnStart" template="ST_MiddleButton" bottom="parent:bottom-10" width="180" right="parent:right-130" hidden="var:exitbutton">
+        <var id="label" value="@UI_GAMESETUP_CREATE_GAME" />
+      </panel>
+
+
+      <!--ONLINE POPUPS-->
+      <!--<panel template="profileSearch"/>-->
+
+      <!--GAME SETUP POPUPS-->
+      <panel template="selectFactionDialog" />
+      <panel template="selectDifficultyDialog" />
+      <panel template="selectAvatarDialog" />
+      <panel template="selectBadgeDialog" />
+    </panel>
+  </panel>
+</gui>

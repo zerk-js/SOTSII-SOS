@@ -1,0 +1,59 @@
+SOS Update - RS - V2.1 14/11/2019
+
+Merged SoS and PH's .dll files to ensure stability. (Done to ensure I did not miss anything.)
+Removed PH economy changes from SoS's version of the .dll file.
+Removed PH faction tech and weapon preferences from SoS's version of the .dll file.
+Re-enabled trade AI for the SoS version of the .dll file.
+Disabled Independants due to crash. (Crash is very random, you can re-enable independants in new games by replacing the 0 with a 1 in the CommonAssets file)
+
+
+KNOWN BUGS:
+Game creation sliders updated to new values, however does not work ingame as of yet. Research is underway to determine why. Default values remain in place.
+Morrigi Colony Traps may cause a desync issue in MP matches. Unknown if this can be fixed - avoid using Colony Traps in MP if possible.
+
+
+
+
+
+
+SoS Update - RS - V2 10/31/2019
+
+Ripper - Increased cost from 200 to 2000
+Ripper - Added Brawler tag
+Blast Storm - Changed point blank, effective and max ranges so they are not all the same amount.
+
+Fusion Burst Ammo - Rebalanced damage and range; Damage increases with distance.
+Antimatter Burst Ammo - Aligned statistics with Fusion Burst Ammo. Range, Torpedo health and Damage increased over Fusion version.
+Antimatter Burst Ammo - Assigned Antimatter sound effects instead of using Fusion sound effects.
+Antimatter Burst Ammo - Increased Solution Tolerance to 180 from 90.
+
+Antimatter Burst Torpedo - Aligned statistics with Fusion Burst Torpedo. Range, Torpedo and damage increased over Fusion version.
+Antimatter Burst Torpedo - Assigned Antimatter sound effects instead of using Fusion sound effects.
+Antimatter Burst Torpedo - Cost increased from 25000 to 35000 to ensure it isn't the same price as the Fusion version.
+
+AI can now properly assign research goals and priorities to Shields, Rider and Cybernetic research trees instead of randomly blundering into them.
+Ships using 'flyby' combat mode have more variance in how close and how far they are willing to pass their targets by. So far, this only impacts Solforce and sometimes the AI itself.
+AI aggression and willingness to use its strike and invasion fleets increased yet again, hopefully this time it works as advertised.
+AI has initial support for Interdiction mission but won't actually assign or build fleets for it yet (Interdiction is a WIP for me.)
+AI is now more willing to engage in prolonged invasions of the same system
+AI invasion ships can depending on the tactical situation split into multiple 'task forces' in order to assault multiple planets at the same time. Doesn't always do it however.
+AI research spending readjusted so the max they can put towards it is 75% of their budget instead of 90%. 90% was not allowing enough of a surplus to afford PH Leviathans and the more fully-upgraded DNs.
+
+
+
+
+
+
+
+SoS Update - RS - V1 29/4/2019
+
+Swapped Shipyard Supervisor requirements with We got Rock, Neil achievement - Design and save a ship design to unlock.
+Swapped Steel Pusher requirements with Dr Sleepless achievement - Actually build a ship to completion to unlock.
+
+AI chances of making new designs of all non-combat ships increased.
+AI chances of making new designs of supply and colony ships decreased.
+AI will now update and make new Gravboat designs if playing Morrigi.
+AI no longer has defense fleets over every system (barring homeworld) it owns ONLY if it is in the expanding phase. It will build and place defense fleets in all other phases.
+AI has 25% more budget allocated towards building new ships and fleets.
+Combat AI focuses on planetary attack capable craft if they own the system (SoS default.)
+

@@ -1,0 +1,85 @@
+<ShipSection>
+  <RealClass />
+  <Title>@SECTIONTITLE_BR_BIO_MISSILE</Title>
+  <Description>@SECTIONDESC_BR_BIO_MISSILE</Description>
+  <AiType>
+  </AiType>
+  <ModelFile>factions\morrigi\models\Weapons\bio_missile.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>
+  </DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <AmbientSound>
+  </AmbientSound>
+  <EngineSound>
+  </EngineSound>
+  <CameraDistanceFactor>1</CameraDistanceFactor>
+  <Struct>120</Struct>
+  <StructDamageAmount>0</StructDamageAmount>
+  <DeathDamage>0</DeathDamage>
+  <ExplosionRadius>0</ExplosionRadius>
+  <Mass>1300</Mass>
+  <Top>0,0</Top>
+  <Bottom>0,0</Bottom>
+  <Side>0,0</Side>
+  <Crew>3</Crew>
+  <CrewRequired>3</CrewRequired>
+  <Power>5</Power>
+  <Supply>5</Supply>
+  <ECM>0</ECM>
+  <ECCM>0</ECCM>
+  <ColonizerSpace>0</ColonizerSpace>
+  <SavingsCost>0</SavingsCost>
+  <ProductionCost>0</ProductionCost>
+  <FtlSpeed>0</FtlSpeed>
+  <NodeSpeed>0</NodeSpeed>
+  <MissionTime>0</MissionTime>
+  <CommandPoints>0</CommandPoints>
+  <RepairPoints>0</RepairPoints>
+  <TerraformingPoints>0</TerraformingPoints>
+  <FreighterSpace>0</FreighterSpace>
+  <Signature>0</Signature>
+  <TacticalSensorRange>0</TacticalSensorRange>
+  <StrategicSensorRange>0</StrategicSensorRange>
+  <LaunchDelay>0</LaunchDelay>
+  <DockingDelay>0</DockingDelay>
+  <BattleRiderReserveSize>0</BattleRiderReserveSize>
+  <StationType>
+  </StationType>
+  <StationLevel>0</StationLevel>
+  <IsConstructor>False</IsConstructor>
+  <IsFreighter>False</IsFreighter>
+  <ConstructionPoints>0</ConstructionPoints>
+  <IsPolice>False</IsPolice>
+  <PsionicPowerLevel>0</PsionicPowerLevel>
+  <SlaveCapacity>0</SlaveCapacity>
+  <FleetSpeedModifier>1</FleetSpeedModifier>
+  <PreviewImage>
+  </PreviewImage>
+  <Acceleration>90</Acceleration>
+  <RotationalAccelerationYaw>90</RotationalAccelerationYaw>
+  <RotationalAccelerationPitch>90</RotationalAccelerationPitch>
+  <RotationalAccelerationRoll>90</RotationalAccelerationRoll>
+  <Decceleration>1.5</Decceleration>
+  <LinearSpeed>130</LinearSpeed>
+  <RotationSpeed>180</RotationSpeed>
+  <Banks />
+  <RequiredTechs />
+  <Modules />
+  <ExcludedSections />
+  <ExcludedTypes>
+    <ExcludedType>
+      <Name>Command</Name>
+    </ExcludedType>
+    <ExcludedType>
+      <Name>Engine</Name>
+    </ExcludedType>
+  </ExcludedTypes>
+  <PsionicAbilities />
+  <WeaponGroups />
+  <ShipOptionGroups />
+</ShipSection>

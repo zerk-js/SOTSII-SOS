@@ -1,0 +1,217 @@
+<Weapon>
+  <Name>Particle Beam</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>EWP_Particle_Beam</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Brawler</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_Particlebeam_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+        <TurretClassSize>
+          <TurretSize>VeryHeavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>Barrel_Particlebeam_3_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+    <TurretClass>
+      <TurretClass>Spinal</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>
+          </Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Beam</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>5000</Cost>
+  <Crew>3</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>5</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>1</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>5</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>50</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>0</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>50</CritHitBonus>
+  <MalfunctionPercent>15</MalfunctionPercent>
+  <MalfunctionDamage>50</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0.5</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>0.2</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>10</BaseRechargeTime>
+  <MuzzleSpeed>10000</MuzzleSpeed>
+  <ShotAcceleration>0</ShotAcceleration>
+  <Duration>2</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>
+  </Model>
+  <DecalMaterial>Burn 01</DecalMaterial>
+  <DecalSize>8</DecalSize>
+  <MuzzleEffect>effects\Weapons\ParticleBeam_Muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\ParticleBeam_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\ParticleBeam_Bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Bem_Particle_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Bem_Particle_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>
+  </BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>bem_part</Icon>
+  <RangeTable>
+    <PbRange>800</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>5</PbDamage>
+    <EffectiveRange>1200</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>5</EffectiveDamage>
+    <MaxRange>1600</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>5</MaxDamage>
+    <PlanetRange>1600</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>500002</PopDamage>
+  <InfraDamage>0.001</InfraDamage>
+  <TerraDamage>0.005</TerraDamage>
+  <SolutionTolerance>0</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

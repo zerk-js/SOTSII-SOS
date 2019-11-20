@@ -1,0 +1,192 @@
+<Weapon>
+  <Name>Disruptor Whip</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>BAL_Disruptor_Whip</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Brawler</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Disabling</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Missile</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Heavy_1_HeavyMissile</Turret>
+          <Barrel>Barrel_HeavyMissile_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>GrappleHook</PayloadType>
+  <PlagueType />
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>deploy</Animation>
+  <AnimationDelay>0.001</AnimationDelay>
+  <Cost>5000</Cost>
+  <Crew>6</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>6</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>5</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>5</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>40</HpBonus>
+  <Health>0</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>25</TimeToLive>
+  <DumbfireTime>0</DumbfireTime>
+  <CritHitBonus>0</CritHitBonus>
+  <MalfunctionPercent>5</MalfunctionPercent>
+  <MalfunctionDamage>45</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>5</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition />
+  <SubmunitionAmount>0</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0001111100
+0000111000
+0000010000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0001111100
+0000111000
+0000010000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0000010000
+0000010000
+0000010000
+0000010000
+0000010000
+0001111100
+0000111000
+0000010000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>0.6</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>0</BaseVolleyDeviationName>
+  <BaseRechargeTime>30</BaseRechargeTime>
+  <MuzzleSpeed>400</MuzzleSpeed>
+  <ShotAcceleration>400</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>Missile_Grapple.scene</Model>
+  <DecalMaterial>Decal Weapon Scortch Small 01</DecalMaterial>
+  <DecalSize>40</DecalSize>
+  <MuzzleEffect>effects\Weapons\nuclearmissile_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\NuclearMissile_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\PolarisMissile_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Bal_Grapple_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Bal_Grapple_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>Bal_Grapple_break</ExpireSound>
+  <BulletSound>Mis_IOBMMissile_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>bal_disruptorwhip</Icon>
+  <RangeTable>
+    <PbRange>800</PbRange>
+    <PbDeviation>1</PbDeviation>
+    <PbDamage>14</PbDamage>
+    <EffectiveRange>1400</EffectiveRange>
+    <EffectiveDeviation>1.5</EffectiveDeviation>
+    <EffectiveDamage>21</EffectiveDamage>
+    <MaxRange>2000</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>14</MaxDamage>
+    <PlanetRange>0</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-1.9</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>500</RoundMass>
+  <PopDamage>500</PopDamage>
+  <InfraDamage>0</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>0</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

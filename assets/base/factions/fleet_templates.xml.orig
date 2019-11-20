@@ -1,0 +1,310 @@
+<!--
+[AI STANCES]
+EXPANDING,		// AI is expanding its empire.
+ARMING, 		// AI is increasing its forces and preparing for war
+HUNKERING, 		// AI is not at war, and is building up its industry and technology as rapidly as possible
+CONQUERING, 	// AI is expanding its empire by warring with neighbours
+DESTROYING, 	// AI is attempting to eliminate an opponent
+DEFENDING, 		// AI is defending its territory
+-->
+
+<!--
+[INCLUSION TYPES]
+REQUIRED,		// This ship is required for this fleet.
+FILL,			// All remaining command points will be filled with this type of ship.
+-->
+
+<!-- 
+[SHIP ROLES]
+COMBAT,
+CARRIER,
+COMMAND,
+COLONIZER,
+CONSTRUCTOR,
+SCOUT,
+SUPPLY,
+E_WARFARE,
+GATE,
+BORE,
+FREIGHTER,
+SCAVENGER,
+DRONE,
+ASSAULTSHUTTLE,
+SLAVEDISK,
+BOARDINGPOD,
+-->
+
+<!--
+[WEAPON ROLES]
+STAND_OFF,
+BRAWLER,
+POINT_DEFENSE,
+PLANET_ATTACK,
+DISABLING,
+-->
+
+<!--
+[MISSION TYPES]
+COLONIZATION,
+SURVEY,
+RELOCATION,
+CONSTRUCT_STN,
+UPGRADE_STN,
+TRANSFER,
+PATROL,
+INTERDICTION,
+STRIKE,
+INVASION,
+INTERCEPT,
+GATE,
+RETURN,
+ ** Added from Sots.StarFleet.MissionType, not in original comments **
+SUPPORT (for colonization support)
+RETREAT, 
+PIRACY,
+DEPLOY_NPG,
+EVACUATE,
+SPECIAL_CONSTRUCT_STN
+REACTION
+-->
+
+<!-- 
+[STANCE WEIGHTS]
+<StanceWeight stance="x">y</StanceWeight>
+
+x = Stance to weight.
+y = Relative chance of selecting this fleet type.
+
+Not specifying a stance in a FleetTemplate will result in a fleet not being selectable for that stance.
+-->
+
+<!--
+[SHIPS]
+<Ship inclusion="v" amount="w" weaponRole="x" faction="y">z</Ship>
+
+v = An inclusion type, see [INCLUSION TYPES].
+w = Number of ships to build, for REQUIRED inclusion type only.
+x = (Optional) Use a design with the specified weapon role.
+y = (Optional) Faction requirement. 
+z = A ship role, see [SHIP ROLES].
+
+-->
+
+<FleetTemplates>
+	<FleetTemplate name="DEFAULT_COMBAT" fleetName="Combat Fleet">
+		<MissionType>STRIKE</MissionType>
+		<MissionType>PATROL</MissionType>
+		<StanceWeight stance="CONQUERING">10</StanceWeight> 
+		<StanceWeight stance="DESTROYING">10</StanceWeight> 
+		<StanceWeight stance="DEFENDING">5</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">4</Amount>
+      <Amount stance="ARMING">6</Amount>
+      <Amount stance="HUNKERING">6</Amount>
+      <Amount stance="CONQUERING">10</Amount>
+      <Amount stance="DESTROYING">10</Amount>
+      <Amount stance="DEFENDING">10</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="2" nfaction="loa">SUPPLY</Ship>
+    <Ship inclusion="REQUIRED" amount="1" faction="zuul">BORE</Ship>
+		<Ship inclusion="FILL">COMBAT</Ship>
+	</FleetTemplate>
+  
+  <FleetTemplate name="SMALL_COMBAT" fleetName="Combat Fleet">
+    <MissionType>STRIKE</MissionType>
+    <MissionType>INVASION</MissionType>
+    <MissionType>PATROL</MissionType>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">4</Amount>
+      <Amount stance="ARMING">6</Amount>
+      <Amount stance="HUNKERING">6</Amount>S
+      <Amount stance="CONQUERING">5</Amount>
+      <Amount stance="DESTROYING">3</Amount>
+      <Amount stance="DEFENDING">6</Amount>
+    </MinToMaintain>
+    <Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+    <Ship inclusion="REQUIRED" amount="2" nfaction="loa">SUPPLY</Ship>
+    <Ship inclusion="REQUIRED" amount="2" faction="loa">COMBAT</Ship>
+    <Ship inclusion="REQUIRED" amount="1" faction="zuul">BORE</Ship>
+    <Ship inclusion="FILL" amount="4" nfaction="zuul">COMBAT</Ship>
+    <Ship inclusion="FILL" amount="3" faction="zuul">COMBAT</Ship>
+  </FleetTemplate>
+	
+	<FleetTemplate name="DEFAULT_PATROL" fleetName="Defense Fleet">
+		<MissionType>PATROL</MissionType>
+		<StanceWeight stance="CONQUERING">2</StanceWeight> 
+		<StanceWeight stance="DESTROYING">2</StanceWeight> 
+		<StanceWeight stance="DEFENDING">10</StanceWeight>
+		<StanceWeight stance="ARMING">5</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">3</Amount>
+      <Amount stance="ARMING">2</Amount>
+      <Amount stance="HUNKERING">1</Amount>
+      <Amount stance="CONQUERING">6</Amount>
+      <Amount stance="DESTROYING">8</Amount>
+      <Amount stance="DEFENDING">4</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="FILL">COMBAT</Ship>
+	</FleetTemplate>
+
+	<FleetTemplate name="DEFAULT_INVASION" fleetName="Invasion Fleet">
+		<MissionType>INVASION</MissionType>
+		<StanceWeight stance="ARMING">10</StanceWeight>
+		<StanceWeight stance="CONQUERING">20</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">3</Amount>
+      <Amount stance="ARMING">6</Amount>
+      <Amount stance="HUNKERING">6</Amount>
+      <Amount stance="CONQUERING">15</Amount>
+      <Amount stance="DESTROYING">15</Amount>
+      <Amount stance="DEFENDING">3</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="2" nfaction="loa">SUPPLY</Ship>
+		<Ship inclusion="FILL" weaponRole="PLANET_ATTACK">COMBAT</Ship>
+	</FleetTemplate>
+
+	<FleetTemplate name="DEFAULT_CONSTRUCTION" fleetName="Construction Fleet">
+		<MissionType>CONSTRUCT_STN</MissionType>
+		<MissionType>UPGRADE_STN</MissionType>
+		<StanceWeight stance="EXPANDING">4</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">2</Amount>
+      <Amount stance="ARMING">2</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="2" nfaction="loa">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="loa">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" amount="1">CONSTRUCTOR</Ship>
+	</FleetTemplate>
+	
+	<FleetTemplate name="DEFAULT_SURVEY" fleetName="Survey Fleet">
+		<MissionType>SURVEY</MissionType>
+		<MissionType>DEPLOY_NPG</MissionType>
+		<MissionType>STRIKE</MissionType>
+		<StanceWeight stance="EXPANDING">10</StanceWeight>
+		<StanceWeight stance="CONQUERING">2</StanceWeight>
+		<StanceWeight stance="DESTROYING">2</StanceWeight> 
+		<StanceWeight stance="DEFENDING">2</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">6</Amount>
+      <Amount stance="ARMING">5</Amount>
+      <Amount stance="HUNKERING">3</Amount>
+      <Amount stance="CONQUERING">3</Amount>
+      <Amount stance="DESTROYING">3</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="2">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" faction="zuul" amount="1">BORE</Ship>
+		<Ship inclusion="REQUIRED" faction="hiver" amount="2">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" faction="human" amount="1">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" faction="moriggi" amount="1">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" faction="liir_zuul" amount="1">COMBAT</Ship>	
+		
+		<Ship inclusion="REQUIRED" amount="2" nfaction="loa">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2" faction="loa">COMBAT</Ship>
+	</FleetTemplate>
+
+	
+	
+	<FleetTemplate name="DEFAULT_GATE" fleetName="Gate Fleet">
+	<MissionType>GATE</MissionType>
+    <MissionType>SURVEY</MissionType>
+    <AllowableFactions>
+      <Faction>hiver</Faction>
+    </AllowableFactions>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">3</Amount>
+      <Amount stance="ARMING">3</Amount>
+      <Amount stance="HUNKERING">1</Amount>
+      <Amount stance="CONQUERING">1</Amount>
+      <Amount stance="DESTROYING">1</Amount>
+      <Amount stance="DEFENDING">1</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="2">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="2">GATE</Ship>
+		<Ship inclusion="FILL">COMBAT</Ship>
+	</FleetTemplate>
+  
+  <FleetTemplate name="SMALL_GATE" fleetName="Gate Fleet">
+    <MissionType>GATE</MissionType>
+    <MissionType>SURVEY</MissionType>
+    <AllowableFactions>
+      <Faction>hiver</Faction>
+    </AllowableFactions>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">4</Amount>
+      <Amount stance="ARMING">4</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+    <Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+    <Ship inclusion="REQUIRED" amount="1">SUPPLY</Ship>
+    <Ship inclusion="REQUIRED" amount="1">GATE</Ship>
+    <Ship inclusion="REQUIRED" amount="2">COMBAT</Ship>
+  </FleetTemplate>
+	
+	<FleetTemplate name="DEFAULT_COLONIZATION" fleetName="Colonization Fleet" initial="true">
+		<MissionType>COLONIZATION</MissionType>
+		<StanceWeight stance="EXPANDING">6</StanceWeight>
+		<StanceWeight stance="CONQUERING">4</StanceWeight>
+		<StanceWeight stance="DESTROYING">4</StanceWeight> 
+		<StanceWeight stance="DEFENDING">2</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">4</Amount>
+      <Amount stance="ARMING">4</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="1" nfaction="loa">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="loa">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" amount="2">COLONIZER</Ship>
+
+		<!-- Hiver gets colonizer, everyone else gets +1 supply. -->
+		<Ship inclusion="REQUIRED" amount="1" faction="hiver">COLONIZER</Ship>
+		<Ship inclusion="REQUIRED" faction="human" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="moriggi" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="liir_zuul" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="zuul" amount="1">SUPPLY</Ship>
+	</FleetTemplate>
+	
+	<FleetTemplate name="COLONIZATION" fleetName="Colonization Fleet">
+		<MissionType>COLONIZATION</MissionType>
+		<StanceWeight stance="EXPANDING">6</StanceWeight>
+		<StanceWeight stance="CONQUERING">2</StanceWeight>
+		<StanceWeight stance="DESTROYING">2</StanceWeight> 
+		<StanceWeight stance="DEFENDING">2</StanceWeight>
+    <MinToMaintain>
+      <Amount stance="EXPANDING">3</Amount>
+      <Amount stance="ARMING">3</Amount>
+      <Amount stance="HUNKERING">2</Amount>
+      <Amount stance="CONQUERING">2</Amount>
+      <Amount stance="DESTROYING">2</Amount>
+      <Amount stance="DEFENDING">2</Amount>
+    </MinToMaintain>
+		<Ship inclusion="REQUIRED" amount="1">COMMAND</Ship>
+		<Ship inclusion="REQUIRED" amount="1" nfaction="loa">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" amount="1" faction="loa">COMBAT</Ship>
+		<Ship inclusion="REQUIRED" faction="human" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="moriggi" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="liir_zuul" amount="1">SUPPLY</Ship>
+		<Ship inclusion="REQUIRED" faction="zuul" amount="1">BORE</Ship>
+		<Ship inclusion="FILL">COLONIZER</Ship>
+	</FleetTemplate>
+</FleetTemplates>
+
+

@@ -1,0 +1,231 @@
+<Faction ID="0" name="hiver">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<CrewEfficiencyValue>1.0</CrewEfficiencyValue>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+	
+  <MaterialDictionary>\base\factions\hiver\materials.xml</MaterialDictionary>
+
+  <MinishipModel>props\ui\miniship_hiver.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Hiver.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Amplified_Gates</RootNode>
+  </TechTree>
+
+
+  <InitialDesigns weaponbias="BAL">
+
+	<Design name="Colonizer">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Drone">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_dronecarrier"/>
+    </Design>
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_assault_shuttle_carrier"/>
+    </Design>
+	<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair"/>
+    </Design>
+	-->
+	<Design name="Boarding">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+
+
+
+
+    <Design name="Armor">
+	  <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Supply">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+    <Design name="Command">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+    <Design name="Gateship">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_gateship"/>
+    </Design>
+    <Design name="Scout">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_extended_range"/>
+    </Design>
+  </InitialDesigns>
+
+
+
+  <DiplomacyActionWeights>factions\hiver\diplomacyWeights.xml</DiplomacyActionWeights>
+  <StratModifiers>
+    <ShipSupplyModifier>1.5</ShipSupplyModifier>
+    <MaxProvincePlanetRange>10.0</MaxProvincePlanetRange>
+    <OverharvestModifier>190.0</OverharvestModifier>
+    <MaxColonizableHazard>700</MaxColonizableHazard>
+    <ConstructionPointBonus>1.2</ConstructionPointBonus>
+    <ChanceOfPirates>0.7</ChanceOfPirates>
+    <PrototypeSavingsCostModifierCR>4.3</PrototypeSavingsCostModifierCR>
+    <PrototypeSavingsCostModifierDN>3.2</PrototypeSavingsCostModifierDN>
+    <PrototypeSavingsCostModifierLV>2.6</PrototypeSavingsCostModifierLV>
+    <PopulationGrowthModifier>1.2</PopulationGrowthModifier>
+    <DiplomacyReactionKillShips>-10</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-150</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>5</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-150</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-100</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>0</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-50</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-125</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>45</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>5</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>2</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>30</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>-10</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>0</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>-20</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>0</DiplomacyReactionSmallerEmpire>
+    <DiplomacyDemandWeight>0.2</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>0.9</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="700"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="700"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="1100"/>
+    <DefaultDiplomacyReaction faction="loa"       value="300"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="600"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="1000"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="300"/>    
+  </DefaultDiplomacyReactions>
+
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="1.15" />
+    <ImmigrationPopBonus faction="hiver"     value="1.0"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="1.25"/>
+    <ImmigrationPopBonus faction="loa"       value="1.0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="1.3"/>
+    <ImmigrationPopBonus faction="tarkas"    value="1.1"/>
+    <ImmigrationPopBonus faction="zuul"      value="0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="-0.35" />
+    <SpyingBonus faction="hiver"     value="0.15"/>
+    <SpyingBonus faction="tarkas"    value="-0.20"/>
+    <SpyingBonus faction="liir_zuul" value="-0.35"/>
+    <SpyingBonus faction="morrigi"   value="0.10"/>
+    <SpyingBonus faction="zuul"      value="-0.45"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_INDEPENDANT_CONQUERED>2</ME_INDEPENDANT_CONQUERED>
+    </Centrism>
+  </MoralEventModifiers>
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>1.0</PsiPowerPerCrew>
+  <EntryPointOffset>4000</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+  
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.6</EXPANDING>
+    <ARMING>0.8</ARMING>
+    <HUNKERING>0.7</HUNKERING>
+    <CONQUERING>0.7</CONQUERING>
+    <DESTROYING>0.6</DESTROYING>
+    <DEFENDING>0.6</DEFENDING>
+  </ResearchRates>
+  
+
+  <!--Badges-->
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_01.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_02.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_03.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_04.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_05.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_06.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_07.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_08.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_09.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_10.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_11.tga"/>
+  <Badge texture="\base\factions\hiver\badges\Hiver_Badge_12.tga"/>
+
+  <!--Noseart-->
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_01.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_02.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_03.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_04.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_05.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_06.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_07.tga"/>
+  <Noseart texture="\base\factions\hiver\textures\noseart\nose_art_hiver_08.tga"/>
+
+  <NoAvatar texture="\base\factions\hiver\avatars\hiver_off.tga"/>
+  
+  <!--Avatars-->
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\hiver\avatars\Hiver_Avatar_08.tga"/>
+
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\hiver\textures\splash\Obsidian_Crown_splash.tga"/>
+    <SplashScreen image="factions\hiver\textures\splash\Radiant-Frost-screen_final.tga"/>
+  </SplashScreens>
+  
+  
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="10" material="EngineHumanDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="20" material="EngineHumanDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="20" material="EngineHumanDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.2</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_HIVER_" count="36"/>
+  <EmpireNames prefix="@EMPIRENAME_HIVER_" count="16"/>
+  
+</Faction>

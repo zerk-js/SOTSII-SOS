@@ -1,0 +1,202 @@
+<Weapon>
+  <Name>Antimatter Burst Torpedo</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>TRP_AM_Burst_Torpedo</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Energy</Name>
+    </Attribute>
+    <Attribute>
+      <Name>StandOff</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Explosive</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Torpedo</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>VeryHeavy</TurretSize>
+          <Turret>
+          </Turret>
+          <Barrel>
+          </Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Torpedo</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>VeryHeavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>35000</Cost>
+  <Crew>10</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>25</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>6</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>15</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>40</HpBonus>
+  <Health>150</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>90</TimeToLive>
+  <DumbfireTime>1</DumbfireTime>
+  <CritHitBonus>85</CritHitBonus>
+  <MalfunctionPercent>10</MalfunctionPercent>
+  <MalfunctionDamage>350</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition>Trp_AM_Burst_Ammo</Submunition>
+  <SubmunitionAmount>5</SubmunitionAmount>
+  <SubmunitionBlastType>Focus</SubmunitionBlastType>
+  <SubmunitionConeDeviation>45</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>300</ExplosiveMaxEffectRange>
+  <DetonationRange>1000</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>5</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>1111111111
+0111111110
+0111111110
+0011111100
+0001111000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0111111110
+1111111111
+1111111111
+1111111111
+1111111111
+1111111111
+0111111110
+0011111100
+0001111000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>12,12</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>001111111100
+011111111110
+111111111111
+111111111111
+111111111111
+111111111111
+111111111111
+111111111111
+011111111110
+001111111100
+000111111000
+000011110000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>0</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>3</BaseVolleyDeviationName>
+  <BaseRechargeTime>30</BaseRechargeTime>
+  <MuzzleSpeed>400</MuzzleSpeed>
+  <ShotAcceleration>75</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>turret_dummy.scene</Model>
+  <DecalMaterial>Burn 01</DecalMaterial>
+  <DecalSize>20</DecalSize>
+  <MuzzleEffect>effects\Weapons\Antimattercannon_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\AntimatterTorpedo_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\Torpedo_AMBurst_SRC.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Trp_AM_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Trp_AM_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>Trp_AM_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>trp_am_burst</Icon>
+  <RangeTable>
+    <PbRange>1100</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>23</PbDamage>
+    <EffectiveRange>2250</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>24</EffectiveDamage>
+    <MaxRange>7500</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>25</MaxDamage>
+    <PlanetRange>7500</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>1000</RoundMass>
+  <PopDamage>300000</PopDamage>
+  <InfraDamage>1E-05</InfraDamage>
+  <TerraDamage>1E-05</TerraDamage>
+  <SolutionTolerance>180</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

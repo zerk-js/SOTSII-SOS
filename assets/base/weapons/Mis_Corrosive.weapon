@@ -1,0 +1,195 @@
+<Weapon>
+  <Name>Corrosive Missile</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>WAR_Corrosive_Missile</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Explosive</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Detonating</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>Standard</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>Heavy</TurretSize>
+          <Turret>Turret_Heavy_1_HeavyMissile</Turret>
+          <Barrel>Barrel_HeavyMissile_1_Heavy</Barrel>
+          <Base>
+          </Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Missile</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>Heavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>15000</Cost>
+  <Crew>3</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>1</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>10</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>1</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>0</HpBonus>
+  <Health>25</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>40</TimeToLive>
+  <DumbfireTime>2</DumbfireTime>
+  <CritHitBonus>-10</CritHitBonus>
+  <MalfunctionPercent>5</MalfunctionPercent>
+  <MalfunctionDamage>150</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition>Mis_Corrosive_DOT</Submunition>
+  <SubmunitionAmount>1</SubmunitionAmount>
+  <SubmunitionBlastType />
+  <SubmunitionConeDeviation>0</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>0</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>0</ExplosiveMaxEffectRange>
+  <DetonationRange>0</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>0</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>0011111100
+0001111000
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0011111100
+0001111000
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>0011111100
+0001111000
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>1</VolleyPeriod>
+  <VolleyDelay>1.15</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>3</BaseVolleyDeviationName>
+  <BaseRechargeTime>40</BaseRechargeTime>
+  <MuzzleSpeed>200</MuzzleSpeed>
+  <ShotAcceleration>100</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>Missile_Corrosive.scene</Model>
+  <DecalMaterial>Bullet hole07</DecalMaterial>
+  <DecalSize>12</DecalSize>
+  <MuzzleEffect>effects\Weapons\nuclearmissile_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\NuclearMissile_Impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\PolarisMissile_bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Mis_IOBMMissile_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Mis_IOBMMissile_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>Mis_IOBMMissile_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>mis_cor</Icon>
+  <RangeTable>
+    <PbRange>3000</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>16</PbDamage>
+    <EffectiveRange>5000</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>16</EffectiveDamage>
+    <MaxRange>10000</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>16</MaxDamage>
+    <PlanetRange>10000</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>0</PopDamage>
+  <InfraDamage>0</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>180</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

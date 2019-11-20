@@ -1,0 +1,147 @@
+<SectionList>
+	<Sections>
+    
+
+		<Section File="factions/loa/sections/cr_cmd_absorbtion.section" Type="Command" Class="Cruiser"/>
+  		<Section File="factions/loa/sections/cr_cmd_assault.section" Type="Command" Class="Cruiser"/>
+  		<Section File="factions/loa/sections/cr_cmd_battlebridge.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_cloaking.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_deepscan.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_deflector.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_disruptor.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_firecontrol.section" Type="Command" Class="Cruiser"/>
+  		<Section File="factions/loa/sections/cr_cmd_hammerhead.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_listener.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_shield.section" Type="Command" Class="Cruiser"/>
+  		<Section File="factions/loa/sections/cr_cmd.section" Type="Command" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_cmd_strafe.section" Type="Command" Class="Cruiser"/>
+
+		<Section File="factions/loa/sections/cr_mis_armor.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_assimilator.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_barrage.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_battleridercarrier.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_biowar.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_blazer.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_boarding.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_carrier.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_col.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_construction.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_dronecarrier.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_extendedrange.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_freighter.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_heavymissile.section" Type="Mission" Class="Cruiser"/>
+ 		<Section File="factions/loa/sections/cr_mis_impactor.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_megafreighter.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_megafreighter-Q.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_minelayer.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_pointdefence.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_projector.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_propaganda.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_repair.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_sdb.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_torpedo.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_cnc.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_supply.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_war.section" Type="Mission" Class="Cruiser"/>
+                
+
+		<Section File="factions/loa/sections/cr_mis_cube.section" Type="Mission" Class="Cruiser"/>
+		<Section File="factions/loa/sections/cr_mis_ngp.section" Type="Mission" Class="Cruiser"/>
+		
+
+  		<Section File="factions/loa/sections/cr_eng_fusion.section" Type="Engine" Class="Cruiser"/>
+  		<Section File="factions/loa/sections/cr_eng_antimatter.section" Type="Engine" Class="Cruiser"/>
+ 		<Section File="factions/loa/sections/cr_eng_antimatter_enhanced.section" Type="Engine" Class="Cruiser"/>
+
+		<Section File="factions/loa/sections/dn_cmd_absorber.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_assault.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_battlebridge.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_deflector.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_disruptor.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_electronicwarfare.section" Type="Command" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_cmd_standard.section" Type="Command" Class="Dreadnought"/>
+
+		<Section File="factions/loa/sections/dn_mis_armor.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_barrage.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_biowar.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_blazer.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_brcarrier.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_cnc.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_col.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_dronecarrier.section" Type="Mission" Class="Dreadnought"/>
+                <Section File="factions/loa/sections/dn_mis_flagship.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_heavymissile.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_impactor.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_projector.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_siegedriver.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_supply.section" Type="Mission" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_mis_war.section" Type="Mission" Class="Dreadnought"/>
+
+		<Section File="factions/loa/sections/dn_eng_fusion.section" Type="Engine" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_eng_antimatter.section" Type="Engine" Class="Dreadnought"/>
+		<Section File="factions/loa/sections/dn_eng_enhancedantimatter.section" Type="Engine" Class="Dreadnought"/>
+
+		<Section File="factions/loa/sections/lv.section" Type="Mission" Class="Leviathan"/>
+		<Section File="factions/loa/sections/lv_carrier.section" Type="Mission" Class="Leviathan"/>
+		<Section File="factions/loa/sections/lv_invasion.section" Type="Mission" Class="Leviathan"/>
+		<Section File="factions/loa/sections/lv_supertransport.section" Type="Mission" Class="Leviathan"/>
+		
+		<Section File="factions/loa/sections/sn_asteroid_monitor.section" Type="Mission" Class="Station"/>
+		<Section File="factions/loa/sections/sn_br_satellite.section" Type="Mission" Class="Station"/>
+		<Section File="factions/loa/sections/sn_drone_satellite.section" Type="Mission" Class="Station"/>
+		<Section File="factions/loa/sections/sn_torpedo_satellite.section" Type="Mission" Class="Station"/>
+		<Section File="factions/loa/sections/sn_scan_satellite.section" Type="Mission" Class="Station"/>
+		<Section File="factions/loa/sections/sn_missile_satellite.section" Type="Mission" Class="Station"/>
+
+
+    <Section File="factions/loa/sections/sn_civilian_way_station.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_civilian_trading_post.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_civilian_merchanter_station.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_civilian_nexus.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_civilian_star_city.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_diplomatic_customs_station.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_diplomatic_consulate.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_diplomatic_embassy.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_diplomatic_council_station.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_diplomatic_star_chamber.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_science_field_station.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_science_star_lab.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_science_research_base.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_science_polytechnic_institute.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_science_science_center.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_naval_outpost.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_naval_forward_base.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_naval_naval_base.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_naval_star_base.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_naval_sector_base.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_underconstruction.section" Type="Mission" Class="Station"/>
+    <Section File="factions/loa/sections/sn_mining_station.section" Type="Mission" Class="Station"/>
+
+
+
+		<Section File="factions/loa/sections/br_assaultshuttle.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_boarding_pod.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_drone.section" Type="Mission" Class="BattleRider"/>
+	        <Section File="factions/loa/sections/br_drone_drainer.section" Type="Mission" Class="BattleRider"/>
+	`       <Section File="factions/loa/sections/br_drone_suicide.section" Type="Mission" Class="BattleRider"/>
+	        <Section File="factions/loa/sections/br_drone_ew.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_heavydrone.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_escort.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_heavyassaultshuttle.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_interceptor.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_patrol.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_spinal.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_scout.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_msn_torpedo.section" Type="Mission" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_bio_missile.section" Type="Mission" Class="BattleRider"/>
+
+
+
+
+		<Section File="factions/loa/sections/br_eng_antimatter.section" Type="Engine" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_eng_antimatterstreak.section" Type="Engine" Class="BattleRider"/>
+		<Section File="factions/loa/sections/br_eng_fusion.section" Type="Engine" Class="BattleRider"/>
+
+   
+	</Sections>
+</SectionList>

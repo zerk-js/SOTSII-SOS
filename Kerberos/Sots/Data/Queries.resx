@@ -1,0 +1,2169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InsertWeaponBank" xml:space="preserve">
+    <value>INSERT INTO design_section_weapon_banks (design_section_id, weapon_id,design_id,firing_mode,filter_mode,bank_guid) VALUES ({0},{1},{2},{3}, {4}, {5});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertEnounteredDesign" xml:space="preserve">
+    <value>INSERT INTO designs_encountered (player_id, design_id) SELECT {0},{1} WHERE NOT EXISTS (SELECT 1 FROM designs_encountered WHERE player_id={0} AND design_id={1});</value>
+  </data>
+  <data name="RemoveFeasibilityStudy" xml:space="preserve">
+    <value>DELETE FROM feasibility_projects WHERE project_id={0};
+DELETE FROM research_projects WHERE id={0};</value>
+  </data>
+  <data name="GetIntelStation" xml:space="preserve">
+    <value>SELECT last_seen,level FROM ai_intel_stations WHERE player_id={0} AND owning_player={1} AND station_id={2}</value>
+  </data>
+  <data name="GetNodeLine" xml:space="preserve">
+    <value>SELECT id,system1_id,system2_id,health FROM travel_nodes WHERE id = {0}</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DeleteLoaFleetCompositon" xml:space="preserve">
+    <value>UPDATE loa_fleet_compositions SET visible="False" WHERE id = {0};</value>
+  </data>
+  <data name="UpdateGardenerInfo" xml:space="preserve">
+    <value>UPDATE gardeners SET system_id = {1}, gardener_fleet_id={2}, turns_to_wait={3} WHERE encounter_id = {0};</value>
+  </data>
+  <data name="InsertFeasibilityStudy" xml:space="preserve">
+    <value>INSERT INTO research_projects (player_id,state,name) VALUES ({0},{1},"{2}");
+INSERT INTO feasibility_projects (project_id,tech_id,research_cost) VALUES (trigger_rowid(),{3},{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertQueuedStationModule" xml:space="preserve">
+    <value>INSERT INTO station_queued_modules (design_section_id, module_id, weapon_id, mount_node, station_module_type) values ({0}, {1}, {2}, "{3}", {4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetFactionDiplomacyPointsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM player_diplomacy_points WHERE player_id = {0}</value>
+  </data>
+  <data name="InsertIntelMission" xml:space="preserve">
+    <value>INSERT INTO intel_missions (player_id,target_player,turn,type,blame_player) VALUES ({0},{1},{2},{3},{4});</value>
+  </data>
+  <data name="RemoveIntelStation" xml:space="preserve">
+    <value>DELETE FROM ai_intel_stations WHERE player_id={0} AND station_id={1}</value>
+  </data>
+  <data name="UpdateShipSystemPosition" xml:space="preserve">
+    <value>UPDATE ships SET system_position="{1}" WHERE id={0}</value>
+  </data>
+  <data name="GetWaypointsByMissionID" xml:space="preserve">
+    <value>SELECT * FROM waypoints WHERE mission_id = {0} ORDER BY id ASC</value>
+  </data>
+  <data name="GetCivilianPopulationsForColony" xml:space="preserve">
+    <value>SELECT faction_id,civ_pop,civ_morale,civ_pop_weight,turn_established,civ_last_morale FROM colony_factions WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="GetCombatDatas" xml:space="preserve">
+    <value>SELECT data FROM combat_data;</value>
+  </data>
+  <data name="GetTreatyConsequences" xml:space="preserve">
+    <value>SELECT * FROM treaty_consequences</value>
+  </data>
+  <data name="GetPlagueInfosByColony" xml:space="preserve">
+    <value>SELECT * FROM plagues WHERE colony_id={0}</value>
+  </data>
+  <data name="ClearAdmiralTraits" xml:space="preserve">
+    <value>DELETE FROM admiral_traits WHERE admiral_id = {0}</value>
+  </data>
+  <data name="InsertNodeLine" xml:space="preserve">
+    <value>INSERT INTO travel_nodes (system1_id, system2_id, health) VALUES({0}, {1}, {2})</value>
+  </data>
+  <data name="GetTechID" xml:space="preserve">
+    <value>SELECT id FROM techs WHERE id_from_file="{0}"</value>
+  </data>
+  <data name="UpdateFactionDiplomacyPoints" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO player_diplomacy_points (player_id, faction_id, points) VALUES ({0}, {1}, 0);
+UPDATE player_diplomacy_points SET points = {2} WHERE player_id = {0} AND faction_id = {1};</value>
+  </data>
+  <data name="UpdateVonNeumannInfo" xml:space="preserve">
+    <value>UPDATE von_neumann SET homeworld_system_id = {1},  homeworld_orbit_id = {2}, resources = {3}, construction_progress = {4}, resources_collected_last_turn = {5}, project_design_id = {6}, last_collection_system = {7}, last_target_system = {8}, last_collection_turn={9}, last_target_turn={10}, fleet_id = {11} WHERE encounter_id = {0}</value>
+  </data>
+  <data name="InsertUINotchSetting" xml:space="preserve">
+    <value>INSERT OR REPLACE INTO ui_slider_notch_settings (player_id, slider_type, slider_value, colony_id) VALUES ({0},{1},{2},{3});</value>
+  </data>
+  <data name="InsertDesignSection" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO assets (path) VALUES("{1}");
+INSERT INTO design_sections (design_id,asset_id) VALUES ({0},(SELECT id FROM assets WHERE path="{1}"));
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="RemoveColony" xml:space="preserve">
+    <value>DELETE FROM colonies WHERE id={0};</value>
+  </data>
+  <data name="GetPlayerResearchingTechID" xml:space="preserve">
+    <value>SELECT tech_id FROM player_techs WHERE state=5 AND player_id={0}</value>
+  </data>
+  <data name="GetMissionInfo" xml:space="preserve">
+    <value>SELECT * FROM missions WHERE id = {0}</value>
+  </data>
+  <data name="GetReserveFleetID" xml:space="preserve">
+    <value>SELECT fleet_id FROM reserve_fleets WHERE reserve_fleets.player_id = {0} AND reserve_fleets.system_id = {1}</value>
+  </data>
+  <data name="RemoveSDBByOrbital" xml:space="preserve">
+    <value>DELETE FROM sdb_info WHERE orbital_object_id={0}</value>
+  </data>
+  <data name="GetColonyTrapInfosAtSystem" xml:space="preserve">
+    <value>SELECT * FROM colony_traps WHERE system_id = {0}</value>
+  </data>
+  <data name="GetStarSystemInfos" xml:space="preserve">
+    <value>SELECT * FROM star_systems JOIN stellar_info ON stellar_info.id = star_systems.id</value>
+  </data>
+  <data name="InsertLargeAsteroid" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+INSERT INTO large_asteroids (orbital_object_id, resources) VALUES (trigger_rowid(),{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetPlayerHomeworld" xml:space="preserve">
+    <value>SELECT players.id,players.homeworld_id,orbital_objects.star_system_id FROM players
+JOIN colonies ON colonies.orbital_object_id = players.homeworld_id AND colonies.player_id={0}
+JOIN orbital_objects ON orbital_objects.id = colonies.orbital_object_id
+WHERE homeworld_id NOT NULL</value>
+  </data>
+  <data name="RemoveEncounter" xml:space="preserve">
+    <value>DELETE FROM encounters WHERE id = {0}</value>
+  </data>
+  <data name="GetVonNeumannTargetInfos" xml:space="preserve">
+    <value>SELECT system_id, threat_level FROM von_neumann_targets WHERE encounter_id = {0}</value>
+  </data>
+  <data name="RemoveWeaponInstance" xml:space="preserve">
+    <value>DELETE FROM weapon_instances WHERE id={0}</value>
+  </data>
+  <data name="SelectCounterIntelStingsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM sting_operations WHERE player_id={0};</value>
+  </data>
+  <data name="GetStarSystemAsteroidBeltInfos" xml:space="preserve">
+    <value>SELECT orbital_object_id,random_seed FROM asteroid_belts
+JOIN orbital_objects ON orbital_objects.id = asteroid_belts.orbital_object_id
+WHERE orbital_objects.star_system_id = {0}</value>
+  </data>
+  <data name="RemoveEmpireHistoryByPlayerID" xml:space="preserve">
+    <value>DELETE FROM player_empire_history WHERE player_id = {0}</value>
+  </data>
+  <data name="GetDesignSectionInfo" xml:space="preserve">
+    <value>SELECT id, (SELECT path FROM assets WHERE id = asset_id) FROM design_sections WHERE design_id = {0}</value>
+  </data>
+  <data name="GetExploredNodeLines" xml:space="preserve">
+    <value>SELECT DISTINCT id,system1_id,system2_id,health FROM travel_nodes
+JOIN explore_records ON ((explore_records.system_id == travel_nodes.system1_id) OR (explore_records.system_id == travel_nodes.system2_id))
+WHERE explore_records.player_id = {0}</value>
+  </data>
+  <data name="InsertDiplomacyActionHistoryEntry" xml:space="preserve">
+    <value>INSERT INTO diplomacy_action_history (player_id, towards_player_id, turn_count, action, action_sub_type, action_data, duration, consequence_type, consequence_data) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8})</value>
+  </data>
+  <data name="GetAITechWeights" xml:space="preserve">
+    <value>SELECT tech_family,total_spent,preference FROM ai_tech_weights WHERE ai_id={0}</value>
+  </data>
+  <data name="GetStarSystemOrigin" xml:space="preserve">
+    <value>SELECT origin FROM stellar_info WHERE id = {0}</value>
+  </data>
+  <data name="UpdateSpecialProjectProgress" xml:space="preserve">
+    <value>UPDATE special_projects SET progress = {1} WHERE id = {0};</value>
+  </data>
+  <data name="ChangeSectionInstanceSectionId" xml:space="preserve">
+    <value>UPDATE section_instances SET section_id = {1} WHERE id = {0};</value>
+  </data>
+  <data name="GetAdmiralTraits" xml:space="preserve">
+    <value>SELECT type FROM admiral_traits WHERE admiral_id = {0}</value>
+  </data>
+  <data name="UpdatePlayerCivilianColonizationAccumulator" xml:space="preserve">
+    <value>UPDATE players SET civilian_colonization_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="RemoveUINotchSetting" xml:space="preserve">
+    <value>DELETE FROM ui_slider_notch_settings WHERE player_id={0} AND slider_type={1};</value>
+  </data>
+  <data name="RemoveSpecialProject" xml:space="preserve">
+    <value>DELETE FROM special_projects WHERE id={0};</value>
+  </data>
+  <data name="UpdateWeaponInstance" xml:space="preserve">
+    <value>UPDATE weapon_instances SET structure = {1} WHERE id = {0};</value>
+  </data>
+  <data name="UpdatePlayerCurrentTradeIncome" xml:space="preserve">
+    <value>UPDATE players SET current_trade_income = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetLastPlayerTechResearched" xml:space="preserve">
+    <value>SELECT player_id,tech_id,state,progress,(SELECT id_from_file FROM techs WHERE id=tech_id),research_cost,feasibility,player_feasibility, turn_researched FROM player_techs WHERE player_id={0} ORDER BY turn_researched</value>
+  </data>
+  <data name="UpdateColonyFaction" xml:space="preserve">
+    <value>UPDATE colony_factions SET civ_pop={2}, civ_morale={3}, civ_pop_weight={4}, civ_last_morale={5} WHERE orbital_object_id={0} AND faction_id={1}</value>
+  </data>
+  <data name="RemoveAIInfo" xml:space="preserve">
+    <value>DELETE FROM ai_fleet_info WHERE id = {0}</value>
+  </data>
+  <data name="GetMoveOrdersByDestinationSystem" xml:space="preserve">
+    <value>SELECT * FROM move_orders WHERE to_system = {0}</value>
+  </data>
+  <data name="GetIndependentRaceColony" xml:space="preserve">
+    <value>SELECT race_id, population FROM independent_colonies WHERE orbital_object_id={0}</value>
+  </data>
+  <data name="GetHomeworlds" xml:space="preserve">
+    <value>SELECT players.id,players.homeworld_id,orbital_objects.star_system_id FROM players
+JOIN colonies ON colonies.orbital_object_id = players.homeworld_id
+JOIN orbital_objects ON orbital_objects.id = colonies.orbital_object_id
+WHERE homeworld_id NOT NULL</value>
+  </data>
+  <data name="RemoveNodeLine" xml:space="preserve">
+    <value>DELETE FROM travel_nodes WHERE id={0}</value>
+  </data>
+  <data name="GetIntelStationsOfTargetPlayer" xml:space="preserve">
+    <value>SELECT station_id,last_seen,level FROM ai_intel_stations WHERE player_id={0} AND owning_player={1}</value>
+  </data>
+  <data name="GetPlayerInfos" xml:space="preserve">
+    <value>SELECT 
+    id,
+    name,
+    faction_id,
+    is_ai,
+    (SELECT color FROM primary_player_colors WHERE id=primary_color_id),
+    secondary_color,
+    (SELECT path FROM assets WHERE id=badge_asset_id),
+    savings,
+    homeworld_id,
+    (SELECT path FROM assets WHERE id=avatar_asset_id),
+    last_combat_turn,
+    last_encounter_turn,
+rate_government_research, rate_research_current_project, rate_research_special_projects, rate_research_salvage_research, rate_government_stimulus, rate_government_security, rate_government_savings, rate_stimulus_mining, rate_stimulus_colonization, rate_stimulus_trade, rate_security_operations, rate_security_intelligence, rate_security_counter_intelligence,
+is_standard_player,
+generic_diplomacy_points,
+rate_tax,
+rate_immigration,
+intel_points,
+counterintel_points,
+operations_points,
+intel_accumulator,
+counterintel_accumulator,
+operations_accumulator,
+civilian_mining_accumulator,
+civilian_colonization_accumulator,
+civilian_trade_accumulator,
+subfaction_index,
+additional_research_points,
+psionic_potential,
+is_defeated,
+current_trade_income,
+include_in_diplomacy,
+is_ai_rebellion_player,
+auto_placedefenses,
+auto_repairfleets,
+auto_usegoop,
+auto_usejoker,
+research_boost_funds,
+auto_aoe,
+team,
+auto_patrol,
+ai_difficulty, rate_tax_prev
+FROM 
+    players</value>
+  </data>
+  <data name="UpdatePlayerOperationsAccumulator" xml:space="preserve">
+    <value>UPDATE players SET operations_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="GetMoveOrderInfos" xml:space="preserve">
+    <value>SELECT * FROM move_orders</value>
+  </data>
+  <data name="GetRetrofitOrdersForInvoice" xml:space="preserve">
+    <value>SELECT * FROM retrofit_orders WHERE invoice_instance_id = {0}</value>
+  </data>
+  <data name="GetWeaponInstance" xml:space="preserve">
+    <value>SELECT * FROM weapon_instances WHERE id = {0}</value>
+  </data>
+  <data name="GetGardenerInfo" xml:space="preserve">
+    <value>SELECT * FROM gardeners WHERE encounter_id = {0};</value>
+  </data>
+  <data name="RemoveDesign" xml:space="preserve">
+    <value>DELETE FROM designs WHERE id={0}</value>
+  </data>
+  <data name="InsertTerrain" xml:space="preserve">
+    <value>INSERT INTO terrain (name, origin) VALUES ("{0}", "{1}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetAsteroidBeltInfo" xml:space="preserve">
+    <value>SELECT * FROM asteroid_belts WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="UpdatePirateBaseInfo" xml:space="preserve">
+    <value>UPDATE pirate_bases SET turns_until_add_ship={1}, num_ships={2} WHERE encounter_id={0}</value>
+  </data>
+  <data name="InsertNameValuePair" xml:space="preserve">
+    <value>INSERT INTO name_value_pairs (name,value) VALUES ("{0}","{1}")</value>
+  </data>
+  <data name="GetStationInfo" xml:space="preserve">
+    <value>SELECT * FROM stations WHERE orbital_object_id ={0}</value>
+  </data>
+  <data name="GetMostRecentCombatData" xml:space="preserve">
+    <value>SELECT data FROM combat_data WHERE system_id={0} ORDER BY turn DESC LIMIT 1;</value>
+  </data>
+  <data name="GetWeaponAsset" xml:space="preserve">
+    <value>SELECT path FROM assets WHERE id=(SELECT asset_id FROM weapons WHERE id={0})</value>
+  </data>
+  <data name="GetNumCiviliansByPlayer" xml:space="preserve">
+    <value>SELECT civ_pop FROM colony_factions WHERE orbital_object_id=(SELECT orbital_object_id FROM colonies WHERE player_id={0})</value>
+  </data>
+  <data name="UpdateSuperNovaInfo" xml:space="preserve">
+    <value>UPDATE super_novas SET turns_remaining={1} WHERE encounter_id={0}</value>
+  </data>
+  <data name="GetFleetInfos" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE fleet_type &amp; {0} &gt; 0</value>
+  </data>
+  <data name="GetDiplomacyInfos" xml:space="preserve">
+    <value>SELECT * FROM diplomacy_states</value>
+  </data>
+  <data name="GetNonPermenantNodeLines" xml:space="preserve">
+    <value>SELECT id,system1_id,system2_id,health FROM travel_nodes WHERE health &gt; -1</value>
+  </data>
+  <data name="InsertSpecialProject" xml:space="preserve">
+    <value>INSERT INTO special_projects(player_id, name, cost, type, tech_id, encounter_id, fleet_id, target_player_id) VALUES ({0},"{1}",{2},{3},{4},{5},{6},{7});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateProvinceInfo" xml:space="preserve">
+    <value>UPDATE provinces SET player_id={1}, name="{2}", capital_id={3} WHERE id={0}</value>
+  </data>
+  <data name="GetVonNeumannInfos" xml:space="preserve">
+    <value>SELECT * FROM von_neumann</value>
+  </data>
+  <data name="GetAlliancePlayersByAllianceId" xml:space="preserve">
+    <value>SELECT * FROM players WHERE alliance_id = {0}</value>
+  </data>
+  <data name="GetOrbitalObjectStarSystemID" xml:space="preserve">
+    <value>SELECT star_systems.id FROM star_systems JOIN orbital_objects ON orbital_objects.star_system_id=star_systems.id WHERE orbital_objects.id={0};</value>
+  </data>
+  <data name="UpdateTurnEventSoundQue" xml:space="preserve">
+    <value>UPDATE turn_events SET event_sound_cue_name = '{1}' WHERE id = {0};</value>
+  </data>
+  <data name="GetSuperNovaInfos" xml:space="preserve">
+    <value>SELECT * FROM super_novas;</value>
+  </data>
+  <data name="InsertBuildOrder" xml:space="preserve">
+    <value>INSERT INTO build_orders (star_system_id,design_id,progress,build_priority,mission_id,ship_name, production_target, invoice_instance_id, ai_fleet_id, loa_cubes) VALUES ({0},{1},{2},{3},{4},"{5}",{6},{7}, {8}, {9});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetNeutronStarInfos" xml:space="preserve">
+    <value>SELECT * FROM neutron_stars;</value>
+  </data>
+  <data name="UpdateSuulkaStation" xml:space="preserve">
+    <value>UPDATE suulkas SET station_id = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetPirateBaseInfos" xml:space="preserve">
+    <value>SELECT * FROM pirate_bases;</value>
+  </data>
+  <data name="ClearTradeResults" xml:space="preserve">
+    <value>DELETE FROM trade_result_nodes WHERE turn_id &lt; {0};</value>
+  </data>
+  <data name="InsertEmpireHistory" xml:space="preserve">
+    <value>INSERT INTO player_empire_history (player_id, turn_id, colonies, provinces, bases, fleets, ships, empire_pop, empire_economy, empire_biosphere, empire_trade, empire_morale, savings, psi_potential) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetAIInfo" xml:space="preserve">
+    <value>SELECT stance,flags FROM ai WHERE player_id={0}</value>
+  </data>
+  <data name="UpdateShipPsionicPower" xml:space="preserve">
+    <value>UPDATE ships SET psionic_power={1} WHERE id={0}</value>
+  </data>
+  <data name="UpdateNodeLineHealth" xml:space="preserve">
+    <value>UPDATE travel_nodes SET health = {1} WHERE id = {0}</value>
+  </data>
+  <data name="InsertWaypoint" xml:space="preserve">
+    <value>INSERT INTO waypoints (mission_id,waypoint_type,destination_id) VALUES ({0},{1},{2});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertLoaFleetComposition" xml:space="preserve">
+    <value>INSERT INTO loa_fleet_compositions (player_id, invoice_name) VALUES ({0},"{1}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetNumImperialsByPlayer" xml:space="preserve">
+    <value>SELECT imp_pop FROM colonies WHERE player_id={0}</value>
+  </data>
+  <data name="GetInvoiceInstance" xml:space="preserve">
+    <value>SELECT * FROM invoice_instances WHERE id={0}</value>
+  </data>
+  <data name="InsertProvince" xml:space="preserve">
+    <value>INSERT INTO provinces (player_id, name, capital_id) VALUES({0}, "{1}", {2});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="RemoveSDBByShip" xml:space="preserve">
+    <value>DELETE FROM sdb_info WHERE ship_id={0}</value>
+  </data>
+  <data name="GetFleetInfoByFleetName" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE name = "{0}" AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="GetDesignAttributesForDesign" xml:space="preserve">
+    <value>SELECT attribute FROM design_attributes WHERE design_id={0}</value>
+  </data>
+  <data name="GetIntelPlanetForPlayer" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_planets WHERE player_id={0};</value>
+  </data>
+  <data name="RemoveVonNeumannTargetInfo" xml:space="preserve">
+    <value>DELETE FROM von_neumann_targets WHERE encounter_id={0} AND system_id={0}</value>
+  </data>
+  <data name="InsertPlayerClientInfo" xml:space="preserve">
+    <value>INSERT INTO player_client_info (player_id, username) VALUES ({0}, "{1}");</value>
+  </data>
+  <data name="RemoveSuulka" xml:space="preserve">
+    <value>DELETE FROM suulkas WHERE id = {0}</value>
+  </data>
+  <data name="GetDatabaseHistory" xml:space="preserve">
+    <value>SELECT * FROM query_history</value>
+  </data>
+  <data name="GetEncounterInfo" xml:space="preserve">
+    <value>SELECT * FROM encounters WHERE id  = {0}</value>
+  </data>
+  <data name="GetDiplomacyReactionHistory" xml:space="preserve">
+    <value>SELECT * FROM diplomacy_reaction_history WHERE turn_count &lt;= {0} AND turn_count &gt; {0} - {1} AND player_id = {2} AND towards_player_id = {3}</value>
+  </data>
+  <data name="GetColonyIDsForProvince" xml:space="preserve">
+    <value>SELECT colonies.id FROM colonies JOIN orbital_objects ON colonies.orbital_object_id = orbital_objects.id JOIN star_systems ON orbital_objects.star_system_id = star_systems.id WHERE star_systems.province_id = {0}</value>
+  </data>
+  <data name="UpdateAdmiralInfo" xml:space="preserve">
+    <value>UPDATE admirals SET player_id={1},age={2},reaction={3},evasion={4} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateGovernmentInfo" xml:space="preserve">
+    <value>UPDATE governments SET authoritarianism={1},economic_liberalism={2},current_type="{3}" WHERE player_id={0}</value>
+  </data>
+  <data name="InsertIncomingRandom" xml:space="preserve">
+    <value>INSERT INTO incoming_randoms (player_id, system_id, type, turn) VALUES ({0},{1},{2},{3});</value>
+  </data>
+  <data name="GetAITechStyles" xml:space="preserve">
+    <value>SELECT * FROM ai_tech_styles WHERE player_id={0};</value>
+  </data>
+  <data name="LogTransaction" xml:space="preserve">
+    <value>INSERT INTO query_history (turn, query) VALUES((SELECT value FROM name_value_pairs WHERE name = "turn"), '{0}')</value>
+  </data>
+  <data name="RemoveFavoriteInvoice" xml:space="preserve">
+    <value>UPDATE invoices SET is_favorite="False" WHERE id = {0}</value>
+  </data>
+  <data name="InsertFaction" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO factions (id,name,suitability) VALUES ({0},"{1}",{2})</value>
+  </data>
+  <data name="RemoveModule" xml:space="preserve">
+    <value>DELETE FROM modules WHERE id={0}</value>
+  </data>
+  <data name="UpdateAIIntelColony" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO ai_intel_colonies (player_id,owning_player,planet_id,colony_id,last_seen,imperial_population) VALUES ({0},{1},{2},{3},{4},{5});
+UPDATE ai_intel_colonies SET
+    owning_player = {1},
+    colony_id = {3},
+    last_seen = {4},
+    imperial_population = {5}
+WHERE
+     player_id = {0} AND planet_id = {2};</value>
+  </data>
+  <data name="GetDatabaseHistoryByTurnAndId" xml:space="preserve">
+    <value>SELECT * FROM query_history WHERE turn = {0} AND id &gt; {1} </value>
+  </data>
+  <data name="RemoveRetrofitOrder" xml:space="preserve">
+    <value>DELETE FROM retrofit_orders WHERE id = {0}</value>
+  </data>
+  <data name="GetGardenerInfos" xml:space="preserve">
+    <value>SELECT * FROM gardeners</value>
+  </data>
+  <data name="GetDesignInfos" xml:space="preserve">
+    <value>SELECT * FROM designs</value>
+  </data>
+  <data name="GetPirateBaseInfo" xml:space="preserve">
+    <value>SELECT * FROM pirate_bases WHERE encounter_id = {0};</value>
+  </data>
+  <data name="UpdateSystemStellarClass" xml:space="preserve">
+    <value>UPDATE star_systems SET stellar_class='{1}' WHERE id={0}</value>
+  </data>
+  <data name="SelectIntelMissionInfo" xml:space="preserve">
+    <value>SELECT * FROM intel_missions WHERE id={0};</value>
+  </data>
+  <data name="GetExploreRecordInfos" xml:space="preserve">
+    <value>SELECT * FROM explore_records</value>
+  </data>
+  <data name="GetBranchesToTech" xml:space="preserve">
+    <value>SELECT player_id,from_id,to_id,research_cost,feasibility FROM player_tech_branches WHERE player_id={0} AND to_id={1}</value>
+  </data>
+  <data name="GetStarSystemIDs" xml:space="preserve">
+    <value>SELECT id FROM star_systems</value>
+  </data>
+  <data name="InsertMoveOrder" xml:space="preserve">
+    <value>INSERT INTO move_orders (fleet_id,from_system,from_coord,to_system,to_coord,progress) VALUES ({0},{1},"{2}",{3},"{4}", 0);
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertSection" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO assets (path) VALUES("{0}");
+INSERT INTO sections (asset_id, player_id) VALUES ((SELECT id FROM assets WHERE path="{0}"), {1});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertLocustSwarmScoutTargetInfo" xml:space="preserve">
+    <value>INSERT INTO locust_swarm_scout_targets (system_id, is_hostile)
+VALUES ({0},{1});</value>
+  </data>
+  <data name="UpdatePlayerResearchBoost" xml:space="preserve">
+    <value>UPDATE players SET research_boost_funds = {1} WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerPsionicPotential" xml:space="preserve">
+    <value>UPDATE players SET psionic_potential={1} WHERE id ={0};</value>
+  </data>
+  <data name="RemoveWeapon" xml:space="preserve">
+    <value>DELETE FROM weapons WHERE id={0}</value>
+  </data>
+  <data name="InsertRequest" xml:space="preserve">
+    <value>INSERT INTO requests (initiating_player_id, receiving_player_id, request_type, request_value, request_state) VALUES ({0}, {1}, {2}, {3}, {4});</value>
+  </data>
+  <data name="UpdateDiplomacyInfo" xml:space="preserve">
+    <value>UPDATE diplomacy_states SET diplomacy_type={2}, relations={3}, is_encountered={4} WHERE player_id={0} AND towards_player_id={1}</value>
+  </data>
+  <data name="GetResearchProjectInfos" xml:space="preserve">
+    <value>SELECT id,player_id,state,name,progress FROM research_projects</value>
+  </data>
+  <data name="GetStarSystemPlanetInfos" xml:space="preserve">
+    <value>SELECT * FROM planets
+JOIN orbital_objects ON orbital_objects.id = planets.orbital_object_id
+WHERE orbital_objects.star_system_id = {0}</value>
+  </data>
+  <data name="UpdatePlayerSavings" xml:space="preserve">
+    <value>UPDATE players SET savings = {1} WHERE id = {0}</value>
+  </data>
+  <data name="RemovePlague" xml:space="preserve">
+    <value>DELETE FROM plagues WHERE id={0}</value>
+  </data>
+  <data name="GetAITechWeight" xml:space="preserve">
+    <value>SELECT total_spent,preference FROM ai_tech_weights WHERE tech_family="{0}" AND ai_id={1}</value>
+  </data>
+  <data name="UpdateFleetInfo" xml:space="preserve">
+    <value>UPDATE fleets SET admiral_id={1}, supporting_system_id={2}, name="{3}", turns_away={4},supply_remaining={5}, player_id={6} WHERE id ={0}</value>
+  </data>
+  <data name="GetStationRetrofitOrderByID" xml:space="preserve">
+    <value>SELECT * FROM retrofitstation_orders WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerCombatTurn" xml:space="preserve">
+    <value>UPDATE players SET last_combat_turn = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetEmpireHistoryByPlayerIDAndTurn" xml:space="preserve">
+    <value>SELECT * FROM player_empire_history WHERE player_id = {0} AND turn_id = {1}</value>
+  </data>
+  <data name="GetStarSystemOrbitalObjectInfos" xml:space="preserve">
+    <value>SELECT id, parent_id, orbital_path, name FROM orbital_objects WHERE star_system_id = {0}</value>
+  </data>
+  <data name="GetNodeLines" xml:space="preserve">
+    <value>SELECT id,system1_id,system2_id,health FROM travel_nodes</value>
+  </data>
+  <data name="UpdateQueuedModuleNodeName" xml:space="preserve">
+    <value>UPDATE station_queued_modules SET mount_node = "{1}" WHERE id = {0};</value>
+  </data>
+  <data name="InsertIntelFleet" xml:space="preserve">
+    <value>INSERT INTO ai_intel_fleets (player_id, intel_on_player_id, last_seen, last_seen_system, last_seen_coords, num_destroyers, num_cruisers, num_dreadnoughts, num_leviathans) VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8})</value>
+  </data>
+  <data name="InsertStationRetrofitOrder" xml:space="preserve">
+    <value>INSERT INTO  retrofitstation_orders (design_id, ship_id) VALUES ({0},{1});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdatePlayerCivilianTradeAccumulator" xml:space="preserve">
+    <value>UPDATE players SET civilian_trade_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="GetPlayerColoniesByPlayerId" xml:space="preserve">
+    <value>SELECT * FROM colonies WHERE player_id = {0}</value>
+  </data>
+  <data name="UpdatePlanet" xml:space="preserve">
+    <value>UPDATE planets SET suitability = {1}, biosphere = {2}, resources = {3}, infrastructure = {4}, size = {5}, max_resources={6} WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="UpdatePlague" xml:space="preserve">
+    <value>UPDATE plagues SET colony_id = {1}, plague_type={2}, infection_rate={3},infected_population_imperial={4}, infected_population_civilian={5}, launching_player={6} WHERE id={0}</value>
+  </data>
+  <data name="UpdatePlayerIntelAccumulator" xml:space="preserve">
+    <value>UPDATE players SET intel_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="RemoveFreighterInfo" xml:space="preserve">
+    <value>DELETE FROM freighters WHERE id = {0};</value>
+  </data>
+  <data name="InsertIntelStation" xml:space="preserve">
+    <value>INSERT INTO ai_intel_stations (player_id,owning_player,station_id,last_seen,level) VALUES ({0},{1},{2},{3},{4})</value>
+  </data>
+  <data name="InsertSuperNovaInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO super_novas(encounter_id, target_system_id, turns_remaining) VALUES(last_insert_rowid(), {1}, {2});</value>
+  </data>
+  <data name="GetResearchProjectInfosForPlayer" xml:space="preserve">
+    <value>SELECT id,player_id,state,name,progress FROM research_projects WHERE player_id={0}</value>
+  </data>
+  <data name="InsertProteanShipOrbitMap" xml:space="preserve">
+    <value>INSERT INTO protean_ship_orbit_map (encounter_id, ship_id, orbital_object_id) VALUES ({0}, {1}, {2});</value>
+  </data>
+  <data name="RemoveTreaty" xml:space="preserve">
+    <value>DELETE FROM treaties WHERE id = {0};</value>
+  </data>
+  <data name="SelectIncomingRandomsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM incoming_randoms WHERE player_id = {0} AND turn = {1};</value>
+  </data>
+  <data name="GetIndependentRaces" xml:space="preserve">
+    <value>SELECT id,name,orbital_object_id,population,tech_level,reaction_human,reaction_tarka, reaction_liir,reaction_zuul,reaction_morrigi, reaction_hiver FROM independent_races</value>
+  </data>
+  <data name="InsertPlanet" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+INSERT INTO planets (orbital_object_id,type,ring_id,suitability,biosphere,resources,size,max_resources) VALUES (trigger_rowid(),"{4}",{5},{6},{7},{8},{9},{8});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertPlague" xml:space="preserve">
+    <value>INSERT INTO plagues (colony_id, plague_type, infection_rate, infected_population_imperial,infected_population_civilian, launching_player) VALUES ({0}, {1}, {2}, {3}, {4}, {5});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertPlayer" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO primary_player_colors (color) VALUES ("{4}");
+INSERT OR IGNORE INTO assets (path) VALUES ("{6}");
+INSERT OR IGNORE INTO assets (path) VALUES ("{8}");
+
+INSERT INTO players 
+(
+    alliance_id,    name,    faction_id,    is_ai,    homeworld_id,    primary_color_id,    secondary_color,    badge_asset_id,    savings,    avatar_asset_id,    last_combat_turn,    last_encounter_turn, rate_government_research, rate_research_current_project, rate_research_special_projects, rate_research_salvage_research, rate_government_stimulus, rate_government_security, rate_government_savings, rate_stimulus_mining, rate_stimulus_colonization, rate_stimulus_trade, rate_security_operations, rate_security_intelligence, rate_security_counter_intelligence, is_standard_player, subfaction_index, include_in_diplomacy, is_ai_rebellion_player, auto_placedefenses, auto_repairfleets, auto_usegoop, auto_usejoker, auto_aoe, team, ai_difficulty
+)
+VALUES 
+(
+    {0},
+    "{1}",
+    {2},
+    0,
+    {3},
+    (SELECT id FROM primary_player_colors WHERE color="{4}"),
+    "{5}",
+    (SELECT id FROM assets WHERE path="{6}"),
+    {7},
+    (SELECT id FROM assets WHERE path="{8}"),
+    0,
+    0,
+    0.5, 
+    1.0, 0, 0,
+    0.0, 0.5, 0.5,
+    0.0, 1.0, 0.0,
+    0.0, 0.5, 0.5,
+    {9},
+    {10},
+    {11},
+    {12},
+	{13},
+	{14},
+	{15},
+	{16},
+	{17},
+	{18},
+"{19}"
+);
+
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetDesignBuildOrders" xml:space="preserve">
+    <value>SELECT * FROM build_orders WHERE design_id = {0}</value>
+  </data>
+  <data name="InsertDesignSectionTech" xml:space="preserve">
+    <value>INSERT INTO design_section_techs (id, tech_id) VALUES ({0}, {1});</value>
+  </data>
+  <data name="UpdatePlayerCounterintelPoints" xml:space="preserve">
+    <value>UPDATE players SET counterintel_points = {1} WHERE id={0}</value>
+  </data>
+  <data name="GetEnounteredDesigns" xml:space="preserve">
+    <value>SELECT * FROM designs_encountered WHERE player_id={0};</value>
+  </data>
+  <data name="InsertSuulka" xml:space="preserve">
+    <value>INSERT INTO suulkas(player_id,ship_id,admiral_id, station_id, arrival_turns) VALUES ({0},{1},{2},{3},{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="SelectIncomingGMsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM incoming_gm WHERE turn = {0};</value>
+  </data>
+  <data name="GetSuulkaByAdmiralID" xml:space="preserve">
+    <value>SELECT id, player_id, ship_id, admiral_id, station_id,arrival_turns  FROM suulkas WHERE admiral_id = {0}</value>
+  </data>
+  <data name="GetDatabaseHistoryByTurn" xml:space="preserve">
+    <value>SELECT * FROM query_history WHERE turn = {0}</value>
+  </data>
+  <data name="UpdateLargeAsteroidInfo" xml:space="preserve">
+    <value>UPDATE large_asteroids SET resources = {1} WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="UpdateSuulkaPlayer" xml:space="preserve">
+    <value>UPDATE suulkas SET player_id = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetSystemKillerInfo" xml:space="preserve">
+    <value>SELECT * FROM system_killers WHERE encounter_id={0}</value>
+  </data>
+  <data name="UpdateStation" xml:space="preserve">
+    <value>UPDATE stations SET player_id = {1}, design_id={2}, ship_id={3} WHERE orbital_object_id={0}</value>
+  </data>
+  <data name="GetMorrigiRelicInfos" xml:space="preserve">
+    <value>SELECT * FROM morrigi_relic</value>
+  </data>
+  <data name="GetAllWeaponInstances" xml:space="preserve">
+    <value>SELECT * FROM weapon_instances;</value>
+  </data>
+  <data name="SetRequestState" xml:space="preserve">
+    <value>UPDATE requests SET request_state = {1} WHERE id={0}</value>
+  </data>
+  <data name="RemoveOrbitalObject" xml:space="preserve">
+    <value>DELETE FROM orbital_objects WHERE parent_id={0};
+DELETE FROM orbital_objects WHERE id={0}</value>
+  </data>
+  <data name="UpdateIntelStation" xml:space="preserve">
+    <value>UPDATE ai_intel_stations SET last_seen={2} WHERE player_id={0} AND station_id={1}</value>
+  </data>
+  <data name="InsertSystemKillerInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO system_killers (encounter_id,fleet_id, target)
+VALUES (last_insert_rowid(),{1},"{2}");</value>
+  </data>
+  <data name="GetNumShipsByPlayer" xml:space="preserve">
+    <value>SELECT COUNT(*) FROM ships WHERE (SELECT player_id FROM fleets WHERE id=fleet_id)={0}</value>
+  </data>
+  <data name="RemoveWaypoint" xml:space="preserve">
+    <value>DELETE FROM waypoints WHERE id = {0}</value>
+  </data>
+  <data name="GetDesignInfo" xml:space="preserve">
+    <value>SELECT * FROM designs WHERE id = {0}</value>
+  </data>
+  <data name="GetGiveInfos" xml:space="preserve">
+    <value>SELECT * FROM gives</value>
+  </data>
+  <data name="UpdatePlayerCivilianMiningAccumulator" xml:space="preserve">
+    <value>UPDATE players SET civilian_mining_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="InsertWeapon" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO assets (path) VALUES ("{1}");
+INSERT INTO weapons (asset_id, player_id) VALUES ((SELECT id FROM assets WHERE path="{1}"), {0});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="SetPlayerDefeated" xml:space="preserve">
+    <value>UPDATE players SET is_defeated = 'True' WHERE id={0}</value>
+  </data>
+  <data name="RemoveColonyTrapInfo" xml:space="preserve">
+    <value>DELETE FROM colony_traps WHERE id={0}</value>
+  </data>
+  <data name="UpdateAsteroidMonitorInfo" xml:space="preserve">
+    <value>UPDATE asteroid_monitors SET system_id = {1}, orbital_object_id = {2}, is_aggressive = {3} WHERE encounter_id = {0};</value>
+  </data>
+  <data name="GetFactionSuitability" xml:space="preserve">
+    <value>SELECT suitability FROM factions WHERE name="{0}"</value>
+  </data>
+  <data name="GetPlayerClientInfo" xml:space="preserve">
+    <value>SELECT player_id FROM player_client_info WHERE username="{0}";</value>
+  </data>
+  <data name="GetSectionAssetID" xml:space="preserve">
+    <value>SELECT id FROM sections WHERE asset_id=(SELECT id FROM assets WHERE path="{0}") AND player_id={1}</value>
+  </data>
+  <data name="InsertIncomingGM" xml:space="preserve">
+    <value>INSERT INTO incoming_gm (system_id, type, turn) VALUES ({0},{1},{2});</value>
+  </data>
+  <data name="UpdateDesignPrototype" xml:space="preserve">
+    <value>UPDATE designs SET is_prototyped={1} WHERE id={0}</value>
+  </data>
+  <data name="GetPlanetInfo" xml:space="preserve">
+    <value>SELECT * FROM planets WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="GetAIFleetInfos" xml:space="preserve">
+    <value>SELECT * FROM ai_fleet_info WHERE player_id ={0};</value>
+  </data>
+  <data name="GetMoraleHistoryEvent" xml:space="preserve">
+    <value>SELECT * FROM morale_event_history WHERE id={0};</value>
+  </data>
+  <data name="UpdateFactionInfo" xml:space="preserve">
+    <value>UPDATE factions SET name = "{1}", suitability={2} WHERE id={0};</value>
+  </data>
+  <data name="RemoveAllMoraleHistoryEvents" xml:space="preserve">
+    <value>DELETE FROM morale_event_history WHERE turn &lt; {0};</value>
+  </data>
+  <data name="GetLocustSwarmInfo" xml:space="preserve">
+    <value>SELECT * FROM locust_swarms WHERE encounter_id={0};</value>
+  </data>
+  <data name="GetSDBByOrbital" xml:space="preserve">
+    <value>SELECT * FROM sdb_info WHERE orbital_object_id={0}</value>
+  </data>
+  <data name="DeleteIncomingGM" xml:space="preserve">
+    <value>DELETE FROM incoming_gm WHERE id={0};</value>
+  </data>
+  <data name="GetCounterIntelResponsesForIntel" xml:space="preserve">
+    <value>SELECT * FROM intel_responses WHERE intel_mission_id={0};</value>
+  </data>
+  <data name="SetLastTurnWithCombat" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO name_value_pairs (name) VALUES ("LastTurnWithCombat");
+UPDATE name_value_pairs SET value = {0} WHERE name = "LastTurnWithCombat";</value>
+  </data>
+  <data name="InsertGovernmentAction" xml:space="preserve">
+    <value>INSERT INTO government_actions (player_id, description, authoritarianism_change, econ_liberalism_change, turn) VALUES({0}, "{1}", {2}, {3}, {4});
+UPDATE governments SET authoritarianism = MIN(MAX(authoritarianism + {2}, -{5}), {5}), economic_liberalism = MIN(MAX(economic_liberalism + {3}, -{5}), {5}) WHERE player_id = {0};</value>
+  </data>
+  <data name="GetProvinceInfos" xml:space="preserve">
+    <value>SELECT id,player_id,name,capital_id FROM provinces</value>
+  </data>
+  <data name="InsertMoraleHistoryEvent" xml:space="preserve">
+    <value>INSERT INTO morale_event_history (turn, event_type,player_id,value,colony_id,system_id,province_id) VALUES ({0},{1},{2},{3},{4},{5},{6});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateOrbitalObjectInfo" xml:space="preserve">
+    <value>UPDATE orbital_objects SET parent_id={1}, star_system_id={2}, orbital_path="{3}", name="{4}" WHERE id={0}</value>
+  </data>
+  <data name="UpdateSuulkaArrivalTurns" xml:space="preserve">
+    <value>UPDATE suulkas SET arrival_turns = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetModulePsionicsByDesignModule" xml:space="preserve">
+    <value>SELECT * FROM module_psionics WHERE design_module_id = {0}</value>
+  </data>
+  <data name="SetStarSystemVisible" xml:space="preserve">
+    <value>UPDATE star_systems SET visible = "{1}" WHERE id = {0}</value>
+  </data>
+  <data name="GetLastTurnWithCombat" xml:space="preserve">
+    <value>SELECT value FROM name_value_pairs WHERE name = "LastTurnWithCombat";</value>
+  </data>
+  <data name="SelectLoaFleetCompositions" xml:space="preserve">
+    <value>SELECT * FROM loa_fleet_compositions WHERE visible = "True";</value>
+  </data>
+  <data name="GetWeaponBankInfos" xml:space="preserve">
+    <value>SELECT id, weapon_id, design_id, bank_guid, firing_mode, filter_mode FROM design_section_weapon_banks WHERE design_section_id = {0} ORDER BY id</value>
+  </data>
+  <data name="RemoveInvoiceInstance" xml:space="preserve">
+    <value>DELETE FROM invoice_instances WHERE id={0}</value>
+  </data>
+  <data name="UpdateSectionInstance" xml:space="preserve">
+    <value>UPDATE section_instances SET section_id={1}, ship_id={2}, station_id={3}, structure={4}, supply={5}, crew={6}, signature={7}, repair_points={8} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateGenericDiplomacyPoints" xml:space="preserve">
+    <value>UPDATE players SET generic_diplomacy_points = {1} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateMission" xml:space="preserve">
+    <value>UPDATE missions SET type = {1}, target_system_id = {2}, target_orbital_object_id = {3}, target_fleet_id = {4}, duration = {5}, use_direct_route = {6} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateMorrigiRelicInfo" xml:space="preserve">
+    <value>UPDATE morrigi_relic SET system_id = {1}, fleet_id = {2}, is_aggressive = {3} WHERE encounter_id = {0};</value>
+  </data>
+  <data name="GetIntelColony" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_colonies WHERE player_id={0} AND colony_id={1}</value>
+  </data>
+  <data name="UpdateExploreRecord" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO explore_records (system_id, player_id, last_seen) VALUES ({0}, {1}, {2});
+UPDATE explore_records SET last_seen = {2}, visible = "{3}", explored = "{4}" WHERE system_id = {0} AND player_id = {1}</value>
+  </data>
+  <data name="UpdatePlayerAutoPatrol" xml:space="preserve">
+    <value>UPDATE players SET auto_patrol= {1} WHERE id={0};</value>
+  </data>
+  <data name="UpdateDesign" xml:space="preserve">
+    <value>UPDATE designs SET player_id={1},name="{2}",armour={3},structure={4},num_turrets={5},mass={6},range={7},thrust={8},top_speed={9},savings_cost={10},production_cost={11},class={12},crew_avail={13},power_avail={14},supply_avail={15},crew_req={16},power_req={17},supply_req={18},design_date={19},role={20},weapon_role={21},is_prototyped={22},is_attributes_discovered={23},station_type={24},station_level={25}
+    WHERE id = {0}</value>
+  </data>
+  <data name="GetExploredNodeLinesFromSystem" xml:space="preserve">
+    <value>SELECT DISTINCT id,system1_id,system2_id,health FROM travel_nodes
+JOIN explore_records ON ((explore_records.system_id == travel_nodes.system1_id) OR (explore_records.system_id == travel_nodes.system2_id))
+WHERE explore_records.player_id = {0} AND (travel_nodes.system1_id = {1} OR travel_nodes.system2_id = {1})</value>
+  </data>
+  <data name="RemoveStation" xml:space="preserve">
+    <value>DELETE FROM stations WHERE orbital_object_id={0}</value>
+  </data>
+  <data name="GetPlayerTechInfo" xml:space="preserve">
+    <value>SELECT player_id,tech_id,state,progress,(SELECT id_from_file FROM techs WHERE id=tech_id),research_cost,feasibility,player_feasibility, turn_researched FROM player_techs WHERE player_id={0} AND tech_id={1}</value>
+  </data>
+  <data name="InsertModulePsionicAbility" xml:space="preserve">
+    <value>INSERT INTO module_psionics (design_module_id, psionic) VALUES ({0}, {1});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateTurnEventDialogShown" xml:space="preserve">
+    <value>UPDATE turn_events SET dialog_shown = {1} WHERE id = {0};</value>
+  </data>
+  <data name="UpdatePlayerAutoUseGoop" xml:space="preserve">
+    <value>UPDATE players SET auto_usegoop = {1} WHERE id={0};</value>
+  </data>
+  <data name="InsertShip" xml:space="preserve">
+    <value>INSERT INTO ships (fleet_id,design_id,parent_id,force_dmg,torque_dmg,speed_dmg,rot_speed_dmg,helm_dmg,name,serial_num,params,rider_index,psionic_power,ai_fleet_id, comission_date, loa_cubes) VALUES({0},{1},{2},0,0,0,0,0,"{3}",{4}, {5},{6},{7}, {8}, {9}, {10});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetStationInfos" xml:space="preserve">
+    <value>SELECT * FROM stations;</value>
+  </data>
+  <data name="InsertTech" xml:space="preserve">
+    <value>INSERT INTO techs (id_from_file) VALUES ("{0}")</value>
+  </data>
+  <data name="InsertGive" xml:space="preserve">
+    <value>INSERT INTO gives (initiating_player_id, receiving_player_id,give_type,give_value) VALUES ({0}, {1}, {2}, {3});</value>
+  </data>
+  <data name="InsertMoon" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+INSERT INTO moons (orbital_object_id) VALUES (trigger_rowid());
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetNumShipsDestroyedFromDesign" xml:space="preserve">
+    <value>SELECT num_destroyed FROM designs WHERE id={0}</value>
+  </data>
+  <data name="InsertAsteroidBelt" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+INSERT INTO asteroid_belts (orbital_object_id,random_seed) VALUES (trigger_rowid(),{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetDesignModuleInfos" xml:space="preserve">
+    <value>SELECT * FROM design_modules WHERE design_section_id={0}</value>
+  </data>
+  <data name="RemoveCounterIntelResponse" xml:space="preserve">
+    <value>DELETE FROM intel_responses WHERE id={0};</value>
+  </data>
+  <data name="GetShipSectionInstance" xml:space="preserve">
+    <value>SELECT * FROM section_instances WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerSliderRates" xml:space="preserve">
+    <value>UPDATE players SET 
+rate_government_research = {1}, 
+rate_research_current_project = {2}, 
+rate_research_special_projects = {3}, 
+rate_research_salvage_research = {4}, 
+rate_government_stimulus = {5}, 
+rate_government_security = {6}, 
+rate_government_savings = {7}, 
+rate_stimulus_mining = {8}, 
+rate_stimulus_colonization = {9}, 
+rate_stimulus_trade = {10}, 
+rate_security_operations = {11}, 
+rate_security_intelligence = {12}, 
+rate_security_counter_intelligence = {13}
+ WHERE id ={0}</value>
+  </data>
+  <data name="GetLocustSwarmScoutTargetInfo" xml:space="preserve">
+    <value>SELECT * FROM  locust_swarm_scout_targets WHERE system_id={0};</value>
+  </data>
+  <data name="GetPlayerShipSections" xml:space="preserve">
+    <value>SELECT assets.path FROM sections JOIN assets ON assets.id = sections.asset_id WHERE player_id={0}</value>
+  </data>
+  <data name="UpdatePreviousTaxRate" xml:space="preserve">
+    <value>UPDATE players SET rate_tax_prev = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetCombatData" xml:space="preserve">
+    <value>SELECT data,version FROM combat_data WHERE system_id={0} AND turn={1};</value>
+  </data>
+  <data name="GetStarSystemInfo" xml:space="preserve">
+    <value>SELECT * FROM star_systems JOIN stellar_info ON stellar_info.id = star_systems.id WHERE star_systems.id = {0}</value>
+  </data>
+  <data name="UpdateShipParams" xml:space="preserve">
+    <value>UPDATE ships SET params={1} WHERE id = {0}</value>
+  </data>
+  <data name="GetFactions" xml:space="preserve">
+    <value>SELECT * FROM factions</value>
+  </data>
+  <data name="GetResearchProjectInfo" xml:space="preserve">
+    <value>SELECT id,player_id,state,name,progress FROM research_projects WHERE player_id={0} AND id={1}</value>
+  </data>
+  <data name="GetIndependentRace" xml:space="preserve">
+    <value>SELECT name,orbital_object_id,population,tech_level,reaction_human,reaction_tarka, reaction_liir,reaction_zuul,reaction_morrigi, reaction_hiver FROM independent_races WHERE id={0}</value>
+  </data>
+  <data name="GetSuulkaByStationID" xml:space="preserve">
+    <value>SELECT id, player_id, ship_id, admiral_id, station_id,arrival_turns  FROM suulkas WHERE station_id = {0}</value>
+  </data>
+  <data name="GetTurnEventsByPlayerID" xml:space="preserve">
+    <value>SELECT * FROM turn_events WHERE player_id = {0};</value>
+  </data>
+  <data name="InsertAITechWeight" xml:space="preserve">
+    <value>INSERT INTO ai_tech_weights (tech_family,ai_id,total_spent,preference) VALUES ("{0}",{1},{2},{3})</value>
+  </data>
+  <data name="GetAllModuleInstances" xml:space="preserve">
+    <value>SELECT * FROM module_instances;</value>
+  </data>
+  <data name="UpdateSwarmerInfo" xml:space="preserve">
+    <value>UPDATE swarmers SET system_id={1}, orbit_id={2}, growth_stage={3}, hive_fleet={4}, queen_fleet={5}, spawn_hive_delay={6} WHERE encounter_id={0}</value>
+  </data>
+  <data name="InsertDiplomacyReactionHistoryEntry" xml:space="preserve">
+    <value>INSERT INTO diplomacy_reaction_history (player_id, towards_player_id, turn_count, difference, reaction) VALUES ({0}, {1}, {2}, {3},{4})</value>
+  </data>
+  <data name="InsertSectionInstance" xml:space="preserve">
+    <value>INSERT INTO section_instances(section_id, ship_id, station_id, structure, supply, crew, signature, repair_points) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertLocustSwarmTarget" xml:space="preserve">
+    <value>INSERT INTO locust_swarm_targets (system_id) VALUES ({0});</value>
+  </data>
+  <data name="UpdateAIInfo" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO ai (player_id, stance) VALUES({0},0);
+UPDATE ai SET stance={1},flags={2} WHERE player_id={0}</value>
+  </data>
+  <data name="GetAdmiral" xml:space="preserve">
+    <value>SELECT * FROM admirals WHERE id = {0}</value>
+  </data>
+  <data name="UpdateAIIntelPlanet" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO ai_intel_planets(player_id,planet_id,last_seen,biosphere,resources,infrastructure,suitability) VALUES ({0},{1},{2},{3},{4},{5},{6});
+UPDATE ai_intel_planets SET
+    last_seen = {2},
+    biosphere = {3},
+    resources = {4},
+    infrastructure = {5},
+    suitability = {6}
+WHERE
+    player_id = {0} AND planet_id = {1};</value>
+  </data>
+  <data name="UpdateMoveOrder" xml:space="preserve">
+    <value>UPDATE move_orders SET progress = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetCompleteSpecialProjectsByPlayerID" xml:space="preserve">
+    <value>SELECT id, player_id, name, progress, cost, type, tech_id, rate, encounter_id, fleet_id,target_player_id FROM special_projects WHERE player_id = {0} AND progress &gt;= cost;</value>
+  </data>
+  <data name="SelectCounterIntelStingsAgainstPlayer" xml:space="preserve">
+    <value>SELECT * FROM sting_operations WHERE target_player={0};</value>
+  </data>
+  <data name="RemoveColonyFactionMoraleHistoryByColonyID" xml:space="preserve">
+    <value>DELETE FROM colony_morale_history WHERE colony_id = {0}</value>
+  </data>
+  <data name="GetDiplomacyInfo" xml:space="preserve">
+    <value>SELECT * FROM diplomacy_states WHERE id={0}</value>
+  </data>
+  <data name="InsertColony" xml:space="preserve">
+    <value>INSERT INTO colonies (orbital_object_id,player_id,imp_pop,civ_pop_weight,turn_established) VALUES ({0},{1},{2},{3},{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetInvoiceInfo" xml:space="preserve">
+    <value>SELECT * FROM invoices WHERE id={0} AND player_id={1}</value>
+  </data>
+  <data name="GetBuildOrdersForSystem" xml:space="preserve">
+    <value>SELECT * FROM build_orders WHERE star_system_id = {0} AND progress &lt; production_target ORDER BY build_priority</value>
+  </data>
+  <data name="InsertStation" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+INSERT INTO stations (orbital_object_id,player_id,design_id,ship_id) VALUES (trigger_rowid(),{4},{5}, {6});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetFeasibilityStudyInfo" xml:space="preserve">
+    <value>SELECT project_id,tech_id,research_cost FROM feasibility_projects WHERE project_id={0}</value>
+  </data>
+  <data name="InsertAITechStyle" xml:space="preserve">
+    <value>INSERT INTO ai_tech_styles (player_id,tech_family,cost_factor) VALUES({0},{1},{2});</value>
+  </data>
+  <data name="UpdateModuleInstance" xml:space="preserve">
+    <value>UPDATE module_instances SET section_instance_id = {1}, module_node_id = '{2}', structure = {3}, repair_points = {4} WHERE id = {0}</value>
+  </data>
+  <data name="SelectCounterIntelStingsForPlayerAgainstPlayer" xml:space="preserve">
+    <value>SELECT * FROM sting_operations WHERE player_id={0} AND target_player={1} ;</value>
+  </data>
+  <data name="GetFleetInfosByPlayerID" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE player_id = {0} AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="GetFeasibilityStudyInfoForTech" xml:space="preserve">
+    <value>SELECT project_id,tech_id,research_cost FROM feasibility_projects WHERE tech_id={1} AND (SELECT player_id FROM research_projects WHERE id=project_id)={0}</value>
+  </data>
+  <data name="GetPlayerTechInfos" xml:space="preserve">
+    <value>SELECT player_id,tech_id,state,progress,(SELECT id_from_file FROM techs WHERE id=tech_id),research_cost,feasibility,player_feasibility,turn_researched FROM player_techs WHERE player_id={0}</value>
+  </data>
+  <data name="UpdatePlayerTechState" xml:space="preserve">
+    <value>UPDATE player_techs SET state={2} WHERE player_id={0} AND tech_id={1}</value>
+  </data>
+  <data name="InsertIndependentRace" xml:space="preserve">
+    <value>INSERT INTO independent_races (name,orbital_object_id,population,tech_level,reaction_human,reaction_tarka,reaction_liir, reaction_zuul,reaction_morrigi,reaction_hiver) VALUES ("{0}",{1},{2},{3},{4},{5},{6},{7},{8},{9});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetModuleAsset" xml:space="preserve">
+    <value>SELECT path FROM assets WHERE id=(SELECT asset_id FROM modules WHERE id={0})</value>
+  </data>
+  <data name="GetStarSystemProvinceID" xml:space="preserve">
+    <value>SELECT province_id FROM star_systems WHERE id={0}</value>
+  </data>
+  <data name="InsertDesign" xml:space="preserve">
+    <value>INSERT INTO designs (player_id,name,armour,structure,num_turrets,mass,range,thrust,top_speed,savings_cost,production_cost,class,crew_avail,power_avail,supply_avail,crew_req,power_req,supply_req,design_date,role,weapon_role,is_prototyped,is_attributes_discovered,station_type,station_level,priority_weapon_name,retrofit_design_id) VALUES ({0},"{1}",{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},"{23}","{24}","{25}",{26});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertDemand" xml:space="preserve">
+    <value>INSERT INTO demands (initiating_player_id, receiving_player_id,demand_type,demand_value,demand_state) VALUES ({0}, {1}, {2}, {3}, {4});</value>
+  </data>
+  <data name="UpdateColony" xml:space="preserve">
+    <value>UPDATE colonies SET player_id = {1}, imp_pop = {2}, civ_pop_weight = {3} , terra_rate = {4}, infra_rate = {5}, shipcon_rate = {6}, overharvest_rate = {7}, economy_rating = {8}, colony_stage = {9}, overdevelop_progress = {10}, overdevelop_rate = {11}, population_biosphere_rate = {12}, hardened_structures={13}, rebellion_type={14}, rebellion_turns={15}, turns_overharvesting={16}, repair_points={17},slavework_rate={18},damaged_last_turn={19}, repair_points_max={20},
+owning_system={21} ,replicants_on={22}
+WHERE id = {0}</value>
+  </data>
+  <data name="InsertPirateBaseInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO pirate_bases(encounter_id, system_id, base_station_id, turns_until_add_ship, num_ships) VALUES(last_insert_rowid(), {1}, {2}, {3}, {4});</value>
+  </data>
+  <data name="InsertAIFleetInfo" xml:space="preserve">
+    <value>INSERT INTO ai_fleet_info (player_id, fleet_id, fleet_type, system_id, invoice_id, admiral_id, fleet_template) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, "{6}"); SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertDiplomacyInfo" xml:space="preserve">
+    <value>INSERT INTO diplomacy_states (player_id, towards_player_id, diplomacy_type, relations, is_encountered) VALUES ({0},{1},{2},{3},{4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateShipFleetPosition" xml:space="preserve">
+    <value>UPDATE ships SET fleet_position="{1}" WHERE id={0}</value>
+  </data>
+  <data name="UpdateDesignModuleNodeName" xml:space="preserve">
+    <value>UPDATE design_modules SET mount_node = "{1}" WHERE id = {0};</value>
+  </data>
+  <data name="RemoveBuildSite" xml:space="preserve">
+    <value>DELETE FROM build_sites WHERE id={0};
+DELETE FROM build_orders WHERE buildsite_id={0};</value>
+  </data>
+  <data name="GetColonyTrapInfoByFleetID" xml:space="preserve">
+    <value>SELECT * FROM colony_traps WHERE fleet_id = {0}</value>
+  </data>
+  <data name="RemoveAdmiral" xml:space="preserve">
+    <value>DELETE FROM admirals WHERE id={0}</value>
+  </data>
+  <data name="InsertStarSystem" xml:space="preserve">
+    <value>INSERT INTO star_systems (id, name,province_id,stellar_class, visible, terrain_id, is_open) VALUES ({0},"{1}",{2},"{3}", {4}, {5}, {6});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateLocustSwarmScoutTargetInfo" xml:space="preserve">
+    <value>UPDATE locust_swarm_scout_targets SET is_hostile={1} WHERE system_id = {0}</value>
+  </data>
+  <data name="InsertLocustSwarmScoutInfo" xml:space="preserve">
+    <value>INSERT INTO locust_swarm_scouts (locust_nest_id, ship_id, target_system_id, num_drones)
+VALUES ({0},{1},{2},{3});</value>
+  </data>
+  <data name="RemoveFleet" xml:space="preserve">
+    <value>DELETE FROM fleets WHERE id={0};
+DELETE FROM move_orders WHERE fleet_id={0};</value>
+  </data>
+  <data name="UpdateFreighterInfo" xml:space="preserve">
+    <value>UPDATE freighters SET system_id = {1}, player_id  = {2} WHERE id = {0};</value>
+  </data>
+  <data name="UpdateTaxRate" xml:space="preserve">
+    <value>UPDATE players SET rate_tax = {1} WHERE id = {0}</value>
+  </data>
+  <data name="InsertNeutronStarInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO neutron_stars(encounter_id, fleet_id, target_system_id, deep_space_system_id, deep_space_orbital_id) VALUES(last_insert_rowid(), {1}, {2},{3},{4});</value>
+  </data>
+  <data name="RemoveDesignModule" xml:space="preserve">
+    <value>DELETE FROM design_modules WHERE id={0}</value>
+  </data>
+  <data name="GetProvinceCapitalSystemID" xml:space="preserve">
+    <value>SELECT capital_id FROM provinces WHERE id={0}</value>
+  </data>
+  <data name="InsertTreatyInfo" xml:space="preserve">
+    <value>INSERT INTO treaties (initiating_player_id, receiving_player_id, treaty_type, duration, starting_turn,active,removed) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}); SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateShipDesign" xml:space="preserve">
+    <value>UPDATE ships SET design_id={1} WHERE id = {0};</value>
+  </data>
+  <data name="GetFleetsByPlayerAndSystem" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE player_id = {0} AND system_id={1} AND fleet_type &amp; {2} &gt; 0</value>
+  </data>
+  <data name="RemoveProvince" xml:space="preserve">
+    <value>DELETE FROM provinces WHERE id={0};</value>
+  </data>
+  <data name="RemoveSection" xml:space="preserve">
+    <value>DELETE FROM sections WHERE id={0}</value>
+  </data>
+  <data name="GetDesignInfosForPlayer" xml:space="preserve">
+    <value>SELECT * FROM designs WHERE player_id = {0}</value>
+  </data>
+  <data name="InsertModule" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO assets (path) VALUES ("{0}");
+INSERT INTO modules (asset_id, player_id) VALUES ((SELECT id FROM assets WHERE path="{0}"), {1});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateVonNeumannTargetInfo" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO von_neumann_targets (encounter_id, system_id, threat_level) VALUES ({0}, {1}, 0);
+UPDATE von_neumann_targets SET threat_level={2} WHERE encounter_id={0} AND system_id={1}</value>
+  </data>
+  <data name="GetLevelForAdmiralTrait" xml:space="preserve">
+    <value>SELECT level FROM admiral_traits WHERE admiral_id = {0} AND type = {1}</value>
+  </data>
+  <data name="UpdateSystemProvinceID" xml:space="preserve">
+    <value>UPDATE star_systems SET province_id={1} WHERE id={0}</value>
+  </data>
+  <data name="GetFactionIdFromName" xml:space="preserve">
+    <value>SELECT id FROM factions WHERE name="{0}"</value>
+  </data>
+  <data name="GetArmorInstances" xml:space="preserve">
+    <value>SELECT * FROM armor_instances WHERE section_instance_id = {0};</value>
+  </data>
+  <data name="GetWeaponID" xml:space="preserve">
+    <value>SELECT id FROM weapons WHERE asset_id=(SELECT id FROM assets WHERE path="{1}") AND player_id = {0}</value>
+  </data>
+  <data name="InsertAdmiral" xml:space="preserve">
+    <value>INSERT INTO admirals (player_id,orbital_object_id,name,race,age,gender,reaction,evasion,loyalty,battles_fought,battles_won,missions_assigned,missions_accomplished,turn_created, engram) VALUES ({0},{1},"{2}","{3}",{4},"{5}",{6},{7},{8},{9},{10},{11},{12},{13},{14});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateDesignAttributesDiscovered" xml:space="preserve">
+    <value>UPDATE designs SET is_attributes_discovered={1} WHERE id={0}</value>
+  </data>
+  <data name="GetColonyInfoForPlanet" xml:space="preserve">
+    <value>SELECT * FROM colonies WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="InsertInvoiceInstance" xml:space="preserve">
+    <value>INSERT INTO invoice_instances (player_id, system_id, name) VALUES ({0}, {1}, "{2}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetShipNamesByPlayer" xml:space="preserve">
+    <value>SELECT ships.name FROM ships
+JOIN fleets ON fleets.player_id={0}</value>
+  </data>
+  <data name="GetShipInfos" xml:space="preserve">
+    <value>SELECT id,fleet_id,design_id,parent_id,name,serial_num,fleet_position,system_position,params,rider_index,psionic_power,ai_fleet_id,comission_date,obtained_slaves,loa_cubes FROM ships</value>
+  </data>
+  <data name="GetFleetInfosBySupportingSystem" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE supporting_system_id = {0} AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="InsertAsteroidMonitorInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO asteroid_monitors (encounter_id,system_id, orbital_object_id, is_aggressive) VALUES (last_insert_rowid(),{1}, {2}, {3});</value>
+  </data>
+  <data name="GetSuulkaByShipID" xml:space="preserve">
+    <value>SELECT * FROM suulkas WHERE ship_id = {0}</value>
+  </data>
+  <data name="InsertTradeResult" xml:space="preserve">
+    <value>INSERT INTO trade_result_nodes (system_id, produced, production_capacity, consumption, freighters, dock_capacity, export_int, export_prov,export_loc,import_int,import_prov,import_loc,range, turn_id) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8},{9},{10}, {11}, {12}, {13});</value>
+  </data>
+  <data name="SetTreatyActive" xml:space="preserve">
+    <value>UPDATE treaties SET active='True' WHERE id={0}</value>
+  </data>
+  <data name="InsertCounterIntelSting" xml:space="preserve">
+    <value>INSERT INTO sting_operations (player_id,target_player) VALUES ({0},{1});</value>
+  </data>
+  <data name="GetModuleInstance" xml:space="preserve">
+    <value>SELECT * FROM module_instances WHERE id = {0}</value>
+  </data>
+  <data name="UpdateAITechWeight" xml:space="preserve">
+    <value>UPDATE ai_tech_weights SET total_spent = {2},preference={3} WHERE tech_family="{0}" AND ai_id ={1}</value>
+  </data>
+  <data name="UpdateAdmiralIsEngram" xml:space="preserve">
+    <value>UPDATE admirals SET engram={1} WHERE id = {0}</value>
+  </data>
+  <data name="InsertSDB" xml:space="preserve">
+    <value>INSERT INTO sdb_info (orbital_object_id, ship_id) VALUES ({0}, {1})</value>
+  </data>
+  <data name="InsertTreatyIncentiveInfo" xml:space="preserve">
+    <value>INSERT INTO treaty_incentives (treaty_id, incentive_type, incentive_value) VALUES ({0}, {1}, {2});</value>
+  </data>
+  <data name="UpdatePlayerAutoRepairFleets" xml:space="preserve">
+    <value>UPDATE players SET auto_repairfleets = {1} WHERE id={0};</value>
+  </data>
+  <data name="RemoveQueuedStationModule" xml:space="preserve">
+    <value>DELETE FROM station_queued_modules WHERE id={0}</value>
+  </data>
+  <data name="GetInvoiceInstancesBySystemAndPlayer" xml:space="preserve">
+    <value>SELECT * FROM invoice_instances WHERE player_id={0} AND system_id={1}</value>
+  </data>
+  <data name="GetLocustSwarmScoutInfo" xml:space="preserve">
+    <value>SELECT * FROM  locust_swarm_scouts WHERE id={0};</value>
+  </data>
+  <data name="InsertSwarmerInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO swarmers(encounter_id, system_id, orbit_id, growth_stage, hive_fleet, queen_fleet, spawn_hive_delay) VALUES(last_insert_rowid(), {1}, {2}, {3}, {4}, {5}, {6})</value>
+  </data>
+  <data name="UpdateBankruptcyTurns" xml:space="preserve">
+    <value>UPDATE players SET bankruptcy_turns = {1} WHERE id={0};</value>
+  </data>
+  <data name="InsertNewStarSystem" xml:space="preserve">
+    <value>INSERT INTO star_systems (name,province_id,stellar_class,origin, visible, terrain_id, is_open) VALUES ("{0}",{1},"{2}","{3}", {4}, {5}, {6});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetOrbitalObjectInfo" xml:space="preserve">
+    <value>SELECT parent_id,star_system_id,orbital_path,name FROM orbital_objects WHERE id = {0}</value>
+  </data>
+  <data name="GetDemandInfos" xml:space="preserve">
+    <value>SELECT * FROM demands</value>
+  </data>
+  <data name="RemoveSectionInstance" xml:space="preserve">
+    <value>DELETE FROM section_instances WHERE id = {0}</value>
+  </data>
+  <data name="GetEncounterInfos" xml:space="preserve">
+    <value>SELECT * FROM encounters</value>
+  </data>
+  <data name="UpdateSystemKillerInfo" xml:space="preserve">
+    <value>UPDATE system_killers SET fleet_id={1}, target = '{2}' WHERE id = {0}</value>
+  </data>
+  <data name="SetTreatyRemoved" xml:space="preserve">
+    <value>UPDATE treaties SET removed='True' WHERE id={0}</value>
+  </data>
+  <data name="UpdateLocustSwarmInfo" xml:space="preserve">
+    <value>UPDATE locust_swarms SET fleet_id={1},  resources={2}, num_drones={3}  WHERE encounter_id = {0}</value>
+  </data>
+  <data name="GetFeasibilityStudyInfoForPlayer" xml:space="preserve">
+    <value>SELECT project_id,tech_id,research_cost FROM feasibility_projects WHERE (SELECT player_id FROM research_projects WHERE id=project_id)={0}</value>
+  </data>
+  <data name="GetLocustSwarmScoutsForLocustNest" xml:space="preserve">
+    <value>SELECT * FROM locust_swarm_scouts WHERE locust_nest_id={0};</value>
+  </data>
+  <data name="UpdatePlayerAutoUseJoker" xml:space="preserve">
+    <value>UPDATE players SET auto_usejoker = {1} WHERE id={0};</value>
+  </data>
+  <data name="UpdateArmorInstance" xml:space="preserve">
+    <value>UPDATE armor_instances SET data="{2}" WHERE section_instance_id = {0} AND side = {1};</value>
+  </data>
+  <data name="UpdateFleetPreferred" xml:space="preserve">
+    <value>UPDATE fleets SET preferred={1} WHERE id ={0}</value>
+  </data>
+  <data name="RemoveMoveOrder" xml:space="preserve">
+    <value>DELETE FROM move_orders WHERE id = {0}</value>
+  </data>
+  <data name="InsertReserveFleet" xml:space="preserve">
+    <value>INSERT INTO reserve_fleets (player_id,system_id,fleet_id) VALUES ({0},{1},{2});</value>
+  </data>
+  <data name="GetTreatyIncentives" xml:space="preserve">
+    <value>SELECT * FROM treaty_incentives;</value>
+  </data>
+  <data name="GetLocustSwarmTargets" xml:space="preserve">
+    <value>SELECT system_id FROM locust_swarm_targets</value>
+  </data>
+  <data name="UpdateShipSlavesObtained" xml:space="preserve">
+    <value>UPDATE ships SET obtained_slaves={1} WHERE id={0}</value>
+  </data>
+  <data name="InsertArmorInstance" xml:space="preserve">
+    <value>INSERT INTO armor_instances (section_instance_id, side, data) VALUES ({0}, {1}, "{2}");</value>
+  </data>
+  <data name="InsertIntelDesign" xml:space="preserve">
+    <value>INSERT INTO ai_intel_designs (player_id,intel_on_player_id,design_id,first_seen,last_seen,salvaged) VALUES ({0},{1},{2},{3},{4},{5})</value>
+  </data>
+  <data name="InsertAIOldColonyOwner" xml:space="preserve">
+    <value>INSERT INTO ai_old_colony_owner (colony_id, player_id) VALUES ({0}, {1});</value>
+  </data>
+  <data name="RemoveStarSystem" xml:space="preserve">
+    <value>DELETE FROM stellar_info WHERE id={0};</value>
+  </data>
+  <data name="RemoveNullAIColonyIntel" xml:space="preserve">
+    <value>DELETE FROM ai_intel_colonies WHERE colony_id IS NULL AND player_id={0} AND planet_id={1};</value>
+  </data>
+  <data name="UpdateAdmiralTrait" xml:space="preserve">
+    <value>UPDATE admiral_traits SET level = {2} WHERE admiral_id = {0} AND type = {1}</value>
+  </data>
+  <data name="UpdateBuildOrder" xml:space="preserve">
+    <value>UPDATE build_orders SET production_target={1}, build_priority = {2}, progress = {3}, ship_name="{4}" WHERE id = {0}</value>
+  </data>
+  <data name="InsertWeaponInstance" xml:space="preserve">
+    <value>INSERT INTO weapon_instances (section_instance_id, weapon_id, structure, max_structure, node_name, module_instance_id) VALUES ({0}, {1}, {2},{3},"{4}",{5});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetGovernmentInfo" xml:space="preserve">
+    <value>SELECT authoritarianism,economic_liberalism,current_type FROM governments WHERE player_id = {0}</value>
+  </data>
+  <data name="GetPlayerSuulkas" xml:space="preserve">
+    <value>SELECT * FROM suulkas WHERE player_id = {0}</value>
+  </data>
+  <data name="GetLastTurnExplored" xml:space="preserve">
+    <value>SELECT last_seen FROM explore_records WHERE system_id = {0} AND player_id = {1}</value>
+  </data>
+  <data name="GetBankruptcyTurns" xml:space="preserve">
+    <value>SELECT bankruptcy_turns FROM players WHERE id={0};</value>
+  </data>
+  <data name="GetVonNeumannInfo" xml:space="preserve">
+    <value>SELECT * FROM von_neumann WHERE encounter_id = {0}</value>
+  </data>
+  <data name="SelectLoaShipDefForComposition" xml:space="preserve">
+    <value>SELECT * FROM loa_fleet_ship_def WHERE composition_id={0};</value>
+  </data>
+  <data name="GetUniqueGenerators" xml:space="preserve">
+    <value>SELECT 'INSERT OR REPLACE INTO gen_unique (generator, player_id, current) VALUES ('''||generator||''', '||player_id||', '||current||');' FROM gen_unique WHERE player_id = (SELECT id FROM clientinfo WHERE ROWID = 1);</value>
+  </data>
+  <data name="UpdateIntelDesign" xml:space="preserve">
+    <value>UPDATE ai_intel_designs SET last_seen={3},salvaged={4} WHERE player_id={0} AND intel_on_player_id={1} AND design_id={2}</value>
+  </data>
+  <data name="GetFreighterInfosForSystem" xml:space="preserve">
+    <value>SELECT * FROM freighters WHERE system_id = {0};</value>
+  </data>
+  <data name="SetClientID" xml:space="preserve">
+    <value>DELETE FROM clientinfo; INSERT INTO clientinfo (id) VALUES ({0});</value>
+  </data>
+  <data name="RemoveConstructionMissionByOrbitalID" xml:space="preserve">
+    <value>DELETE FROM  special_construction_mission WHERE orbital_object_id={0} AND player_id={1}</value>
+  </data>
+  <data name="GetPlayerModules" xml:space="preserve">
+    <value>SELECT assets.path FROM modules JOIN assets ON assets.id = modules.asset_id WHERE modules.player_id = {0}</value>
+  </data>
+  <data name="InsertPlayerTech" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO techs (id_from_file) VALUES ("{1}");
+
+INSERT INTO player_techs
+(
+    player_id,
+    tech_id,
+    state,
+    progress,
+    research_cost,
+    feasibility,
+    player_feasibility,
+    turn_researched
+)
+VALUES 
+(
+    {0},
+    (SELECT id FROM techs WHERE id_from_file="{1}"),
+    {2},
+    {3},
+    {4},
+    {5},
+    {6},
+    {7}
+);</value>
+  </data>
+  <data name="InsertTreatyConsequenceInfo" xml:space="preserve">
+    <value>INSERT INTO treaty_consequences (treaty_id, consequence_type, consequence_value) VALUES ({0}, {1}, {2});</value>
+  </data>
+  <data name="UpdateImmigrationRate" xml:space="preserve">
+    <value>UPDATE players SET rate_immigration = {1} WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerAutoPlaceDefenses" xml:space="preserve">
+    <value>UPDATE players SET auto_placedefenses = {1} WHERE id={0};</value>
+  </data>
+  <data name="InsertFleet" xml:space="preserve">
+    <value>INSERT INTO fleets (player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred) VALUES ({0},{1},{2},{3},"{4}",{5},{6},{7},{8},{9});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetLargeAsteroidInfoInAsteroidBelt" xml:space="preserve">
+    <value>SELECT * FROM large_asteroids JOIN orbital_objects ON id = orbital_object_id WHERE parent_id = {0}</value>
+  </data>
+  <data name="GetPlayerClientInfos" xml:space="preserve">
+    <value>SELECT * FROM player_client_info;</value>
+  </data>
+  <data name="GetSpecialProjectInfosByPlayerID" xml:space="preserve">
+    <value>SELECT id, player_id, name, progress, cost, type, tech_id, rate, encounter_id, fleet_id,target_player_id FROM special_projects WHERE player_id = {0}</value>
+  </data>
+  <data name="GetDesignSectionNames" xml:space="preserve">
+    <value>SELECT assets.path FROM design_sections JOIN assets ON assets.id = design_sections.asset_id WHERE design_id = {0}</value>
+  </data>
+  <data name="GetPlayerColonySystemIDs" xml:space="preserve">
+    <value>SELECT DISTINCT star_systems.id FROM star_systems
+JOIN orbital_objects ON orbital_objects.star_system_id = star_systems.id
+JOIN colonies ON colonies.orbital_object_id = orbital_objects.id
+WHERE colonies.player_id = {0}</value>
+  </data>
+  <data name="InsertOrIgnoreAI" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO ai (player_id,stance) VALUES ({0},{1});</value>
+  </data>
+  <data name="GetDesignSectionTechs" xml:space="preserve">
+    <value>SELECT tech_id FROM design_section_techs WHERE id = {0};</value>
+  </data>
+  <data name="UpdateStarSystemOrigin" xml:space="preserve">
+    <value>UPDATE stellar_info SET origin = "{1}" WHERE id = {0}</value>
+  </data>
+  <data name="GetAdmiralsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM admirals WHERE player_id = {0}</value>
+  </data>
+  <data name="GetTurnEventsByTurnNumber" xml:space="preserve">
+    <value>SELECT * FROM turn_events WHERE turn_number = {0} AND player_id = {1};</value>
+  </data>
+  <data name="GetInvoiceInfosForPlayer" xml:space="preserve">
+    <value>SELECT * FROM invoices WHERE player_id={0}</value>
+  </data>
+  <data name="GetVisibleDesignIDsForPlayer" xml:space="preserve">
+    <value>SELECT id FROM designs WHERE player_id = {0} AND visible_to_player="True"</value>
+  </data>
+  <data name="GetUINotchSetting" xml:space="preserve">
+    <value>SELECT * FROM ui_slider_notch_settings WHERE player_id={0} AND slider_type={1};</value>
+  </data>
+  <data name="InsertArmisticeTreatyInfo" xml:space="preserve">
+    <value>INSERT INTO armistice_treaties (treaty_id, suggested_diplomacy_state) VALUES ({0}, {1});</value>
+  </data>
+  <data name="UpdatePlayerAdditionalResearchPoints" xml:space="preserve">
+    <value>UPDATE players SET additional_research_points = {1} WHERE id={0};</value>
+  </data>
+  <data name="UpdateShipAIFleetID" xml:space="preserve">
+    <value>UPDATE ships SET ai_fleet_id={1} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateHomeworld" xml:space="preserve">
+    <value>UPDATE homeworlds SET system_id = {0}, orbital_object_id = {1} WHERE player_id = {2};</value>
+  </data>
+  <data name="GetFleetInfo" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id, preferred,last_accel,loa_fleet_config  FROM fleets WHERE id = {0} AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="ClearGives" xml:space="preserve">
+    <value>DELETE FROM gives;</value>
+  </data>
+  <data name="GetNumShipsBuiltFromDesign" xml:space="preserve">
+    <value>SELECT num_built FROM designs WHERE id={0}</value>
+  </data>
+  <data name="GetAIOldColoniesByPlayer" xml:space="preserve">
+    <value>SELECT colony_id FROM ai_old_colony_owner WHERE player_id = {0};</value>
+  </data>
+  <data name="UpdateUINotchSetting" xml:space="preserve">
+    <value>UPDATE ui_slider_notch_settings SET player_id = {1},  slider_type = {2}, slider_value = {3}, colony_id = {4} WHERE id = {0}</value>
+  </data>
+  <data name="UpdateBuildSiteResources" xml:space="preserve">
+    <value>UPDATE build_sites SET resources = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetAdmirals" xml:space="preserve">
+    <value>SELECT * FROM admirals</value>
+  </data>
+  <data name="GetColonyTrapInfoBySystemIDAndPlanetID" xml:space="preserve">
+    <value>SELECT * FROM colony_traps WHERE system_id = {0} AND planet_id = {1}</value>
+  </data>
+  <data name="GetFleetInfoBySystemID" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config  FROM fleets WHERE system_id = {0} AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="InsertFreighterInfo" xml:space="preserve">
+    <value>INSERT INTO freighters (system_id, player_id, design_id, ship_id, is_player_built) VALUES ({0}, {1}, {2}, {3}, {4});</value>
+  </data>
+  <data name="RemoveBuildOrder" xml:space="preserve">
+    <value>DELETE FROM build_orders WHERE id = {0}</value>
+  </data>
+  <data name="UpdateFleetLastAccelerated" xml:space="preserve">
+    <value>UPDATE fleets SET last_accel = {1} WHERE id = {0};</value>
+  </data>
+  <data name="GetAsteroidMonitorInfo" xml:space="preserve">
+    <value>SELECT * FROM asteroid_monitors WHERE encounter_id = {0};</value>
+  </data>
+  <data name="InsertGardenerInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO gardeners (encounter_id,system_id,fleet_id, gardener_fleet_id,turns_to_wait,is_gardener, deep_space_system_id, deep_space_orbital_id) VALUES (last_insert_rowid(),{1},{2},{3},{4},{5},{6},{7});</value>
+  </data>
+  <data name="UpdatePlayerTeam" xml:space="preserve">
+    <value>UPDATE players SET team = {1} WHERE id={0};</value>
+  </data>
+  <data name="GetColonyFactionMoraleHistoryByColonyIDAndTurn" xml:space="preserve">
+    <value>SELECT * FROM colony_morale_history WHERE colony_id = {0} AND turn_id = {1}</value>
+  </data>
+  <data name="GetInvoiceBuildOrders" xml:space="preserve">
+    <value>SELECT * FROM invoice_build_orders WHERE invoice_id={0}</value>
+  </data>
+  <data name="GetTradeResults" xml:space="preserve">
+    <value>SELECT * FROM trade_result_nodes WHERE turn_id = {0};</value>
+  </data>
+  <data name="GetUINotchSettingForColony" xml:space="preserve">
+    <value>SELECT * FROM ui_slider_notch_settings WHERE player_id={0} AND slider_type={1} AND colony_id = {2};</value>
+  </data>
+  <data name="DuplicateStratModifiers" xml:space="preserve">
+    <value>DELETE FROM strat_modifiers WHERE player_id={0};
+INSERT OR IGNORE INTO strat_modifiers SELECT key, value, {0}  FROM strat_modifiers WHERE player_id = {1};</value>
+  </data>
+  <data name="GetShipInfo" xml:space="preserve">
+    <value>SELECT id,fleet_id,design_id,parent_id,name,serial_num,fleet_position,system_position,params,rider_index,psionic_power,ai_fleet_id,comission_date,obtained_slaves,loa_cubes FROM ships WHERE id = {0}</value>
+  </data>
+  <data name="GetStratModifier" xml:space="preserve">
+    <value>SELECT value FROM strat_modifiers WHERE key = "{0}" AND player_id = {1};</value>
+  </data>
+  <data name="InsertPlayerTechBranch" xml:space="preserve">
+    <value>INSERT INTO player_tech_branches
+(
+    player_id,
+    from_id,
+    to_id,
+    research_cost,
+    feasibility
+)
+VALUES 
+(
+    {0},
+    {1},
+    {2},
+    {3},
+    {4}
+);</value>
+  </data>
+  <data name="GetColonyInfos" xml:space="preserve">
+    <value>SELECT * FROM colonies</value>
+  </data>
+  <data name="GetIndependentRaceForWorld" xml:space="preserve">
+    <value>SELECT id,name,population,tech_level,reaction_human,reaction_tarka, reaction_liir,reaction_zuul,reaction_morrigi, reaction_hiver FROM independent_races WHERE orbital_object_id ={0}</value>
+  </data>
+  <data name="GetNumColoniesByPlayer" xml:space="preserve">
+    <value>SELECT COUNT(*) FROM colonies WHERE player_id={0}</value>
+  </data>
+  <data name="InsertRetrofitOrder" xml:space="preserve">
+    <value>INSERT INTO retrofit_orders (star_system_id,design_id,ship_id, invoice_instance_id) VALUES ({0},{1},{2},{3});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetColonyTrapInfos" xml:space="preserve">
+    <value>SELECT * FROM colony_traps</value>
+  </data>
+  <data name="AddNumShipsDestroyedFromDesign" xml:space="preserve">
+    <value>UPDATE designs SET num_destroyed=num_destroyed+{0} WHERE designs.id={1}</value>
+  </data>
+  <data name="GetAllShipSectionInstances" xml:space="preserve">
+    <value>SELECT * FROM section_instances;</value>
+  </data>
+  <data name="RemoveIntelMission" xml:space="preserve">
+    <value>DELETE FROM intel_missions WHERE id={0};</value>
+  </data>
+  <data name="GetSwarmerInfos" xml:space="preserve">
+    <value>SELECT * FROM swarmers</value>
+  </data>
+  <data name="RemoveCivilianPopulation" xml:space="preserve">
+    <value>DELETE FROM colony_factions WHERE orbital_object_id = {0} AND faction_id = {1}</value>
+  </data>
+  <data name="ClearWaypoints" xml:space="preserve">
+    <value>DELETE FROM waypoints WHERE mission_id = {0};</value>
+  </data>
+  <data name="GetLocustSwarmScoutInfos" xml:space="preserve">
+    <value>SELECT * FROM  locust_swarm_scouts;</value>
+  </data>
+  <data name="GetSpecialProjectInfo" xml:space="preserve">
+    <value>SELECT id, player_id, name, progress, cost, type, tech_id, rate, encounter_id,fleet_id,target_player_id FROM special_projects WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerOperationsPoints" xml:space="preserve">
+    <value>UPDATE players SET operations_points = {1} WHERE id={0}</value>
+  </data>
+  <data name="UpdateDesignSection" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO assets (path) VALUES("{1}");
+UPDATE design_sections SET asset_id = (SELECT id FROM assets WHERE path="{1}") WHERE id = {0};</value>
+  </data>
+  <data name="InsertTurnEvent" xml:space="preserve">
+    <value>INSERT INTO turn_events (event_type, event_message, event_desc, player_id, system_id, orbital_id, colony_id, fleet_id, tech_id, mission_id, design_id, feasibility_percent, turn_number, shows_dialog, admiral_id,treaty_id,special_project_id,system2_id,plague_type,plague_imp_pop_damage,plague_civ_pop_damage,plague_infra_damage,combat_id,target_player_id,ship_id, province_id, design_attribute, arrival_turns, names_list, num_ships, savings, event_sound_cue_name, param1,dialog_shown,event_name) 
+VALUES ({0}, {1}, "{2}"
+, CASE WHEN ((SELECT players.id FROM players WHERE players.id = {3} ) ISNULL) THEN NULL ELSE {3} END
+, CASE WHEN ((SELECT star_systems.id FROM star_systems WHERE star_systems.id = {4} ) ISNULL) THEN NULL ELSE {4} END
+, CASE WHEN ((SELECT orbital_objects.id FROM orbital_objects WHERE orbital_objects.id = {5} ) ISNULL) THEN NULL ELSE {5} END
+, CASE WHEN ((SELECT colonies.id FROM colonies WHERE colonies.id = {6} ) ISNULL) THEN NULL ELSE {6} END
+, CASE WHEN ((SELECT fleets.id FROM fleets WHERE fleets.id = {7} ) ISNULL) THEN NULL ELSE {7} END
+, CASE WHEN ((SELECT techs.id FROM techs WHERE techs.id = {8} ) ISNULL) THEN NULL ELSE {8} END
+, CASE WHEN ((SELECT missions.id FROM missions WHERE missions.id = {9} ) ISNULL) THEN NULL ELSE {9} END
+, CASE WHEN ((SELECT designs.id FROM designs WHERE designs.id = {10} ) ISNULL) THEN NULL ELSE {10} END
+, {11}
+, {12}
+, {13}
+, CASE WHEN ((SELECT admirals.id FROM admirals WHERE admirals.id = {14} ) ISNULL) THEN NULL ELSE {14} END
+,{15}
+,CASE WHEN ((SELECT special_projects.id FROM special_projects WHERE special_projects.id = {16} ) ISNULL) THEN NULL ELSE {16} END
+,CASE WHEN ((SELECT star_systems.id FROM star_systems WHERE star_systems.id = {17} ) ISNULL) THEN NULL ELSE {17} END
+,{18}
+, {19}
+, {20}
+, {21}
+,{22}
+,CASE WHEN ((SELECT players.id FROM players WHERE players.id = {23} ) ISNULL) THEN NULL ELSE {23} END
+,CASE WHEN ((SELECT ships.id FROM ships WHERE ships.id = {24} ) ISNULL) THEN NULL ELSE {24} END
+, CASE WHEN ((SELECT provinces.id FROM provinces WHERE provinces.id = {25} ) ISNULL) THEN NULL ELSE {25} END
+, {26}
+, {27}
+, "{28}"
+, {29}
+, {30}
+, "{31}"
+, "{32}"
+, {33}
+,"{34}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetColonyTrapInfo" xml:space="preserve">
+    <value>SELECT * FROM colony_traps WHERE id = {0}</value>
+  </data>
+  <data name="UpdateStarSystemVisible" xml:space="preserve">
+    <value>UPDATE star_systems SET visible = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetProteanShipOrbitMaps" xml:space="preserve">
+    <value>SELECT ship_id, orbital_object_id FROM protean_ship_orbit_map WHERE encounter_id = {0};</value>
+  </data>
+  <data name="InsertModuleInstance" xml:space="preserve">
+    <value>INSERT INTO module_instances(section_instance_id, module_node_id, structure, repair_points) VALUES ({0}, '{1}', {2}, {3});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetPlayerInfo" xml:space="preserve">
+    <value>SELECT id, name, faction_id, is_ai, (SELECT color FROM primary_player_colors WHERE id=primary_color_id), secondary_color, (SELECT path FROM assets WHERE id=badge_asset_id), savings, homeworld_id, (SELECT path FROM assets WHERE id=avatar_asset_id), last_combat_turn, last_encounter_turn, rate_government_research, rate_research_current_project, rate_research_special_projects, rate_research_salvage_research, rate_government_stimulus, rate_government_security, rate_government_savings, rate_stimulus_mining, rate_stimulus_colonization, rate_stimulus_trade, rate_security_operations, rate_security_intelligence, rate_security_counter_intelligence, 
+is_standard_player,
+generic_diplomacy_points, 
+rate_tax,
+rate_immigration,
+intel_points,
+counterintel_points,
+operations_points,
+intel_accumulator,
+counterintel_accumulator,
+operations_accumulator,
+civilian_mining_accumulator,
+civilian_colonization_accumulator,
+civilian_trade_accumulator,
+subfaction_index,
+additional_research_points,
+psionic_potential,
+is_defeated,
+current_trade_income,
+include_in_diplomacy,
+is_ai_rebellion_player,
+auto_placedefenses,
+auto_repairfleets,
+auto_usegoop,
+auto_usejoker,
+research_boost_funds,
+auto_aoe,
+team,
+auto_patrol,
+ai_difficulty, rate_tax_prev
+FROM players WHERE id = {0}</value>
+  </data>
+  <data name="InsertLocustSwarmInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO locust_swarms (encounter_id, fleet_id, resources, num_drones)
+VALUES (last_insert_rowid(),{1},{2}, {3});</value>
+  </data>
+  <data name="InsertPiracyFleetDetection" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO piracy_fleet_detections (fleet_id, player_id, mission_id) VALUES ({0},{1},{2});</value>
+  </data>
+  <data name="GetFactionSuitabilityById" xml:space="preserve">
+    <value>SELECT suitability FROM factions WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerHomeWorld" xml:space="preserve">
+    <value>UPDATE players SET homeworld_id = {0} WHERE id = {1}</value>
+  </data>
+  <data name="GetMoveOrderInfoByFleetID" xml:space="preserve">
+    <value>SELECT * FROM move_orders WHERE fleet_id = {0}</value>
+  </data>
+  <data name="UpdateLocustSwarmScoutInfo" xml:space="preserve">
+    <value>UPDATE locust_swarm_scouts SET target_system_id= {1}, num_drones={2} WHERE id = {0}</value>
+  </data>
+  <data name="InsertIndependentRaceColony" xml:space="preserve">
+    <value>INSERT INTO independent_colonies (orbital_object_id,race_id,population) VALUES ({0},{1},{2});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetIntelColonyForPlayer" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_colonies WHERE player_id={0};</value>
+  </data>
+  <data name="GetIntelColonyForPlanet" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_colonies WHERE player_id={0} AND planet_id={1}</value>
+  </data>
+  <data name="SetShipParentID" xml:space="preserve">
+    <value>UPDATE ships SET parent_id = {1} WHERE id = {0}</value>
+  </data>
+  <data name="PurgeOwnedColonyIntel" xml:space="preserve">
+    <value>DELETE FROM ai_intel_colonies WHERE player_id={0} AND owning_player={0} AND colony_id IS NULL;</value>
+  </data>
+  <data name="UpdateResearchProjectInfo" xml:space="preserve">
+    <value>UPDATE research_projects SET player_id={1}, name="{2}", progress={3}, state={4} WHERE id={0}</value>
+  </data>
+  <data name="DeleteIncomingRandom" xml:space="preserve">
+    <value>DELETE FROM incoming_randoms WHERE id={0};</value>
+  </data>
+  <data name="GetGovernmentActions" xml:space="preserve">
+    <value>SELECT * FROM government_actions WHERE player_id = {0}</value>
+  </data>
+  <data name="GetTurnHasEventType" xml:space="preserve">
+    <value>SELECT * FROM turn_events WHERE player_id = {0} AND turn_number = {1} AND event_type = {2};</value>
+  </data>
+  <data name="UpdatePlayerCounterintelAccumulator" xml:space="preserve">
+    <value>UPDATE players SET counterintel_accumulator = {1} WHERE id={0}</value>
+  </data>
+  <data name="InsertOrbitalObject" xml:space="preserve">
+    <value>INSERT INTO orbital_objects (parent_id,star_system_id,orbital_path,name) VALUES ({0},{1},"{2}",{3});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetColonyHistoryByColonyIDAndTurn" xml:space="preserve">
+    <value>SELECT * FROM player_colony_history WHERE colony_id = {0} AND turn_id = {1}</value>
+  </data>
+  <data name="InsertColonyTrap" xml:space="preserve">
+    <value>INSERT INTO colony_traps (system_id,planet_id,fleet_id) VALUES ({0},{1},{2});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetAsteroidMonitorInfos" xml:space="preserve">
+    <value>SELECT * FROM asteroid_monitors;</value>
+  </data>
+  <data name="UpdatePlayerClientInfo" xml:space="preserve">
+    <value>UPDATE player_client_info SET username="{1}" WHERE  player_id={0};</value>
+  </data>
+  <data name="InsertGovernment" xml:space="preserve">
+    <value>INSERT INTO governments (player_id,authoritarianism,economic_liberalism) VALUES ({0},{1},{2})</value>
+  </data>
+  <data name="SetDemandState" xml:space="preserve">
+    <value>UPDATE demands SET demand_state = {1} WHERE id={0}</value>
+  </data>
+  <data name="GetSystemKillerInfoByFleetID" xml:space="preserve">
+    <value>SELECT * FROM system_killers WHERE fleet_id={0}</value>
+  </data>
+  <data name="GetCombatSpecificData" xml:space="preserve">
+    <value>SELECT data,version FROM combat_data WHERE system_id={0} AND conflict_id={1} AND turn={2};</value>
+  </data>
+  <data name="InsertDesignAttribute" xml:space="preserve">
+    <value>INSERT INTO design_attributes (design_id, attribute) VALUES({0}, {1})</value>
+  </data>
+  <data name="RemoveTurnEvent" xml:space="preserve">
+    <value>DELETE FROM turn_events WHERE id={0};</value>
+  </data>
+  <data name="InsertInvoice" xml:space="preserve">
+    <value>INSERT INTO invoices (invoice_name, player_id, is_favorite) VALUES ("{0}", {1}, {2});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetDiplomacyActionHistory" xml:space="preserve">
+    <value>SELECT * FROM diplomacy_action_history WHERE turn_count &lt;= {0} AND turn_count &gt; {0} - {1} AND (player_id = {2} AND towards_player_id = {3})</value>
+  </data>
+  <data name="UpdateResearchProjectState" xml:space="preserve">
+    <value>UPDATE research_projects SET state={1} WHERE id={0}</value>
+  </data>
+  <data name="GetEmpireBiosphere" xml:space="preserve">
+    <value>SELECT SUM(biosphere) FROM colonies JOIN planets ON colonies.orbital_object_id = planets.orbital_object_id WHERE colonies.player_id={0}</value>
+  </data>
+  <data name="GetExploredRecordsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM explore_records WHERE player_id = {0}  AND explored='True'</value>
+  </data>
+  <data name="InsertColonyHistory" xml:space="preserve">
+    <value>INSERT INTO player_colony_history (colony_id, turn_id, resources, biosphere, infrastructure, hazard, income, econ_rating, life_support_cost, industrial_output, civ_pop, imp_pop,slave_pop) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11},{12});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdateLastEncounterTurn" xml:space="preserve">
+    <value>UPDATE players SET last_encounter_turn = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetTechFileID" xml:space="preserve">
+    <value>SELECT id_from_file FROM techs WHERE id={0}</value>
+  </data>
+  <data name="UpdateShipLoaCubes" xml:space="preserve">
+    <value>UPDATE ships SET loa_cubes={1} WHERE id={0}</value>
+  </data>
+  <data name="UpdatePlayerIntelPoints" xml:space="preserve">
+    <value>UPDATE players SET intel_points = {1} WHERE id={0}</value>
+  </data>
+  <data name="UpdateSpecialProjectRate" xml:space="preserve">
+    <value>UPDATE special_projects SET rate = {1} WHERE id = {0};</value>
+  </data>
+  <data name="InsertLoaFleetShipDef" xml:space="preserve">
+    <value>INSERT INTO loa_fleet_ship_def(composition_id, design_id)  VALUES ({0},{1});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="RemoveLocustSwarmScoutTargetInfo" xml:space="preserve">
+    <value>DELETE FROM locust_swarm_scout_targets WHERE system_id = {0}</value>
+  </data>
+  <data name="GetRequestInfos" xml:space="preserve">
+    <value>SELECT * FROM requests</value>
+  </data>
+  <data name="GetAllArmorInstances" xml:space="preserve">
+    <value>SELECT * FROM armor_instances;</value>
+  </data>
+  <data name="GetIntelMissionsForPlayer" xml:space="preserve">
+    <value>SELECT * FROM intel_missions WHERE player_id={0};</value>
+  </data>
+  <data name="InsertInvoiceBuildOrder" xml:space="preserve">
+    <value>INSERT INTO invoice_build_orders (design_id, ship_name, invoice_id, loa_cubes) VALUES ({1}, "{2}", {0}, {3});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="UpdatePlanetInfrastructure" xml:space="preserve">
+    <value>UPDATE planets SET infrastructure ={1} WHERE orbital_object_id ={0}</value>
+  </data>
+  <data name="RemoveUINotchSettingForColony" xml:space="preserve">
+    <value>DELETE FROM ui_slider_notch_settings WHERE player_id={0} AND slider_type={1} AND colony_id = {2};</value>
+  </data>
+  <data name="GetColonyTrapInfoByPlanetID" xml:space="preserve">
+    <value>SELECT * FROM colony_traps WHERE planet_id = {0}</value>
+  </data>
+  <data name="GetNumProvincesByPlayer" xml:space="preserve">
+    <value>SELECT COUNT(*) FROM provinces WHERE player_id={0}</value>
+  </data>
+  <data name="UpdateFleetLocation" xml:space="preserve">
+    <value>UPDATE fleets SET system_id = {1}, prev_system_id = {2} WHERE id = {0}</value>
+  </data>
+  <data name="GetBuildOrderInfo" xml:space="preserve">
+    <value>SELECT * FROM build_orders WHERE id = {0}</value>
+  </data>
+  <data name="GetMoraleHistoryEvents" xml:space="preserve">
+    <value>SELECT * FROM morale_event_history;</value>
+  </data>
+  <data name="GetMissionInfos" xml:space="preserve">
+    <value>SELECT * FROM missions</value>
+  </data>
+  <data name="RemoveColonyHistoryByColonyID" xml:space="preserve">
+    <value>DELETE FROM player_colony_history WHERE colony_id = {0}</value>
+  </data>
+  <data name="GetSwarmerInfo" xml:space="preserve">
+    <value>SELECT * FROM swarmers WHERE encounter_id = {0}</value>
+  </data>
+  <data name="InsertNewStellarInfo" xml:space="preserve">
+    <value>INSERT INTO stellar_info (origin) VALUES ("{0}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetLargeAsteroidInfo" xml:space="preserve">
+    <value>SELECT * FROM large_asteroids WHERE orbital_object_id = {0}</value>
+  </data>
+  <data name="RemoveLocustSwarmScoutInfo" xml:space="preserve">
+    <value>DELETE FROM locust_swarm_scouts WHERE id = {0}</value>
+  </data>
+  <data name="InsertColonyFactionMoraleHistory" xml:space="preserve">
+    <value>INSERT INTO colony_morale_history(colony_id, turn_id, faction_id, morale, population) VALUES ({0}, {1}, {2}, {3}, {4});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetBuildOrderForInvoice" xml:space="preserve">
+    <value>SELECT * FROM build_orders WHERE invoice_instance_id = {0}</value>
+  </data>
+  <data name="GetStationRetrofitOrders" xml:space="preserve">
+    <value>SELECT * FROM retrofitstation_orders</value>
+  </data>
+  <data name="RemoveStationRetrofitOrder" xml:space="preserve">
+    <value>DELETE FROM retrofitstation_orders WHERE id = {0}</value>
+  </data>
+  <data name="GetTerrainInfos" xml:space="preserve">
+    <value>SELECT id, name, origin FROM terrain;</value>
+  </data>
+  <data name="GetSuperNovaInfo" xml:space="preserve">
+    <value>SELECT * FROM super_novas WHERE encounter_id={0};</value>
+  </data>
+  <data name="AddNumShipsBuiltFromDesign" xml:space="preserve">
+    <value>UPDATE designs SET num_built=num_built+{0} WHERE designs.id={1}</value>
+  </data>
+  <data name="TransferShip" xml:space="preserve">
+    <value>UPDATE ships SET fleet_id = {1} WHERE id = {0}</value>
+  </data>
+  <data name="UpdatePlayerTechInfo" xml:space="preserve">
+    <value>UPDATE player_techs SET state={2}, progress={3}, research_cost={4}, feasibility={5}, player_feasibility={6}, turn_researched={7} WHERE player_id={0} AND tech_id={1}</value>
+  </data>
+  <data name="InsertCounterIntelResponse" xml:space="preserve">
+    <value>INSERT INTO intel_responses (intel_mission_id, auto, value) VALUES ({0},{1},"{2}");</value>
+  </data>
+  <data name="UpdateShipRiderIndex" xml:space="preserve">
+    <value>UPDATE ships SET rider_index={1} WHERE id={0}</value>
+  </data>
+  <data name="UpdateStarSystemOpen" xml:space="preserve">
+    <value>UPDATE star_systems SET is_open = {1} WHERE id = {0}</value>
+  </data>
+  <data name="GetIncompleteSpecialProjectInfosByPlayerID" xml:space="preserve">
+    <value>SELECT id, player_id, name, progress, cost, type, tech_id, rate, encounter_id, fleet_id,target_player_id FROM special_projects WHERE player_id = {0} AND progress != cost;</value>
+  </data>
+  <data name="GetIntelColoniesOfTargetPlayer" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_colonies WHERE player_id={0} AND owning_player={1}</value>
+  </data>
+  <data name="GetModuleID" xml:space="preserve">
+    <value>SELECT id FROM modules WHERE asset_id=(SELECT id FROM assets WHERE path="{0}") AND player_id={1}</value>
+  </data>
+  <data name="GetDemandInfo" xml:space="preserve">
+    <value>SELECT * FROM demands WHERE id={0};</value>
+  </data>
+  <data name="GetColonyInfo" xml:space="preserve">
+    <value>SELECT * FROM colonies WHERE id={0}</value>
+  </data>
+  <data name="UpdateNameValuePair" xml:space="preserve">
+    <value>UPDATE name_value_pairs SET value = "{1}" WHERE name = "{0}"</value>
+  </data>
+  <data name="GetStellarProps" xml:space="preserve">
+    <value>SELECT stellar_props.id,assets.path,transform FROM stellar_props JOIN assets ON stellar_props.model_asset_id=assets.id;</value>
+  </data>
+  <data name="GetRetrofitOrdersForSystem" xml:space="preserve">
+    <value>SELECT * FROM retrofit_orders WHERE star_system_id = {0}</value>
+  </data>
+  <data name="GetStarSystemOrbitalObjectsBySystemId" xml:space="preserve">
+    <value>SELECT orbital_objects.id FROM star_systems
+JOIN orbital_objects ON orbital_objects.star_system_id = star_systems.id 
+WHERE star_systems.id = {0}</value>
+  </data>
+  <data name="GetNumFleetsByPlayer" xml:space="preserve">
+    <value>SELECT COUNT(*) FROM fleets WHERE player_id={0}</value>
+  </data>
+  <data name="GetFleetInfoByAdmiralID" xml:space="preserve">
+    <value>SELECT id,player_id,admiral_id,system_id,supporting_system_id,name,turns_away,supply_remaining,fleet_type,prev_system_id,preferred,last_accel,loa_fleet_config FROM fleets WHERE admiral_id = {0} AND fleet_type &amp; {1} &gt; 0</value>
+  </data>
+  <data name="GetPlayerWeapons" xml:space="preserve">
+    <value>SELECT assets.path FROM weapons JOIN assets ON assets.id = weapons.asset_id WHERE weapons.player_id = {0}</value>
+  </data>
+  <data name="GetLocustSwarmScoutTargetInfos" xml:space="preserve">
+    <value>SELECT * FROM  locust_swarm_scout_targets;</value>
+  </data>
+  <data name="DuplicateTechs" xml:space="preserve">
+    <value>DELETE FROM player_techs WHERE player_id={0};
+INSERT OR IGNORE INTO player_techs SELECT {0}, tech_id, state, progress, research_cost, feasibility, player_feasibility, turn_researched  FROM player_techs WHERE player_id = {1};</value>
+  </data>
+  <data name="GetNeutronStarInfo" xml:space="preserve">
+    <value>SELECT * FROM neutron_stars WHERE encounter_id={0};</value>
+  </data>
+  <data name="InsertStellarInfo" xml:space="preserve">
+    <value>INSERT INTO stellar_info (id, origin) VALUES ({0},"{1}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertStellarProp" xml:space="preserve">
+    <value>INSERT INTO stellar_props (model_asset_id, transform) VALUES ((SELECT id FROM assets WHERE path="{0}"),"{1}");
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="RemoveAllColonyHistory" xml:space="preserve">
+    <value>DELETE  FROM player_colony_history WHERE turn_id &gt;= 0;</value>
+  </data>
+  <data name="GetPiracyFleetDectectionInfoForFleet" xml:space="preserve">
+    <value>SELECT * FROM piracy_fleet_detections WHERE fleet_id={0};</value>
+  </data>
+  <data name="InsertColonyFaction" xml:space="preserve">
+    <value>INSERT INTO colony_factions (orbital_object_id,faction_id,civ_pop,civ_morale,civ_pop_weight,turn_established,civ_last_morale) VALUES({0},{1},{2},{3},{4},{5},{6})</value>
+  </data>
+  <data name="GetProvinceInfo" xml:space="preserve">
+    <value>SELECT id,player_id,name,capital_id FROM provinces WHERE id={0}</value>
+  </data>
+  <data name="InsertCombatData" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO combat_data (system_id, conflict_id, turn, data, version) VALUES ({0}, {1}, {2}, "{3}", {4});</value>
+  </data>
+  <data name="GetAIIntelPlanet" xml:space="preserve">
+    <value>SELECT * FROM ai_intel_planets WHERE player_id={0} AND planet_id={1};</value>
+  </data>
+  <data name="InsertVonNeumannInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO von_neumann(encounter_id, homeworld_system_id, homeworld_orbit_id, fleet_id, resources, construction_progress, project_design_id) VALUES(last_insert_rowid(), {1}, {2}, {3}, {4},{5}, NULL)
+</value>
+  </data>
+  <data name="GetFreighterInfosBuiltByPlayer" xml:space="preserve">
+    <value>SELECT * FROM freighters WHERE player_id = {0} AND is_player_built = "True";</value>
+  </data>
+  <data name="UpdateFleetCompositionID" xml:space="preserve">
+    <value>UPDATE fleets SET loa_fleet_config = {1} WHERE id = {0};</value>
+  </data>
+  <data name="GetExploreRecordInfo" xml:space="preserve">
+    <value>SELECT * FROM explore_records WHERE system_id = {0} AND player_id = {1}</value>
+  </data>
+  <data name="GetNameValue" xml:space="preserve">
+    <value>SELECT value FROM name_value_pairs WHERE name = "{0}"</value>
+  </data>
+  <data name="RemoveCounterIntelSting" xml:space="preserve">
+    <value>DELETE FROM sting_operations WHERE id={0};</value>
+  </data>
+  <data name="AddAdmiralTrait" xml:space="preserve">
+    <value>INSERT INTO admiral_traits (admiral_id,type,level) VALUES ({0},{1},{2})</value>
+  </data>
+  <data name="GetFactionName" xml:space="preserve">
+    <value>SELECT name FROM factions WHERE id={0}</value>
+  </data>
+  <data name="GetFactionInfo" xml:space="preserve">
+    <value>SELECT id,name,suitability FROM factions WHERE id={0}</value>
+  </data>
+  <data name="InsertMorrigiRelicInfo" xml:space="preserve">
+    <value>INSERT INTO encounters(type) VALUES("{0}");
+INSERT INTO morrigi_relic (encounter_id,system_id, fleet_id, is_aggressive) VALUES (last_insert_rowid(),{1}, {2}, {3});</value>
+  </data>
+  <data name="InsertLimitationTreatyInfo" xml:space="preserve">
+    <value>INSERT INTO limitation_treaties (treaty_id, limitation_type, limitation_amount,limitation_group) VALUES ({0},{1},{2},"{3}");</value>
+  </data>
+  <data name="GetIntelDesignsOfTargetPlayer" xml:space="preserve">
+    <value>SELECT design_id,first_seen,last_seen,salvaged FROM ai_intel_designs WHERE player_id={0} AND intel_on_player_id={1}</value>
+  </data>
+  <data name="GetStationInfoFromShipId" xml:space="preserve">
+    <value>SELECT * FROM stations WHERE ship_id ={0}</value>
+  </data>
+  <data name="GetSuulkas" xml:space="preserve">
+    <value>SELECT * FROM suulkas</value>
+  </data>
+  <data name="InsertMission" xml:space="preserve">
+    <value>INSERT INTO missions (fleet_id,type,target_system_id,target_orbital_object_id,target_fleet_id,duration, use_direct_route, turn_started, system_started, station_type) VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="InsertDesignModule" xml:space="preserve">
+    <value>INSERT INTO design_modules (design_section_id, mount_node, module_id, weapon_id, station_module_type,design_id) VALUES ({0},"{1}",{2},{3},{4},{5});
+SELECT last_insert_rowid();</value>
+  </data>
+  <data name="GetSuulka" xml:space="preserve">
+    <value>SELECT * FROM suulkas WHERE id = {0}</value>
+  </data>
+  <data name="RemoveMission" xml:space="preserve">
+    <value>DELETE FROM missions WHERE id = {0};
+DELETE FROM waypoints WHERE mission_id = {0};</value>
+  </data>
+  <data name="GetIntelFleetsOfTargetPlayer" xml:space="preserve">
+    <value>SELECT last_seen, last_seen_system, last_seen_coords, num_destroyers, num_cruisers, num_dreadnoughts, num_leviathans FROM ai_intel_fleets WHERE player_id={0} AND intel_on_player_id={1}</value>
+  </data>
+  <data name="GetSDBByShip" xml:space="preserve">
+    <value>SELECT * FROM sdb_info WHERE ship_id={0}</value>
+  </data>
+  <data name="RemovePlayerDesign" xml:space="preserve">
+    <value>UPDATE designs SET visible_to_player="False" WHERE id={0}</value>
+  </data>
+  <data name="UpdatePlayerAutoAOE" xml:space="preserve">
+    <value>UPDATE players SET auto_aoe = {1} WHERE id={0};</value>
+  </data>
+  <data name="GetMorrigiRelicInfo" xml:space="preserve">
+    <value>SELECT * FROM morrigi_relic WHERE encounter_id = {0};</value>
+  </data>
+  <data name="UpdateAIFleetInfo" xml:space="preserve">
+    <value>UPDATE ai_fleet_info SET fleet_id = {1}, fleet_type = {2}, system_id= {3}, invoice_id= {4}, admiral_id = {5}  WHERE id = {0};</value>
+  </data>
+  <data name="RemoveMoraleHistoryEvent" xml:space="preserve">
+    <value>DELETE FROM morale_event_history WHERE id={0};</value>
+  </data>
+  <data name="SetStratModifier" xml:space="preserve">
+    <value>INSERT OR IGNORE INTO strat_modifiers (key, player_id, value) VALUES("{0}", {1}, "");
+UPDATE strat_modifiers SET value="{2}" WHERE key = "{0}" AND player_id = {1};</value>
+  </data>
+  <data name="GetTreatyInfos" xml:space="preserve">
+    <value>SELECT * FROM treaties LEFT OUTER JOIN limitation_treaties ON id = limitation_treaties.treaty_id LEFT OUTER JOIN armistice_treaties ON id = armistice_treaties.treaty_id;</value>
+  </data>
+  <data name="GetLocustSwarmInfos" xml:space="preserve">
+    <value>SELECT * FROM locust_swarms</value>
+  </data>
+  <data name="RemoveShip" xml:space="preserve">
+    <value>DELETE FROM ships WHERE id={0}</value>
+  </data>
+  <data name="GetRetrofitOrderInfo" xml:space="preserve">
+    <value>SELECT * FROM retrofit_orders WHERE id = {0}</value>
+  </data>
+  <data name="UpdateSystemCombatZones" xml:space="preserve">
+    <value>UPDATE star_systems SET control_zones="{0}" WHERE id={1}</value>
+  </data>
+  <data name="GetRequestInfo" xml:space="preserve">
+    <value>SELECT * FROM requests WHERE id={0};</value>
+  </data>
+  <data name="GetQueuedStationModuleInfos" xml:space="preserve">
+    <value>SELECT * FROM station_queued_modules WHERE design_section_id={0}</value>
+  </data>
+</root>

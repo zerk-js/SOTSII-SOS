@@ -1,0 +1,235 @@
+<Faction ID="3" name="morrigi">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<PsiPowerModifier>1.0</PsiPowerModifier>
+	
+  <MaterialDictionary>\base\factions\morrigi\materials.xml</MaterialDictionary>
+
+  <MinishipModel>props\ui\miniship_morrigi.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Morrigi.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Void_Carver</RootNode>
+  </TechTree>
+
+  <InitialDesigns weaponbias="EWP">
+    <Design name="Armor">
+      <Section name="cr_cmd_battlebridge"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+	<Design name="Supply">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+	<Design name="Command">
+      <Section name="cr_cmd_battlebridge"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+	<Design name="Scout">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_extendedrange"/>
+    </Design>
+	
+	<Design name="Drone">
+      <Section name="cr_cmd_battlebridge"/>
+      <Section name="cr_mis_dronecarrier"/>
+    </Design>
+	<Design name="Boarding">
+      <Section name="cr_cmd_battlebridge"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+	<Design name="Colonizer">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_battlebridge"/>
+      <Section name="cr_mis_carrier"/>
+    </Design>
+<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair"/>
+    </Design>
+	-->
+    <Design name="Gravboat">
+      <Section name="cr_mis_gravboat"/>
+    </Design>
+  </InitialDesigns>
+
+  <DiplomacyActionWeights>factions\morrigi\diplomacyWeights.xml</DiplomacyActionWeights>
+  <StratModifiers>
+    <MaxColonizableHazard>600</MaxColonizableHazard>
+    <MaxProvincePlanetRange>9.0</MaxProvincePlanetRange>
+    <MaxProvincePlanets>4</MaxProvincePlanets>
+    <PopulationGrowthModifier>0.9</PopulationGrowthModifier>
+    <TradeRangeModifier>4.0</TradeRangeModifier>
+    <ChanceOfPirates>0.9</ChanceOfPirates>
+    <OverharvestModifier>90.0</OverharvestModifier>
+    <ResearchModifier>1.2</ResearchModifier>
+    <PsiResearchModifier>1.7</PsiResearchModifier>
+    <DiplomacyPointCostModifier>0.8</DiplomacyPointCostModifier>
+    <DiplomacyReactionKillShips>-20</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-200</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>5</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-80</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-120</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>-45</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-115</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-115</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>150</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>8</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>1</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>125</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>-30</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>30</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>-1</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>2</DiplomacyReactionSmallerEmpire>
+    <DiplomacyDemandWeight>0.3</DiplomacyDemandWeight>
+    <DiplomacyRequestWeight>1.1</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="1300"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="900"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="1100"/>
+    <DefaultDiplomacyReaction faction="loa"       value="1000"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="950"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="700"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="100"/>
+  </DefaultDiplomacyReactions>
+
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="1.10" />
+    <ImmigrationPopBonus faction="hiver"     value="1.30"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="1.0"/>
+    <ImmigrationPopBonus faction="loa"       value="1.0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="1.0"/>
+    <ImmigrationPopBonus faction="tarkas"    value="1.20"/>
+    <ImmigrationPopBonus faction="zuul"      value="0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="0.40" />
+    <SpyingBonus faction="hiver"     value="0.25"/>
+    <SpyingBonus faction="tarkas"    value="0.15"/>
+    <SpyingBonus faction="liir_zuul" value="0.0"/>
+    <SpyingBonus faction="morrigi"   value="0.50"/>
+    <SpyingBonus faction="zuul"      value="-0.40"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_INDEPENDANT_INCORPORATED>2</ME_INDEPENDANT_INCORPORATED>
+      <ME_INDEPENDANT_CONQUERED>2</ME_INDEPENDANT_CONQUERED>
+       <ME_INDEPENDANT_DESTROYED>-5</ME_INDEPENDANT_DESTROYED>
+    </Centrism>
+  </MoralEventModifiers>
+  
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <CrewEfficiencyValue>2.0</CrewEfficiencyValue>
+  <PsiPowerPerCrew>10.0</PsiPowerPerCrew>
+  <EntryPointOffset>500</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.6</EXPANDING>
+    <ARMING>0.8</ARMING>
+    <HUNKERING>0.6</HUNKERING>
+    <CONQUERING>0.6</CONQUERING>
+    <DESTROYING>0.6</DESTROYING>
+    <DEFENDING>0.5</DEFENDING>
+  </ResearchRates>
+  
+  <!--Badges-->
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_01.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_02.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_03.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_04.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_05.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_06.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_07.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_08.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_09.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_10.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_11.tga"/>
+  <Badge texture="\base\factions\morrigi\badges\Morrigi_Badge_12.tga"/>
+
+  <!--Noseart-->
+  <!--<Badge texture="\base\factions\morrigi\textures\NoseArt\nose_art_morrigi_01.tga"/>-->
+
+  <NoAvatar texture="\base\factions\morrigi\avatars\morrigi_off.tga"/>
+
+  <!--Avatars-->
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\morrigi\avatars\Morrigi_Avatar_08.tga"/>
+
+  <!--Noseart-->
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_01.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_02.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_03.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_04.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_05.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_06.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_07.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_08.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_09.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_10.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_11.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_12.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_13.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_14.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_15.tga"/>
+  <Noseart texture="\base\factions\morrigi\textures\noseart\nose_art_morrigi_16.tga"/>
+
+
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\morrigi\textures\splash\Khabul_splash.tga"/>
+    <SplashScreen image="factions\morrigi\textures\splash\Tokhta_splash.tga"/>
+  </SplashScreens>
+
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineTarkasDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineTarkasDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineTarkasDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.0</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_MORRIGI_" count="36"/>
+  <EmpireNames prefix="@EMPIRENAME_MORRIGI_" count="29"/>
+
+</Faction>

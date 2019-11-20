@@ -1,0 +1,197 @@
+<Weapon>
+  <Name>IOBM MIRV Missile</Name>
+  <PassableShields />
+  <RequiredTechnologies>
+    <Technology>
+      <Name>WAR_MW_Warheads</Name>
+    </Technology>
+  </RequiredTechnologies>
+  <Attributes>
+    <Attribute>
+      <Name>Explosive</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Tracking</Name>
+    </Attribute>
+    <Attribute>
+      <Name>Upgradable</Name>
+    </Attribute>
+    <Attribute>
+      <Name>StandOff</Name>
+    </Attribute>
+  </Attributes>
+  <CompatibleSections />
+  <TurretClasses>
+    <TurretClass>
+      <TurretClass>IOBM</TurretClass>
+      <TurretClassSizes>
+        <TurretClassSize>
+          <TurretSize>SuperHeavy</TurretSize>
+          <Turret>turret_dummy</Turret>
+          <Barrel>barrel_iobm_2_vheavy</Barrel>
+          <Base>base_dummy</Base>
+        </TurretClassSize>
+      </TurretClassSizes>
+    </TurretClass>
+  </TurretClasses>
+  <DeployableSections />
+  <CompatibleFactions />
+  <PayloadType>Missile</PayloadType>
+  <PlagueType>
+  </PlagueType>
+  <WeaponSize>SuperHeavy</WeaponSize>
+  <Animation>
+  </Animation>
+  <AnimationDelay>0</AnimationDelay>
+  <Cost>40000</Cost>
+  <Crew>10</Crew>
+  <CrewPerBank>False</CrewPerBank>
+  <Power>2</Power>
+  <PowerPerBank>False</PowerPerBank>
+  <Supply>30</Supply>
+  <SupplyPerBank>False</SupplyPerBank>
+  <Signature>10</Signature>
+  <SignaturePerBank>False</SignaturePerBank>
+  <HpBonus>25</HpBonus>
+  <Health>30</Health>
+  <TrackingSpeed>0</TrackingSpeed>
+  <TimeToLive>180</TimeToLive>
+  <DumbfireTime>3</DumbfireTime>
+  <CritHitBonus>25</CritHitBonus>
+  <MalfunctionPercent>5</MalfunctionPercent>
+  <MalfunctionDamage>200</MalfunctionDamage>
+  <SubweaponType />
+  <IsVisible>True</IsVisible>
+  <IsAbductor>False</IsAbductor>
+  <DisruptorValue>0</DisruptorValue>
+  <DrainValue>0</DrainValue>
+  <DOT>0</DOT>
+  <Submunition>Mis_Missile</Submunition>
+  <SubmunitionAmount>10</SubmunitionAmount>
+  <SubmunitionBlastType>Burst</SubmunitionBlastType>
+  <SubmunitionConeDeviation>90</SubmunitionConeDeviation>
+  <ExplosiveMinEffectRange>5</ExplosiveMinEffectRange>
+  <ExplosiveMaxEffectRange>25</ExplosiveMaxEffectRange>
+  <DetonationRange>1500</DetonationRange>
+  <EMPRange>0</EMPRange>
+  <EMPDuration>0</EMPDuration>
+  <ArmorPiercingLevel>0</ArmorPiercingLevel>
+  <NumArcs>0</NumArcs>
+  <ArcRange>0</ArcRange>
+  <CritHitRolls>2</CritHitRolls>
+  <MaxGravityForce>0</MaxGravityForce>
+  <GravityAffectRange>0</GravityAffectRange>
+  <PbGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>4,0</CollisionPoint>
+    <Data>1111111111
+1111111111
+0111111110
+0011111100
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </PbGrid>
+  <EffectiveGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>1111111111
+1111111111
+0111111110
+0011111100
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </EffectiveGrid>
+  <MaxGrid>
+    <Dimensions>10,10</Dimensions>
+    <CollisionPoint>5,0</CollisionPoint>
+    <Data>1111111111
+1111111111
+0111111110
+0011111100
+0001111000
+0000110000
+0000000000
+0000000000
+0000000000
+0000000000
+</Data>
+  </MaxGrid>
+  <TrackSpeedModifier>0</TrackSpeedModifier>
+  <BeamDamagePeriod>0</BeamDamagePeriod>
+  <Volleys>1</Volleys>
+  <VolleyPeriod>0</VolleyPeriod>
+  <VolleyDelay>1</VolleyDelay>
+  <BuildupDelay>0</BuildupDelay>
+  <BaseVolleyDeviationName>10</BaseVolleyDeviationName>
+  <BaseRechargeTime>35</BaseRechargeTime>
+  <MuzzleSpeed>220</MuzzleSpeed>
+  <ShotAcceleration>30</ShotAcceleration>
+  <Duration>0</Duration>
+  <MuzzleDescription>
+    <MuzzleType />
+    <Width>0</Width>
+    <Height>0</Height>
+  </MuzzleDescription>
+  <Model>IOBM_MIRV_missile.scene</Model>
+  <DecalMaterial>Bullet hole07</DecalMaterial>
+  <DecalSize>30</DecalSize>
+  <MuzzleEffect>effects\Weapons\polarismissile_muzzle.effect</MuzzleEffect>
+  <BuildupEffect>
+  </BuildupEffect>
+  <ImpactEffect>effects\Weapons\IOBM_impact.effect</ImpactEffect>
+  <PlanetImpactEffect>
+  </PlanetImpactEffect>
+  <BulletEffect>effects\Weapons\IOBM_Bullet.effect</BulletEffect>
+  <RicochetEffect>
+  </RicochetEffect>
+  <isMuzzleEffectLooping>False</isMuzzleEffectLooping>
+  <isBuildupEffectLooping>False</isBuildupEffectLooping>
+  <isBulletEffectLooping>False</isBulletEffectLooping>
+  <isImpactEffectLooping>False</isImpactEffectLooping>
+  <isRicochetEffectLooping>False</isRicochetEffectLooping>
+  <MuzzleSound>Mis_IOBMMissile_muzzle</MuzzleSound>
+  <BuildupSound>
+  </BuildupSound>
+  <ImpactSound>Mis_IOBMMissile_impact</ImpactSound>
+  <PlanetImpactSound>
+  </PlanetImpactSound>
+  <ExpireSound>
+  </ExpireSound>
+  <BulletSound>Mis_IOBMMissile_travel</BulletSound>
+  <RicochetSound>
+  </RicochetSound>
+  <Icon>mis_mirv_iobm</Icon>
+  <RangeTable>
+    <PbRange>10000</PbRange>
+    <PbDeviation>0</PbDeviation>
+    <PbDamage>40</PbDamage>
+    <EffectiveRange>15000</EffectiveRange>
+    <EffectiveDeviation>0</EffectiveDeviation>
+    <EffectiveDamage>40</EffectiveDamage>
+    <MaxRange>25000</MaxRange>
+    <MaxDeviation>0</MaxDeviation>
+    <MaxDamage>40</MaxDamage>
+    <PlanetRange>25000</PlanetRange>
+  </RangeTable>
+  <BaseRicochetModifier>-10</BaseRicochetModifier>
+  <RecoilFactor>0</RecoilFactor>
+  <RoundMass>0</RoundMass>
+  <PopDamage>0</PopDamage>
+  <InfraDamage>0</InfraDamage>
+  <TerraDamage>0</TerraDamage>
+  <SolutionTolerance>220</SolutionTolerance>
+  <RatingDamageEstimate>0</RatingDamageEstimate>
+  <FiringRate>0</FiringRate>
+  <Accuracy>0</Accuracy>
+  <Range>0</Range>
+</Weapon>

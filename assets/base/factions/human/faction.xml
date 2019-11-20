@@ -1,0 +1,219 @@
+<Faction ID="1" name="human">
+	<!-- tags added by SOS Mod. -->
+	<!-- Percent modifers where 1.0 = 100% -->
+	<ResearchBoostAccidentMod>1.0</ResearchBoostAccidentMod>
+	<CrewEfficiencyValue>1.0</CrewEfficiencyValue>
+
+  <MaterialDictionary>\base\factions\human\materials.xml</MaterialDictionary>
+  <DiplomacyActionWeights>factions\human\diplomacyWeights.xml</DiplomacyActionWeights>
+  
+  <MinishipModel>props\ui\miniship_human.scene</MinishipModel>
+
+  <TechTree>
+	<Model>Tech\Models\PSI.scene</Model>
+    <Model>Tech\Models\DRV_Human.scene</Model>
+	<RootNode>PSI_Wild_Talents</RootNode>
+    <RootNode>DRV_Node_Focusing</RootNode>
+  </TechTree>
+
+  <InitialDesigns weaponbias="">
+
+	<Design name="Drone">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_dronecarrier"/>
+    </Design>
+	<Design name="Boarding">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_boarding"/>
+    </Design>
+	<Design name="Colonizer">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_transport_colonizer"/>
+    </Design>
+	<Design name="Assault Shuttle">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_carrier"/>
+    </Design>
+<!-- had to remove until I can fix AI considering R&S ships to be ARMOR roles (need to add a new role)
+	<Design name="Repair and Salvage">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_repair"/>
+    </Design>
+	-->
+
+  
+    <Design name="Armor">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_armor"/>
+    </Design>
+    <Design name="Supply">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_Supply"/>
+    </Design>
+    <Design name="Command">
+      <Section name="cr_cmd_hammerhead"/>
+      <Section name="cr_mis_cnc"/>
+    </Design>
+    <Design name="Scout">
+      <Section name="cr_cmd"/>
+      <Section name="cr_mis_extendedrange"/>
+    </Design>
+  </InitialDesigns>
+
+
+
+  <StratModifiers>
+    <MaxProvincePlanetRange>10.0</MaxProvincePlanetRange>
+    <TradeRangeModifier>2.0</TradeRangeModifier>
+    <OverharvestModifier>100.0</OverharvestModifier>
+    <PrototypeSavingsCostModifierCR>3.5</PrototypeSavingsCostModifierCR>
+    <PrototypeSavingsCostModifierDN>2.75</PrototypeSavingsCostModifierDN>
+    <PrototypeSavingsCostModifierLV>2.25</PrototypeSavingsCostModifierLV>
+    <DiplomacyReactionKillShips>-30</DiplomacyReactionKillShips>
+    <DiplomacyReactionKillColony>-100</DiplomacyReactionKillColony>
+    <DiplomacyReactionKillEnemy>10</DiplomacyReactionKillEnemy>
+    <DiplomacyReactionColonizeClaimedWorld>-20</DiplomacyReactionColonizeClaimedWorld>
+    <DiplomacyReactionKillRaceWorld>-80</DiplomacyReactionKillRaceWorld>
+    <DiplomacyReactionKillGrandMenace>100</DiplomacyReactionKillGrandMenace>
+    <DiplomacyReactionInvadeIndependentWorld>-10</DiplomacyReactionInvadeIndependentWorld>
+    <DiplomacyReactionSellSlaves>-75</DiplomacyReactionSellSlaves>
+    <DiplomacyReactionAIRebellion>-100</DiplomacyReactionAIRebellion>
+    <DiplomacyReactionKillSuulka>50</DiplomacyReactionKillSuulka>
+    <DiplomacyReactionMoney>2</DiplomacyReactionMoney>
+    <DiplomacyReactionResearch>1</DiplomacyReactionResearch>
+    <DiplomacyReactionSlave>0</DiplomacyReactionSlave>
+    <DiplomacyReactionStarChamber>75</DiplomacyReactionStarChamber>
+    <DiplomacyReactionDeclareWar>0</DiplomacyReactionDeclareWar>
+    <DiplomacyReactionPeaceTreaty>5</DiplomacyReactionPeaceTreaty>
+    <DiplomacyReactionBiggerEmpire>-15</DiplomacyReactionBiggerEmpire>
+    <DiplomacyReactionSmallerEmpire>0</DiplomacyReactionSmallerEmpire>
+	<DiplomacyDemandWeight>0.3</DiplomacyDemandWeight>
+	<DiplomacyRequestWeight>0.8</DiplomacyRequestWeight>
+  </StratModifiers>
+  <DefaultDiplomacyReactions>
+    <DefaultDiplomacyReaction faction="human"     value="1500"/>
+    <DefaultDiplomacyReaction faction="hiver"     value="750"/>
+    <DefaultDiplomacyReaction faction="liir_zuul" value="1100"/>
+    <DefaultDiplomacyReaction faction="loa"       value="400"/>
+    <DefaultDiplomacyReaction faction="morrigi"   value="900"/>
+    <DefaultDiplomacyReaction faction="tarkas"    value="1000"/>
+    <DefaultDiplomacyReaction faction="zuul"      value="300"/>
+  </DefaultDiplomacyReactions>
+  
+  <ImmigrationPopBonus>
+    <ImmigrationPopBonus faction="human"     value="1.0" />
+    <ImmigrationPopBonus faction="hiver"     value="1.15"/>
+    <ImmigrationPopBonus faction="liir_zuul" value="1.25"/>
+    <ImmigrationPopBonus faction="loa"       value="1.0"/>
+    <ImmigrationPopBonus faction="morrigi"   value="1.1"/>
+    <ImmigrationPopBonus faction="tarkas"    value="1.05"/>
+    <ImmigrationPopBonus faction="zuul"      value="0"/>
+  </ImmigrationPopBonus>
+
+  <SpyingBonus>
+    <SpyingBonus faction="human"     value="0.10" />
+    <SpyingBonus faction="hiver"     value="-0.20"/>
+    <SpyingBonus faction="tarkas"    value="-0.10"/>
+    <SpyingBonus faction="liir_zuul" value="-0.25"/>
+    <SpyingBonus faction="morrigi"   value="0.15"/>
+    <SpyingBonus faction="zuul"      value="-0.45"/>
+    <SpyingBonus faction="loa"       value="0"/>
+  </SpyingBonus>
+
+  <MoralEventModifiers>
+    <Centrism>
+      <ME_INDEPENDANT_CONQUERED>2</ME_INDEPENDANT_CONQUERED>
+      <ME_INDEPENDANT_DESTROYED>-1</ME_INDEPENDANT_DESTROYED>
+    </Centrism>
+  </MoralEventModifiers>
+
+  <!-- CombatAI -->
+  <!-- if false (default), use regular combat AI
+        if true, use specialized AI -->
+  <UseNPCCombatAI>FALSE</UseNPCCombatAI>
+  <PsiPowerPerCrew>1.0</PsiPowerPerCrew>
+  <PsiPowerModifier>1.0</PsiPowerModifier>
+  <EntryPointOffset>2500</EntryPointOffset>
+  <StarTearTechEnteryPointOffset>0</StarTearTechEnteryPointOffset>
+
+  <!-- SalvageSettings -->
+  <SalvageModifiers>
+    <RepSal>3</RepSal>
+    <default>0</default>
+  </SalvageModifiers>
+
+  <!-- Research Rates for AI -->
+  <ResearchRates>
+    <EXPANDING>0.5</EXPANDING>
+    <ARMING>0.7</ARMING>
+    <HUNKERING>0.6</HUNKERING>
+    <CONQUERING>0.7</CONQUERING>
+    <DESTROYING>0.7</DESTROYING>
+    <DEFENDING>0.6</DEFENDING>
+  </ResearchRates>
+  
+  
+
+  <!--Badges-->
+  <Badge texture="\base\factions\human\badges\Human_Badge_01.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_02.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_03.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_04.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_05.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_06.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_07.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_08.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_09.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_10.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_11.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_12.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_13.tga"/>
+  <Badge texture="\base\factions\human\badges\Human_Badge_14.tga"/>
+  <Badge texture="\base\factions\human\badges\Canada_Flag.tga"/>
+  <Badge texture="\base\factions\human\badges\USA_Flag.tga"/>
+  <Badge texture="\base\factions\human\badges\old_Canada_Flag.tga"/>
+  <Badge texture="\base\factions\human\badges\old_USA_Flag.tga"/>
+
+  <NoAvatar texture="\base\factions\human\avatars\human_off.tga"/>
+
+  <!--Avatars-->
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_01.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_02.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_03.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_04.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_05.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_06.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_07.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_08.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_09.tga"/>
+  <Avatar texture="\base\factions\human\avatars\Human_Avatar_10.tga"/>
+
+
+  <!--SplashScreens-->
+  <SplashScreens>
+    <SplashScreen image="factions\human\textures\splash\Vac-Forces-Engineer-screen_final.tga"/>
+    <SplashScreen image="factions\human\textures\splash\Vac-Forces-Screen_final.tga"/>
+  </SplashScreens>
+  
+  <!--DamageDecals-->
+  <FactionDamageDecals>
+    <Scorch class="Cruiser" stage="1" size="1" material="ScorchDecal"/>
+    <Structure class="Cruiser" stage="1" size="1" material="EngineHumanDecalSmall"/>
+    <Structure class="Cruiser" stage="2" size="1" material="EngineHumanDecalMed"/>
+    <Structure class="Cruiser" stage="3" size="1" material="EngineHumanDecalLarge"/>
+  </FactionDamageDecals>
+
+
+  <!--BoardingActionModifiers-->
+  <BoardingActionModifiers>
+    <FreshAgentStrength>1.0</FreshAgentStrength>
+    <TiredAgentStrength>0.75</TiredAgentStrength>
+    <ExhaustedAgentStrength>0.50</ExhaustedAgentStrength>
+    <AgentLocationStrength default="1.0" cruiser="1.0" dreadnought="1.0" leviathan="1.0" />
+    <EfficiencyVSBoarding default="0.5" cruiser="0.25" dreadnought="0.65" leviathan="0.65" />
+  </BoardingActionModifiers>
+
+  <DesignNames prefix="@DESIGNNAME_HUMAN_" count="49"/>
+  <EmpireNames prefix="@EMPIRENAME_HUMAN_" count="17"/>
+
+</Faction>

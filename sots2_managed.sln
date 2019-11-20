@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sots2_managed", "sots2_managed.csproj", "{F16EE476-D828-43E7-8C0A-0718DB1FDD2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F16EE476-D828-43E7-8C0A-0718DB1FDD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16EE476-D828-43E7-8C0A-0718DB1FDD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16EE476-D828-43E7-8C0A-0718DB1FDD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16EE476-D828-43E7-8C0A-0718DB1FDD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

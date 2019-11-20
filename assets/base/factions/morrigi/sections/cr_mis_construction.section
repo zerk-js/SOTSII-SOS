@@ -1,0 +1,92 @@
+<ShipSection>
+  <RealClass />
+  <Title>@SECTIONTITLE_CR_MIS_CONSTRUCTION</Title>
+  <Description>@SECTIONDESC_CR_MIS_CONSTRUCTION</Description>
+  <AiType>
+  </AiType>
+  <ModelFile>factions\morrigi\models\Cruiser\Mission\Construction.scene</ModelFile>
+  <DamagedModelFile>
+  </DamagedModelFile>
+  <DamagedEffectFile>
+  </DamagedEffectFile>
+  <DestroyedModelFile>
+  </DestroyedModelFile>
+  <DestroyedEffectFile>
+  </DestroyedEffectFile>
+  <AmbientSound>Trp_EM_pulsar_travel</AmbientSound>
+  <EngineSound>Eng_cr_fusion_grav_engine</EngineSound>
+  <CameraDistanceFactor>1</CameraDistanceFactor>
+  <Struct>1760</Struct>
+  <StructDamageAmount>0</StructDamageAmount>
+  <DeathDamage>0</DeathDamage>
+  <ExplosionRadius>0</ExplosionRadius>
+  <Mass>190000</Mass>
+  <Top>10,3</Top>
+  <Bottom>10,3</Bottom>
+  <Side>10,3</Side>
+  <Crew>80</Crew>
+  <CrewRequired>70</CrewRequired>
+  <Power>20</Power>
+  <Supply>100</Supply>
+  <ECM>0</ECM>
+  <ECCM>0</ECCM>
+  <ColonizerSpace>0</ColonizerSpace>
+  <SavingsCost>90000</SavingsCost>
+  <ProductionCost>16000</ProductionCost>
+  <FtlSpeed>3</FtlSpeed>
+  <NodeSpeed>0</NodeSpeed>
+  <MissionTime>0</MissionTime>
+  <CommandPoints>0</CommandPoints>
+  <RepairPoints>0</RepairPoints>
+  <TerraformingPoints>0</TerraformingPoints>
+  <FreighterSpace>0</FreighterSpace>
+  <Signature>30</Signature>
+  <TacticalSensorRange>0</TacticalSensorRange>
+  <StrategicSensorRange>0</StrategicSensorRange>
+  <LaunchDelay>0</LaunchDelay>
+  <DockingDelay>0</DockingDelay>
+  <BattleRiderReserveSize>0</BattleRiderReserveSize>
+  <StationType>
+  </StationType>
+  <StationLevel>0</StationLevel>
+  <IsConstructor>True</IsConstructor>
+  <IsFreighter>False</IsFreighter>
+  <ConstructionPoints>300</ConstructionPoints>
+  <IsPolice>False</IsPolice>
+  <PsionicPowerLevel>0</PsionicPowerLevel>
+  <SlaveCapacity>0</SlaveCapacity>
+  <FleetSpeedModifier>1</FleetSpeedModifier>
+  <PreviewImage>
+  </PreviewImage>
+  <Acceleration>10</Acceleration>
+  <RotationalAccelerationYaw>5</RotationalAccelerationYaw>
+  <RotationalAccelerationPitch>5</RotationalAccelerationPitch>
+  <RotationalAccelerationRoll>5</RotationalAccelerationRoll>
+  <Decceleration>1</Decceleration>
+  <LinearSpeed>100</LinearSpeed>
+  <RotationSpeed>15</RotationSpeed>
+  <Banks />
+  <RequiredTechs />
+  <Modules />
+  <ExcludedSections />
+  <ExcludedTypes>
+    <ExcludedType>
+      <Name>Command</Name>
+    </ExcludedType>
+    <ExcludedType>
+      <Name>Engine</Name>
+    </ExcludedType>
+  </ExcludedTypes>
+  <PsionicAbilities />
+  <WeaponGroups />
+  <ShipOptionGroups>
+    <ShipOptionGroup>
+      <ShipOptions>
+        <ShipOption>
+          <AvailableByDefault>False</AvailableByDefault>
+          <Name>SLD_Structural_Fields</Name>
+        </ShipOption>
+      </ShipOptions>
+    </ShipOptionGroup>
+  </ShipOptionGroups>
+</ShipSection>
