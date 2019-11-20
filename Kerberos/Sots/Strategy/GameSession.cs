@@ -29,6 +29,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace Kerberos.Sots.Strategy
 {
@@ -817,13 +818,14 @@ namespace Kerberos.Sots.Strategy
 		  GameSession.Flags flags = (GameSession.Flags)0)
 		{
 			GameSession.SimAITurns = 0;
-			saveGameFileName = Path.GetFileName(saveGameFileName);
-			if (saveGameFileName.EndsWith(".sots2save"))
-				saveGameFileName = saveGameFileName.Substring(0, saveGameFileName.Length - ".sots2save".Length);
+			string pattern = "(?:\\s*\\((?:" + Regex.Replace(App.Localize("@AUTOSAVE_SUFFIX"), "([\\(\\)])", string.Empty) + "|Precombat)\\).*|\\.sots2save)";
+
+			saveGameFileName = Regex.Replace(Path.GetFileName(saveGameFileName) ?? string.Empty, pattern, string.Empty);
 			if (string.IsNullOrEmpty(saveGameFileName))
 				throw new ArgumentNullException(nameof(saveGameFileName), "GameSession must be constructed with a valid save game filename. By default this could be gameSetup.GetDefaultSaveGameFileName().");
 			this._db = db;
 			this._random = new Random();
+			
 			this._saveGameName = saveGameFileName;
 			this._app = app;
 			this.NamesPool = namesPool;
@@ -1546,9 +1548,10 @@ namespace Kerberos.Sots.Strategy
 
 		public void Autosave(string suffix)
 		{
+			//string pattern = "\\s*\\((?:" + Regex.Replace(App.Localize("@AUTOSAVE_SUFFIX"), "([\\(\\)])", string.Empty) + "|Precombat)\\).*";
+			//string str = Regex.Replace(Path.GetFileNameWithoutExtension(this._saveGameName), pattern, string.Empty);
 			string str = Path.GetFileNameWithoutExtension(this._saveGameName);
-			if (!str.EndsWith(suffix))
-				str = str + " " + suffix;
+			str = str + " " + suffix;
 			this.Save(Path.Combine(this.App.SaveDir, str + ".sots2save"));
 		}
 

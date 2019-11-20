@@ -27,6 +27,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Kerberos.Sots
 {
@@ -401,20 +402,23 @@ namespace Kerberos.Sots
 			return savedGameFilenameList.ToArray();
 		}
 
-		public SavedGameFilename[] GetAvailableSavedGames()
+		public SavedGameFilename[] GetAvailableSavedGames(bool IncludeAutosaves = true)
 		{
 			string searchPattern = "*.sots2save";
 			SavedGameFilename[] savedGameFilenameArray = (SavedGameFilename[])null;
+			string pattern = "\\((?:" + Regex.Replace(App.Localize("@AUTOSAVE_SUFFIX"), "([\\(\\)])", string.Empty) + "|Precombat)\\)";
+
 			try
 			{
-				savedGameFilenameArray = (from p in new DirectoryInfo(this.SaveDir).GetFiles(searchPattern, SearchOption.TopDirectoryOnly)
-										  orderby p.LastWriteTime descending
-										  select p into x
-										  select new SavedGameFilename
-										  {
-											  RootedFilename = x.FullName,
-											  IsBuiltin = false
-										  }).ToArray<SavedGameFilename>();
+				savedGameFilenameArray =	(from p in new DirectoryInfo(this.SaveDir).GetFiles(searchPattern, SearchOption.TopDirectoryOnly)
+											where IncludeAutosaves || !Regex.IsMatch(p.Name, pattern)
+											orderby p.LastWriteTime descending
+											select p into x
+											select new SavedGameFilename
+											{
+												RootedFilename = x.FullName,
+												IsBuiltin = false
+											}).ToArray<SavedGameFilename>();
 			}
 			catch (DirectoryNotFoundException ex)
 			{

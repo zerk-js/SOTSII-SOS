@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Kerberos.Sots.UI
 {
@@ -30,11 +31,13 @@ namespace Kerberos.Sots.UI
 		private bool _choice;
 		private string _reallyDeleteDialog;
 		private string _fileExistsDialog;
+		private bool isSave = false;
 
 		public SaveGameDialog(App game, string defaultName, string template = "dialogSaveGame")
 		  : base(game, template)
 		{
 			this._enteredText = defaultName ?? string.Empty;
+			this.isSave = template == "dialogSaveGame";
 		}
 
 		protected virtual void OnSelectionCleared()
@@ -132,7 +135,7 @@ namespace Kerberos.Sots.UI
 			this._app.UI.Send((object)"SetMaxChars", (object)"gameSaveName", (object)this._maxChars);
 			this._app.UI.Send((object)"SetFileMode", (object)"gameSaveName", (object)true);
 			this._app.UI.SetPropertyString("gameSaveName", "text", this._enteredText);
-			SavedGameFilename[] availableSavedGames = this._app.GetAvailableSavedGames();
+			SavedGameFilename[] availableSavedGames = this._app.GetAvailableSavedGames(!isSave);
 			int num = 0;
 			foreach (SavedGameFilename savedGameFilename in availableSavedGames)
 			{
