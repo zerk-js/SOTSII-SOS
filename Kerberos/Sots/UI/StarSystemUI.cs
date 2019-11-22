@@ -550,7 +550,7 @@ namespace Kerberos.Sots.UI
 				sim.UI.SetSliderValue(sim.UI.Path(panelId, StarSystemUI.FormatName("partTradeSlider", colonyId, widgetId)), sliderValue7);
 				sim.UI.ClearSliderNotches(sim.UI.Path(panelId, StarSystemUI.FormatName("partTradeSlider", colonyId, widgetId)));
 				foreach (double num7 in sim.GetTradeRatesForWholeExportsForColony(colonyInfo.ID))
-					sim.UI.AddSliderNotch(sim.UI.Path(panelId, StarSystemUI.FormatName("partTradeSlider", colonyId, widgetId)), (int)(num7 * 100.0));
+					sim.UI.AddSliderNotch(sim.UI.Path(panelId, StarSystemUI.FormatName("partTradeSlider", colonyId, widgetId)), (int)Math.Ceiling(num7 * 100.0));
 			}
 			if (sliderName != StarSystemUI.FormatName("partCivSlider", colonyId, widgetId))
 				sim.UI.SetSliderValue(sim.UI.Path(panelId, StarSystemUI.FormatName("partCivSlider", colonyId, widgetId)), num6);
@@ -705,7 +705,7 @@ namespace Kerberos.Sots.UI
 				sim.UI.SetSliderValue(sim.UI.Path(panelId, "partTradeSlider"), (int)sliderValue7);
 				sim.UI.ClearSliderNotches(sim.UI.Path(panelId, "partTradeSlider"));
 				foreach (double num7 in sim.GetTradeRatesForWholeExportsForColony(colonyInfo.ID))
-					sim.UI.AddSliderNotch(sim.UI.Path(panelId, "partTradeSlider"), (int)(num7 * 100.0));
+					sim.UI.AddSliderNotch(sim.UI.Path(panelId, "partTradeSlider"), (int)Math.Ceiling(num7 * 100.0));
 			}
 			if (sliderName != "partCivSlider")
 				sim.UI.SetSliderValue(sim.UI.Path(panelId, "partCivSlider"), num6);

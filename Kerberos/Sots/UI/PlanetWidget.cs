@@ -220,28 +220,24 @@ namespace Kerberos.Sots.UI
 			ColonyInfo colonyInfo = App.GameDatabase.GetColonyInfo(ColonyID);
 			if (value == -1)
 			{
-				if (App.GameDatabase.GetSliderNotchSettingInfoForColony(colonyInfo.PlayerID, colonyInfo.ID, UISlidertype.TradeSlider) == null)
-					return;
+				// Zerk: faster to just run delete query
+				//if (App.GameDatabase.GetSliderNotchSettingInfoForColony(colonyInfo.PlayerID, colonyInfo.ID, UISlidertype.TradeSlider) == null)
+					//return;
 				App.GameDatabase.DeleteUISliderNotchSettingForColony(colonyInfo.PlayerID, colonyInfo.ID, UISlidertype.TradeSlider);
 			}
 			else
 			{
 				List<double> exportsForColony = App.Game.GetTradeRatesForWholeExportsForColony(colonyInfo.ID);
 				UISliderNotchInfo settingInfoForColony = App.GameDatabase.GetSliderNotchSettingInfoForColony(colonyInfo.PlayerID, colonyInfo.ID, UISlidertype.TradeSlider);
-				foreach (double num in exportsForColony)
+				//App.Log.Trace(string.Format("Trade slider notched: Colony: {0}, Value: {1}, Notch: {2}", App.GameDatabase.GetColonyName(colonyInfo.OrbitalObjectID), value, exportsForColony.IndexOf(exportsForColony.FirstOrDefault(v => (int)Math.Ceiling(v * 100.0) == value))), "zerk");
+				double num = exportsForColony.First(v => (int)Math.Ceiling(v * 100.0) == value);
+				if (settingInfoForColony != null)
 				{
-					if ((int)Math.Ceiling(num * 100.0) == value)
-					{
-						if (settingInfoForColony != null)
-						{
-							settingInfoForColony.SliderValue = (double)exportsForColony.IndexOf(num);
-							App.GameDatabase.UpdateUISliderNotchSetting(settingInfoForColony);
-							break;
-						}
-						App.GameDatabase.InsertUISliderNotchSetting(App.LocalPlayer.ID, UISlidertype.TradeSlider, (double)exportsForColony.IndexOf(num), colonyInfo.ID);
-						break;
-					}
+					settingInfoForColony.SliderValue = (double)exportsForColony.IndexOf(num);
+					App.GameDatabase.UpdateUISliderNotchSetting(settingInfoForColony);
+					return;
 				}
+				App.GameDatabase.InsertUISliderNotchSetting(App.LocalPlayer.ID, UISlidertype.TradeSlider, (double)exportsForColony.IndexOf(num), colonyInfo.ID);
 			}
 		}
 
