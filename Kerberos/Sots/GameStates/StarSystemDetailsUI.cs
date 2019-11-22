@@ -134,7 +134,7 @@ namespace Kerberos.Sots.GameStates
 
 		public static int OutputRateToSliderValue(float value)
 		{
-			return (int)((double)value * 100.0);
+			return (int)Math.Ceiling((double)value * 100.0);
 		}
 
 		public static float SliderValueToOutputRate(int value)
